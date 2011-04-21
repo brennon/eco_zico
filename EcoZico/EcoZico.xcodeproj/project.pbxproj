@@ -1,0 +1,270 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AD4B81F1360961C00000919 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B81E1360961C00000919 /* UIKit.framework */; };
+		3AD4B8211360961C00000919 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B8201360961C00000919 /* Foundation.framework */; };
+		3AD4B8231360961C00000919 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B8221360961C00000919 /* CoreGraphics.framework */; };
+		3AD4B8291360961C00000919 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AD4B8271360961C00000919 /* InfoPlist.strings */; };
+		3AD4B82C1360961C00000919 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4B82B1360961C00000919 /* main.m */; };
+		3AD4B82F1360961C00000919 /* EcoZicoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */; };
+		3AD4B8321360961C00000919 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AD4B8301360961C00000919 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3AD4B81A1360961C00000919 /* EcoZico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoZico.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AD4B81E1360961C00000919 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3AD4B8201360961C00000919 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3AD4B8221360961C00000919 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3AD4B8261360961C00000919 /* EcoZico-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EcoZico-Info.plist"; sourceTree = "<group>"; };
+		3AD4B8281360961C00000919 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3AD4B82A1360961C00000919 /* EcoZico-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EcoZico-Prefix.pch"; sourceTree = "<group>"; };
+		3AD4B82B1360961C00000919 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcoZicoAppDelegate.h; sourceTree = "<group>"; };
+		3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EcoZicoAppDelegate.m; sourceTree = "<group>"; };
+		3AD4B8311360961C00000919 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AD4B8171360961C00000919 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD4B81F1360961C00000919 /* UIKit.framework in Frameworks */,
+				3AD4B8211360961C00000919 /* Foundation.framework in Frameworks */,
+				3AD4B8231360961C00000919 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AD4B80F1360961C00000919 = {
+			isa = PBXGroup;
+			children = (
+				3AD4B8241360961C00000919 /* EcoZico */,
+				3AD4B81D1360961C00000919 /* Frameworks */,
+				3AD4B81B1360961C00000919 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3AD4B81B1360961C00000919 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AD4B81A1360961C00000919 /* EcoZico.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AD4B81D1360961C00000919 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AD4B81E1360961C00000919 /* UIKit.framework */,
+				3AD4B8201360961C00000919 /* Foundation.framework */,
+				3AD4B8221360961C00000919 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AD4B8241360961C00000919 /* EcoZico */ = {
+			isa = PBXGroup;
+			children = (
+				3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */,
+				3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */,
+				3AD4B8301360961C00000919 /* MainWindow.xib */,
+				3AD4B8251360961C00000919 /* Supporting Files */,
+			);
+			path = EcoZico;
+			sourceTree = "<group>";
+		};
+		3AD4B8251360961C00000919 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AD4B8261360961C00000919 /* EcoZico-Info.plist */,
+				3AD4B8271360961C00000919 /* InfoPlist.strings */,
+				3AD4B82A1360961C00000919 /* EcoZico-Prefix.pch */,
+				3AD4B82B1360961C00000919 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AD4B8191360961C00000919 /* EcoZico */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AD4B8351360961C00000919 /* Build configuration list for PBXNativeTarget "EcoZico" */;
+			buildPhases = (
+				3AD4B8161360961C00000919 /* Sources */,
+				3AD4B8171360961C00000919 /* Frameworks */,
+				3AD4B8181360961C00000919 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EcoZico;
+			productName = EcoZico;
+			productReference = 3AD4B81A1360961C00000919 /* EcoZico.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AD4B8111360961C00000919 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Queen's University Belfast";
+			};
+			buildConfigurationList = 3AD4B8141360961C00000919 /* Build configuration list for PBXProject "EcoZico" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3AD4B80F1360961C00000919;
+			productRefGroup = 3AD4B81B1360961C00000919 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AD4B8191360961C00000919 /* EcoZico */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AD4B8181360961C00000919 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD4B8291360961C00000919 /* InfoPlist.strings in Resources */,
+				3AD4B8321360961C00000919 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AD4B8161360961C00000919 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AD4B82C1360961C00000919 /* main.m in Sources */,
+				3AD4B82F1360961C00000919 /* EcoZicoAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3AD4B8271360961C00000919 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AD4B8281360961C00000919 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3AD4B8301360961C00000919 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AD4B8311360961C00000919 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AD4B8331360961C00000919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3AD4B8341360961C00000919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		3AD4B8361360961C00000919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EcoZico/EcoZico-Prefix.pch";
+				INFOPLIST_FILE = "EcoZico/EcoZico-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3AD4B8371360961C00000919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EcoZico/EcoZico-Prefix.pch";
+				INFOPLIST_FILE = "EcoZico/EcoZico-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AD4B8141360961C00000919 /* Build configuration list for PBXProject "EcoZico" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD4B8331360961C00000919 /* Debug */,
+				3AD4B8341360961C00000919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AD4B8351360961C00000919 /* Build configuration list for PBXNativeTarget "EcoZico" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD4B8361360961C00000919 /* Debug */,
+				3AD4B8371360961C00000919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AD4B8111360961C00000919 /* Project object */;
+}
