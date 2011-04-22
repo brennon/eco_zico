@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BookViewController;
 
 @interface EcoZicoAppDelegate : NSObject <UIApplicationDelegate> {
-
+    BookViewController *bookViewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) BookViewController *bookViewController;
 
 @end

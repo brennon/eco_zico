@@ -7,15 +7,17 @@
 //
 
 #import "EcoZicoAppDelegate.h"
+#import "BookViewController.h"
 
 @implementation EcoZicoAppDelegate
 
-
-@synthesize window=_window;
+@synthesize window=_window, bookViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    bookViewController = [[BookViewController alloc] init];
+    [self.window setRootViewController:bookViewController];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -62,6 +64,8 @@
 - (void)dealloc
 {
     [_window release];
+    [bookViewController release];
+    bookViewController = nil;
     [super dealloc];
 }
 
