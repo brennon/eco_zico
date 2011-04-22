@@ -6,7 +6,7 @@ To-Do / Task List
 * Create CSV files of words / seek points
 	* Format: `0, fireball, 22.876` (index, word, seek point)
 	* Donal: even pages, Brennon: odd pages
-* Begin design of BookViewController and PageView (Brennon)
+* <strike>Begin design of BookViewController and PageView (Brennon)</strike>
 * Explore possibilities of using *cocos2d* for drawing to a `UIView`'s `frame` (Donal)
 * Write *Ruby* script to parse `CSV` files to `.plist` files with the following format:
 	* NSArray
