@@ -12,6 +12,9 @@
 @interface BookViewController : UIViewController {
     IBOutlet UIScrollView *pageScrollView;
     UIView *sentenceView;
+    
+    //temp
+    NSString *loadOfText;
 }
 
 @property (nonatomic, retain) IBOutlet UIScrollView *pageScrollView;

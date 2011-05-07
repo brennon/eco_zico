@@ -7,7 +7,7 @@
 //
 
 #import "BookViewController.h"
-//#import "HelloWorldLayer.h"
+#import "TextViewController.h"
 #import "cocos2d.h"
 
 @implementation BookViewController
@@ -76,6 +76,9 @@ const NSUInteger kNumberOfPages = 14;
         [pageScrollView addSubview:view];
         [view release];
     }
+    
+    //temp
+    loadOfText = @"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape.";
     
     CGSize winsize = [[UIScreen mainScreen]applicationFrame].size;
     
@@ -151,12 +154,25 @@ const NSUInteger kNumberOfPages = 14;
 	// You can change anytime.
 	[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
     
-	CCScene *scene = [CCScene node];
+	CCScene *scene = [CCScene node];    
+    CCLayerColor *layer = [CCLayerColor layerWithColor:ccc4(0, 0, 0, 255)];    
+    [scene addChild:layer];
     
-    CCLayerColor *layer = [CCLayerColor layerWithColor:ccc4(255, 255, 255, 255)];
+    [[CCDirector sharedDirector] runWithScene: scene];
+    
+    
+    
+    TextViewController *textVC = [[TextViewController alloc] initWithMessage:loadOfText size:[sentenceView bounds].size fontSize:35 background:NO];
+    
+    textVC.view.position = ccp([sentenceView bounds].size.width / 2, [sentenceView bounds].size.height);
+    
+    [layer addChild:textVC.view];
+
+    [textVC release];
    
-    CCLabelBMFont *lab = [[CCLabelBMFont alloc] initWithString:@"EXAMPLE OF AN IMAGE FILE USED TO DRAW A LABEL" fntFile:@"camb40.fnt"];
-    CCLabelBMFont *lab2 = [[CCLabelBMFont alloc] initWithString:@"EACH CHAR CAN BE MANIPULATED SEPERATELY" fntFile:@"camb40.fnt"];
+    /*
+    CCLabelBMFont *lab = [[CCLabelBMFont alloc] initWithString:@"EXAMPLE OF AN IMAGE FILE USED TO DRAW A LABEL" fntFile:@"Lucidia30.fnt"];
+    CCLabelBMFont *lab2 = [[CCLabelBMFont alloc] initWithString:@"EACH CHAR CAN BE MANIPULATED SEPERATELY" fntFile:@"Lucidia30.fnt"];
     
     lab.position = ccp(sentenceView.bounds.size.width / 2, sentenceView.bounds.size.height / 2);
     lab2.position = ccp(sentenceView.bounds.size.width / 2, sentenceView.bounds.size.height / 2 - 50);
@@ -195,6 +211,7 @@ const NSUInteger kNumberOfPages = 14;
         id obj2 = [arr2 objectAtIndex:i];
         [obj2 performSelector:@selector(runAction:) withObject:seq2 afterDelay:i / 15.0];
     }
+    */
 }
 
 - (void)viewDidUnload
