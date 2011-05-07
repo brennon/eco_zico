@@ -24,7 +24,7 @@
 - (CGRect)rectInPixels
 {
 	CGSize s = [self boundingBoxInPixels].size;
-	return CGRectMake(-s.width / 2, -s.height / 2, s.width, s.height);
+    return CGRectMake(-(s.width * self.anchorPoint.x) , -(s.height * self.anchorPoint.y), s.width, s.height);
 }
 
 
@@ -42,6 +42,7 @@
 	if ( ![self containsTouchLocation:touch] ) return NO;
 //	
 //	state = kPaddleStateGrabbed;
+    NSLog(@"%@", [self string]);
 	return YES;
 }
 

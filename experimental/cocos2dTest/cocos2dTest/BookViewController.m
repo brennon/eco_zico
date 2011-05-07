@@ -78,7 +78,13 @@ const NSUInteger kNumberOfPages = 14;
     }
     
     //temp
-    loadOfText = @"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape.";
+    loadOfText = @"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. Another"@" could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it.";
+    
+    
+    
+    
+    //
+    //
     
     CGSize winsize = [[UIScreen mainScreen]applicationFrame].size;
     
@@ -155,18 +161,18 @@ const NSUInteger kNumberOfPages = 14;
 	[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
     
 	CCScene *scene = [CCScene node];    
-    CCLayerColor *layer = [CCLayerColor layerWithColor:ccc4(0, 0, 0, 255)];    
-    [scene addChild:layer];
+   // CCLayerColor *layer = [CCLayerColor layerWithColor:ccc4(0, 0, 0, 255)];    
+   // [scene addChild:layer];
     
     [[CCDirector sharedDirector] runWithScene: scene];
     
     
     
-    TextViewController *textVC = [[TextViewController alloc] initWithMessage:loadOfText size:[sentenceView bounds].size fontSize:35 background:NO];
+    TextViewController *textVC = [[TextViewController alloc] initWithText:loadOfText];
     
-    textVC.view.position = ccp([sentenceView bounds].size.width / 2, [sentenceView bounds].size.height);
+    //textVC.view.position = ccp([sentenceView bounds].size.width / 2, [sentenceView bounds].size.height / 2);
     
-    [layer addChild:textVC.view];
+    [scene addChild:textVC.view];
 
     [textVC release];
    
