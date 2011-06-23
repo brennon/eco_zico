@@ -27,7 +27,7 @@
  *
  */
 
-#import "CCNode.h"
+#import "CCSpriteSheet.h"
 
 
 @class CCTMXLayer;

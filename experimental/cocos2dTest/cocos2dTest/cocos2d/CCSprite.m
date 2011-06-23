@@ -27,6 +27,7 @@
 
 #import "ccConfig.h"
 #import "CCSpriteBatchNode.h"
+#import "CCSpriteSheet.h"
 #import "CCSprite.h"
 #import "CCSpriteFrame.h"
 #import "CCSpriteFrameCache.h"
@@ -107,6 +108,12 @@ struct transformValues_ {
 	return [self spriteWithSpriteFrame:frame];
 }
 
+// XXX: deprecated
++(id)spriteWithCGImage:(CGImageRef)image
+{
+	return [[[self alloc] initWithCGImage:image] autorelease];
+}
+
 +(id)spriteWithCGImage:(CGImageRef)image key:(NSString*)key
 {
 	return [[[self alloc] initWithCGImage:image key:key] autorelease];
@@ -116,6 +123,10 @@ struct transformValues_ {
 {
 	return [[[self alloc] initWithBatchNode:batchNode rect:rect] autorelease];
 }
++(id) spriteWithSpriteSheet:(CCSpriteSheetInternalOnly*)spritesheet rect:(CGRect)rect // XXX DEPRECATED
+{
+	return [self spriteWithBatchNode:spritesheet rect:rect];
+}
 
 -(id) init
 {
@@ -123,7 +134,7 @@ struct transformValues_ {
 		dirty_ = recursiveDirty_ = NO;
 		
 		// by default use "Self Render".
-		// if the sprite is added to a batchnode, then it will automatically switch to "batchnode Render"
+		// if the sprite is added to an SpriteSheet, then it will automatically switch to "SpriteSheet Render"
 		[self useSelfRender];
 		
 		opacityModifyRGB_			= YES;
@@ -284,6 +295,11 @@ struct transformValues_ {
 	return ret;
 }
 
+-(id) initWithSpriteSheet:(CCSpriteSheetInternalOnly*)spritesheet rect:(CGRect)rect // XXX DEPRECATED
+{
+	return [self initWithBatchNode:spritesheet rect:rect];
+}
+
 - (NSString*) description
 {
 	return [NSString stringWithFormat:@"<%@ = %08X | Rect = (%.2f,%.2f,%.2f,%.2f) | tag = %i | atlasIndex = %i>", [self class], self,
@@ -324,6 +340,10 @@ struct transformValues_ {
 	textureAtlas_ = [batchNode textureAtlas]; // weak ref
 	batchNode_ = batchNode; // weak ref
 }
+-(void) useSpriteSheetRender:(CCSpriteSheetInternalOnly*)spriteSheet // XXX DEPRECATED
+{
+	[self useBatchNode:spriteSheet];
+}
 
 -(void) initAnimationDictionary
 {
@@ -357,7 +377,7 @@ struct transformValues_ {
 	offsetPositionInPixels_.y = relativeOffsetInPixels.y + (contentSizeInPixels_.height - rectInPixels_.size.height) / 2;
 	
 	
-	// rendering using batch node
+	// rendering using SpriteSheet
 	if( usesBatchNode_ ) {
 		// update dirty_, don't update recursiveDirty_
 		dirty_ = YES;

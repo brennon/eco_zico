@@ -1,0 +1,27 @@
+//
+//  BookViewController.h
+//  EcoZico
+//
+//  Created by Brennon Bortz and Donal O'Brien on 21/04/2011.
+//  Copyright 2011 Brennon Bortz and Donal O'Brien. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "EZPageView.h"
+
+@interface EZBookViewController : UIViewController 
+{
+    IBOutlet EZPageView *pageScrollView;
+    UIView *sentenceView;
+    
+    //TEMP - page text
+    NSString *loadOfText;
+}
+
+@property (nonatomic, retain)NSString *loadOfText;
+
+@property (nonatomic, retain) IBOutlet EZPageView *pageScrollView;
+
+-(void)attachCocos2dView;
+
+@end

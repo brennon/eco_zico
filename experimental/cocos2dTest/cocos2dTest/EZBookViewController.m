@@ -6,15 +6,15 @@
 //  Copyright 2011 Brennon Bortz and Donal O'Brien. All rights reserved.
 //
 
-#import "BookViewController.h"
-//#import "HelloWorldLayer.h"
+#import "EZBookViewController.h"
+#import "EZTextViewController.h"
 #import "cocos2d.h"
 
-@implementation BookViewController
+@implementation EZBookViewController
 
 const NSUInteger kNumberOfPages = 14;
 
-@synthesize pageScrollView;
+@synthesize pageScrollView, loadOfText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -77,23 +77,28 @@ const NSUInteger kNumberOfPages = 14;
         [view release];
     }
     
-    CGSize winsize = [[UIScreen mainScreen]applicationFrame].size;
+    //TEMP - page text
+    self.loadOfText = @"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. ";
     
+    //calc size for view to which to attach cocos2d    
+    CGSize winsize = [[UIScreen mainScreen]applicationFrame].size;    
     float heightOfSentenceView = winsize.width - pageScrollView.frame.origin.y - portalHeight;
     
     sentenceView = [[UIView alloc] initWithFrame:CGRectMake(pageScrollView.frame.origin.x, pageScrollView.frame.origin.y + portalHeight, portalWidth, heightOfSentenceView)];
     
-    sentenceView.backgroundColor = [UIColor whiteColor];    
-    
     [self.view addSubview:sentenceView];
     [sentenceView release];
     
-    [self attachCocos2dViewAndRunLabelActions];
+    //attach cocos2d to the view
+    [self attachCocos2dView];
+    
+    //TEMP - pass text to the page
+    pageScrollView.text = loadOfText;
 
 }
 
 
--(void)attachCocos2dViewAndRunLabelActions
+-(void)attachCocos2dView
 {
 	
 	// Try to use CADisplayLink director
@@ -151,50 +156,13 @@ const NSUInteger kNumberOfPages = 14;
 	// You can change anytime.
 	[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
     
-	CCScene *scene = [CCScene node];
+    //start with an empty scene
+    CCScene *temp = [CCScene node];
+    CCLayer *tempL = [CCLayer node];
+    [temp addChild:tempL];
     
-    CCLayerColor *layer = [CCLayerColor layerWithColor:ccc4(255, 255, 255, 255)];
-   
-    CCLabelBMFont *lab = [[CCLabelBMFont alloc] initWithString:@"EXAMPLE OF AN IMAGE FILE USED TO DRAW A LABEL" fntFile:@"camb40.fnt"];
-    CCLabelBMFont *lab2 = [[CCLabelBMFont alloc] initWithString:@"EACH CHAR CAN BE MANIPULATED SEPERATELY" fntFile:@"camb40.fnt"];
+    [director runWithScene:temp];
     
-    lab.position = ccp(sentenceView.bounds.size.width / 2, sentenceView.bounds.size.height / 2);
-    lab2.position = ccp(sentenceView.bounds.size.width / 2, sentenceView.bounds.size.height / 2 - 50);
-    
-    [layer addChild:lab];
-    [layer addChild:lab2];
-    
-    [lab release];
-    [lab2 release];
-    
-    [scene addChild:layer];
-    
-    [[CCDirector sharedDirector] runWithScene: scene];
-    
-    //arrays of individual sprites from the lables created above. 
-    //these can then be manipulated seperately
-    CCArray *arr = [lab descendants];
-    CCArray *arr2 = [lab2 descendants];
-
-    //lots of actions to choose from. these two loops do a fancy scale and rotate action on each character individually. 
-    for (int i = 0; i < [arr count]; i++)
-    {
-        id scale = [CCScaleBy actionWithDuration:1 scaleX:1.1 scaleY:1.5];
-        CCSequence *seq = [CCSequence actionOne:scale two:[scale reverse]];
-        CCRepeat *rep = [CCRepeatForever actionWithAction:seq];
-
-        id obj = [arr objectAtIndex:i];
-        [obj performSelector:@selector(runAction:) withObject:rep afterDelay:i / 15.0];
-    }
-    
-    for (int i = 0; i < [arr2 count]; i++)
-    {
-        id rot = [CCRotateBy actionWithDuration:1 angle:360];
-        CCSequence *seq2 = [CCSequence actionOne:rot two:[rot reverse]];
-        
-        id obj2 = [arr2 objectAtIndex:i];
-        [obj2 performSelector:@selector(runAction:) withObject:seq2 afterDelay:i / 15.0];
-    }
 }
 
 - (void)viewDidUnload
