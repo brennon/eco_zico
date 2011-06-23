@@ -103,7 +103,7 @@ Class nextTransition()
     
     [[CCDirector sharedDirector] replaceScene:[nextTrans transitionWithDuration:0.25 scene:nextScene]];
 
-    transitionLabel.text = [NSString stringWithFormat:@"Trans name: %@", NSStringFromClass(nextTrans)];
+    transitionLabel.text = [NSString stringWithFormat:@"Transition number: %i", sceneIdx];
     
 }
 

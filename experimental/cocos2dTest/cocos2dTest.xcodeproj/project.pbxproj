@@ -223,7 +223,7 @@
 		2E9C67FC136D89EE00F2844D /* CJSONSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CJSONSerializer.m; path = libs/TouchJSON/JSON/CJSONSerializer.m; sourceTree = "<group>"; };
 		2E9C67FF136D89EE00F2844D /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		2E9C6800136D89EE00F2844D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2E9C6811136D90E700F2844D /* EZBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = EZBookViewController.h; sourceTree = "<group>"; };
+		2E9C6811136D90E700F2844D /* EZBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZBookViewController.h; sourceTree = "<group>"; };
 		2E9C6812136D90E700F2844D /* EZBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZBookViewController.m; sourceTree = "<group>"; };
 		2E9C6813136D90E700F2844D /* EZBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZBookViewController.xib; sourceTree = "<group>"; };
 		2E9C6814136D90E800F2844D /* eco-page_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_1.png"; sourceTree = "<group>"; };
