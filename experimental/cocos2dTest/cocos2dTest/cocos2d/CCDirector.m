@@ -179,7 +179,7 @@ static CCDirector *_sharedDirector = nil;
 	[self setProjection: projection_];
 	
 	// set other opengl default values
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	
 #if CC_DIRECTOR_FAST_FPS
     if (!FPSLabel_) {

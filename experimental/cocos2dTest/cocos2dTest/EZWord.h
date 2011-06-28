@@ -19,4 +19,8 @@
 @property (nonatomic, retain) NSString *word;
 @property float seekPoint;
 
+-(void)runWordOnAnim;
+-(void)runWordOffAnim;
+
+
 @end

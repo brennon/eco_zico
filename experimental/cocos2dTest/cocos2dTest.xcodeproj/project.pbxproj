@@ -11,6 +11,7 @@
 		2E3A29B313748E6100638289 /* Lucidia30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E3A29B113748E6100638289 /* Lucidia30.png */; };
 		2E3A29C21374925400638289 /* EZTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A29C11374925400638289 /* EZTextViewController.m */; };
 		2E3A29C5137493B600638289 /* EZWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A29C4137493B600638289 /* EZWord.m */; };
+		2E8F5EBF13B8EB9A0073F6E9 /* EZParagraphTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8F5EBE13B8EB990073F6E9 /* EZParagraphTransition.m */; };
 		2E943AE51375ED900021D02F /* EZPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E943AE41375ED900021D02F /* EZPageView.m */; };
 		2E9C66A7136D89EA00F2844D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9C66A6136D89EA00F2844D /* QuartzCore.framework */; };
 		2E9C66A9136D89EA00F2844D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9C66A8136D89EA00F2844D /* OpenGLES.framework */; };
@@ -69,8 +70,6 @@
 		2E9C6834136D90EB00F2844D /* EcoZicoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C6823136D90EB00F2844D /* EcoZicoAppDelegate.m */; };
 		2E9C6837136D9CEB00F2844D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C6835136D9CEB00F2844D /* InfoPlist.strings */; };
 		2E9C6838136D9CEB00F2844D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C6836136D9CEB00F2844D /* MainWindow.xib */; };
-		2E9C683B136DA98300F2844D /* camb40.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C6839136DA98300F2844D /* camb40.fnt */; };
-		2E9C683C136DA98300F2844D /* camb40fx1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C683A136DA98300F2844D /* camb40fx1.png */; };
 		2EA1652713773B0D008938F9 /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1647C13773B0D008938F9 /* CCAction.m */; };
 		2EA1652813773B0D008938F9 /* CCActionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1647E13773B0D008938F9 /* CCActionCamera.m */; };
 		2EA1652913773B0D008938F9 /* CCActionEase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1648013773B0D008938F9 /* CCActionEase.m */; };
@@ -149,6 +148,7 @@
 		2EA1657213773B0D008938F9 /* TGAlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1652013773B0D008938F9 /* TGAlib.m */; };
 		2EA1657313773B0D008938F9 /* TransformUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1652213773B0D008938F9 /* TransformUtils.m */; };
 		2EA1657413773B0D008938F9 /* ZipUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1652613773B0D008938F9 /* ZipUtils.m */; };
+		2EC5F90213B7659F001F944F /* zico_audio-page_02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2EC5F90113B7659F001F944F /* zico_audio-page_02.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +158,8 @@
 		2E3A29C11374925400638289 /* EZTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTextViewController.m; sourceTree = "<group>"; };
 		2E3A29C3137493B600638289 /* EZWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZWord.h; sourceTree = "<group>"; };
 		2E3A29C4137493B600638289 /* EZWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZWord.m; sourceTree = "<group>"; };
+		2E8F5EBD13B8EB990073F6E9 /* EZParagraphTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZParagraphTransition.h; sourceTree = "<group>"; };
+		2E8F5EBE13B8EB990073F6E9 /* EZParagraphTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZParagraphTransition.m; sourceTree = "<group>"; };
 		2E943AE31375ED8F0021D02F /* EZPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPageView.h; sourceTree = "<group>"; };
 		2E943AE41375ED900021D02F /* EZPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPageView.m; sourceTree = "<group>"; };
 		2E9C66A2136D89EA00F2844D /* cocos2dTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cocos2dTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,8 +246,6 @@
 		2E9C6823136D90EB00F2844D /* EcoZicoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoZicoAppDelegate.m; sourceTree = "<group>"; };
 		2E9C6835136D9CEB00F2844D /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		2E9C6836136D9CEB00F2844D /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		2E9C6839136DA98300F2844D /* camb40.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = camb40.fnt; path = Resources/camb40.fnt; sourceTree = "<group>"; };
-		2E9C683A136DA98300F2844D /* camb40fx1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camb40fx1.png; path = Resources/camb40fx1.png; sourceTree = "<group>"; };
 		2E9C69B7136DFCB800F2844D /* GameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		2EA1647B13773B0D008938F9 /* CCAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAction.h; sourceTree = "<group>"; };
 		2EA1647C13773B0D008938F9 /* CCAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAction.m; sourceTree = "<group>"; };
@@ -415,6 +415,7 @@
 		2EA1652413773B0D008938F9 /* utlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utlist.h; sourceTree = "<group>"; };
 		2EA1652513773B0D008938F9 /* ZipUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipUtils.h; sourceTree = "<group>"; };
 		2EA1652613773B0D008938F9 /* ZipUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipUtils.m; sourceTree = "<group>"; };
+		2EC5F90113B7659F001F944F /* zico_audio-page_02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_02.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,8 +472,6 @@
 		2E9C66B6136D89EA00F2844D /* cocos2dTest */ = {
 			isa = PBXGroup;
 			children = (
-				2E9C6839136DA98300F2844D /* camb40.fnt */,
-				2E9C683A136DA98300F2844D /* camb40fx1.png */,
 				2E9C6822136D90EB00F2844D /* EcoZicoAppDelegate.h */,
 				2E9C6823136D90EB00F2844D /* EcoZicoAppDelegate.m */,
 				2E9C6811136D90E700F2844D /* EZBookViewController.h */,
@@ -481,23 +480,11 @@
 				2E943AE41375ED900021D02F /* EZPageView.m */,
 				2E3A29C01374925400638289 /* EZTextViewController.h */,
 				2E3A29C11374925400638289 /* EZTextViewController.m */,
+				2E8F5EBD13B8EB990073F6E9 /* EZParagraphTransition.h */,
+				2E8F5EBE13B8EB990073F6E9 /* EZParagraphTransition.m */,
 				2E3A29C3137493B600638289 /* EZWord.h */,
 				2E3A29C4137493B600638289 /* EZWord.m */,
 				2E9C69B7136DFCB800F2844D /* GameConfig.h */,
-				2E9C6814136D90E800F2844D /* eco-page_1.png */,
-				2E9C6815136D90E800F2844D /* eco-page_2.png */,
-				2E9C6816136D90E800F2844D /* eco-page_3.png */,
-				2E9C6817136D90E800F2844D /* eco-page_4.png */,
-				2E9C6818136D90E900F2844D /* eco-page_5.png */,
-				2E9C6819136D90E900F2844D /* eco-page_6.png */,
-				2E9C681A136D90E900F2844D /* eco-page_7.png */,
-				2E9C681B136D90E900F2844D /* eco-page_8.png */,
-				2E9C681C136D90EA00F2844D /* eco-page_9.png */,
-				2E9C681D136D90EA00F2844D /* eco-page_10.png */,
-				2E9C681E136D90EA00F2844D /* eco-page_11.png */,
-				2E9C681F136D90EA00F2844D /* eco-page_12.png */,
-				2E9C6820136D90EA00F2844D /* eco-page_13.png */,
-				2E9C6821136D90EA00F2844D /* eco-page_14.png */,
 				2E9C66B7136D89EB00F2844D /* Resources */,
 				2EA1647A13773B0D008938F9 /* cocos2d */,
 				2E9C67BC136D89ED00F2844D /* CocosDenshion */,
@@ -512,6 +499,8 @@
 		2E9C66B7136D89EB00F2844D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2EEAAD1813B9FB7D00E7AEFD /* Page Images */,
+				2EC5F8FD13B76445001F944F /* Audio */,
 				2E3A29B013748E6100638289 /* Lucidia30.fnt */,
 				2E3A29B113748E6100638289 /* Lucidia30.png */,
 				2E9C6813136D90E700F2844D /* EZBookViewController.xib */,
@@ -817,6 +806,35 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		2EC5F8FD13B76445001F944F /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				2EC5F90113B7659F001F944F /* zico_audio-page_02.wav */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		2EEAAD1813B9FB7D00E7AEFD /* Page Images */ = {
+			isa = PBXGroup;
+			children = (
+				2E9C6814136D90E800F2844D /* eco-page_1.png */,
+				2E9C6815136D90E800F2844D /* eco-page_2.png */,
+				2E9C6816136D90E800F2844D /* eco-page_3.png */,
+				2E9C6817136D90E800F2844D /* eco-page_4.png */,
+				2E9C6818136D90E900F2844D /* eco-page_5.png */,
+				2E9C6819136D90E900F2844D /* eco-page_6.png */,
+				2E9C681A136D90E900F2844D /* eco-page_7.png */,
+				2E9C681B136D90E900F2844D /* eco-page_8.png */,
+				2E9C681C136D90EA00F2844D /* eco-page_9.png */,
+				2E9C681D136D90EA00F2844D /* eco-page_10.png */,
+				2E9C681E136D90EA00F2844D /* eco-page_11.png */,
+				2E9C681F136D90EA00F2844D /* eco-page_12.png */,
+				2E9C6820136D90EA00F2844D /* eco-page_13.png */,
+				2E9C6821136D90EA00F2844D /* eco-page_14.png */,
+			);
+			name = "Page Images";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -893,10 +911,9 @@
 				2E9C6833136D90EB00F2844D /* eco-page_14.png in Resources */,
 				2E9C6837136D9CEB00F2844D /* InfoPlist.strings in Resources */,
 				2E9C6838136D9CEB00F2844D /* MainWindow.xib in Resources */,
-				2E9C683B136DA98300F2844D /* camb40.fnt in Resources */,
-				2E9C683C136DA98300F2844D /* camb40fx1.png in Resources */,
 				2E3A29B213748E6100638289 /* Lucidia30.fnt in Resources */,
 				2E3A29B313748E6100638289 /* Lucidia30.png in Resources */,
+				2EC5F90213B7659F001F944F /* zico_audio-page_02.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1011,6 +1028,7 @@
 				2EA1657213773B0D008938F9 /* TGAlib.m in Sources */,
 				2EA1657313773B0D008938F9 /* TransformUtils.m in Sources */,
 				2EA1657413773B0D008938F9 /* ZipUtils.m in Sources */,
+				2E8F5EBF13B8EB9A0073F6E9 /* EZParagraphTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

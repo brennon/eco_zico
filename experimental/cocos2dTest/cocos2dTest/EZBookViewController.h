@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "EZPageView.h"
 
+#define PLAY_PAUSE_BUTTON_WIDTH 85
+
 @interface EZBookViewController : UIViewController 
 {
     IBOutlet EZPageView *pageScrollView;
@@ -19,7 +21,6 @@
 }
 
 @property (nonatomic, retain)NSString *loadOfText;
-
 @property (nonatomic, retain) IBOutlet EZPageView *pageScrollView;
 
 -(void)attachCocos2dView;
