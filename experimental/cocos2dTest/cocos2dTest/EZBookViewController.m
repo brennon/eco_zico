@@ -77,14 +77,17 @@ const NSUInteger kNumberOfPages = 14;
         [view release];
     }
     
-    //TEMP - page text
-    self.loadOfText = @"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. "@"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. "@"Another could make fireballs by clicking his fingers. One time, he had thrown a fireball at the teacher. She hadn't been very happy about it. ";
+    //TEMP - page text    
+    self.loadOfText = @"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. Another could make fireballs by clicking his fingers. One time, he'd thrown a fireball at the teacher. She hadn't been very happy about it. But Zico had yet to discover his superpower. It was so embarrassing. The other kids at school made fun of him. \"Zico has no superpower, Zico has no superpower\", they chanted.";
+
     
     //calc size for view to which to attach cocos2d    
     CGSize winsize = [[UIScreen mainScreen]applicationFrame].size;    
     float heightOfSentenceView = winsize.width - pageScrollView.frame.origin.y - portalHeight;
     
-    sentenceView = [[UIView alloc] initWithFrame:CGRectMake(pageScrollView.frame.origin.x, pageScrollView.frame.origin.y + portalHeight, portalWidth, heightOfSentenceView)];
+    sentenceView = [[UIView alloc] initWithFrame:CGRectMake(pageScrollView.frame.origin.x, pageScrollView.frame.origin.y + portalHeight, portalWidth - PLAY_PAUSE_BUTTON_WIDTH, heightOfSentenceView)];
+    
+//    sentenceView.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:sentenceView];
     [sentenceView release];
@@ -149,20 +152,21 @@ const NSUInteger kNumberOfPages = 14;
 	// make the OpenGLView a child of sentenceView
 	//[viewController setView:glView];
     [sentenceView addSubview:glView];
-	
-	
+        
 	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
 	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
 	// You can change anytime.
 	[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
     
+    //set default opengl color to white
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    
     //start with an empty scene
     CCScene *temp = [CCScene node];
-    CCLayer *tempL = [CCLayer node];
+    CCLayerColor *tempL = [CCLayerColor layerWithColor:ccc4(255, 255, 255, 255)];
     [temp addChild:tempL];
     
-    [director runWithScene:temp];
-    
+    [director runWithScene:temp];    
 }
 
 - (void)viewDidUnload

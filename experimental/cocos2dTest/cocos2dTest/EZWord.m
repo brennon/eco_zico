@@ -14,6 +14,20 @@
 @synthesize word, seekPoint;
 
 
+-(id) initWithString:(NSString*)theString fntFile:(NSString*)fntFile
+{
+    if((self = [super initWithString:theString fntFile:fntFile]))
+    {
+        word = [theString copy];
+        
+        color_ = ccc3(0,0,0);
+    }
+    
+    return self;
+}
+
+#pragma mark - Touch handling mehods
+
 -(void)onEnter
 {
     [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
@@ -47,10 +61,24 @@
 }
 
 
+#pragma mark - Animation mehods
+
+-(void)runWordOnAnim
+{
+    self.color = ccc3(255,0,0);
+}
+
+
+-(void)runWordOffAnim
+{
+    self.color = ccc3(0,0,0);
+}
+
+
+
 -(void)dealloc
 {
-    [word release];
-    
+    [word release];    
     [super dealloc];
 }
 

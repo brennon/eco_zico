@@ -10,6 +10,7 @@
 #import "EZPageView.h"
 #import "EZWord.h"
 
+
 #define EZ_MAX_LINES 3
 
 @implementation EZTextViewController
@@ -19,15 +20,13 @@
 
 -(id)initWithPage:(EZPageView*)pageView;
 {
-	if((self = [super init]))
+	if((self = [super initWithColor:ccc4(255, 255, 255, 255)]))
 	{    
-        page = pageView;        		
+        page = pageView;
     }
 	
 	return self;
 }
-
-
 
 
 -(void)layoutWords
@@ -49,11 +48,9 @@
     //whether we are at the start of the line
     startOFLine = NO;
 
-    
     //size of the drawable area
-    s = [[CCDirector sharedDirector] winSize];
+    s = [[CCDirector sharedDirector] winSize];       
     
-
     // find the idx of the word at the end of the third line. work backwards from there to find the idx of the word with the first full-stop '.'
     // layout the words to that point.
     
@@ -104,9 +101,6 @@
         }
  
 	}	    
-    
-    if(word != [page.words lastObject])
-       [self performSelector:@selector(paraNarrationDidFinish) withObject:nil afterDelay:4];
 }
 
 
@@ -176,16 +170,104 @@
     return returnVal;    
 }
 
-//temp
--(void)paraNarrationDidFinish
+
+-(void)setWordPositionForTime:(NSTimeInterval)time
+{    
+    for (int i = 0; i < [page.words count]; i++)
+    {
+        if ([(EZWord*)[page.words objectAtIndex:i]seekPoint] >= time)
+        {
+            wordPositionCounter = i;
+            
+            page.player.currentTime = [(EZWord*)[page.words objectAtIndex:wordPositionCounter] seekPoint];
+            
+            break;
+        }
+    }
+}
+
+
+-(void)playPause
 {
+    //pause
+    if([page.player isPlaying])
+    {
+        NSLog(@"tv pause");
+        [timer invalidate];
+        timer = nil;
+    }
+    //play
+    else 
+    {
+        NSLog(@"tv play");
+        //start a timer which polls the avaudio player obj for it's current position.
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(pollPlaybackTime) userInfo:nil repeats:YES];
+    }
+}
+
+
+-(void)pollPlaybackTime
+{
+    currentPlaybackPosition = [page.player currentTime];// current playback pos
+    
+    if(wordPositionCounter < [page.words count])
+    {
+        if(currentPlaybackPosition >= [(EZWord*)[page.words objectAtIndex:wordPositionCounter] seekPoint])
+        {
+            if (wordPositionCounter > 0) 
+            {
+                [[page.words objectAtIndex:wordPositionCounter - 1] runWordOffAnim];
+            }            
+            
+            //if playback pos is beyond next word in word array set it as the current word
+            currentWord = [page.words objectAtIndex:wordPositionCounter];
+            
+            //do some animation
+            [currentWord runWordOnAnim];
+            
+            //inc the counter
+            wordPositionCounter++;
+        }
+        
+        if(wordPositionCounter > idxStopPoint && wordPositionCounter < [page.words count] && !isParaNarrationFinished)
+        {     
+            isParaNarrationFinished = YES;//only allow this block to be called once
+            
+            NSLog(@"tv pollPlaybackTime wordPositionCounter > idxStopPoint");
+            
+            [self playPause];
+                        
+            double timeToWait = [[page.words objectAtIndex:wordPositionCounter] seekPoint] - currentWord.seekPoint;
+            
+            [self performSelector:@selector(paraNarrationDidFinish) withObject:nil afterDelay:timeToWait];
+        }
+    }
+    
+}
+
+//not used
+-(void)setPlayPosition:(NSTimeInterval)pos
+{
+    page.player.currentTime = page.player.duration / pos;
+}
+
+
+-(void)paraNarrationDidFinish
+{    
+    
+    NSLog(@"tv paraNarrationDidFinish");
+
+    [currentWord runWordOffAnim];
+    
     [page textViewDidFinishNarratingParagraph];    
 }
 
 
 -(void)dealloc
 {
-	[super dealloc];	
+    NSLog(@"tv dealloc");
+    
+	[super dealloc];
 }
 
 
