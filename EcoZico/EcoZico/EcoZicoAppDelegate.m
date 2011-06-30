@@ -7,7 +7,7 @@
 //
 
 #import "EcoZicoAppDelegate.h"
-#import "BookViewController.h"
+#import "EZBookViewController.h"
 
 @implementation EcoZicoAppDelegate
 
@@ -16,7 +16,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    bookViewController = [[BookViewController alloc] init];
+    bookViewController = [[EZBookViewController alloc] init];
     [self.window setRootViewController:bookViewController];
     [self.window makeKeyAndVisible];
     return YES;

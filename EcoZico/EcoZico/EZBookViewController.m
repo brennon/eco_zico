@@ -6,13 +6,14 @@
 //  Copyright 2011 Brennon Bortz and Donal O'Brien. All rights reserved.
 //
 
-#import "BookViewController.h"
+#import "EZBookViewController.h"
+#import "EZPageView.h"
 
-@implementation BookViewController
+@implementation EZBookViewController
 
 const NSUInteger kNumberOfPages = 14;
 
-@synthesize pageScrollView;
+@synthesize ezPageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,8 +26,8 @@ const NSUInteger kNumberOfPages = 14;
 
 - (void)dealloc
 {
-    [pageScrollView release];
-    pageScrollView = nil;
+    [ezPageView release];
+    ezPageView = nil;
     [super dealloc];
 }
 
@@ -45,33 +46,33 @@ const NSUInteger kNumberOfPages = 14;
     [super viewDidLoad];    
 
     self.view.backgroundColor = [UIColor blackColor];        
-    pageScrollView.backgroundColor = [UIColor blackColor];
+    ezPageView.backgroundColor = [UIColor blackColor];
     
-    // Match contentView to pageScrollView's frame
-    pageScrollView.contentSize = CGSizeMake(pageScrollView.frame.size.width * kNumberOfPages, pageScrollView.frame.size.height);
+    // Match contentView to ezPageView's frame
+    ezPageView.contentSize = CGSizeMake(ezPageView.frame.size.width * kNumberOfPages, ezPageView.frame.size.height);
     
-    // Align contentView and pageScrollView origins
-    pageScrollView.contentOffset = CGPointZero;
+    // Align contentView and ezPageView origins
+    ezPageView.contentOffset = CGPointZero;
     
     // Needed to lock scrolling to pages
-    pageScrollView.pagingEnabled = YES;
+    ezPageView.pagingEnabled = YES;
     
     // This stops the possibility of scrolling past the beginning or end of the book
-    // pageScrollView.bounces = NO;
+    // ezPageView.bounces = NO;
     
     // For ease in referencing sizes
-    CGFloat portalHeight = pageScrollView.frame.size.height;
-    CGFloat portalWidth = pageScrollView.frame.size.width;
+    CGFloat portalHeight = ezPageView.frame.size.height;
+    CGFloat portalWidth = ezPageView.frame.size.width;
     
     // Manually load images into contentView -- this will change once Book / Page classes are implemented
     for (NSUInteger i = 0; i <= kNumberOfPages; i++) {
         
-        // Make all frames the size of pageScrollView's frame, but shifted by multiples of its width
-        CGRect frame = CGRectMake(pageScrollView.bounds.origin.x + portalWidth * i, pageScrollView.bounds.origin.y, portalWidth, portalHeight);
+        // Make all frames the size of ezPageView's frame, but shifted by multiples of its width
+        CGRect frame = CGRectMake(ezPageView.bounds.origin.x + portalWidth * i, ezPageView.bounds.origin.y, portalWidth, portalHeight);
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"eco-page_%d.png", i+1]];
         UIImageView *view = [[UIImageView alloc] initWithImage:image];
         view.frame = frame;
-        [pageScrollView addSubview:view];
+        [ezPageView addSubview:view];
         [view release];
     }
 }
@@ -81,7 +82,7 @@ const NSUInteger kNumberOfPages = 14;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    pageScrollView = nil;
+    ezPageView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

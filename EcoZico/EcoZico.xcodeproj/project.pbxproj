@@ -23,6 +23,7 @@
 		3A74D6841361E88600155817 /* eco-page_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D6761361E88500155817 /* eco-page_12.png */; };
 		3A74D6851361E88600155817 /* eco-page_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D6771361E88600155817 /* eco-page_13.png */; };
 		3A74D6861361E88600155817 /* eco-page_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D6781361E88600155817 /* eco-page_14.png */; };
+		3A97DD0113BCE4350010CDC6 /* EZPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A97DD0013BCE4350010CDC6 /* EZPageView.m */; };
 		3AD4B81F1360961C00000919 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B81E1360961C00000919 /* UIKit.framework */; };
 		3AD4B8211360961C00000919 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B8201360961C00000919 /* Foundation.framework */; };
 		3AD4B8231360961C00000919 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B8221360961C00000919 /* CoreGraphics.framework */; };
@@ -33,7 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A74D665136191B500155817 /* EZBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = EZBookViewController.h; sourceTree = "<group>"; };
+		3A74D665136191B500155817 /* EZBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZBookViewController.h; sourceTree = "<group>"; };
 		3A74D666136191B500155817 /* EZBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZBookViewController.m; sourceTree = "<group>"; };
 		3A74D667136191B500155817 /* EZBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZBookViewController.xib; sourceTree = "<group>"; };
 		3A74D66B1361E88500155817 /* eco-page_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_1.png"; sourceTree = "<group>"; };
@@ -50,6 +51,8 @@
 		3A74D6761361E88500155817 /* eco-page_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_12.png"; sourceTree = "<group>"; };
 		3A74D6771361E88600155817 /* eco-page_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_13.png"; sourceTree = "<group>"; };
 		3A74D6781361E88600155817 /* eco-page_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_14.png"; sourceTree = "<group>"; };
+		3A97DCFF13BCE4350010CDC6 /* EZPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPageView.h; sourceTree = "<group>"; };
+		3A97DD0013BCE4350010CDC6 /* EZPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPageView.m; sourceTree = "<group>"; };
 		3AD4B81A1360961C00000919 /* EcoZico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoZico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD4B81E1360961C00000919 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AD4B8201360961C00000919 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -131,6 +134,8 @@
 				3A74D665136191B500155817 /* EZBookViewController.h */,
 				3A74D666136191B500155817 /* EZBookViewController.m */,
 				3A74D667136191B500155817 /* EZBookViewController.xib */,
+				3A97DCFF13BCE4350010CDC6 /* EZPageView.h */,
+				3A97DD0013BCE4350010CDC6 /* EZPageView.m */,
 				3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */,
 				3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */,
 				3AD4B8301360961C00000919 /* MainWindow.xib */,
@@ -231,6 +236,7 @@
 				3AD4B82C1360961C00000919 /* main.m in Sources */,
 				3AD4B82F1360961C00000919 /* EcoZicoAppDelegate.m in Sources */,
 				3A74D668136191B500155817 /* EZBookViewController.m in Sources */,
+				3A97DD0113BCE4350010CDC6 /* EZPageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

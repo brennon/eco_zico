@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class EZPageView;
 
-@interface BookViewController : UIViewController {
-    IBOutlet UIScrollView *pageScrollView;
+@interface EZBookViewController : UIViewController {
+    IBOutlet EZPageView *ezPageView;
 }
 
-@property (nonatomic, retain) IBOutlet UIScrollView *pageScrollView;
+@property (nonatomic, retain) IBOutlet EZPageView *ezPageView;
 
 @end

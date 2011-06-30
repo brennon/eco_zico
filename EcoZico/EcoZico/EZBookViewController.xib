@@ -89,11 +89,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">pageScrollView</string>
+						<string key="label">ezPageView</string>
 						<reference key="source" ref="841351856"/>
 						<reference key="destination" ref="894241418"/>
 					</object>
-					<int key="connectionID">5</int>
+					<int key="connectionID">6</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -140,14 +140,16 @@
 					<string>-2.CustomClassName</string>
 					<string>2.IBEditorWindowLastContentRect</string>
 					<string>2.IBPluginDependency</string>
+					<string>4.CustomClassName</string>
 					<string>4.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>BookViewController</string>
+					<string>EZBookViewController</string>
 					<string>UIResponder</string>
 					<string>{{353, 156}, {1024, 768}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>EZPageView</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
@@ -163,28 +165,36 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">5</int>
+			<int key="maxID">6</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
-					<string key="className">BookViewController</string>
+					<string key="className">EZBookViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">pageScrollView</string>
-						<string key="NS.object.0">UIScrollView</string>
+						<string key="NS.key.0">ezPageView</string>
+						<string key="NS.object.0">EZPageView</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">pageScrollView</string>
+						<string key="NS.key.0">ezPageView</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">pageScrollView</string>
-							<string key="candidateClassName">UIScrollView</string>
+							<string key="name">ezPageView</string>
+							<string key="candidateClassName">EZPageView</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BookViewController.h</string>
+						<string key="minorKey">./Classes/EZBookViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">EZPageView</string>
+					<string key="superclassName">UIScrollView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/EZPageView.h</string>
 					</object>
 				</object>
 			</object>
