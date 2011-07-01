@@ -19,7 +19,7 @@
 
 const NSUInteger kNumberOfPages = 14;
 
-@synthesize ezPageView;
+@synthesize ezPageView, ezTextView;
 
 #pragma mark - EZBookViewController lifecycle
 

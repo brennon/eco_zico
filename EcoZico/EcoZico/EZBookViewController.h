@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class EZPageView;
+@class EZPageView, EZTextView;
 
 @interface EZBookViewController : UIViewController {
     IBOutlet EZPageView *ezPageView;
+    IBOutlet EZTextView *ezTextView;
 }
 
 @property (nonatomic, retain) IBOutlet EZPageView *ezPageView;
+@property (nonatomic, retain) IBOutlet EZTextView *ezTextView;
 
 @end
