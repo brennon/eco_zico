@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10J869</string>
+		<string key="IBDocument.SystemVersion">10J567</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
-		<string key="IBDocument.HIToolboxVersion">461.00</string>
+		<string key="IBDocument.HIToolboxVersion">462.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">301</string>
@@ -187,14 +187,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">pageScrollView</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="894241418"/>
-					</object>
-					<int key="connectionID">5</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">transitionLabel</string>
 						<reference key="source" ref="894241418"/>
 						<reference key="destination" ref="295924466"/>
@@ -235,6 +227,14 @@
 					</object>
 					<int key="connectionID">15</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">ezPageView</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="894241418"/>
+					</object>
+					<int key="connectionID">17</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -261,10 +261,10 @@
 						<reference key="object" ref="766721923"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="894241418"/>
 							<reference ref="295924466"/>
 							<reference ref="539440382"/>
 							<reference ref="657121281"/>
+							<reference ref="894241418"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -348,7 +348,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">16</int>
+			<int key="maxID">17</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -357,13 +357,13 @@
 					<string key="className">EZBookViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">pageScrollView</string>
+						<string key="NS.key.0">ezPageView</string>
 						<string key="NS.object.0">EZPageView</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">pageScrollView</string>
+						<string key="NS.key.0">ezPageView</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">pageScrollView</string>
+							<string key="name">ezPageView</string>
 							<string key="candidateClassName">EZPageView</string>
 						</object>
 					</object>

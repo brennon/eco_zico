@@ -13,7 +13,7 @@
 
 @interface EZBookViewController : UIViewController 
 {
-    IBOutlet EZPageView *pageScrollView;
+    IBOutlet EZPageView *ezPageView;
     UIView *sentenceView;
     
     //TEMP - page text
@@ -21,7 +21,7 @@
 }
 
 @property (nonatomic, retain)NSString *loadOfText;
-@property (nonatomic, retain) IBOutlet EZPageView *pageScrollView;
+@property (nonatomic, retain) IBOutlet EZPageView *ezPageView;
 
 -(void)attachCocos2dView;
 
