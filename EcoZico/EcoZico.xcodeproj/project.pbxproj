@@ -131,13 +131,13 @@
 		3AD4B8241360961C00000919 /* EcoZico */ = {
 			isa = PBXGroup;
 			children = (
+				3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */,
+				3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */,
 				3A74D665136191B500155817 /* EZBookViewController.h */,
 				3A74D666136191B500155817 /* EZBookViewController.m */,
 				3A74D667136191B500155817 /* EZBookViewController.xib */,
 				3A97DCFF13BCE4350010CDC6 /* EZPageView.h */,
 				3A97DD0013BCE4350010CDC6 /* EZPageView.m */,
-				3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */,
-				3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */,
 				3AD4B8301360961C00000919 /* MainWindow.xib */,
 				3AD4B8251360961C00000919 /* Supporting Files */,
 			);

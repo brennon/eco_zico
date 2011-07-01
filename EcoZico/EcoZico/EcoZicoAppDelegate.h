@@ -10,10 +10,10 @@
 @class EZBookViewController;
 
 @interface EcoZicoAppDelegate : NSObject <UIApplicationDelegate> {
-    EZBookViewController *bookViewController;
+    EZBookViewController *ezBookViewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) EZBookViewController *bookViewController;
+@property (nonatomic, retain) EZBookViewController *ezBookViewController;
 
 @end

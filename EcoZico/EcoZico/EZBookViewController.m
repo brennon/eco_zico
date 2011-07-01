@@ -9,11 +9,19 @@
 #import "EZBookViewController.h"
 #import "EZPageView.h"
 
+@interface EZBookViewController ()
+
+-(void)setupPageView; 
+
+@end
+
 @implementation EZBookViewController
 
 const NSUInteger kNumberOfPages = 14;
 
 @synthesize ezPageView;
+
+#pragma mark - EZBookViewController lifecycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,13 +47,35 @@ const NSUInteger kNumberOfPages = 14;
     // Release any cached data, images, etc that aren't in use.
 }
 
-#pragma mark - View lifecycle
+#pragma mark - EZBookview lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];    
+    
+    self.view.backgroundColor = [UIColor blackColor];
+    
+    [self setupPageView];
+}
 
-    self.view.backgroundColor = [UIColor blackColor];        
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+    ezPageView = nil;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Only allow landscape orientations
+	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+}
+
+#pragma mark - EZPageView
+- (void)setupPageView
+{
+    // BEGIN ezPageView SETUP
     ezPageView.backgroundColor = [UIColor blackColor];
     
     // Match contentView to ezPageView's frame
@@ -75,20 +105,6 @@ const NSUInteger kNumberOfPages = 14;
         [ezPageView addSubview:view];
         [view release];
     }
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-    ezPageView = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Only allow landscape orientations
-	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 @end
