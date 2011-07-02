@@ -10,4 +10,6 @@
 
 @interface EZPageView : UIScrollView {}
 
+- (void)setupBookWithNumberofPages:(NSUInteger)count;
+
 @end
