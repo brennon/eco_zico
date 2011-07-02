@@ -15,11 +15,9 @@
 @interface EZBookViewController : UIViewController {
     IBOutlet EZPageView *ezPageView;
     IBOutlet EZTextView *ezTextView;    
-    NSString *loadOfText;
 }
 
 @property (nonatomic, retain) IBOutlet EZPageView *ezPageView;
 @property (nonatomic, retain) IBOutlet EZTextView *ezTextView;
-@property (nonatomic, retain) NSString *loadOfText;
 
 @end

@@ -10,6 +10,8 @@
 
 @implementation EZPageView
 
+#pragma mark - View lifecycle
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

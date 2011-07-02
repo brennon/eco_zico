@@ -15,4 +15,6 @@
 
 @property (nonatomic, retain) NSString *text;
 
+- (void)attachCocos2dToSelf;
+
 @end
