@@ -10,7 +10,9 @@
 
 
 @interface EZTextView : UIView {
-    
+    NSString *text;
 }
+
+@property (nonatomic, retain) NSString *text;
 
 @end

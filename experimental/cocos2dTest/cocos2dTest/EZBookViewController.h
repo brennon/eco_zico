@@ -20,7 +20,7 @@
     NSString *loadOfText;
 }
 
-@property (nonatomic, retain)NSString *loadOfText;
+@property (nonatomic, retain) NSString *loadOfText;
 @property (nonatomic, retain) IBOutlet EZPageView *ezPageView;
 
 -(void)attachCocos2dView;

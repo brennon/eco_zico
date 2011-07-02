@@ -8,8 +8,9 @@
 
 #import "EZTextView.h"
 
-
 @implementation EZTextView
+
+@synthesize text;
 
 - (id)initWithFrame:(CGRect)frame
 {

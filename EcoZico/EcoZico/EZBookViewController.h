@@ -8,14 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+#define PLAY_PAUSE_BUTTON_WIDTH 85
+
 @class EZPageView, EZTextView;
 
 @interface EZBookViewController : UIViewController {
     IBOutlet EZPageView *ezPageView;
-    IBOutlet EZTextView *ezTextView;
+    IBOutlet EZTextView *ezTextView;    
+    NSString *loadOfText;
 }
 
 @property (nonatomic, retain) IBOutlet EZPageView *ezPageView;
 @property (nonatomic, retain) IBOutlet EZTextView *ezTextView;
+@property (nonatomic, retain) NSString *loadOfText;
 
 @end
