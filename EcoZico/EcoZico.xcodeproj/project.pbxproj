@@ -142,6 +142,7 @@
 		3A97DE7913BF0FE80010CDC6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97DE7413BF0FE80010CDC6 /* QuartzCore.framework */; };
 		3ABEDA2413C0D1F200DC40BC /* EZBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEDA2313C0D1F100DC40BC /* EZBook.m */; };
 		3ABEDA2713C0D26A00DC40BC /* EZPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEDA2613C0D26900DC40BC /* EZPage.m */; };
+		3ABEDA2A13C0D30A00DC40BC /* EZWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEDA2913C0D30A00DC40BC /* EZWord.m */; };
 		3AD4B81F1360961C00000919 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B81E1360961C00000919 /* UIKit.framework */; };
 		3AD4B8211360961C00000919 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B8201360961C00000919 /* Foundation.framework */; };
 		3AD4B8231360961C00000919 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B8221360961C00000919 /* CoreGraphics.framework */; };
@@ -402,6 +403,8 @@
 		3ABEDA2313C0D1F100DC40BC /* EZBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZBook.m; sourceTree = "<group>"; };
 		3ABEDA2513C0D26900DC40BC /* EZPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPage.h; sourceTree = "<group>"; };
 		3ABEDA2613C0D26900DC40BC /* EZPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPage.m; sourceTree = "<group>"; };
+		3ABEDA2813C0D30900DC40BC /* EZWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZWord.h; sourceTree = "<group>"; };
+		3ABEDA2913C0D30A00DC40BC /* EZWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZWord.m; sourceTree = "<group>"; };
 		3AD4B81A1360961C00000919 /* EcoZico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoZico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD4B81E1360961C00000919 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AD4B8201360961C00000919 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -838,6 +841,8 @@
 				3ABEDA2313C0D1F100DC40BC /* EZBook.m */,
 				3ABEDA2513C0D26900DC40BC /* EZPage.h */,
 				3ABEDA2613C0D26900DC40BC /* EZPage.m */,
+				3ABEDA2813C0D30900DC40BC /* EZWord.h */,
+				3ABEDA2913C0D30A00DC40BC /* EZWord.m */,
 				3A427B1B13BF3A3E004BF22B /* GameConfig.h */,
 				3AD4B8251360961C00000919 /* Supporting Files */,
 			);
@@ -1056,6 +1061,7 @@
 				3A4286D113BF43F8004BF22B /* CJSONSerializer.m in Sources */,
 				3ABEDA2413C0D1F200DC40BC /* EZBook.m in Sources */,
 				3ABEDA2713C0D26A00DC40BC /* EZPage.m in Sources */,
+				3ABEDA2A13C0D30A00DC40BC /* EZWord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
