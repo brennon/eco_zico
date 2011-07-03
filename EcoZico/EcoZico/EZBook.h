@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface EZBook : NSObject {
     NSArray *pages;    
 }
