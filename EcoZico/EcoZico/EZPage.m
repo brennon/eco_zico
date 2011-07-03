@@ -13,4 +13,23 @@
 
 @synthesize words, audioFilePath;
 
+- (id)initWithWords:(NSArray *)wordArray andAudioFilePath:(NSURL *)path
+{
+    self = [super init];
+    if (self) {
+        self.words = wordArray;
+        self.audioFilePath = path;
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [words release];
+    words = nil;
+    [audioFilePath release];
+    audioFilePath = nil;
+    [super dealloc];
+}
+
 @end
