@@ -140,6 +140,7 @@
 		3A97DE7713BF0FE80010CDC6 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97DE7213BF0FE70010CDC6 /* OpenAL.framework */; };
 		3A97DE7813BF0FE80010CDC6 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97DE7313BF0FE70010CDC6 /* OpenGLES.framework */; };
 		3A97DE7913BF0FE80010CDC6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97DE7413BF0FE80010CDC6 /* QuartzCore.framework */; };
+		3ABEDA2413C0D1F200DC40BC /* EZBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEDA2313C0D1F100DC40BC /* EZBook.m */; };
 		3AD4B81F1360961C00000919 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B81E1360961C00000919 /* UIKit.framework */; };
 		3AD4B8211360961C00000919 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B8201360961C00000919 /* Foundation.framework */; };
 		3AD4B8231360961C00000919 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B8221360961C00000919 /* CoreGraphics.framework */; };
@@ -396,6 +397,8 @@
 		3A97DE7213BF0FE70010CDC6 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		3A97DE7313BF0FE70010CDC6 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		3A97DE7413BF0FE80010CDC6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3ABEDA2213C0D1F100DC40BC /* EZBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZBook.h; sourceTree = "<group>"; };
+		3ABEDA2313C0D1F100DC40BC /* EZBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZBook.m; sourceTree = "<group>"; };
 		3AD4B81A1360961C00000919 /* EcoZico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoZico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD4B81E1360961C00000919 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AD4B8201360961C00000919 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -828,6 +831,8 @@
 				3A97DD0013BCE4350010CDC6 /* EZPageView.m */,
 				3A97DD1213BE2D760010CDC6 /* EZTextView.h */,
 				3A97DD1313BE2D770010CDC6 /* EZTextView.m */,
+				3ABEDA2213C0D1F100DC40BC /* EZBook.h */,
+				3ABEDA2313C0D1F100DC40BC /* EZBook.m */,
 				3A427B1B13BF3A3E004BF22B /* GameConfig.h */,
 				3AD4B8251360961C00000919 /* Supporting Files */,
 			);
@@ -1044,6 +1049,7 @@
 				3A4286CF13BF43F8004BF22B /* CJSONDeserializer.m in Sources */,
 				3A4286D013BF43F8004BF22B /* CJSONScanner.m in Sources */,
 				3A4286D113BF43F8004BF22B /* CJSONSerializer.m in Sources */,
+				3ABEDA2413C0D1F200DC40BC /* EZBook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

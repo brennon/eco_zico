@@ -122,7 +122,7 @@
     [text release];
     text = newText;
     
-/*    
+/*
     //TEMP
     self.words = [self createWordObjsFromText:self.text];
     
