@@ -13,4 +13,20 @@
 
 @synthesize pages;
 
+- (id)initWithPages:(NSArray *)pageArray
+{
+    self = [super init];
+    if (self) {
+        self.pages = pageArray;
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [pages release];
+    pages = nil;
+    [super dealloc];
+}
+
 @end
