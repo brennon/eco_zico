@@ -12,12 +12,17 @@
 
 @class EZPageView, EZTextView;
 
-@interface EZBookViewController : UIViewController {
+@interface EZBookViewController : UIViewController <UIScrollViewDelegate> {
     IBOutlet EZPageView *ezPageView;
-    IBOutlet EZTextView *ezTextView;    
+    IBOutlet EZTextView *ezTextView;
+    
+    NSNumber *currentPage;
 }
 
 @property (nonatomic, retain) IBOutlet EZPageView *ezPageView;
 @property (nonatomic, retain) IBOutlet EZTextView *ezTextView;
+@property (nonatomic, retain) NSNumber *currentPage;
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
 
 @end

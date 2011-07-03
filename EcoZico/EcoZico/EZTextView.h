@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AVFoundation/AVAudioPlayer.h>
 
 @interface EZTextView : UIView {
+    
+    // text for the page
     NSString *text;
 }
 

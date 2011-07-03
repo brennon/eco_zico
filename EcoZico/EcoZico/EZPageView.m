@@ -10,6 +10,8 @@
 
 @implementation EZPageView
 
+@synthesize delegate;
+
 #pragma mark - View lifecycle
 
 - (id)initWithFrame:(CGRect)frame
@@ -37,9 +39,10 @@
 
 #pragma mark - Book setup
 
-- (void)setupBookWithNumberofPages:(NSUInteger)count
+- (void)setupBookWithNumberofPages:(NSUInteger)count withDelegate:(id <UIScrollViewDelegate>)svDelegate
 {
     // ezPageView is instantiated by the NIB file
+    super.delegate = svDelegate;
     
     // For ease in referencing sizes
     CGFloat portalHeight = self.frame.size.height;

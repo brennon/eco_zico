@@ -20,7 +20,7 @@ const NSUInteger kNumberOfPages = 14;
 
 @implementation EZBookViewController
 
-@synthesize ezPageView, ezTextView;
+@synthesize ezPageView, ezTextView, currentPage;
 
 #pragma mark - EZBookViewController lifecycle
 
@@ -28,7 +28,7 @@ const NSUInteger kNumberOfPages = 14;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        currentPage = [NSNumber numberWithInt:0];
     }
     return self;
 }
@@ -39,6 +39,8 @@ const NSUInteger kNumberOfPages = 14;
     ezPageView = nil;
     [ezTextView release];
     ezTextView = nil;
+    [currentPage release];
+    currentPage = nil;
     [super dealloc];
 }
 
@@ -58,7 +60,7 @@ const NSUInteger kNumberOfPages = 14;
     
     self.view.backgroundColor = [UIColor blackColor];
     
-    [ezPageView setupBookWithNumberofPages:kNumberOfPages];
+    [ezPageView setupBookWithNumberofPages:kNumberOfPages withDelegate:self];
     
     [self setupTextView];
 }
@@ -91,6 +93,13 @@ const NSUInteger kNumberOfPages = 14;
     
     [self.view addSubview:(UIView *)ezTextView];
     [ezTextView attachCocos2dToSelf];
+}
+
+#pragma mark - UIScrollViewDelegate methods
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    self.currentPage = [NSNumber numberWithInt:(int) scrollView.contentOffset.x / scrollView.frame.size.width];
 }
 
 @end

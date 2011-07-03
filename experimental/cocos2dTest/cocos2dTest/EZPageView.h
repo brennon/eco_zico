@@ -34,7 +34,7 @@
     //EZWord objects
     NSArray *words;
     
-    EZTextViewController *textVC;    
+    EZTextViewController *textVC;
 }
 
 @property(nonatomic, retain) IBOutlet UIButton *skipParaBut;

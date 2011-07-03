@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EZPageView : UIScrollView {}
+@interface EZPageView : UIScrollView {
+    id <UIScrollViewDelegate> delegate;
+}
 
-- (void)setupBookWithNumberofPages:(NSUInteger)count;
+@property (nonatomic, assign) id <UIScrollViewDelegate> delegate;
+
+- (void)setupBookWithNumberofPages:(NSUInteger)count withDelegate:(id <UIScrollViewDelegate>)svDelegate;
 
 @end

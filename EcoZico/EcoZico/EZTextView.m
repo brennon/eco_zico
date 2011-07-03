@@ -11,7 +11,7 @@
 
 @implementation EZTextView
 
-@synthesize text;
+@dynamic text;
 
 # pragma mark - View lifecycle
 
@@ -33,8 +33,11 @@
 }
 */
 
-- (void)dealloc
+-(void)dealloc
 {
+    [text release];
+    text = nil;
+    
     [super dealloc];
 }
 
@@ -103,6 +106,40 @@
     [temp addChild:tempL];
     
     [director runWithScene:temp];
+}
+
+#pragma mark - Text handling
+
+- (NSString *)text
+{
+    return text;
+}
+
+-(void)setText:(NSString *)newText
+{
+    // Once text has been received, create EZWord objs and layout text.
+    [newText retain];
+    [text release];
+    text = newText;
+    
+/*    
+    //TEMP
+    self.words = [self createWordObjsFromText:self.text];
+    
+    paraNum++;
+    
+    //layout text the first time
+    CCScene *nextScene = [CCScene node];
+    textVC = [[EZTextViewController alloc]initWithPage:self];    
+    [nextScene addChild:textVC];    
+    [textVC release];
+    
+    [[CCDirector sharedDirector] replaceScene:nextScene];
+    
+    [textVC layoutWords];
+    
+    [self loadAudioForPage:2];
+ */
 }
 
 @end
