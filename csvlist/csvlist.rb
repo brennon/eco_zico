@@ -7,8 +7,9 @@ csv_file_path = File.expand_path("../seekpoints.csv", __FILE__)
 array_for_plist = []
 
 CSV.foreach(csv_file_path) do |row|
+  pp row
   array_for_plist[row[0].to_i] ||= []
-  array_for_plist[row[0].to_i] << {row[2]=>row[3]}
+  array_for_plist[row[0].to_i] << {"text"=>row[3],"time"=>row[4]}
 end
 
 plist_file = "#{__FILE__[0..(__FILE__.index('.')-1)]}.plist"
