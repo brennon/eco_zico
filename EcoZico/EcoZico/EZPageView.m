@@ -61,11 +61,12 @@
     self.pagingEnabled = YES;
     
     // Manually load images into contentView -- this will change once Book / Page classes are implemented
-    for (NSUInteger i = 0; i <= count; i++) {
-        
+    for (NSUInteger i = 0; i < count; ++i) {
         // Make all frames the size of ezPageView's frame, but shifted by multiples of its width
         CGRect frame = CGRectMake(self.bounds.origin.x + portalWidth * i, self.bounds.origin.y, portalWidth, portalHeight);
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"eco-page_%d.png", i]];
+        NSString *imageString = [NSString stringWithFormat:@"eco-page_%d.png", i+1];
+        NSLog(@"%@", imageString);
+        UIImage *image = [UIImage imageNamed:imageString];
         UIImageView *view = [[UIImageView alloc] initWithImage:image];
         view.frame = frame;
         [self addSubview:view];
