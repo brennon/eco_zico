@@ -16,6 +16,6 @@
 @property (nonatomic, retain) NSArray *words;
 @property (nonatomic, retain) NSURL *audioFilePath;
 
-- (id)initWithWords:(NSArray *)wordArray andAudioFilePath:(NSURL *)path;
+- (id)initWithWords:(NSArray *)wordArray andAudioFilename:(NSString *)filename;
 
 @end

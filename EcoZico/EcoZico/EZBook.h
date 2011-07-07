@@ -14,6 +14,6 @@
 
 @property (nonatomic, retain) NSArray *pages;
 
-- (id)initWithPages:(NSArray *)pageArray;
+- (id)initWithPlist:(NSString *)aPath;
 
 @end

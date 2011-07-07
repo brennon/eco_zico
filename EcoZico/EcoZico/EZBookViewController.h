@@ -10,18 +10,20 @@
 
 #define PLAY_PAUSE_BUTTON_WIDTH 85
 
-@class EZPageView, EZTextView;
+@class EZPageView, EZTextView, EZBook;
 
 @interface EZBookViewController : UIViewController <UIScrollViewDelegate> {
-    IBOutlet EZPageView *ezPageView;
-    IBOutlet EZTextView *ezTextView;
+    IBOutlet    EZPageView  *ezPageView;
+    IBOutlet    EZTextView  *ezTextView;
     
-    NSNumber *currentPage;
+                EZBook      *ezBook;    
+                NSNumber    *currentPage;
 }
 
-@property (nonatomic, retain) IBOutlet EZPageView *ezPageView;
-@property (nonatomic, retain) IBOutlet EZTextView *ezTextView;
-@property (nonatomic, retain) NSNumber *currentPage;
+@property (nonatomic, retain) IBOutlet  EZPageView  *ezPageView;
+@property (nonatomic, retain) IBOutlet  EZTextView  *ezTextView;
+@property (nonatomic, retain)           EZBook      *ezBook;
+@property (nonatomic, retain)           NSNumber    *currentPage;
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
 

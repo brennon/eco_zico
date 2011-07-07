@@ -9,6 +9,7 @@
 #import "EZBookViewController.h"
 #import "EZPageView.h"
 #import "EZTextView.h"
+#import "EZBook.h"
 
 const NSUInteger kNumberOfPages = 14;
 
@@ -20,7 +21,7 @@ const NSUInteger kNumberOfPages = 14;
 
 @implementation EZBookViewController
 
-@synthesize ezPageView, ezTextView, currentPage;
+@synthesize ezPageView, ezTextView, ezBook, currentPage;
 
 #pragma mark - EZBookViewController lifecycle
 
@@ -29,6 +30,7 @@ const NSUInteger kNumberOfPages = 14;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         currentPage = [NSNumber numberWithInt:0];
+        ezBook = [[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"];
     }
     return self;
 }

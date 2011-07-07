@@ -13,12 +13,12 @@
 
 @synthesize words, audioFilePath;
 
-- (id)initWithWords:(NSArray *)wordArray andAudioFilePath:(NSURL *)path
+- (id)initWithWords:(NSArray *)wordArray andAudioFilename:(NSString *)filename
 {
     self = [super init];
     if (self) {
         self.words = wordArray;
-        self.audioFilePath = path;
+        self.audioFilePath = filename;
     }
     return self;
 }
