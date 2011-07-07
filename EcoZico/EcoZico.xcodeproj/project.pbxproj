@@ -123,7 +123,6 @@
 		3A74D6861361E88600155817 /* eco-page_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D6781361E88600155817 /* eco-page_13.png */; };
 		3A97DD0113BCE4350010CDC6 /* EZPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A97DD0013BCE4350010CDC6 /* EZPageView.m */; };
 		3A97DD1413BE2D780010CDC6 /* EZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A97DD1313BE2D770010CDC6 /* EZTextView.m */; };
-		3A97DD1913BF0EDF0010CDC6 /* zico_audio-page_02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A97DD1813BF0EDF0010CDC6 /* zico_audio-page_02.wav */; };
 		3A97DD1C13BF0EF40010CDC6 /* Lucidia30.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 3A97DD1A13BF0EF40010CDC6 /* Lucidia30.fnt */; };
 		3A97DD1D13BF0EF40010CDC6 /* Lucidia30.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A97DD1B13BF0EF40010CDC6 /* Lucidia30.png */; };
 		3A97DD2813BF0F1B0010CDC6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A97DD1F13BF0F1B0010CDC6 /* Default.png */; };
@@ -144,19 +143,20 @@
 		3ABEDA2713C0D26A00DC40BC /* EZPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEDA2613C0D26900DC40BC /* EZPage.m */; };
 		3ABEDA2A13C0D30A00DC40BC /* EZWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEDA2913C0D30A00DC40BC /* EZWord.m */; };
 		3AC034DE13C508940017D811 /* EcoZicoBook.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034DD13C508940017D811 /* EcoZicoBook.plist */; };
-		3AC034ED13C5DC3E0017D811 /* zico_audio-page_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E013C5DC3E0017D811 /* zico_audio-page_01.wav */; };
-		3AC034EE13C5DC3E0017D811 /* zico_audio-page_03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E113C5DC3E0017D811 /* zico_audio-page_03.wav */; };
-		3AC034EF13C5DC3E0017D811 /* zico_audio-page_04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E213C5DC3E0017D811 /* zico_audio-page_04.wav */; };
-		3AC034F013C5DC3E0017D811 /* zico_audio-page_05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E313C5DC3E0017D811 /* zico_audio-page_05.wav */; };
-		3AC034F113C5DC3E0017D811 /* zico_audio-page_06.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E413C5DC3E0017D811 /* zico_audio-page_06.wav */; };
-		3AC034F213C5DC3E0017D811 /* zico_audio-page_07.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E513C5DC3E0017D811 /* zico_audio-page_07.wav */; };
-		3AC034F313C5DC3E0017D811 /* zico_audio-page_08.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E613C5DC3E0017D811 /* zico_audio-page_08.wav */; };
-		3AC034F413C5DC3E0017D811 /* zico_audio-page_09.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E713C5DC3E0017D811 /* zico_audio-page_09.wav */; };
-		3AC034F513C5DC3E0017D811 /* zico_audio-page_10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E813C5DC3E0017D811 /* zico_audio-page_10.wav */; };
-		3AC034F613C5DC3E0017D811 /* zico_audio-page_11.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E913C5DC3E0017D811 /* zico_audio-page_11.wav */; };
-		3AC034F713C5DC3E0017D811 /* zico_audio-page_12.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034EA13C5DC3E0017D811 /* zico_audio-page_12.wav */; };
-		3AC034F813C5DC3E0017D811 /* zico_audio-page_13.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034EB13C5DC3E0017D811 /* zico_audio-page_13.wav */; };
-		3AC034F913C5DC3E0017D811 /* zico_audio-page_14.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034EC13C5DC3E0017D811 /* zico_audio-page_14.wav */; };
+		3AC034ED13C5DC3E0017D811 /* zico_audio-page_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E013C5DC3E0017D811 /* zico_audio-page_0.wav */; };
+		3AC034EE13C5DC3E0017D811 /* zico_audio-page_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E113C5DC3E0017D811 /* zico_audio-page_2.wav */; };
+		3AC034EF13C5DC3E0017D811 /* zico_audio-page_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E213C5DC3E0017D811 /* zico_audio-page_3.wav */; };
+		3AC034F013C5DC3E0017D811 /* zico_audio-page_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E313C5DC3E0017D811 /* zico_audio-page_4.wav */; };
+		3AC034F113C5DC3E0017D811 /* zico_audio-page_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E413C5DC3E0017D811 /* zico_audio-page_5.wav */; };
+		3AC034F213C5DC3E0017D811 /* zico_audio-page_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E513C5DC3E0017D811 /* zico_audio-page_6.wav */; };
+		3AC034F313C5DC3E0017D811 /* zico_audio-page_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E613C5DC3E0017D811 /* zico_audio-page_7.wav */; };
+		3AC034F413C5DC3E0017D811 /* zico_audio-page_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E713C5DC3E0017D811 /* zico_audio-page_8.wav */; };
+		3AC034F513C5DC3E0017D811 /* zico_audio-page_9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E813C5DC3E0017D811 /* zico_audio-page_9.wav */; };
+		3AC034F613C5DC3E0017D811 /* zico_audio-page_10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E913C5DC3E0017D811 /* zico_audio-page_10.wav */; };
+		3AC034F713C5DC3E0017D811 /* zico_audio-page_11.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034EA13C5DC3E0017D811 /* zico_audio-page_11.wav */; };
+		3AC034F813C5DC3E0017D811 /* zico_audio-page_12.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034EB13C5DC3E0017D811 /* zico_audio-page_12.wav */; };
+		3AC034F913C5DC3E0017D811 /* zico_audio-page_13.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034EC13C5DC3E0017D811 /* zico_audio-page_13.wav */; };
+		3AC034FB13C5DDA80017D811 /* zico_audio-page_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034FA13C5DDA70017D811 /* zico_audio-page_1.wav */; };
 		3AD4B81F1360961C00000919 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B81E1360961C00000919 /* UIKit.framework */; };
 		3AD4B8211360961C00000919 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B8201360961C00000919 /* Foundation.framework */; };
 		3AD4B8231360961C00000919 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4B8221360961C00000919 /* CoreGraphics.framework */; };
@@ -396,7 +396,6 @@
 		3A97DD0013BCE4350010CDC6 /* EZPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPageView.m; sourceTree = "<group>"; };
 		3A97DD1213BE2D760010CDC6 /* EZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTextView.h; sourceTree = "<group>"; };
 		3A97DD1313BE2D770010CDC6 /* EZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTextView.m; sourceTree = "<group>"; };
-		3A97DD1813BF0EDF0010CDC6 /* zico_audio-page_02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_02.wav"; sourceTree = "<group>"; };
 		3A97DD1A13BF0EF40010CDC6 /* Lucidia30.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lucidia30.fnt; sourceTree = "<group>"; };
 		3A97DD1B13BF0EF40010CDC6 /* Lucidia30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lucidia30.png; sourceTree = "<group>"; };
 		3A97DD1F13BF0F1B0010CDC6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -420,19 +419,20 @@
 		3ABEDA2813C0D30900DC40BC /* EZWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZWord.h; sourceTree = "<group>"; };
 		3ABEDA2913C0D30A00DC40BC /* EZWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZWord.m; sourceTree = "<group>"; };
 		3AC034DD13C508940017D811 /* EcoZicoBook.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EcoZicoBook.plist; sourceTree = "<group>"; };
-		3AC034E013C5DC3E0017D811 /* zico_audio-page_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_01.wav"; sourceTree = "<group>"; };
-		3AC034E113C5DC3E0017D811 /* zico_audio-page_03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_03.wav"; sourceTree = "<group>"; };
-		3AC034E213C5DC3E0017D811 /* zico_audio-page_04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_04.wav"; sourceTree = "<group>"; };
-		3AC034E313C5DC3E0017D811 /* zico_audio-page_05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_05.wav"; sourceTree = "<group>"; };
-		3AC034E413C5DC3E0017D811 /* zico_audio-page_06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_06.wav"; sourceTree = "<group>"; };
-		3AC034E513C5DC3E0017D811 /* zico_audio-page_07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_07.wav"; sourceTree = "<group>"; };
-		3AC034E613C5DC3E0017D811 /* zico_audio-page_08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_08.wav"; sourceTree = "<group>"; };
-		3AC034E713C5DC3E0017D811 /* zico_audio-page_09.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_09.wav"; sourceTree = "<group>"; };
-		3AC034E813C5DC3E0017D811 /* zico_audio-page_10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_10.wav"; sourceTree = "<group>"; };
-		3AC034E913C5DC3E0017D811 /* zico_audio-page_11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_11.wav"; sourceTree = "<group>"; };
-		3AC034EA13C5DC3E0017D811 /* zico_audio-page_12.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_12.wav"; sourceTree = "<group>"; };
-		3AC034EB13C5DC3E0017D811 /* zico_audio-page_13.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_13.wav"; sourceTree = "<group>"; };
-		3AC034EC13C5DC3E0017D811 /* zico_audio-page_14.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_14.wav"; sourceTree = "<group>"; };
+		3AC034E013C5DC3E0017D811 /* zico_audio-page_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_0.wav"; sourceTree = "<group>"; };
+		3AC034E113C5DC3E0017D811 /* zico_audio-page_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_2.wav"; sourceTree = "<group>"; };
+		3AC034E213C5DC3E0017D811 /* zico_audio-page_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_3.wav"; sourceTree = "<group>"; };
+		3AC034E313C5DC3E0017D811 /* zico_audio-page_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_4.wav"; sourceTree = "<group>"; };
+		3AC034E413C5DC3E0017D811 /* zico_audio-page_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_5.wav"; sourceTree = "<group>"; };
+		3AC034E513C5DC3E0017D811 /* zico_audio-page_6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_6.wav"; sourceTree = "<group>"; };
+		3AC034E613C5DC3E0017D811 /* zico_audio-page_7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_7.wav"; sourceTree = "<group>"; };
+		3AC034E713C5DC3E0017D811 /* zico_audio-page_8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_8.wav"; sourceTree = "<group>"; };
+		3AC034E813C5DC3E0017D811 /* zico_audio-page_9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_9.wav"; sourceTree = "<group>"; };
+		3AC034E913C5DC3E0017D811 /* zico_audio-page_10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_10.wav"; sourceTree = "<group>"; };
+		3AC034EA13C5DC3E0017D811 /* zico_audio-page_11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_11.wav"; sourceTree = "<group>"; };
+		3AC034EB13C5DC3E0017D811 /* zico_audio-page_12.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_12.wav"; sourceTree = "<group>"; };
+		3AC034EC13C5DC3E0017D811 /* zico_audio-page_13.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_13.wav"; sourceTree = "<group>"; };
+		3AC034FA13C5DDA70017D811 /* zico_audio-page_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_1.wav"; sourceTree = "<group>"; };
 		3AD4B81A1360961C00000919 /* EcoZico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoZico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD4B81E1360961C00000919 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AD4B8201360961C00000919 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -792,20 +792,20 @@
 		3A97DD1513BF0E3E0010CDC6 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				3AC034E013C5DC3E0017D811 /* zico_audio-page_01.wav */,
-				3A97DD1813BF0EDF0010CDC6 /* zico_audio-page_02.wav */,
-				3AC034E113C5DC3E0017D811 /* zico_audio-page_03.wav */,
-				3AC034E213C5DC3E0017D811 /* zico_audio-page_04.wav */,
-				3AC034E313C5DC3E0017D811 /* zico_audio-page_05.wav */,
-				3AC034E413C5DC3E0017D811 /* zico_audio-page_06.wav */,
-				3AC034E513C5DC3E0017D811 /* zico_audio-page_07.wav */,
-				3AC034E613C5DC3E0017D811 /* zico_audio-page_08.wav */,
-				3AC034E713C5DC3E0017D811 /* zico_audio-page_09.wav */,
-				3AC034E813C5DC3E0017D811 /* zico_audio-page_10.wav */,
-				3AC034E913C5DC3E0017D811 /* zico_audio-page_11.wav */,
-				3AC034EA13C5DC3E0017D811 /* zico_audio-page_12.wav */,
-				3AC034EB13C5DC3E0017D811 /* zico_audio-page_13.wav */,
-				3AC034EC13C5DC3E0017D811 /* zico_audio-page_14.wav */,
+				3AC034E013C5DC3E0017D811 /* zico_audio-page_0.wav */,
+				3AC034FA13C5DDA70017D811 /* zico_audio-page_1.wav */,
+				3AC034E113C5DC3E0017D811 /* zico_audio-page_2.wav */,
+				3AC034E213C5DC3E0017D811 /* zico_audio-page_3.wav */,
+				3AC034E313C5DC3E0017D811 /* zico_audio-page_4.wav */,
+				3AC034E413C5DC3E0017D811 /* zico_audio-page_5.wav */,
+				3AC034E513C5DC3E0017D811 /* zico_audio-page_6.wav */,
+				3AC034E613C5DC3E0017D811 /* zico_audio-page_7.wav */,
+				3AC034E713C5DC3E0017D811 /* zico_audio-page_8.wav */,
+				3AC034E813C5DC3E0017D811 /* zico_audio-page_9.wav */,
+				3AC034E913C5DC3E0017D811 /* zico_audio-page_10.wav */,
+				3AC034EA13C5DC3E0017D811 /* zico_audio-page_11.wav */,
+				3AC034EB13C5DC3E0017D811 /* zico_audio-page_12.wav */,
+				3AC034EC13C5DC3E0017D811 /* zico_audio-page_13.wav */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -976,7 +976,6 @@
 				3A74D6841361E88600155817 /* eco-page_11.png in Resources */,
 				3A74D6851361E88600155817 /* eco-page_12.png in Resources */,
 				3A74D6861361E88600155817 /* eco-page_13.png in Resources */,
-				3A97DD1913BF0EDF0010CDC6 /* zico_audio-page_02.wav in Resources */,
 				3A97DD1C13BF0EF40010CDC6 /* Lucidia30.fnt in Resources */,
 				3A97DD1D13BF0EF40010CDC6 /* Lucidia30.png in Resources */,
 				3A97DD2813BF0F1B0010CDC6 /* Default.png in Resources */,
@@ -993,19 +992,20 @@
 				3A4286CA13BF43F8004BF22B /* LICENSE_FontLabel.txt in Resources */,
 				3A4286CB13BF43F8004BF22B /* LICENSE_TouchJSON.txt in Resources */,
 				3AC034DE13C508940017D811 /* EcoZicoBook.plist in Resources */,
-				3AC034ED13C5DC3E0017D811 /* zico_audio-page_01.wav in Resources */,
-				3AC034EE13C5DC3E0017D811 /* zico_audio-page_03.wav in Resources */,
-				3AC034EF13C5DC3E0017D811 /* zico_audio-page_04.wav in Resources */,
-				3AC034F013C5DC3E0017D811 /* zico_audio-page_05.wav in Resources */,
-				3AC034F113C5DC3E0017D811 /* zico_audio-page_06.wav in Resources */,
-				3AC034F213C5DC3E0017D811 /* zico_audio-page_07.wav in Resources */,
-				3AC034F313C5DC3E0017D811 /* zico_audio-page_08.wav in Resources */,
-				3AC034F413C5DC3E0017D811 /* zico_audio-page_09.wav in Resources */,
-				3AC034F513C5DC3E0017D811 /* zico_audio-page_10.wav in Resources */,
-				3AC034F613C5DC3E0017D811 /* zico_audio-page_11.wav in Resources */,
-				3AC034F713C5DC3E0017D811 /* zico_audio-page_12.wav in Resources */,
-				3AC034F813C5DC3E0017D811 /* zico_audio-page_13.wav in Resources */,
-				3AC034F913C5DC3E0017D811 /* zico_audio-page_14.wav in Resources */,
+				3AC034ED13C5DC3E0017D811 /* zico_audio-page_0.wav in Resources */,
+				3AC034EE13C5DC3E0017D811 /* zico_audio-page_2.wav in Resources */,
+				3AC034EF13C5DC3E0017D811 /* zico_audio-page_3.wav in Resources */,
+				3AC034F013C5DC3E0017D811 /* zico_audio-page_4.wav in Resources */,
+				3AC034F113C5DC3E0017D811 /* zico_audio-page_5.wav in Resources */,
+				3AC034F213C5DC3E0017D811 /* zico_audio-page_6.wav in Resources */,
+				3AC034F313C5DC3E0017D811 /* zico_audio-page_7.wav in Resources */,
+				3AC034F413C5DC3E0017D811 /* zico_audio-page_8.wav in Resources */,
+				3AC034F513C5DC3E0017D811 /* zico_audio-page_9.wav in Resources */,
+				3AC034F613C5DC3E0017D811 /* zico_audio-page_10.wav in Resources */,
+				3AC034F713C5DC3E0017D811 /* zico_audio-page_11.wav in Resources */,
+				3AC034F813C5DC3E0017D811 /* zico_audio-page_12.wav in Resources */,
+				3AC034F913C5DC3E0017D811 /* zico_audio-page_13.wav in Resources */,
+				3AC034FB13C5DDA80017D811 /* zico_audio-page_1.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
