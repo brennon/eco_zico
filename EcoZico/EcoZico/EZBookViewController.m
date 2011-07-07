@@ -31,7 +31,6 @@ const NSUInteger kNumberOfPages = 14;
     if (self) {
         currentPage = [NSNumber numberWithInt:0];
         ezBook = [[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"];
-        int doNothing = 0;
     }
     return self;
 }
@@ -63,7 +62,7 @@ const NSUInteger kNumberOfPages = 14;
     
     self.view.backgroundColor = [UIColor blackColor];
     
-    [ezPageView setupBookWithNumberofPages:kNumberOfPages withDelegate:self];
+    [ezPageView setupWithBook:ezBook withDelegate:self];
     
     [self setupTextView];
 }

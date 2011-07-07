@@ -11,11 +11,13 @@
 @interface EZPage : NSObject {
     NSArray *words;
     NSString *audioFilePath;
+    NSString *imageFilePath;
 }
 
 @property (nonatomic, retain) NSArray *words;
 @property (nonatomic, retain) NSString *audioFilePath;
+@property (nonatomic, retain) NSString *imageFilePath;
 
-- (id)initWithWords:(NSArray *)wordArray andAudioFilePath:(NSString *)filepath;
+- (id)initWithWords:(NSArray *)wordArray andAudioFilePath:(NSString *)audioFP andImageFilePath:(NSString *)imageFP;
 
 @end

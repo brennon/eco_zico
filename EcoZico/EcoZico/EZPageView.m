@@ -7,6 +7,8 @@
 //
 
 #import "EZPageView.h"
+#import "EZBook.h"
+#import "EZPage.h"
 
 @implementation EZPageView
 
@@ -39,7 +41,7 @@
 
 #pragma mark - Book setup
 
-- (void)setupBookWithNumberofPages:(NSUInteger)count withDelegate:(id <UIScrollViewDelegate>)svDelegate
+- (void)setupWithBook:(EZBook *)book withDelegate:(id <UIScrollViewDelegate>)svDelegate
 {
     // ezPageView is instantiated by the NIB file
     super.delegate = svDelegate;
@@ -49,10 +51,10 @@
     CGFloat portalWidth = self.frame.size.width;
     
     // Black background
-    self.backgroundColor = [UIColor blackColor];
+    self.backgroundColor = [UIColor whiteColor];
     
     // Match contentView to ezPageView's frame
-    self.contentSize = CGSizeMake(self.frame.size.width * count, self.frame.size.height);
+    self.contentSize = CGSizeMake(self.frame.size.width * [book.pages count], self.frame.size.height);
     
     // Align contentView and ezPageView origins
     self.contentOffset = CGPointZero;
@@ -60,13 +62,13 @@
     // Needed to lock scrolling to pages
     self.pagingEnabled = YES;
     
-    // Manually load images into contentView -- this will change once Book / Page classes are implemented
-    for (NSUInteger i = 0; i < count; ++i) {
+    // Load images into contentView
+    for (NSUInteger i = 0; i < [book.pages count]; i++) {
         // Make all frames the size of ezPageView's frame, but shifted by multiples of its width
         CGRect frame = CGRectMake(self.bounds.origin.x + portalWidth * i, self.bounds.origin.y, portalWidth, portalHeight);
-        NSString *imageString = [NSString stringWithFormat:@"eco-page_%d.png", i+1];
-        NSLog(@"%@", imageString);
-        UIImage *image = [UIImage imageNamed:imageString];
+        EZPage *ezPage = [book.pages objectAtIndex:i];
+        NSString *imagePath = [ezPage imageFilePath];
+        UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
         UIImageView *view = [[UIImageView alloc] initWithImage:image];
         view.frame = frame;
         [self addSubview:view];

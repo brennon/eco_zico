@@ -11,14 +11,15 @@
 
 @implementation EZPage
 
-@synthesize words, audioFilePath;
+@synthesize words, audioFilePath, imageFilePath;
 
-- (id)initWithWords:(NSArray *)wordArray andAudioFilePath:(NSString *)filepath
+- (id)initWithWords:(NSArray *)wordArray andAudioFilePath:(NSString *)audioFP andImageFilePath:(NSString *)imageFP
 {
     self = [super init];
     if (self) {
         self.words = wordArray;
-        self.audioFilePath = filepath;
+        self.audioFilePath = audioFP;
+        self.imageFilePath = imageFP;
     }
     return self;
 }

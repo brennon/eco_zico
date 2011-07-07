@@ -38,8 +38,9 @@
     for (int i = 0; i < [somePages count]; i++) {
         NSDictionary *newPageDictionary = [NSDictionary dictionaryWithDictionary:[somePages objectAtIndex:i]];
         NSArray *newWordArray = [NSArray arrayWithArray:[newPageDictionary objectForKey:@"words"]];
-        NSString *audioFilepath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"zico_audio-page_%d", i] ofType:@"wav"];
-        EZPage *newPage = [[EZPage alloc] initWithWords:newWordArray andAudioFilePath:audioFilepath];
+        NSString *audioFilepath = [[NSBundle mainBundle] pathForResource:[newPageDictionary objectForKey:@"audio"] ofType:nil];
+        NSString *imageFilepath = [[NSBundle mainBundle] pathForResource:[newPageDictionary objectForKey:@"image"] ofType:nil];
+        EZPage *newPage = [[EZPage alloc] initWithWords:newWordArray andAudioFilePath:audioFilepath andImageFilePath:imageFilepath];
         [tempPages insertObject:newPage atIndex:i];
         [newPage release];
     }

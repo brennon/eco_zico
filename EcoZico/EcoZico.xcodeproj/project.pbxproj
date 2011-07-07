@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A112C7913C60CC4004A8AAF /* eco-page_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A112C7813C60CC4004A8AAF /* eco-page_1.png */; };
 		3A42867013BF43F8004BF22B /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42859813BF43F8004BF22B /* CCAction.m */; };
 		3A42867113BF43F8004BF22B /* CCActionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42859A13BF43F8004BF22B /* CCActionCamera.m */; };
 		3A42867213BF43F8004BF22B /* CCActionEase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42859C13BF43F8004BF22B /* CCActionEase.m */; };
@@ -108,7 +109,6 @@
 		3A74D668136191B500155817 /* EZBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A74D666136191B500155817 /* EZBookViewController.m */; };
 		3A74D669136191B500155817 /* EZBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D667136191B500155817 /* EZBookViewController.xib */; };
 		3A74D6791361E88600155817 /* eco-page_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D66B1361E88500155817 /* eco-page_0.png */; };
-		3A74D67A1361E88600155817 /* eco-page_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D66C1361E88500155817 /* eco-page_1.png */; };
 		3A74D67B1361E88600155817 /* eco-page_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D66D1361E88500155817 /* eco-page_2.png */; };
 		3A74D67C1361E88600155817 /* eco-page_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D66E1361E88500155817 /* eco-page_3.png */; };
 		3A74D67D1361E88600155817 /* eco-page_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D66F1361E88500155817 /* eco-page_4.png */; };
@@ -167,6 +167,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A112C7813C60CC4004A8AAF /* eco-page_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_1.png"; sourceTree = "<group>"; };
 		3A427B1B13BF3A3E004BF22B /* GameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		3A42859713BF43F8004BF22B /* CCAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAction.h; sourceTree = "<group>"; };
 		3A42859813BF43F8004BF22B /* CCAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAction.m; sourceTree = "<group>"; };
@@ -379,7 +380,6 @@
 		3A74D666136191B500155817 /* EZBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZBookViewController.m; sourceTree = "<group>"; };
 		3A74D667136191B500155817 /* EZBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZBookViewController.xib; sourceTree = "<group>"; };
 		3A74D66B1361E88500155817 /* eco-page_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_0.png"; sourceTree = "<group>"; };
-		3A74D66C1361E88500155817 /* eco-page_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_1.png"; sourceTree = "<group>"; };
 		3A74D66D1361E88500155817 /* eco-page_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_2.png"; sourceTree = "<group>"; };
 		3A74D66E1361E88500155817 /* eco-page_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_3.png"; sourceTree = "<group>"; };
 		3A74D66F1361E88500155817 /* eco-page_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_4.png"; sourceTree = "<group>"; };
@@ -772,7 +772,7 @@
 			isa = PBXGroup;
 			children = (
 				3A74D66B1361E88500155817 /* eco-page_0.png */,
-				3A74D66C1361E88500155817 /* eco-page_1.png */,
+				3A112C7813C60CC4004A8AAF /* eco-page_1.png */,
 				3A74D66D1361E88500155817 /* eco-page_2.png */,
 				3A74D66E1361E88500155817 /* eco-page_3.png */,
 				3A74D66F1361E88500155817 /* eco-page_4.png */,
@@ -963,7 +963,6 @@
 				3AD4B8321360961C00000919 /* MainWindow.xib in Resources */,
 				3A74D669136191B500155817 /* EZBookViewController.xib in Resources */,
 				3A74D6791361E88600155817 /* eco-page_0.png in Resources */,
-				3A74D67A1361E88600155817 /* eco-page_1.png in Resources */,
 				3A74D67B1361E88600155817 /* eco-page_2.png in Resources */,
 				3A74D67C1361E88600155817 /* eco-page_3.png in Resources */,
 				3A74D67D1361E88600155817 /* eco-page_4.png in Resources */,
@@ -1006,6 +1005,7 @@
 				3AC034F813C5DC3E0017D811 /* zico_audio-page_12.wav in Resources */,
 				3AC034F913C5DC3E0017D811 /* zico_audio-page_13.wav in Resources */,
 				3AC034FB13C5DDA80017D811 /* zico_audio-page_1.wav in Resources */,
+				3A112C7913C60CC4004A8AAF /* eco-page_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
