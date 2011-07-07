@@ -17,8 +17,8 @@
 {
     self = [super init];
     if (self) {
-        self.text = word;
-        self.seekPoint = milliseconds;
+        text = word;
+        seekPoint = milliseconds;
     }
     return self;
 }

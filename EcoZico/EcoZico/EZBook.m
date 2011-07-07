@@ -33,13 +33,18 @@
 
 - (void)setPages:(NSArray *)somePages
 {
-    [self.pages release];
-    NSMutableArray *newPages = [NSMutableArray arrayWithCapacity:[somePages count]];
+    [pages release];
+    NSMutableArray *tempPages = [NSMutableArray arrayWithCapacity:[somePages count]];
     for (int i = 0; i < [somePages count]; i++) {
         NSDictionary *newPageDictionary = [NSDictionary dictionaryWithDictionary:[somePages objectAtIndex:i]];
-        NSArray *newWordArray = [NSArray arrayWithObject:[newPageDictionary objectForKey:@"words"]];
-        // EZPage *newPage = [[EZPage alloc] initWithWords:newWordArray andAudioFilePath:<#(NSURL *)#>];
+        NSArray *newWordArray = [NSArray arrayWithArray:[newPageDictionary objectForKey:@"words"]];
+        NSString *audioFilepath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"zico_audio-page_%d", i] ofType:@"wav"];
+        EZPage *newPage = [[EZPage alloc] initWithWords:newWordArray andAudioFilePath:audioFilepath];
+        [tempPages insertObject:newPage atIndex:i];
+        [newPage release];
     }
+    
+    pages = [[NSArray arrayWithArray:(NSArray *)tempPages] retain];
 }
 
 @end

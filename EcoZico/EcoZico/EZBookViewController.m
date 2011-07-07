@@ -31,6 +31,7 @@ const NSUInteger kNumberOfPages = 14;
     if (self) {
         currentPage = [NSNumber numberWithInt:0];
         ezBook = [[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"];
+        int doNothing = 0;
     }
     return self;
 }
