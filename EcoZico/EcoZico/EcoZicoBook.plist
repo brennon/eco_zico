@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_0.wav</string>
 		<key>image</key>
 		<string>eco-page_0.png</string>
 		<key>words</key>
@@ -430,6 +432,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_1.wav</string>
 		<key>image</key>
 		<string>eco-page_1.png</string>
 		<key>words</key>
@@ -923,6 +927,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_2.wav</string>
 		<key>image</key>
 		<string>eco-page_2.png</string>
 		<key>words</key>
@@ -1398,6 +1404,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_3.wav</string>
 		<key>image</key>
 		<string>eco-page_3.png</string>
 		<key>words</key>
@@ -1795,6 +1803,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_4.wav</string>
 		<key>image</key>
 		<string>eco-page_4.png</string>
 		<key>words</key>
@@ -2270,6 +2280,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_5.wav</string>
 		<key>image</key>
 		<string>eco-page_5.png</string>
 		<key>words</key>
@@ -2769,6 +2781,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_6.wav</string>
 		<key>image</key>
 		<string>eco-page_6.png</string>
 		<key>words</key>
@@ -3226,6 +3240,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_7.wav</string>
 		<key>image</key>
 		<string>eco-page_7.png</string>
 		<key>words</key>
@@ -3911,6 +3927,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_8.wav</string>
 		<key>image</key>
 		<string>eco-page_8.png</string>
 		<key>words</key>
@@ -4326,6 +4344,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_9.wav</string>
 		<key>image</key>
 		<string>eco-page_9.png</string>
 		<key>words</key>
@@ -4903,6 +4923,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_10.wav</string>
 		<key>image</key>
 		<string>eco-page_10.png</string>
 		<key>words</key>
@@ -5282,6 +5304,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_11.wav</string>
 		<key>image</key>
 		<string>eco-page_11.png</string>
 		<key>words</key>
@@ -5685,6 +5709,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_12.wav</string>
 		<key>image</key>
 		<string>eco-page_12.png</string>
 		<key>words</key>
@@ -6088,6 +6114,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>audio</key>
+		<string>zico_audio-page_13.wav</string>
 		<key>image</key>
 		<string>eco-page_13.png</string>
 		<key>words</key>
