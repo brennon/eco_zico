@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_0.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>Once</string>
 				<key>time</key>
-				<real>0.085</real>
+				<real>0.08500000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -29,7 +29,7 @@
 				<key>text</key>
 				<string>time,</string>
 				<key>time</key>
-				<real>0.812</real>
+				<real>0.8120000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -171,9 +171,9 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>Zico's</string>
+				<string>Zico&apos;s</string>
 				<key>time</key>
-				<real>9.906</real>
+				<real>9.906000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -431,14 +431,14 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_1.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>All</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -456,11 +456,11 @@
 				<key>text</key>
 				<string>at</string>
 				<key>time</key>
-				<real>0.933</real>
+				<real>0.9330000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>Zico's</string>
+				<string>Zico&apos;s</string>
 				<key>time</key>
 				<real>1.073</real>
 			</dict>
@@ -588,19 +588,19 @@
 				<key>text</key>
 				<string>cape.</string>
 				<key>time</key>
-				<real>8.053</real>
+				<real>8.053000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>Another</string>
 				<key>time</key>
-				<real>9.22</real>
+				<real>9.220000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>could</string>
 				<key>time</key>
-				<real>9.941</real>
+				<real>9.941000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -652,7 +652,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>he'd</string>
+				<string>he&apos;d</string>
 				<key>time</key>
 				<real>14.03</real>
 			</dict>
@@ -700,7 +700,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>hadn't</string>
+				<string>hadn&apos;t</string>
 				<key>time</key>
 				<real>16.612</real>
 			</dict>
@@ -924,20 +924,20 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_2.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>Zico</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>pretended</string>
 				<key>time</key>
-				<real>0.692</real>
+				<real>0.6919999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -953,7 +953,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>didn't</string>
+				<string>didn&apos;t</string>
 				<key>time</key>
 				<real>1.587</real>
 			</dict>
@@ -1075,7 +1075,7 @@
 				<key>text</key>
 				<string>he</string>
 				<key>time</key>
-				<real>9.002</real>
+				<real>9.002000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -1175,7 +1175,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>didn't</string>
+				<string>didn&apos;t</string>
 				<key>time</key>
 				<real>16.791</real>
 			</dict>
@@ -1217,7 +1217,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>he'd</string>
+				<string>he&apos;d</string>
 				<key>time</key>
 				<real>19.05</real>
 			</dict>
@@ -1399,14 +1399,14 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_3.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>So</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -1538,7 +1538,7 @@
 				<key>text</key>
 				<string>the</string>
 				<key>time</key>
-				<real>8.152</real>
+				<real>8.151999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -1656,7 +1656,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>couldn't</string>
+				<string>couldn&apos;t</string>
 				<key>time</key>
 				<real>15.578</real>
 			</dict>
@@ -1770,7 +1770,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>didn't</string>
+				<string>didn&apos;t</string>
 				<key>time</key>
 				<real>22.534</real>
 			</dict>
@@ -1796,18 +1796,18 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_4.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>Through</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>Zico's</string>
+				<string>Zico&apos;s</string>
 				<key>time</key>
 				<real>0.277</real>
 			</dict>
@@ -1827,7 +1827,7 @@
 				<key>text</key>
 				<string>Earth</string>
 				<key>time</key>
-				<real>2.0</real>
+				<real>2</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -2089,7 +2089,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>wasn't</string>
+				<string>wasn&apos;t</string>
 				<key>time</key>
 				<real>20.055</real>
 			</dict>
@@ -2271,14 +2271,14 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_5.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>When</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -2404,13 +2404,13 @@
 				<key>text</key>
 				<string>to</string>
 				<key>time</key>
-				<real>9.393</real>
+				<real>9.393000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>reuse</string>
 				<key>time</key>
-				<real>9.534</real>
+				<real>9.534000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -2770,14 +2770,14 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_6.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>&quot;Why</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -2883,7 +2883,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>&quot;It's</string>
+				<string>&quot;It&apos;s</string>
 				<key>time</key>
 				<real>6.238</real>
 			</dict>
@@ -2909,7 +2909,7 @@
 				<key>text</key>
 				<string>&quot;Why</string>
 				<key>time</key>
-				<real>9.691</real>
+				<real>9.691000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -3227,14 +3227,14 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_7.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>&quot;I</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -3252,7 +3252,7 @@
 				<key>text</key>
 				<string>could</string>
 				<key>time</key>
-				<real>0.815</real>
+				<real>0.8149999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -3438,7 +3438,7 @@
 				<key>text</key>
 				<string>charity</string>
 				<key>time</key>
-				<real>9.671</real>
+				<real>9.670999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -3466,7 +3466,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>don't</string>
+				<string>don&apos;t</string>
 				<key>time</key>
 				<real>11.654</real>
 			</dict>
@@ -3580,7 +3580,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>It's</string>
+				<string>It&apos;s</string>
 				<key>time</key>
 				<real>21.343</real>
 			</dict>
@@ -3912,14 +3912,14 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_8.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>The</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -3931,7 +3931,7 @@
 				<key>text</key>
 				<string>all</string>
 				<key>time</key>
-				<real>0.941</real>
+				<real>0.9409999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -4057,7 +4057,7 @@
 				<key>text</key>
 				<string>they</string>
 				<key>time</key>
-				<real>8.188</real>
+				<real>8.188000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -4069,7 +4069,7 @@
 				<key>text</key>
 				<string>&quot;The</string>
 				<key>time</key>
-				<real>9.812</real>
+				<real>9.811999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -4145,7 +4145,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>rats'</string>
+				<string>rats&apos;</string>
 				<key>time</key>
 				<real>13.108</real>
 			</dict>
@@ -4193,7 +4193,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>&quot;Let's</string>
+				<string>&quot;Let&apos;s</string>
 				<key>time</key>
 				<real>18.175</real>
 			</dict>
@@ -4327,14 +4327,14 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_9.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>The</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -4374,7 +4374,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>Zico's</string>
+				<string>Zico&apos;s</string>
 				<key>time</key>
 				<real>1.92</real>
 			</dict>
@@ -4484,7 +4484,7 @@
 				<key>text</key>
 				<string>cans</string>
 				<key>time</key>
-				<real>9.444</real>
+				<real>9.444000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -4542,7 +4542,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>wasn't</string>
+				<string>wasn&apos;t</string>
 				<key>time</key>
 				<real>13.932</real>
 			</dict>
@@ -4746,7 +4746,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>didn't</string>
+				<string>didn&apos;t</string>
 				<key>time</key>
 				<real>26.062</real>
 			</dict>
@@ -4904,14 +4904,14 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_10.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>People</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -5097,13 +5097,13 @@
 				<key>text</key>
 				<string>his</string>
 				<key>time</key>
-				<real>9.479</real>
+				<real>9.478999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>powers</string>
 				<key>time</key>
-				<real>9.643</real>
+				<real>9.643000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -5151,7 +5151,7 @@
 				<key>text</key>
 				<string>declared</string>
 				<key>time</key>
-				<real>14.0</real>
+				<real>14</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -5191,7 +5191,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>&quot;You're</string>
+				<string>&quot;You&apos;re</string>
 				<key>time</key>
 				<real>16.89</real>
 			</dict>
@@ -5239,7 +5239,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>we'll</string>
+				<string>we&apos;ll</string>
 				<key>time</key>
 				<real>20.449</real>
 			</dict>
@@ -5283,14 +5283,14 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_11.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>He</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -5302,7 +5302,7 @@
 				<key>text</key>
 				<string>him</string>
 				<key>time</key>
-				<real>0.567</real>
+				<real>0.5669999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -5396,7 +5396,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>couldn't</string>
+				<string>couldn&apos;t</string>
 				<key>time</key>
 				<real>7.899</real>
 			</dict>
@@ -5404,7 +5404,7 @@
 				<key>text</key>
 				<string>wait</string>
 				<key>time</key>
-				<real>8.277</real>
+				<real>8.276999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -5416,7 +5416,7 @@
 				<key>text</key>
 				<string>return</string>
 				<key>time</key>
-				<real>8.732</real>
+				<real>8.731999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -5434,7 +5434,7 @@
 				<key>text</key>
 				<string>Zonar</string>
 				<key>time</key>
-				<real>9.482</real>
+				<real>9.481999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -5486,7 +5486,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>didn't</string>
+				<string>didn&apos;t</string>
 				<key>time</key>
 				<real>13.899</real>
 			</dict>
@@ -5522,7 +5522,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>didn't</string>
+				<string>didn&apos;t</string>
 				<key>time</key>
 				<real>16.672</real>
 			</dict>
@@ -5686,18 +5686,18 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_12.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>Eco</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>Zico's</string>
+				<string>Zico&apos;s</string>
 				<key>time</key>
 				<real>0.57</real>
 			</dict>
@@ -5801,7 +5801,7 @@
 				<key>text</key>
 				<string>they</string>
 				<key>time</key>
-				<real>8.719</real>
+				<real>8.718999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -5813,19 +5813,19 @@
 				<key>text</key>
 				<string>made</string>
 				<key>time</key>
-				<real>8.922</real>
+				<real>8.922000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>from</string>
 				<key>time</key>
-				<real>9.37</real>
+				<real>9.369999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>recycled</string>
 				<key>time</key>
-				<real>9.521</real>
+				<real>9.521000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -6089,14 +6089,14 @@
 	</dict>
 	<dict>
 		<key>image</key>
-		<string>empty</string>
+		<string>eco-page_13.png</string>
 		<key>words</key>
 		<array>
 			<dict>
 				<key>text</key>
 				<string>RE-USE!</string>
 				<key>time</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -6118,7 +6118,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>don't</string>
+				<string>don&apos;t</string>
 				<key>time</key>
 				<real>2.197</real>
 			</dict>
@@ -6228,19 +6228,19 @@
 				<key>text</key>
 				<string>them</string>
 				<key>time</key>
-				<real>8.213</real>
+				<real>8.212999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>and</string>
 				<key>time</key>
-				<real>8.752</real>
+				<real>8.752000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>the</string>
 				<key>time</key>
-				<real>8.89</real>
+				<real>8.890000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -6252,19 +6252,19 @@
 				<key>text</key>
 				<string>will</string>
 				<key>time</key>
-				<real>9.3</real>
+				<real>9.300000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>go</string>
 				<key>time</key>
-				<real>9.482</real>
+				<real>9.481999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>to</string>
 				<key>time</key>
-				<real>9.684</real>
+				<real>9.683999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
