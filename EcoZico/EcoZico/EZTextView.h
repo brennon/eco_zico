@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVAudioPlayer.h>
 
+@class EZPage;
+
 @interface EZTextView : UIView {
-    
-    // text for the page
-    NSString *text;
+    NSArray *ezWordLabels;
 }
 
-@property (nonatomic, retain) NSString *text;
+@property (nonatomic, retain) NSArray *ezWordLabels;
 
 - (void)attachCocos2dToSelf;
+- (void)loadNewPage:(EZPage *)ezPage;
 
 @end

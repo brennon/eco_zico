@@ -1,25 +1,27 @@
 //
-//  EZWord.m
-//  cocos2dTest
+//  EZWordLabel.m
+//  EcoZico
 //
-//  Created by Donal O'Brien on 06/05/2011.
-//  Copyright 2011 Queens University Belfast. All rights reserved.
+//  Created by Brennon Bortz on 08/07/2011.
+//  Copyright 2011 Queen's University Belfast. All rights reserved.
 //
 
+#import "EZWordLabel.h"
 #import "EZWord.h"
 
-@implementation EZWord
+@implementation EZWordLabel
 
-@synthesize word, seekPoint;
+@synthesize text, seekPoint;
 
-
--(id) initWithString:(NSString*)theString fntFile:(NSString*)fntFile
+- (id)initWithEZWord:(EZWord *)ezWord
 {
-    if((self = [super initWithString:theString fntFile:fntFile]))
+    self = [super initWithString:ezWord.text fntFile:@"Lucida30.fnt"];
+    if(self)
     {
-        word = [theString copy];
-        
+        self.text = [ezWord.text copy];
+        self.seekPoint = [ezWord.seekPoint copy];
         color_ = ccc3(0,0,0);
+        anchorPoint_ = ccp(0, 1);
     }
     
     return self;
@@ -51,10 +53,10 @@
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-//	if (state != kPaddleStateUngrabbed) return NO;
+    //	if (state != kPaddleStateUngrabbed) return NO;
 	if ( ![self containsTouchLocation:touch] ) return NO;
-//	
-//	state = kPaddleStateGrabbed;
+    //	
+    //	state = kPaddleStateGrabbed;
     NSLog(@"%@", [self string]);
 	return YES;
 }
@@ -62,13 +64,13 @@
 
 #pragma mark - Animation mehods
 
--(void)runWordOnAnim
+-(void)startWordOnAnimation
 {
     self.color = ccc3(255,0,0);
 }
 
 
--(void)runWordOffAnim
+-(void)startWordOffAnimation
 {
     self.color = ccc3(0,0,0);
 }
@@ -77,7 +79,10 @@
 
 -(void)dealloc
 {
-    [word release];    
+    [text release];
+    text = nil;
+    [seekPoint release];
+    seekPoint = nil;
     [super dealloc];
 }
 

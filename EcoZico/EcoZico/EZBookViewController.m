@@ -30,7 +30,7 @@ const NSUInteger kNumberOfPages = 14;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         currentPage = [NSNumber numberWithInt:0];
-        ezBook = [[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"];
+        ezBook = [[[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"] retain];
     }
     return self;
 }
@@ -43,6 +43,8 @@ const NSUInteger kNumberOfPages = 14;
     ezTextView = nil;
     [currentPage release];
     currentPage = nil;
+    [ezBook release];
+    ezBook = nil;
     [super dealloc];
 }
 
@@ -65,6 +67,7 @@ const NSUInteger kNumberOfPages = 14;
     [ezPageView setupWithBook:ezBook withDelegate:self];
     
     [self setupTextView];
+    [ezTextView loadNewPage:[ezBook.pages objectAtIndex:[currentPage intValue]]];
 }
 
 - (void)viewDidUnload
@@ -101,6 +104,7 @@ const NSUInteger kNumberOfPages = 14;
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     self.currentPage = [NSNumber numberWithInt:(int) scrollView.contentOffset.x / scrollView.frame.size.width];
+    [ezTextView loadNewPage:(EZPage *)[ezBook.pages objectAtIndex:[currentPage intValue]]];
 }
 
 @end

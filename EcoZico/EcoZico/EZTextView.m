@@ -8,10 +8,14 @@
 
 #import "EZTextView.h"
 #import "cocos2d.h"
+#import "EZPage.h"
+#import "EZWord.h"
+#import "EZWordLabel.h"
+#import "CCLabelBMFont.h"
 
 @implementation EZTextView
 
-@dynamic text;
+@synthesize ezWordLabels;
 
 # pragma mark - View lifecycle
 
@@ -35,8 +39,8 @@
 
 -(void)dealloc
 {
-    [text release];
-    text = nil;
+    [ezWordLabels release];
+    ezWordLabels = nil;
     
     [super dealloc];
 }
@@ -110,22 +114,11 @@
 
 #pragma mark - Text handling
 
-- (NSString *)text
-{
-    return text;
-}
-
 -(void)setText:(NSString *)newText
 {
-    // Once text has been received, create EZWord objs and layout text.
-    [newText retain];
-    [text release];
-    text = newText;
+
     
-/*
-    //TEMP
-    self.words = [self createWordObjsFromText:self.text];
-    
+/*    
     paraNum++;
     
     //layout text the first time
@@ -140,6 +133,24 @@
     
     [self loadAudioForPage:2];
  */
+}
+
+- (void)loadEZPageWordsAsCCLabelBMFonts:(EZPage *)ezPage
+{
+    NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:[ezPage.words count]];
+    
+    for (int i = 0; i < [ezPage.words count]; i++) {
+        EZWord *word = [ezPage.words objectAtIndex:i];
+        EZWordLabel *wordLabel = [word generateEZWordLabel];
+        [tempArray insertObject:wordLabel atIndex:i];
+    }
+    
+    self.ezWordLabels = (NSArray *)tempArray;
+}
+
+- (void)loadNewPage:(EZPage *)ezPage
+{
+    [self loadEZPageWordsAsCCLabelBMFonts:ezPage];
 }
 
 @end

@@ -97,7 +97,7 @@ Class nextTransition()
 		EZWord *wordObj = [[EZWord alloc]initWithString:[fullMsg objectAtIndex:i] fntFile:@"Lucidia30.fnt"];
         
         //transformations, i.e. scale, position etc. occur around the anchor point. 0,0 is bottom left. set it to top left.
-        wordObj.anchorPoint = ccp(0, 1);        
+        wordObj.anchorPoint = ccp(0, 1);
         
         wordObj.seekPoint = (NSTimeInterval)[[seekpointAr objectAtIndex:i] doubleValue];
         

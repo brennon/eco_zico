@@ -2,12 +2,12 @@
 //  EZWord.m
 //  EcoZico
 //
-//  Created by Brennon Bortz on 03/07/2011.
-//  Copyright 2011 Queen's University Belfast. All rights reserved.
+//  Created by Brennon Bortz and Donal O'Brien on 06/05/2011.
+//  Copyright 2011 Brennon Bortz and Donal O'Brien. All rights reserved.
 //
 
 #import "EZWord.h"
-
+#import "EZWordLabel.h"
 
 @implementation EZWord
 
@@ -17,10 +17,16 @@
 {
     self = [super init];
     if (self) {
-        text = word;
-        seekPoint = milliseconds;
+        self.text = word;
+        self.seekPoint = milliseconds;
     }
+    
     return self;
+}
+
+- (id)generateEZWordLabel
+{
+    return [[[EZWordLabel alloc] initWithEZWord:self] autorelease];
 }
 
 - (void)dealloc
