@@ -11,11 +11,16 @@
 #import "EZPage.h"
 #import "EZWord.h"
 #import "EZWordLabel.h"
+#import "EZTextViewScene.h"
 #import "CCLabelBMFont.h"
 
 @implementation EZTextView
 
 @synthesize ezWordLabels;
+
+/*** BEGIN NEED TO CULL ***/
+@synthesize idxOfLastWordLaidOut, transitionLabel, player, playPauseBut, skipParaBut;
+/*** END NEED TO CULL ***/
 
 # pragma mark - View lifecycle
 
@@ -41,7 +46,8 @@
 {
     [ezWordLabels release];
     ezWordLabels = nil;
-    
+    [ezTextViewScene release];
+    ezTextViewScene = nil;
     [super dealloc];
 }
 
@@ -112,29 +118,6 @@
     [director runWithScene:temp];
 }
 
-#pragma mark - Text handling
-
--(void)setText:(NSString *)newText
-{
-
-    
-/*    
-    paraNum++;
-    
-    //layout text the first time
-    CCScene *nextScene = [CCScene node];
-    textVC = [[EZTextViewController alloc]initWithPage:self];    
-    [nextScene addChild:textVC];    
-    [textVC release];
-    
-    [[CCDirector sharedDirector] replaceScene:nextScene];
-    
-    [textVC layoutWords];
-    
-    [self loadAudioForPage:2];
- */
-}
-
 - (void)loadEZPageWordsAsCCLabelBMFonts:(EZPage *)ezPage
 {
     NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:[ezPage.words count]];
@@ -151,6 +134,189 @@
 - (void)loadNewPage:(EZPage *)ezPage
 {
     [self loadEZPageWordsAsCCLabelBMFonts:ezPage];
+  
+     // paraNum++;
+     
+     //layout text the first time
+     
+     ezTextViewScene = [[EZTextViewScene alloc]initWithEZPageView:self];    
+    /* 
+    [nextScene addChild:textVC];    
+     [textVC release];
+     
+     [[CCDirector sharedDirector] replaceScene:nextScene];
+     
+     [textVC layoutWords];
+     
+     [self loadAudioForPage:2];
+     */
 }
+
+/*** BEGIN NEED TO CULL ***/
+#pragma mark - NEED TO CULL
+// TEMP - for illustrating cocos2d transitions
+static int sceneIdx=0;
+static NSString *transitions[] = {
+	@"CCTransitionFlipAngular",    
+	@"CCTransitionFlipX",    
+	@"CCTransitionFlipY",    
+	@"CCTransitionJumpZoom",    
+	@"CCTransitionMoveInB",    
+	@"CCTransitionRadialCCW",    
+	@"CCTransitionRadialCW",    
+	@"CCTransitionRotoZoom",    
+	@"CCTransitionShrinkGrow",    
+	@"CCTransitionSlideInB",    
+	@"CCTransitionSplitCols",    
+	@"CCTransitionSplitRows",    
+	@"CCTransitionTurnOffTiles",    
+	@"CCTransitionZoomFlipAngular",    
+	@"CCTransitionZoomFlipX",    
+	@"CCTransitionZoomFlipY",
+};
+
+
+// TEMP - for illustrating cocos2d transitions
+Class nextTransition()
+{	
+	// HACK: else NSClassFromString will fail
+	[CCTransitionRadialCCW node];
+	
+	sceneIdx++;
+	sceneIdx = sceneIdx % ( sizeof(transitions) / sizeof(transitions[0]) );
+	NSString *r = transitions[sceneIdx];
+	Class c = NSClassFromString(r);
+	return c;
+}
+
+-(void)layoutText
+{    
+    //chaning scenes allows you to use the fancy transitions
+    CCScene *nextScene = [CCScene node];
+    
+    // pass a refernce to self, i.e. the page, so that EZTextViewController knows where to get the words        
+    textVC = [[EZTextViewController alloc]initWithPage:self];    
+    [nextScene addChild:textVC];        
+    [textVC release];
+    
+    //turn off interactions for the transition
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    
+    //do the transition
+    [[CCDirector sharedDirector] replaceScene:[EZParagraphTransition transitionWithDuration:0.25 scene:nextScene delegate:self]];
+    
+    //draw the paragraph
+    [textVC layoutWords];
+    
+    paraNum++;
+    paraNum%= 3;
+}
+
+-(void)loadAudioForPage:(int)pageNum
+{
+    //narration
+    //load sound file
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"zico_audio-page_02" ofType: @"wav"];  
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];    
+    AVAudioPlayer *newPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: fileURL error: NULL];
+    [fileURL release];           
+    
+    self.player = newPlayer;    
+    [newPlayer release];        
+    
+    [player prepareToPlay];    
+    [player setDelegate: self];
+    
+}
+
+
+-(IBAction)playPause:(id)sender
+{
+    //pause / resume timers and narration animations
+    [textVC playPause];
+    
+    //pause
+    if([player isPlaying])
+    {        
+        NSLog(@"pv pause");
+        [player pause];
+    }
+    //play
+    else 
+    {    
+        NSLog(@"pv play");
+        [player play];
+    }
+}
+
+
+//for debugging - allows to skip through paragraphs in order to observer transitions more quickly.
+int firstParaSkip = 10;
+int secondParaSkip = 20;
+int thirdParaSkip = 30;
+
+-(IBAction)skipPara:(id)sender
+{    
+    [self playPause:self];
+    
+    //    paraNum++;
+    
+    switch (paraNum) 
+    {
+        case 0:
+            [self audioPlayerDidFinishPlaying:nil successfully:YES];//hack!!
+            [textVC setWordPositionForTime:firstParaSkip];
+            break;
+        case 1:
+            [self layoutText];
+            [textVC setWordPositionForTime:secondParaSkip];
+            break;
+        case 2:
+            [self layoutText];
+            [textVC setWordPositionForTime:thirdParaSkip];
+            break;
+        default:
+            break;
+    }
+}
+
+
+
+
+-(void)textViewDidFinishNarratingParagraph
+{
+    NSLog(@"pv textViewDidFinishNarratingParagraph");
+    
+    [player pause];
+    
+    [self layoutText];    
+}
+
+
+-(void)paragraphTransitionDidFinish
+{
+    NSLog(@"pv paragraphTransitionDidFinish");
+    
+    //re-enable interactions after the transition
+    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+    
+    [self playPause:self];    
+}
+
+- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *) player successfully:(BOOL) completed
+{    
+    if (completed == YES) 
+    {    
+        idxOfLastWordLaidOut = 0;
+        
+        paraNum = 0;
+        
+        [[words lastObject] runWordOffAnim];
+        
+        //TEMP
+        self.text = @"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. Another could make fireballs by clicking his fingers. One time, he'd thrown a fireball at the teacher. She hadn't been very happy about it. But Zico had yet to discover his superpower. It was so embarrassing. The other kids at school made fun of him. \"Zico has no superpower, Zico has no superpower\", they chanted.";        
+    }    
+}
+/*** END NEED TO CULL ***/
 
 @end
