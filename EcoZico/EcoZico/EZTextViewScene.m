@@ -9,6 +9,7 @@
 #import "EZTextViewScene.h"
 #import "EZTextView.h"
 #import "EZWord.h"
+#import "EZWordLabel.h"
 
 #define EZ_MAX_LINES 3
 
@@ -61,12 +62,12 @@
     // layout the words
     for(int i = ezTextView.idxOfLastWordLaidOut; i < [ezTextView.ezWordLabels count]; i++)
 	{
-        word = [page.words objectAtIndex:i];
+        word = (EZWordLabel *)[ezTextView.ezWordLabels objectAtIndex:i];
         
-        if(i > page.idxOfLastWordLaidOut)
+        if(i > ezTextView.idxOfLastWordLaidOut)
         {
             //width of previous and current word
-            prevWordWidth = [[page.words objectAtIndex:i - 1]boundingBox].size.width;
+            prevWordWidth = [[ezTextView.ezWordLabels objectAtIndex:i - 1]boundingBox].size.width;
             currentWordWidth = [word boundingBox].size.width;
             
             //if next word will take us past the drawable area, move to the next line
@@ -96,7 +97,7 @@
         if(i == idxStopPoint)
         {
             //record the location of where we stopped so we can start from the right location next time.
-            page.idxOfLastWordLaidOut = i + 1;
+            ezTextView.idxOfLastWordLaidOut = i + 1;
             break;
         }
         
@@ -111,14 +112,14 @@
     int lineNum = 1;
     
     
-    for(int i = page.idxOfLastWordLaidOut; i < [page.words count]; i++)
+    for(int i = ezTextView.idxOfLastWordLaidOut; i < [ezTextView.ezWordLabels count]; i++)
 	{
-        word = [page.words objectAtIndex:i];
+        word = (EZWordLabel *)[ezTextView.ezWordLabels objectAtIndex:i];
         
-        if(i > page.idxOfLastWordLaidOut)
+        if(i > ezTextView.idxOfLastWordLaidOut)
         {
             //width of previous and current word
-            prevWordWidth = [[page.words objectAtIndex:i - 1]boundingBox].size.width;
+            prevWordWidth = [[ezTextView.ezWordLabels objectAtIndex:i - 1]boundingBox].size.width;
             currentWordWidth = [word boundingBox].size.width;
             
             //if next word will take us past the drawable area, move to the next line
@@ -138,7 +139,7 @@
                 // work backwards from there to find the idx of the word with the first full-stop '.'
                 for(int i = idxEndOfline3; i >= 0; i--)
                 {
-                    EZWord *wordToCheckForPeriod = [page.words objectAtIndex:i];
+                    EZWordLabel *wordToCheckForPeriod = [ezTextView.ezWordLabels objectAtIndex:i];
                     
                     if([[wordToCheckForPeriod string] hasSuffix:@"."])
                     {
@@ -173,13 +174,16 @@
 
 -(void)setWordPositionForTime:(NSTimeInterval)time
 {    
-    for (int i = 0; i < [page.words count]; i++)
+    for (int i = 0; i < [ezTextView.ezWordLabels count]; i++)
     {
-        if ([(EZWord*)[page.words objectAtIndex:i]seekPoint] >= time)
+        EZWordLabel *labelToCheck = (EZWordLabel *)[ezTextView.ezWordLabels objectAtIndex:i];
+        if ((NSTimeInterval)[labelToCheck.seekPoint doubleValue] >= time)
         {
             wordPositionCounter = i;
             
-            page.player.currentTime = [(EZWord*)[page.words objectAtIndex:wordPositionCounter] seekPoint];
+            EZWordLabel *wordForCurrentTime = (EZWordLabel *)[ezTextView.ezWordLabels objectAtIndex:wordPositionCounter]; 
+            
+            ezTextView.player.currentTime = (NSTimeInterval)[wordForCurrentTime.seekPoint doubleValue];
             
             break;
         }
@@ -190,7 +194,7 @@
 -(void)playPause
 {
     //pause
-    if([page.player isPlaying])
+    if([ezTextView.player isPlaying])
     {
         NSLog(@"tv pause");
         [timer invalidate];
@@ -208,28 +212,30 @@
 
 -(void)pollPlaybackTime
 {
-    currentPlaybackPosition = [page.player currentTime];// current playback pos
+    currentPlaybackPosition = [ezTextView.player currentTime];// current playback pos
     
-    if(wordPositionCounter < [page.words count])
+    if(wordPositionCounter < [ezTextView.ezWordLabels count])
     {
-        if(currentPlaybackPosition >= [(EZWord*)[page.words objectAtIndex:wordPositionCounter] seekPoint])
+        EZWordLabel *wordForCurrentPosition = (EZWordLabel *)[ezTextView.ezWordLabels objectAtIndex:wordPositionCounter];
+        
+        if(currentPlaybackPosition >= [wordForCurrentPosition.seekPoint doubleValue])
         {
             if (wordPositionCounter > 0) 
             {
-                [[page.words objectAtIndex:wordPositionCounter - 1] runWordOffAnim];
+                [[ezTextView.ezWordLabels objectAtIndex:wordPositionCounter - 1] startWordOffAnimation];
             }            
             
             //if playback pos is beyond next word in word array set it as the current word
-            currentWord = [page.words objectAtIndex:wordPositionCounter];
+            currentWord = [ezTextView.ezWordLabels objectAtIndex:wordPositionCounter];
             
             //do some animation
-            [currentWord runWordOnAnim];
+            [currentWord startWordOnAnimation];
             
             //inc the counter
             wordPositionCounter++;
         }
         
-        if(wordPositionCounter > idxStopPoint && wordPositionCounter < [page.words count] && !isParaNarrationFinished)
+        if(wordPositionCounter > idxStopPoint && wordPositionCounter < [ezTextView.ezWordLabels count] && !isParaNarrationFinished)
         {     
             isParaNarrationFinished = YES;//only allow this block to be called once
             
@@ -237,7 +243,7 @@
             
             [self playPause];
             
-            double timeToWait = [[page.words objectAtIndex:wordPositionCounter] seekPoint] - currentWord.seekPoint;
+            double timeToWait = [[[ezTextView.ezWordLabels objectAtIndex:wordPositionCounter] seekPoint] doubleValue] - [currentWord.seekPoint doubleValue];
             
             [self performSelector:@selector(paraNarrationDidFinish) withObject:nil afterDelay:timeToWait];
         }
@@ -248,7 +254,7 @@
 //not used
 -(void)setPlayPosition:(NSTimeInterval)pos
 {
-    page.player.currentTime = page.player.duration / pos;
+    ezTextView.player.currentTime = ezTextView.player.duration / pos;
 }
 
 
@@ -257,9 +263,9 @@
     
     NSLog(@"tv paraNarrationDidFinish");
     
-    [currentWord runWordOffAnim];
+    [currentWord startWordOffAnimation];
     
-    [page textViewDidFinishNarratingParagraph];    
+    [ezTextView textViewDidFinishNarratingParagraph];    
 }
 
 

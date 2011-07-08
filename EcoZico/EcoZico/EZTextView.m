@@ -13,13 +13,20 @@
 #import "EZWordLabel.h"
 #import "EZTextViewScene.h"
 #import "CCLabelBMFont.h"
+#import "EZParagraphTransition.h"
+
+/*** BEGIN NEED TO CULL ***/
+@interface EZTextView ()
+-(void)layoutText;
+@end
+/*** END NEED TO CULL ***/
 
 @implementation EZTextView
 
-@synthesize ezWordLabels;
+@synthesize ezWordLabels, ezTextViewScene;
 
 /*** BEGIN NEED TO CULL ***/
-@synthesize idxOfLastWordLaidOut, transitionLabel, player, playPauseBut, skipParaBut;
+@synthesize idxOfLastWordLaidOut, transitionLabel, player, playPauseBut, skipParaBut, text;
 /*** END NEED TO CULL ***/
 
 # pragma mark - View lifecycle
@@ -135,25 +142,37 @@
 {
     [self loadEZPageWordsAsCCLabelBMFonts:ezPage];
   
-     // paraNum++;
+     paraNum++;
      
-     //layout text the first time
-     
-     ezTextViewScene = [[EZTextViewScene alloc]initWithEZPageView:self];    
-    /* 
-    [nextScene addChild:textVC];    
-     [textVC release];
-     
-     [[CCDirector sharedDirector] replaceScene:nextScene];
-     
-     [textVC layoutWords];
-     
-     [self loadAudioForPage:2];
-     */
+    // Layout text the first time
+    [self layoutText];
 }
 
 /*** BEGIN NEED TO CULL ***/
 #pragma mark - NEED TO CULL
+
+-(void)layoutText
+{    
+    // Changing(?) scenes allows you to use the fancy transitions
+    CCScene *nextScene = [CCScene node];
+    
+    // pass a refernce to self, i.e. the page, so that EZTextViewScene knows where to get the words        
+    ezTextViewScene = [[EZTextViewScene alloc] initWithEZTextView:self];
+    [nextScene addChild:ezTextViewScene];
+    
+    //turn off interactions for the transition
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    
+    //do the transition
+    [[CCDirector sharedDirector] replaceScene:[EZParagraphTransition transitionWithDuration:0.25 scene:nextScene delegate:self]];
+    
+    //draw the paragraph
+    [ezTextViewScene layoutWords];
+    
+    paraNum++;
+    paraNum %= 3;
+}
+
 // TEMP - for illustrating cocos2d transitions
 static int sceneIdx=0;
 static NSString *transitions[] = {
@@ -189,29 +208,6 @@ Class nextTransition()
 	return c;
 }
 
--(void)layoutText
-{    
-    //chaning scenes allows you to use the fancy transitions
-    CCScene *nextScene = [CCScene node];
-    
-    // pass a refernce to self, i.e. the page, so that EZTextViewController knows where to get the words        
-    textVC = [[EZTextViewController alloc]initWithPage:self];    
-    [nextScene addChild:textVC];        
-    [textVC release];
-    
-    //turn off interactions for the transition
-    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    
-    //do the transition
-    [[CCDirector sharedDirector] replaceScene:[EZParagraphTransition transitionWithDuration:0.25 scene:nextScene delegate:self]];
-    
-    //draw the paragraph
-    [textVC layoutWords];
-    
-    paraNum++;
-    paraNum%= 3;
-}
-
 -(void)loadAudioForPage:(int)pageNum
 {
     //narration
@@ -225,7 +221,7 @@ Class nextTransition()
     [newPlayer release];        
     
     [player prepareToPlay];    
-    [player setDelegate: self];
+    [player setDelegate:self];
     
 }
 
@@ -233,7 +229,7 @@ Class nextTransition()
 -(IBAction)playPause:(id)sender
 {
     //pause / resume timers and narration animations
-    [textVC playPause];
+    [ezTextViewScene playPause];
     
     //pause
     if([player isPlaying])
@@ -265,15 +261,15 @@ int thirdParaSkip = 30;
     {
         case 0:
             [self audioPlayerDidFinishPlaying:nil successfully:YES];//hack!!
-            [textVC setWordPositionForTime:firstParaSkip];
+            [ezTextViewScene setWordPositionForTime:firstParaSkip];
             break;
         case 1:
             [self layoutText];
-            [textVC setWordPositionForTime:secondParaSkip];
+            [ezTextViewScene setWordPositionForTime:secondParaSkip];
             break;
         case 2:
             [self layoutText];
-            [textVC setWordPositionForTime:thirdParaSkip];
+            [ezTextViewScene setWordPositionForTime:thirdParaSkip];
             break;
         default:
             break;
@@ -311,7 +307,7 @@ int thirdParaSkip = 30;
         
         paraNum = 0;
         
-        [[words lastObject] runWordOffAnim];
+        [[ezWordLabels lastObject] startWordOffAnimation];
         
         //TEMP
         self.text = @"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. Another could make fireballs by clicking his fingers. One time, he'd thrown a fireball at the teacher. She hadn't been very happy about it. But Zico had yet to discover his superpower. It was so embarrassing. The other kids at school made fun of him. \"Zico has no superpower, Zico has no superpower\", they chanted.";        

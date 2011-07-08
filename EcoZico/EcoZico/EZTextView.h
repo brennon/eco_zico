@@ -11,10 +11,9 @@
 
 @class EZPage, EZTextViewScene;
 
-@interface EZTextView : UIView {
+@interface EZTextView : UIView <AVAudioPlayerDelegate> {
     NSArray *ezWordLabels;
-    EZTextViewScene *ezTextViewScene;
-    
+    EZTextViewScene *ezTextViewScene;    
     
     /*** BEGIN NEED TO CULL ***/
     //TEMP - for showing name of transitions
@@ -31,6 +30,9 @@
     
     // used to continuing laying out page text from the end of the last paragraph
     int idxOfLastWordLaidOut;
+    
+    // text for the page
+    NSString *text;
     /*** END NEED TO CULL ***/
 }
 
@@ -43,6 +45,7 @@
 @property(nonatomic, retain) IBOutlet UILabel *transitionLabel;
 @property (nonatomic, retain) AVAudioPlayer *player;
 @property int idxOfLastWordLaidOut;
+@property(nonatomic, retain) NSString *text;
 /*** END NEED TO CULL ***/
 
 - (void)attachCocos2dToSelf;
