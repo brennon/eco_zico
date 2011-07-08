@@ -26,5 +26,6 @@
 @property (nonatomic, retain)           NSNumber    *currentPage;
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
+- (void)attachCocos2dToSelf;
 
 @end

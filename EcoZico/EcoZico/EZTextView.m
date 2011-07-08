@@ -58,73 +58,6 @@
     [super dealloc];
 }
 
-- (void)attachCocos2dToSelf
-{
-    // Try to use CADisplayLink director
-    // if it fails (SDK < 3.1) use the default director
-    if(![CCDirector setDirectorType:kCCDirectorTypeDisplayLink])
-        [CCDirector setDirectorType:kCCDirectorTypeDefault];
-    
-    
-    CCDirector *director = [CCDirector sharedDirector];
-    
-    //
-    // Create the EAGLView manually
-    //  1. Create a RGB565 format. Alternative: RGBA8
-    //	2. depth format of 0 bit. Use 16 or 24 bit for 3d effects, like CCPageTurnTransition
-    //
-    //
-    EAGLView *glView = [EAGLView viewWithFrame:[self bounds]
-                                   pixelFormat:kEAGLColorFormatRGB565	// kEAGLColorFormatRGBA8
-                                   depthFormat:0						// GL_DEPTH_COMPONENT16_OES
-                        ];
-    
-    // attach the openglView to the director
-    [director setOpenGLView:glView];
-    
-    //	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-    //	if( ! [director enableRetinaDisplay:YES] )
-    //		CCLOG(@"Retina Display Not supported");
-    
-    //
-    // VERY IMPORTANT:
-    // If the rotation is going to be controlled by a UIViewController
-    // then the device orientation should be "Portrait".
-    //
-    // IMPORTANT:
-    // By default, this template only supports Landscape orientations.
-    // Edit the RootViewController.m file to edit the supported orientations.
-    //
-#if GAME_AUTOROTATION == kGameAutorotationUIViewController
-    [director setDeviceOrientation:kCCDeviceOrientationPortrait];
-#else
-    [director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
-#endif
-    
-    [director setAnimationInterval:1.0/60];
-    [director setDisplayFPS:NO];
-    
-    
-    // make the OpenGLView a child of sentenceView
-    //[viewController setView:glView];
-    [self addSubview:glView];
-    
-    // Default texture format for PNG/BMP/TIFF/JPEG/GIF images
-    // It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
-    // You can change anytime.
-    [CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
-    
-    //set default opengl color to white
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-    
-    //start with an empty scene
-    CCScene *temp = [CCScene node];
-    CCLayerColor *tempL = [CCLayerColor layerWithColor:ccc4(255, 255, 255, 255)];
-    [temp addChild:tempL];
-    
-    [director runWithScene:temp];
-}
-
 - (void)loadEZPageWordsAsCCLabelBMFonts:(EZPage *)ezPage
 {
     NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:[ezPage.words count]];
@@ -153,10 +86,10 @@
 
 -(void)layoutText
 {    
-    // Changing(?) scenes allows you to use the fancy transitions
+    // Changing scenes allows you to use the fancy transitions
     CCScene *nextScene = [CCScene node];
     
-    // pass a refernce to self, i.e. the page, so that EZTextViewScene knows where to get the words        
+    // pass a refernce to self, i.e. the EZTextView, so that EZTextViewScene knows where to get the words        
     ezTextViewScene = [[EZTextViewScene alloc] initWithEZTextView:self];
     [nextScene addChild:ezTextViewScene];
     

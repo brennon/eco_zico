@@ -20,8 +20,8 @@
     {
         self.text = [ezWord.text copy];
         self.seekPoint = [ezWord.seekPoint copy];
-        color_ = ccc3(0,0,0);
-        anchorPoint_ = ccp(0, 1);
+        self.color = ccc3(0,0,0);
+        self.anchorPoint = ccp(0, 1);
     }
     
     return self;

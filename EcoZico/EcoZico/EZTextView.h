@@ -48,7 +48,6 @@
 @property(nonatomic, retain) NSString *text;
 /*** END NEED TO CULL ***/
 
-- (void)attachCocos2dToSelf;
 - (void)loadNewPage:(EZPage *)ezPage;
 
 /*** BEGIN NEED TO CULL ***/
