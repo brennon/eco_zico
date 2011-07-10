@@ -106,41 +106,6 @@
     paraNum %= 3;
 }
 
-// TEMP - for illustrating cocos2d transitions
-static int sceneIdx=0;
-static NSString *transitions[] = {
-	@"CCTransitionFlipAngular",    
-	@"CCTransitionFlipX",    
-	@"CCTransitionFlipY",    
-	@"CCTransitionJumpZoom",    
-	@"CCTransitionMoveInB",    
-	@"CCTransitionRadialCCW",    
-	@"CCTransitionRadialCW",    
-	@"CCTransitionRotoZoom",    
-	@"CCTransitionShrinkGrow",    
-	@"CCTransitionSlideInB",    
-	@"CCTransitionSplitCols",    
-	@"CCTransitionSplitRows",    
-	@"CCTransitionTurnOffTiles",    
-	@"CCTransitionZoomFlipAngular",    
-	@"CCTransitionZoomFlipX",    
-	@"CCTransitionZoomFlipY",
-};
-
-
-// TEMP - for illustrating cocos2d transitions
-Class nextTransition()
-{	
-	// HACK: else NSClassFromString will fail
-	[CCTransitionRadialCCW node];
-	
-	sceneIdx++;
-	sceneIdx = sceneIdx % ( sizeof(transitions) / sizeof(transitions[0]) );
-	NSString *r = transitions[sceneIdx];
-	Class c = NSClassFromString(r);
-	return c;
-}
-
 -(void)loadAudioForPage:(int)pageNum
 {
     //narration
@@ -157,7 +122,6 @@ Class nextTransition()
     [player setDelegate:self];
     
 }
-
 
 -(IBAction)playPause:(id)sender
 {
@@ -177,7 +141,6 @@ Class nextTransition()
         [player play];
     }
 }
-
 
 //for debugging - allows to skip through paragraphs in order to observer transitions more quickly.
 int firstParaSkip = 10;
@@ -243,7 +206,7 @@ int thirdParaSkip = 30;
         [[ezWordLabels lastObject] startWordOffAnimation];
         
         //TEMP
-        self.text = @"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. Another could make fireballs by clicking his fingers. One time, he'd thrown a fireball at the teacher. She hadn't been very happy about it. But Zico had yet to discover his superpower. It was so embarrassing. The other kids at school made fun of him. \"Zico has no superpower, Zico has no superpower\", they chanted.";        
+        self.text = @"All the kids at Zico's school had amazing powers, too. One boy could fly and would swoop into the classroom with a swish of his cape. Another could make fireballs by clicking his fingers. One time, he'd thrown a fireball at the teacher. She hadn't been very happy about it. But Zico had yet to discover his superpower. It was so embarrassing. The other kids at school made fun of him. \"Zico has no superpower, Zico has no superpower\", they chanted.";
     }    
 }
 /*** END NEED TO CULL ***/
