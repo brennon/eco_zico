@@ -75,9 +75,9 @@
 {
     [self loadEZPageWordsAsCCLabelBMFonts:ezPage];
   
-     paraNum++;
+    paraNum++;
      
-    // Layout text the first time
+    // Layout text
     [self layoutText];
 }
 
