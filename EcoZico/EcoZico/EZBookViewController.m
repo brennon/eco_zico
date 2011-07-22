@@ -8,9 +8,16 @@
 
 #import "EZBookViewController.h"
 #import "EZPageView.h"
-#import "EZTextView.h"
 #import "EZBook.h"
 #import "cocos2d.h"
+
+// TV imports
+#import "EZPage.h"
+#import "EZWord.h"
+#import "EZWordLabel.h"
+#import "EZTextViewScene.h"
+#import "CCLabelBMFont.h"
+#import "EZParagraphTransition.h"
 
 const NSUInteger kNumberOfPages = 14;
 
@@ -22,7 +29,8 @@ const NSUInteger kNumberOfPages = 14;
 
 @implementation EZBookViewController
 
-@synthesize ezPageView, ezTextView, ezBook, currentPage;
+@synthesize ezPageView, textView, ezBook, currentPage, ezWordLabels, ezTextViewScene, idxOfLastWordLaidOut, player, playPauseBut, skipParaBut;
+
 
 #pragma mark - EZBookViewController lifecycle
 
@@ -30,6 +38,8 @@ const NSUInteger kNumberOfPages = 14;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
+        isFirstPageAfterLaunch = YES;
         currentPage = [NSNumber numberWithInt:0];
         ezBook = [[[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"] retain];
     }
@@ -40,12 +50,18 @@ const NSUInteger kNumberOfPages = 14;
 {
     [ezPageView release];
     ezPageView = nil;
-    [ezTextView release];
-    ezTextView = nil;
+    [textView release];
+    textView = nil;
     [currentPage release];
     currentPage = nil;
     [ezBook release];
     ezBook = nil;
+
+    [ezWordLabels release];
+    ezWordLabels = nil;
+    [ezTextViewScene release];
+    ezTextViewScene = nil;
+    
     [super dealloc];
 }
 
@@ -69,7 +85,10 @@ const NSUInteger kNumberOfPages = 14;
     
     [self setupTextView];
     [self attachCocos2dToSelf];
-    [ezTextView loadNewPage:[ezBook.pages objectAtIndex:[currentPage intValue]]];
+
+    [self loadNewPage:[ezBook.pages objectAtIndex:[currentPage intValue]] withTransition:!isFirstPageAfterLaunch];
+    
+    isFirstPageAfterLaunch = NO;
 }
 
 - (void)viewDidUnload
@@ -78,7 +97,7 @@ const NSUInteger kNumberOfPages = 14;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
     ezPageView = nil;
-    ezTextView = nil;
+    textView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -95,12 +114,13 @@ const NSUInteger kNumberOfPages = 14;
     CGSize winsize = [[UIScreen mainScreen] applicationFrame].size;    
     CGFloat height = winsize.width - ezPageView.frame.origin.y - ezPageView.frame.size.height;
     
-    ezTextView = [[EZTextView alloc] initWithFrame:CGRectMake(ezPageView.frame.origin.x, ezPageView.frame.origin.y + ezPageView.frame.size.height, ezPageView.frame.size.width - PLAY_PAUSE_BUTTON_WIDTH, height)];
+    textView = [[UIView alloc] initWithFrame:CGRectMake(ezPageView.frame.origin.x, ezPageView.frame.origin.y + ezPageView.frame.size.height, ezPageView.frame.size.width - PLAY_PAUSE_BUTTON_WIDTH, height)];
     
-    [ezTextView setBackgroundColor:[UIColor blueColor]];
+    [textView setBackgroundColor:[UIColor whiteColor]];
     
-    [self.view addSubview:(UIView *)ezTextView];
+    [self.view addSubview:(UIView *)textView];
 }
+
 
 - (void)attachCocos2dToSelf
 {
@@ -118,7 +138,7 @@ const NSUInteger kNumberOfPages = 14;
     //	2. depth format of 0 bit. Use 16 or 24 bit for 3d effects, like CCPageTurnTransition
     //
     //
-    EAGLView *glView = [EAGLView viewWithFrame:ezTextView.bounds
+    EAGLView *glView = [EAGLView viewWithFrame:textView.bounds
                                    pixelFormat:kEAGLColorFormatRGB565	// kEAGLColorFormatRGBA8
                                    depthFormat:0						// GL_DEPTH_COMPONENT16_OES
                         ];
@@ -151,7 +171,7 @@ const NSUInteger kNumberOfPages = 14;
     
     // make the OpenGLView a child of sentenceView
     //[viewController setView:glView];
-    [ezTextView addSubview:glView];
+    [textView addSubview:glView];
     
     // Default texture format for PNG/BMP/TIFF/JPEG/GIF images
     // It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
@@ -159,7 +179,7 @@ const NSUInteger kNumberOfPages = 14;
     [CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
     
     //set default opengl color to white
-    glClearColor(0.0f, 0.5f, 1.0f, 1.0f);
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     
     //start with an empty scene
     CCScene *temp = [CCScene node];
@@ -169,12 +189,202 @@ const NSUInteger kNumberOfPages = 14;
     [director runWithScene:temp];
 }
 
+
+- (void)loadEZPageWordsAsCCLabelBMFonts:(EZPage *)ezPage
+{
+    NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:[ezPage.words count]];
+    
+    for (int i = 0; i < [ezPage.words count]; i++) {
+        EZWord *word = [ezPage.words objectAtIndex:i];
+        EZWordLabel *wordLabel = [word generateEZWordLabel];
+        [tempArray insertObject:wordLabel atIndex:i];
+    }
+    
+    self.ezWordLabels = (NSArray *)tempArray;
+}
+
+
+- (void)loadNewPage:(EZPage *)ezPage withTransition:(BOOL)withTrans
+{
+    [self loadEZPageWordsAsCCLabelBMFonts:ezPage];
+    
+    [self loadAudioForPage:[currentPage intValue]];
+    
+    paraNum++;
+    
+    // Layout text
+    [self layoutTextWithTransition:withTrans];
+}
+
+
+-(void)layoutTextWithTransition:(BOOL)withTrans
+{    
+    // Changing scenes allows you to use the fancy transitions
+    CCScene *nextScene = [CCScene node];
+    
+    // pass a refernce to self, i.e. the EZTextView, so that EZTextViewScene knows where to get the words        
+    ezTextViewScene = [[EZTextViewScene alloc] initWithEZBookView:self];
+    [nextScene addChild:ezTextViewScene];
+    
+    //do the transition if not the first page shown
+    if (withTrans)
+    {
+        //turn off interactions for the transition
+        [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+        
+        NSLog(@"beginIgnoringInteractionEvents");
+        
+        [[CCDirector sharedDirector] replaceScene:[EZParagraphTransition transitionWithDuration:0.25 scene:nextScene delegate:self]];
+    }
+    else
+    {
+        [[CCDirector sharedDirector] replaceScene:nextScene];   
+    }
+    
+    //draw the paragraph
+    [ezTextViewScene layoutWords];
+    
+    paraNum++;
+    paraNum %= 3;
+}
+
+
+-(void)loadAudioForPage:(int)pageNum
+{
+    //narration
+    //load sound file
+    NSString *audioFileName = [NSString stringWithFormat:@"zico_audio-page_%0i", pageNum];
+    
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: audioFileName ofType: @"wav"];  
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];    
+    AVAudioPlayer *newPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: fileURL error: NULL];
+    [fileURL release];           
+    
+    self.player = newPlayer;    
+    [newPlayer release];        
+    
+    [player prepareToPlay];    
+    [player setDelegate:self];
+    
+}
+
+
+-(IBAction)playPause:(id)sender
+{
+    NSLog(@"tv playPause");
+    
+    //pause
+    if([player isPlaying])
+    {                
+        [self pauseAudio];
+    }
+    //play
+    else 
+    {            
+        [self playAudio];
+    }
+}
+
+
+-(void)playAudio
+{
+    [ezTextViewScene startPollingPlayer];
+    
+    [player play];
+    
+    [playPauseBut setSelected:YES];
+}
+
+
+-(void)pauseAudio
+{
+    [ezTextViewScene stopPollingPlayer];
+    
+    [player pause];
+    
+    [playPauseBut setSelected:NO];
+}
+
+
+//for debugging - allows to skip through paragraphs in order to observer transitions more quickly.
+double firstParaSkip = 6.5;
+double secondParaSkip = 20;
+double thirdParaSkip = 30;
+
+-(IBAction)skipPara:(id)sender
+{    
+    [ezTextViewScene setWordPositionForTime:firstParaSkip];
+    
+    //    [self playPause:nil];
+    //        
+    //    switch (paraNum) 
+    //    {
+    //        case 2:
+    //            [self audioPlayerDidFinishPlaying:nil successfully:YES];//hack!!
+    //            [ezTextViewScene setWordPositionForTime:firstParaSkip];
+    //            break;
+    //        case 0:
+    //            [self layoutTextWithTransition:YES];
+    //            [ezTextViewScene setWordPositionForTime:secondParaSkip];
+    //            break;
+    //        case 1:
+    //            [self layoutTextWithTransition:YES];
+    //            [ezTextViewScene setWordPositionForTime:thirdParaSkip];
+    //            break;
+    //        default:
+    //            break;
+    //    }
+}
+
+
+#pragma mark - callback from EZTextViewScene
+
+-(void)textViewDidFinishNarratingParagraph
+{    
+    [self pauseAudio];
+    
+    [self layoutTextWithTransition:YES];    
+}
+
+
+#pragma mark - callback from EZParagraphTransition
+
+-(void)paragraphTransitionDidFinish
+{    
+    //re-enable interactions after the transition
+    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+    
+    NSLog(@"endIgnoringInteractionEvents");
+    
+    [self playAudio];
+    
+    //  [self performSelector:@selector(playPause:) withObject:self afterDelay:2];    
+}
+
+
+#pragma mark - audioplayer delegate methods
+
+- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *) player successfully:(BOOL) completed
+{    
+    if (completed == YES) 
+    {    
+        idxOfLastWordLaidOut = 0;
+        
+        paraNum = 0;
+        
+        [[ezWordLabels lastObject] startWordOffAnimation];       
+    }    
+}
+
+
 #pragma mark - UIScrollViewDelegate methods
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     self.currentPage = [NSNumber numberWithInt:(int) scrollView.contentOffset.x / scrollView.frame.size.width];
-    [ezTextView loadNewPage:(EZPage *)[ezBook.pages objectAtIndex:[currentPage intValue]]];
+    [self loadNewPage:(EZPage *)[ezBook.pages objectAtIndex:[currentPage intValue]] withTransition:YES];
 }
+
+
 
 @end
