@@ -11,6 +11,7 @@
 @class EZBook;
 
 @interface EZPageView : UIScrollView {
+
     id <UIScrollViewDelegate> delegate;
 }
 

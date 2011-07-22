@@ -7,25 +7,81 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVAudioPlayer.h>
 
 #define PLAY_PAUSE_BUTTON_WIDTH 85
 
-@class EZPageView, EZTextView, EZBook;
+@class EZPage, EZTextViewScene, EZPageView, EZTextView, EZBook;
 
-@interface EZBookViewController : UIViewController <UIScrollViewDelegate> {
+
+@interface EZBookViewController : UIViewController <UIScrollViewDelegate, AVAudioPlayerDelegate> {
     IBOutlet    EZPageView  *ezPageView;
-    IBOutlet    EZTextView  *ezTextView;
+                UIView      *textView;
     
                 EZBook      *ezBook;    
                 NSNumber    *currentPage;
+        
+    // TV vars //
+    
+    //TEMP - debug button for skipping paragraphs
+    UIButton *skipParaBut;
+    
+    //TEMP - debug
+    int paraNum;
+    
+    BOOL isFirstPageAfterLaunch;
+
+    //cocos2d labels for words
+    NSArray *ezWordLabels;
+    
+    //cocos2d layer for drawing labels
+    EZTextViewScene *ezTextViewScene;    
+    
+    // play pause button
+    UIButton *playPauseBut;
+    
+    // used to continuing laying out page text from the end of the last paragraph
+    int idxOfLastWordLaidOut;
+    
+    //audio player
+    AVAudioPlayer *player;
 }
 
 @property (nonatomic, retain) IBOutlet  EZPageView  *ezPageView;
-@property (nonatomic, retain) IBOutlet  EZTextView  *ezTextView;
+@property (nonatomic, retain)           UIView      *textView;
 @property (nonatomic, retain)           EZBook      *ezBook;
 @property (nonatomic, retain)           NSNumber    *currentPage;
 
+// TV properties
+@property (nonatomic, retain) NSArray *ezWordLabels;
+@property (nonatomic, retain) EZTextViewScene *ezTextViewScene;
+@property(nonatomic, retain) IBOutlet UIButton *playPauseBut;
+@property (nonatomic, retain) AVAudioPlayer *player;
+@property int idxOfLastWordLaidOut;
+@property(nonatomic, retain) IBOutlet UIButton *skipParaBut; // debugging
+
+//scroll view methods
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
-- (void)attachCocos2dToSelf;
+
+//TV methods
+-(void)attachCocos2dToSelf;
+
+-(void)loadNewPage:(EZPage *)ezPage withTransition:(BOOL)withTrans;
+
+-(void)layoutTextWithTransition:(BOOL)withTrans;
+
+-(void)loadAudioForPage:(int)pageNum;
+
+//play / pause audio playback (and TVC narration)
+-(IBAction)playPause:(id)sender;
+
+-(void)playAudio;
+
+-(void)pauseAudio;
+
+-(void)textViewDidFinishNarratingParagraph;
+
+-(IBAction)skipPara:(id)sender; //debugging
+
 
 @end

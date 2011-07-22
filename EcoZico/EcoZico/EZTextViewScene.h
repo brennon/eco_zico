@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@class EZWordLabel, EZTextView;
+@class EZWordLabel, EZBookViewController;
 
 //TODO: position works like anchorpoint is set at 0.5, 0.0 - fix it.
 
 @interface EZTextViewScene : CCLayerColor {
-    EZTextView *ezTextView;
+    EZBookViewController *ezBookView;
     
     float heightOfWords;
     float inset;
@@ -38,9 +38,9 @@
     BOOL isParaNarrationFinished;
 }
 
-@property(nonatomic, assign) EZTextView *ezTextView;
+@property(nonatomic, assign) EZBookViewController *ezBookView;
 
-- (id)initWithEZTextView:(EZTextView *)anEZTextView;
+- (id)initWithEZBookView:(EZBookViewController *)anEZBookView;
 
 //find where to stop laying out words
 -(int)stopIdx;
@@ -51,10 +51,14 @@
 //callback when a para reaches end of narration
 -(void)paraNarrationDidFinish;
 
-//pause / resume timers (used for polling audio player position)
--(void)playPause;
-
 //for debugging
 -(void)setWordPositionForTime:(NSTimeInterval)time;
+
+//start / stop polling audio player position
+-(void)startPollingPlayer;
+
+-(void)stopPollingPlayer;
+
+
 
 @end

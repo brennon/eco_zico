@@ -42,9 +42,9 @@
 #pragma mark - Book setup
 
 - (void)setupWithBook:(EZBook *)book withDelegate:(id <UIScrollViewDelegate>)svDelegate
-{
+{    
     // ezPageView is instantiated by the NIB file
-    super.delegate = svDelegate;
+    self.delegate = svDelegate;
     
     // For ease in referencing sizes
     CGFloat portalHeight = self.frame.size.height;
@@ -75,5 +75,14 @@
         [view release];
     }
 }
+
+
+#pragma - touches 
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+}
+
 
 @end
