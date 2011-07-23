@@ -349,7 +349,7 @@ double thirdParaSkip = 30;
 
 #pragma mark - callback from EZParagraphTransition
 
--(void)paragraphTransitionDidFinish
+- (void)paragraphTransitionDidFinish
 {    
     //re-enable interactions after the transition
     [[UIApplication sharedApplication] endIgnoringInteractionEvents];
