@@ -51,14 +51,12 @@
 //callback when a para reaches end of narration
 -(void)paraNarrationDidFinish;
 
-//for debugging
--(void)setWordPositionForTime:(NSTimeInterval)time;
-
 //start / stop polling audio player position
 -(void)startPollingPlayer;
 
 -(void)stopPollingPlayer;
 
-
+//for debugging
+-(void)setWordPositionForTime:(NSTimeInterval)time;
 
 @end

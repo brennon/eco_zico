@@ -81,8 +81,10 @@ const NSUInteger kNumberOfPages = 14;
     
     self.view.backgroundColor = [UIColor blackColor];
     
-    [ezPageView setupWithBook:ezBook withDelegate:self];
-    
+    ezPageView.delegate = self;
+
+    [ezPageView setupWithBook:ezBook];
+        
     [self setupTextView];
     [self attachCocos2dToSelf];
 
@@ -209,9 +211,7 @@ const NSUInteger kNumberOfPages = 14;
     [self loadEZPageWordsAsCCLabelBMFonts:ezPage];
     
     [self loadAudioForPage:[currentPage intValue]];
-    
-    paraNum++;
-    
+        
     // Layout text
     [self layoutTextWithTransition:withTrans];
 }
@@ -244,8 +244,6 @@ const NSUInteger kNumberOfPages = 14;
     //draw the paragraph
     [ezTextViewScene layoutWords];
     
-    paraNum++;
-    paraNum %= 3;
 }
 
 
@@ -313,27 +311,11 @@ double thirdParaSkip = 30;
 
 -(IBAction)skipPara:(id)sender
 {    
-    [ezTextViewScene setWordPositionForTime:firstParaSkip];
+    EZPage *currentPageObj = [self.ezBook.pages objectAtIndex:[currentPage intValue]];
+    NSTimeInterval timeOfLastWordInParagraph = [[[currentPageObj.words objectAtIndex:idxOfLastWordLaidOut]seekPoint] doubleValue];
     
-    //    [self playPause:nil];
-    //        
-    //    switch (paraNum) 
-    //    {
-    //        case 2:
-    //            [self audioPlayerDidFinishPlaying:nil successfully:YES];//hack!!
-    //            [ezTextViewScene setWordPositionForTime:firstParaSkip];
-    //            break;
-    //        case 0:
-    //            [self layoutTextWithTransition:YES];
-    //            [ezTextViewScene setWordPositionForTime:secondParaSkip];
-    //            break;
-    //        case 1:
-    //            [self layoutTextWithTransition:YES];
-    //            [ezTextViewScene setWordPositionForTime:thirdParaSkip];
-    //            break;
-    //        default:
-    //            break;
-    //    }
+    [ezTextViewScene setWordPositionForTime:timeOfLastWordInParagraph - 2];
+    
 }
 
 
@@ -367,11 +349,7 @@ double thirdParaSkip = 30;
 - (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *) player successfully:(BOOL) completed
 {    
     if (completed == YES) 
-    {    
-        idxOfLastWordLaidOut = 0;
-        
-        paraNum = 0;
-        
+    {            
         [[ezWordLabels lastObject] startWordOffAnimation];       
     }    
 }
@@ -381,8 +359,26 @@ double thirdParaSkip = 30;
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    int previousPage = [self.currentPage intValue];
+    
     self.currentPage = [NSNumber numberWithInt:(int) scrollView.contentOffset.x / scrollView.frame.size.width];
-    [self loadNewPage:(EZPage *)[ezBook.pages objectAtIndex:[currentPage intValue]] withTransition:YES];
+    
+    // don't 'change the page' if the page being changed to is the same as the previous page
+    // this happens for minor scrolls and for the first and last pages.
+    
+    if ([currentPage intValue] != previousPage) 
+    {
+        //must be set before loadNewPage!!
+        idxOfLastWordLaidOut = 0;
+        
+        // pause audio which cancells polling timer before calling loadNewPage.
+        // if timer is not cancelled, you get a crash.
+        [self pauseAudio];
+
+        [self loadNewPage:(EZPage *)[ezBook.pages objectAtIndex:[currentPage intValue]] withTransition:YES];
+    }
+
+    
 }
 
 

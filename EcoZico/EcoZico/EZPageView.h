@@ -12,11 +12,9 @@
 
 @interface EZPageView : UIScrollView {
 
-    id <UIScrollViewDelegate> delegate;
 }
 
-@property (nonatomic, assign) id <UIScrollViewDelegate> delegate;
 
-- (void)setupWithBook:(EZBook *)book withDelegate:(id <UIScrollViewDelegate>)svDelegate;
+- (void)setupWithBook:(EZBook *)book;
 
 @end

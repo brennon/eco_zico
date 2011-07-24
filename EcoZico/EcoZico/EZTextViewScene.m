@@ -98,8 +98,16 @@
         {
             //record the location of where we stopped so we can start from the right location next time.
             ezBookView.idxOfLastWordLaidOut = i + 1;
+            
             break;
         }
+            
+        //used for debugging - skipping paragrpahs.
+        if(i == [ezBookView.ezWordLabels count] - 1)
+        {
+            ezBookView.idxOfLastWordLaidOut = i;
+        }
+
         
 	}	    
 }
@@ -251,8 +259,10 @@
         }
         
         if(wordPositionCounter > idxStopPoint && wordPositionCounter < [ezBookView.ezWordLabels count])
-        {     
+        {   
             isParaNarrationFinished = YES;//only allow this block to be called once
+            
+            NSLog(@"isParaNarrationFinished = YES");
                         
             [self stopPollingPlayer];
             
@@ -264,20 +274,20 @@
     
 }
 
-//not used
--(void)setPlayPosition:(NSTimeInterval)pos
-{
-    ezBookView.player.currentTime = ezBookView.player.duration / pos;
-}
 
 
 -(void)paraNarrationDidFinish
 {    
-    
-    
     [currentWord startWordOffAnimation];
     
     [ezBookView textViewDidFinishNarratingParagraph];    
+}
+
+
+//not used
+-(void)setPlayPosition:(NSTimeInterval)pos
+{
+    ezBookView.player.currentTime = ezBookView.player.duration / pos;
 }
 
 
