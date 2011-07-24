@@ -2,8 +2,8 @@
 //  GameConfig.h
 //  test
 //
-//  Created by Donal O'Brien on 01/05/2011.
-//  Copyright Queens University Belfast 2011. All rights reserved.
+//  Created by Brennon Bortz and Donal O'Brien on 01/05/2011.
+//  Copyright Brennon Bortz and Donal O'Brien 2011. All rights reserved.
 //
 
 #ifndef __GAME_CONFIG_H

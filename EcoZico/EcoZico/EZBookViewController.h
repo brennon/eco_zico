@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVAudioPlayer.h>
+#import "EZParagraphTransition.h"
 
 #define PLAY_PAUSE_BUTTON_WIDTH 85
 
 @class EZPage, EZTextViewScene, EZPageView, EZTextView, EZBook;
 
 
-@interface EZBookViewController : UIViewController <UIScrollViewDelegate, AVAudioPlayerDelegate> {
-    IBOutlet    EZPageView      *ezPageView;
-                UIView          *textView;
+@interface EZBookViewController : UIViewController <UIScrollViewDelegate, AVAudioPlayerDelegate, EZParagraphTransitionDelegate> {
+    IBOutlet    EZPageView  *ezPageView;
+                UIView      *textView;
     
                 EZBook          *ezBook;    
                 NSNumber        *currentPage;
