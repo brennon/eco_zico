@@ -7,9 +7,25 @@
 //
 
 #import "EZFrontViewController.h"
-
+#import "EcoZicoAppDelegate.h"
 
 @implementation EZFrontViewController
+
+@synthesize readItToMeButton, readItToMyselfButton, helpButton;
+
+- (IBAction)readItToMeButtonPushed 
+{
+    EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate switchToBookViewController];
+}
+
+- (IBAction)readItMyselfButtonPushed 
+{
+    EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate switchToBookViewController];
+}
+
+- (IBAction)helpButtonPushed {}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

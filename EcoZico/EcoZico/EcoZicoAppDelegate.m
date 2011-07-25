@@ -8,16 +8,23 @@
 
 #import "EcoZicoAppDelegate.h"
 #import "EZBookViewController.h"
+#import "EZFrontViewController.h"
 
 @implementation EcoZicoAppDelegate
 
 @synthesize window=_window, ezBookViewController;
 
+- (void)switchToBookViewController
+{
+    rootViewController = (UIViewController *)[[EZBookViewController alloc] init];
+    [self.window setRootViewController:rootViewController];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    ezBookViewController = [[EZBookViewController alloc] init];
-    [self.window setRootViewController:ezBookViewController];
+    rootViewController = (UIViewController *)[[EZFrontViewController alloc] init];
+    [self.window setRootViewController:rootViewController];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -64,8 +71,8 @@
 - (void)dealloc
 {
     [_window release];
-    [ezBookViewController release];
-    ezBookViewController = nil;
+    [rootViewController release];
+    rootViewController = nil;
     [super dealloc];
 }
 

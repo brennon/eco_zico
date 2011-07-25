@@ -168,6 +168,8 @@
 		3AD4B82C1360961C00000919 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4B82B1360961C00000919 /* main.m */; };
 		3AD4B82F1360961C00000919 /* EcoZicoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */; };
 		3AD4B8321360961C00000919 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AD4B8301360961C00000919 /* MainWindow.xib */; };
+		3AF0301313DAEACC0042F706 /* EZFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0301113DAEACB0042F706 /* EZFrontViewController.m */; };
+		3AF0301413DAEACC0042F706 /* EZFrontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF0301213DAEACB0042F706 /* EZFrontViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -454,6 +456,9 @@
 		3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcoZicoAppDelegate.h; sourceTree = "<group>"; };
 		3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EcoZicoAppDelegate.m; sourceTree = "<group>"; };
 		3AD4B8311360961C00000919 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		3AF0301013DAEACA0042F706 /* EZFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZFrontViewController.h; sourceTree = "<group>"; };
+		3AF0301113DAEACB0042F706 /* EZFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZFrontViewController.m; sourceTree = "<group>"; };
+		3AF0301213DAEACB0042F706 /* EZFrontViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZFrontViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -479,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				3A74D667136191B500155817 /* EZBookViewController.xib */,
+				3AF0301213DAEACB0042F706 /* EZFrontViewController.xib */,
 				3AD4B8301360961C00000919 /* MainWindow.xib */,
 			);
 			name = XIBs;
@@ -905,6 +911,8 @@
 			children = (
 				3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */,
 				3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */,
+				3AF0301013DAEACA0042F706 /* EZFrontViewController.h */,
+				3AF0301113DAEACB0042F706 /* EZFrontViewController.m */,
 				3A74D665136191B500155817 /* EZBookViewController.h */,
 				3A74D666136191B500155817 /* EZBookViewController.m */,
 				3ABEDA2213C0D1F100DC40BC /* EZBook.h */,
@@ -1040,6 +1048,7 @@
 				2EE8EA4E13CF893D0045F65C /* Lucidia30.png in Resources */,
 				2EBB858113D597D5006CEF3C /* pause_button.png in Resources */,
 				2EBB858213D597D5006CEF3C /* play_button.png in Resources */,
+				3AF0301413DAEACC0042F706 /* EZFrontViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,6 +1163,7 @@
 				3AB77E5B13C6F18600C98D3E /* EZWordLabel.m in Sources */,
 				3AB77E5E13C7550E00C98D3E /* EZTextViewScene.m in Sources */,
 				3AB77FE713C77C3C00C98D3E /* EZParagraphTransition.m in Sources */,
+				3AF0301313DAEACC0042F706 /* EZFrontViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
