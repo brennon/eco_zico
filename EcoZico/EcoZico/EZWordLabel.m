@@ -15,7 +15,7 @@
 
 - (id)initWithEZWord:(EZWord *)ezWord
 {
-    self = [super initWithString:ezWord.text fntFile:@"Lucida30.fnt"];
+    self = [super initWithString:ezWord.text fntFile:@"Lucidia30.fnt"];
     if(self)
     {
         self.text = [ezWord.text copy];
