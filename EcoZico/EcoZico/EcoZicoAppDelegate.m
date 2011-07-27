@@ -9,6 +9,7 @@
 #import "EcoZicoAppDelegate.h"
 #import "EZBookViewController.h"
 #import "EZFrontViewController.h"
+#import "EZHelpViewController.h"
 
 @implementation EcoZicoAppDelegate
 
@@ -18,6 +19,22 @@
 {
     [self.window setRootViewController:nil];
     rootViewController = (UIViewController *)[[EZBookViewController alloc] init];
+    [self.window setRootViewController:rootViewController];
+    [self.window makeKeyAndVisible];
+}
+
+- (void)switchToHelpViewController
+{
+    [self.window setRootViewController:nil];
+    rootViewController = (UIViewController *)[[EZHelpViewController alloc] init];
+    [self.window setRootViewController:rootViewController];
+    [self.window makeKeyAndVisible];
+}
+
+- (void)switchToFrontViewController
+{
+    [self.window setRootViewController:nil];
+    rootViewController = (UIViewController *)[[EZFrontViewController alloc] init];
     [self.window setRootViewController:rootViewController];
     [self.window makeKeyAndVisible];
 }

@@ -16,6 +16,8 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) EZBookViewController *ezBookViewController;
 
+- (void)switchToFrontViewController;
 - (void)switchToBookViewController;
+- (void)switchToHelpViewController;
 
 @end
