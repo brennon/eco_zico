@@ -26,7 +26,11 @@
     [appDelegate switchToBookViewController];
 }
 
-- (IBAction)helpButtonPushed {}
+- (IBAction)helpButtonPushed
+{
+    EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate switchToHelpViewController];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
