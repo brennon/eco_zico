@@ -15,9 +15,10 @@
 @class EZPage, EZTextViewScene, EZPageView, EZTextView, EZBook;
 
 
-@interface EZBookViewController : UIViewController <UIScrollViewDelegate, AVAudioPlayerDelegate, EZParagraphTransitionDelegate> {
+@interface EZBookViewController : UIViewController <UIScrollViewDelegate, AVAudioPlayerDelegate, EZParagraphTransitionDelegate> 
+{
     IBOutlet    EZPageView  *ezPageView;
-                UIView      *textView;
+    IBOutlet    UIView      *textView;
     
                 EZBook          *ezBook;    
                 NSNumber        *currentPage;

@@ -113,14 +113,14 @@ const NSUInteger kNumberOfPages = 14;
 - (void)setupTextView
 {    
     // Calculate size for view to which to attach cocos2d    
-    CGSize winsize = [[UIScreen mainScreen] applicationFrame].size;    
-    CGFloat height = winsize.width - ezPageView.frame.origin.y - ezPageView.frame.size.height;
+    // CGSize winsize = [[UIScreen mainScreen] applicationFrame].size;    
+    // CGFloat height = winsize.width - ezPageView.frame.origin.y - ezPageView.frame.size.height;
     
-    textView = [[UIView alloc] initWithFrame:CGRectMake(ezPageView.frame.origin.x, ezPageView.frame.origin.y + ezPageView.frame.size.height, ezPageView.frame.size.width - PLAY_PAUSE_BUTTON_WIDTH, height)];
+    // textView = [[UIView alloc] initWithFrame:CGRectMake(ezPageView.frame.origin.x, ezPageView.frame.origin.y + ezPageView.frame.size.height, ezPageView.frame.size.width - PLAY_PAUSE_BUTTON_WIDTH, height)];
     
-    [textView setBackgroundColor:[UIColor whiteColor]];
+    // [textView setBackgroundColor:[UIColor whiteColor]];
     
-    [self.view addSubview:(UIView *)textView];
+    // [self.view addSubview:(UIView *)textView];
 }
 
 
