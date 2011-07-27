@@ -93,36 +93,17 @@
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="436385115"/>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MQA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace" id="511476365">
-								<int key="NSID">2</int>
-							</object>
-						</object>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-					</object>
-					<object class="IBUIImageView" id="134505323">
-						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{-5.5, 588}, {944, 160}}</string>
-						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="737489910"/>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC43Mjc5NTI2NTc1IDAuNzI4MjYwODY5NiAwLjY1NTc3NDExODUAA</bytes>
-						</object>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<reference key="IBUIBackgroundColor" ref="591408968"/>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
 					<object class="IBUIScrollView" id="894241418">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{0, 60.5}, {1024, 512}}</string>
+						<string key="NSFrame">{{0, 61}, {1024, 512}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="666595465"/>
+						<reference key="NSNextKeyView" ref="291752825"/>
+						<reference key="IBUIBackgroundColor" ref="591408968"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -148,7 +129,7 @@
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="6152910"/>
 					</object>
-					<object class="IBUIImageView" id="265630727">
+					<object class="IBUIImageView" id="803354779">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{0, 18}, {1024, 71}}</string>
@@ -162,13 +143,24 @@
 							<string key="NSResourceName">book_frame-top.png</string>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="666595465">
+					<object class="IBUIImageView" id="956224538">
 						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{0, 542}, {1024, 71}}</string>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{0, 571}, {916, 177}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="134505323"/>
+						<reference key="NSNextKeyView" ref="737489910"/>
+						<reference key="IBUIBackgroundColor" ref="591408968"/>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+					</object>
+					<object class="IBUIImageView" id="291752825">
+						<reference key="NSNextResponder" ref="766721923"/>
+						<int key="NSvFlags">274</int>
+						<string key="NSFrame">{{0, 527}, {1024, 71}}</string>
+						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="956224538"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
@@ -180,11 +172,13 @@
 				<string key="NSFrame">{{0, 20}, {1024, 748}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="265630727"/>
+				<reference key="NSNextKeyView" ref="803354779"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
-					<reference key="NSCustomColorSpace" ref="511476365"/>
+					<object class="NSColorSpace" key="NSCustomColorSpace">
+						<int key="NSID">2</int>
+					</object>
 				</object>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics">
@@ -254,7 +248,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">textView</string>
 						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="134505323"/>
+						<reference key="destination" ref="956224538"/>
 					</object>
 					<int key="connectionID">27</int>
 				</object>
@@ -284,12 +278,12 @@
 						<reference key="object" ref="766721923"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="894241418"/>
-							<reference ref="737489910"/>
-							<reference ref="265630727"/>
+							<reference ref="803354779"/>
 							<reference ref="349956953"/>
-							<reference ref="134505323"/>
-							<reference ref="666595465"/>
+							<reference ref="894241418"/>
+							<reference ref="956224538"/>
+							<reference ref="737489910"/>
+							<reference ref="291752825"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -322,17 +316,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">24</int>
-						<reference key="object" ref="265630727"/>
+						<reference key="object" ref="803354779"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">26</int>
-						<reference key="object" ref="134505323"/>
+						<reference key="object" ref="956224538"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">25</int>
-						<reference key="object" ref="666595465"/>
+						<reference key="object" ref="291752825"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 				</object>
