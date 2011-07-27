@@ -10,8 +10,9 @@
 #import "EcoZicoAppDelegate.h"
 
 @implementation EZFrontViewController
-
-@synthesize readItToMeButton, readItToMyselfButton, helpButton;
+@synthesize helpButton;
+@synthesize readItMyselfButton;
+@synthesize readItToMeButton;
 
 - (IBAction)readItToMeButtonPushed 
 {
@@ -38,6 +39,10 @@
 
 - (void)dealloc
 {
+    [helpButton release];
+    [helpButton release];
+    [readItMyselfButton release];
+    [readItToMeButton release];
     [super dealloc];
 }
 
@@ -59,6 +64,10 @@
 
 - (void)viewDidUnload
 {
+    [self setHelpButton:nil];
+    [self setHelpButton:nil];
+    [self setReadItMyselfButton:nil];
+    [self setReadItToMeButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

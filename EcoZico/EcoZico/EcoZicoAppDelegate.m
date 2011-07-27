@@ -16,8 +16,10 @@
 
 - (void)switchToBookViewController
 {
+    [self.window setRootViewController:nil];
     rootViewController = (UIViewController *)[[EZBookViewController alloc] init];
     [self.window setRootViewController:rootViewController];
+    [self.window makeKeyAndVisible];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

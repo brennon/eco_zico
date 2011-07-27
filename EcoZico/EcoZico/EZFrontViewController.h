@@ -10,14 +10,14 @@
 
 
 @interface EZFrontViewController : UIViewController {
-    IBOutlet UIButton *readItToMeButton;
-    IBOutlet UIButton *readItMyselfButton;
-    IBOutlet UIButton *helpButton;
+    UIButton *helpButton;
+    UIButton *readItMyselfButton;
+    UIButton *readItToMeButton;
 }
 
-@property (nonatomic, retain) UIButton *readItToMeButton;
-@property (nonatomic, retain) UIButton *readItToMyselfButton;
-@property (nonatomic, retain) UIButton *helpButton;
+@property (nonatomic, retain) IBOutlet UIButton *helpButton;
+@property (nonatomic, retain) IBOutlet UIButton *readItMyselfButton;
+@property (nonatomic, retain) IBOutlet UIButton *readItToMeButton;
 
 - (IBAction)readItToMeButtonPushed;
 - (IBAction)readItMyselfButtonPushed;
