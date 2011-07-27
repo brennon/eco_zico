@@ -12,6 +12,8 @@
 
 @implementation EZHelpViewController
 
+@synthesize screenView, textView, handView;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -23,6 +25,11 @@
 
 - (void)dealloc
 {
+    [handView release];
+    [handView release];
+    [handView release];
+    [screenView release];
+    [textView release];
     [super dealloc];
 }
 
@@ -44,6 +51,10 @@
 
 - (void)viewDidUnload
 {
+    [self setHandView:nil];
+    [self setHandView:nil];
+    [self setScreenView:nil];
+    [self setTextView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -64,4 +75,5 @@
     EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate switchToFrontViewController];
 }
+
 @end
