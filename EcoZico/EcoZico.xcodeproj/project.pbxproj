@@ -125,6 +125,9 @@
 		3A74D6841361E88600155817 /* eco-page_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D6761361E88500155817 /* eco-page_11.png */; };
 		3A74D6851361E88600155817 /* eco-page_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D6771361E88600155817 /* eco-page_12.png */; };
 		3A74D6861361E88600155817 /* eco-page_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D6781361E88600155817 /* eco-page_13.png */; };
+		3A8B5FD313DDEAE700ECA47E /* help-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B5FD013DDEAE600ECA47E /* help-button.png */; };
+		3A8B5FD413DDEAE700ECA47E /* read_it_myself-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B5FD113DDEAE600ECA47E /* read_it_myself-button.png */; };
+		3A8B5FD513DDEAE700ECA47E /* read_it_to_me-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B5FD213DDEAE700ECA47E /* read_it_to_me-button.png */; };
 		3A97DD0113BCE4350010CDC6 /* EZPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A97DD0013BCE4350010CDC6 /* EZPageView.m */; };
 		3A97DD2913BF0F1B0010CDC6 /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A97DD2013BF0F1B0010CDC6 /* fps_images.png */; };
 		3A97DE7513BF0FE80010CDC6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97DE7013BF0FE70010CDC6 /* AudioToolbox.framework */; };
@@ -166,6 +169,8 @@
 		3AF02FFB13DAD2FE0042F706 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF02FF913DAD2FE0042F706 /* Icon-Small.png */; };
 		3AF02FFD13DAD3D60042F706 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF02FFC13DAD3D60042F706 /* Default-Landscape.png */; };
 		3AF02FFF13DAD5280042F706 /* Default-LandscapeUpsideDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF02FFE13DAD5280042F706 /* Default-LandscapeUpsideDown.png */; };
+		3AF0301313DAEACC0042F706 /* EZFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0301113DAEACB0042F706 /* EZFrontViewController.m */; };
+		3AF0301413DAEACC0042F706 /* EZFrontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF0301213DAEACB0042F706 /* EZFrontViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +403,9 @@
 		3A74D6761361E88500155817 /* eco-page_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_11.png"; sourceTree = "<group>"; };
 		3A74D6771361E88600155817 /* eco-page_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_12.png"; sourceTree = "<group>"; };
 		3A74D6781361E88600155817 /* eco-page_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_13.png"; sourceTree = "<group>"; };
+		3A8B5FD013DDEAE600ECA47E /* help-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-button.png"; sourceTree = "<group>"; };
+		3A8B5FD113DDEAE600ECA47E /* read_it_myself-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "read_it_myself-button.png"; sourceTree = "<group>"; };
+		3A8B5FD213DDEAE700ECA47E /* read_it_to_me-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "read_it_to_me-button.png"; sourceTree = "<group>"; };
 		3A97DCFF13BCE4350010CDC6 /* EZPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPageView.h; sourceTree = "<group>"; };
 		3A97DD0013BCE4350010CDC6 /* EZPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPageView.m; sourceTree = "<group>"; };
 		3A97DD2013BF0F1B0010CDC6 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
@@ -450,6 +458,9 @@
 		3AF02FF913DAD2FE0042F706 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		3AF02FFC13DAD3D60042F706 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		3AF02FFE13DAD5280042F706 /* Default-LandscapeUpsideDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-LandscapeUpsideDown.png"; sourceTree = "<group>"; };
+		3AF0301013DAEACA0042F706 /* EZFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZFrontViewController.h; sourceTree = "<group>"; };
+		3AF0301113DAEACB0042F706 /* EZFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZFrontViewController.m; sourceTree = "<group>"; };
+		3AF0301213DAEACB0042F706 /* EZFrontViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZFrontViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -475,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				3A74D667136191B500155817 /* EZBookViewController.xib */,
+				3AF0301213DAEACB0042F706 /* EZFrontViewController.xib */,
 				3AD4B8301360961C00000919 /* MainWindow.xib */,
 			);
 			name = XIBs;
@@ -837,6 +849,9 @@
 		3A97DD1613BF0EBB0010CDC6 /* Other Images */ = {
 			isa = PBXGroup;
 			children = (
+				3A8B5FD013DDEAE600ECA47E /* help-button.png */,
+				3A8B5FD113DDEAE600ECA47E /* read_it_myself-button.png */,
+				3A8B5FD213DDEAE700ECA47E /* read_it_to_me-button.png */,
 				3AF02FF413DAD14A0042F706 /* Icon-72.png */,
 				3A97DD2013BF0F1B0010CDC6 /* fps_images.png */,
 				3AF02FF813DAD2FE0042F706 /* Icon-Small-50.png */,
@@ -899,6 +914,8 @@
 			children = (
 				3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */,
 				3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */,
+				3AF0301013DAEACA0042F706 /* EZFrontViewController.h */,
+				3AF0301113DAEACB0042F706 /* EZFrontViewController.m */,
 				3A74D665136191B500155817 /* EZBookViewController.h */,
 				3A74D666136191B500155817 /* EZBookViewController.m */,
 				3ABEDA2213C0D1F100DC40BC /* EZBook.h */,
@@ -1026,12 +1043,16 @@
 				2EE8EA4E13CF893D0045F65C /* Lucidia30.png in Resources */,
 				2EBB858113D597D5006CEF3C /* pause_button.png in Resources */,
 				2EBB858213D597D5006CEF3C /* play_button.png in Resources */,
+				3AF0301413DAEACC0042F706 /* EZFrontViewController.xib in Resources */,
 				3AF02FF513DAD14A0042F706 /* Icon-72.png in Resources */,
 				3AF02FF713DAD2780042F706 /* iTunesArtwork in Resources */,
 				3AF02FFA13DAD2FE0042F706 /* Icon-Small-50.png in Resources */,
 				3AF02FFB13DAD2FE0042F706 /* Icon-Small.png in Resources */,
 				3AF02FFD13DAD3D60042F706 /* Default-Landscape.png in Resources */,
 				3AF02FFF13DAD5280042F706 /* Default-LandscapeUpsideDown.png in Resources */,
+				3A8B5FD313DDEAE700ECA47E /* help-button.png in Resources */,
+				3A8B5FD413DDEAE700ECA47E /* read_it_myself-button.png in Resources */,
+				3A8B5FD513DDEAE700ECA47E /* read_it_to_me-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1146,6 +1167,7 @@
 				3AB77E5B13C6F18600C98D3E /* EZWordLabel.m in Sources */,
 				3AB77E5E13C7550E00C98D3E /* EZTextViewScene.m in Sources */,
 				3AB77FE713C77C3C00C98D3E /* EZParagraphTransition.m in Sources */,
+				3AF0301313DAEACC0042F706 /* EZFrontViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
