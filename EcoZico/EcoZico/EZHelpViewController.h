@@ -13,4 +13,7 @@
     
 }
 
+- (IBAction)nextButtonPushed:(id)sender;
+- (IBAction)exitButtonPushed:(id)sender;
+
 @end

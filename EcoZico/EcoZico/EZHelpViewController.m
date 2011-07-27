@@ -7,6 +7,7 @@
 //
 
 #import "EZHelpViewController.h"
+#import "EcoZicoAppDelegate.h"
 
 
 @implementation EZHelpViewController
@@ -54,4 +55,13 @@
 	return YES;
 }
 
+- (IBAction)nextButtonPushed:(id)sender
+{
+}
+
+- (IBAction)exitButtonPushed:(id)sender
+{
+    EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate switchToFrontViewController];
+}
 @end
