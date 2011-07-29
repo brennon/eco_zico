@@ -37,7 +37,7 @@
 {
     [words release];
     NSMutableArray *tempWords = [NSMutableArray arrayWithCapacity:[wordArray count]];
-    for (int i = 0; i < [wordArray count]; i++) {\
+    for (int i = 0; i < [wordArray count]; i++) {
         NSDictionary *wordDictionary = [NSDictionary dictionaryWithDictionary:[wordArray objectAtIndex:i]];
         NSString *newText = [wordDictionary objectForKey:@"text"];
         NSNumber *newSeekPoint = [NSNumber numberWithFloat:[[wordDictionary objectForKey:@"time"] floatValue]];

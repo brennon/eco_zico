@@ -72,7 +72,7 @@
 
 -(void)startWordOffAnimation
 {
-    self.color = ccc3(0,0,0);
+    [self runAction:[CCTintTo actionWithDuration:0.333 red:0 green:0 blue:0]];
 }
 
 

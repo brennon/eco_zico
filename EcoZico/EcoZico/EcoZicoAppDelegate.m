@@ -39,12 +39,24 @@
     [self.window makeKeyAndVisible];
 }
 
+#define SKIP_MENU 1
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    rootViewController = (UIViewController *)[[EZFrontViewController alloc] init];
-    [self.window setRootViewController:rootViewController];
-    [self.window makeKeyAndVisible];
+    if (SKIP_MENU) 
+    {
+        // Override point for customization after application launch.
+        rootViewController = (UIViewController *)[[EZBookViewController alloc] init];
+        [self.window setRootViewController:rootViewController];
+        [self.window makeKeyAndVisible];
+    }
+    else
+    {
+        // Override point for customization after application launch.
+        rootViewController = (UIViewController *)[[EZFrontViewController alloc] init];
+        [self.window setRootViewController:rootViewController];
+        [self.window makeKeyAndVisible];
+    }
     return YES;
 }
 
