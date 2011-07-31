@@ -74,15 +74,16 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-	return YES;
+    // Only allow landscape orientations
+	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 - (void)animateScreenshot {}
 
 - (void)animateText
 {  
-    [UIView animateWithDuration:0.75 
+    [UIView anim
+     ateWithDuration:0.75 
                      animations:^ { 
                          self.textView.alpha = 0.0; 
                      } 
