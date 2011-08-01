@@ -78,9 +78,9 @@
 
 #pragma - touches 
 
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
+    NSLog(@"-touchesEnded:withEvent:");     
 }
 
 

@@ -82,8 +82,7 @@
 
 - (void)animateText
 {  
-    [UIView anim
-     ateWithDuration:0.75 
+    [UIView animateWithDuration:0.75 
                      animations:^ { 
                          self.textView.alpha = 0.0; 
                      } 
