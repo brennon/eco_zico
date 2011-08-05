@@ -19,14 +19,6 @@
 #import "CCLabelBMFont.h"
 #import "EZParagraphTransition.h"
 
-const NSUInteger kNumberOfPages = 14;
-
-@interface EZBookViewController ()
-
--(void)setupTextView;
-
-@end
-
 @implementation EZBookViewController
 
 @synthesize ezPageView, textView, ezBook, currentPage, ezWordLabels, ezTextViewScene, idxOfLastWordLaidOut, player, playPauseBut, skipParaBut;
@@ -360,11 +352,7 @@ double thirdParaSkip = 30;
         [self pauseAudio];
 
         [self loadNewPage:(EZPage *)[ezBook.pages objectAtIndex:[currentPage intValue]] withTransition:YES];
-    }
-
-    
+    }    
 }
-
-
 
 @end
