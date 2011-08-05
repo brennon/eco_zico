@@ -195,7 +195,7 @@ const NSUInteger kNumberOfPages = 14;
     [self loadEZPageWordsAsCCLabelBMFonts:ezPage];
     
     [self loadAudioForPage:[currentPage intValue]];
-        
+    
     // Layout text
     [self layoutTextWithTransition:withTrans];
 }
