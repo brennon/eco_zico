@@ -400,8 +400,8 @@
 		3A42866D13BF43F8004BF22B /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
 		3A42866E13BF43F8004BF22B /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
 		3A42866F13BF43F8004BF22B /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
-		3A74D665136191B500155817 /* EZBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZBookViewController.h; sourceTree = "<group>"; };
-		3A74D666136191B500155817 /* EZBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZBookViewController.m; sourceTree = "<group>"; };
+		3A74D665136191B500155817 /* EZBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZBookViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3A74D666136191B500155817 /* EZBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EZBookViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3A74D667136191B500155817 /* EZBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZBookViewController.xib; sourceTree = "<group>"; };
 		3A74D66B1361E88500155817 /* eco-page_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_0.png"; sourceTree = "<group>"; };
 		3A74D66D1361E88500155817 /* eco-page_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_2.png"; sourceTree = "<group>"; };
@@ -420,8 +420,8 @@
 		3A8B5FD113DDEAE600ECA47E /* read_it_myself-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "read_it_myself-button.png"; sourceTree = "<group>"; };
 		3A8B5FD213DDEAE700ECA47E /* read_it_to_me-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "read_it_to_me-button.png"; sourceTree = "<group>"; };
 		3A8B600313E0206600ECA47E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		3A8B600613E0212800ECA47E /* EZHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZHelpViewController.h; sourceTree = "<group>"; };
-		3A8B600713E0212800ECA47E /* EZHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZHelpViewController.m; sourceTree = "<group>"; };
+		3A8B600613E0212800ECA47E /* EZHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZHelpViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3A8B600713E0212800ECA47E /* EZHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EZHelpViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3A8B600813E0212900ECA47E /* EZHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZHelpViewController.xib; sourceTree = "<group>"; };
 		3A8B600B13E02A9300ECA47E /* book_frame-bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book_frame-bottom.png"; sourceTree = "<group>"; };
 		3A8B600C13E02A9300ECA47E /* book_frame-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book_frame-top.png"; sourceTree = "<group>"; };
@@ -434,7 +434,7 @@
 		3A8B602313E06FAA00ECA47E /* instructions_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instructions_02.png; sourceTree = "<group>"; };
 		3A8B602413E06FAA00ECA47E /* instructions_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instructions_03.png; sourceTree = "<group>"; };
 		3A8B602513E06FAA00ECA47E /* instructions_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instructions_04.png; sourceTree = "<group>"; };
-		3A97DCFF13BCE4350010CDC6 /* EZPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPageView.h; sourceTree = "<group>"; };
+		3A97DCFF13BCE4350010CDC6 /* EZPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZPageView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		3A97DD0013BCE4350010CDC6 /* EZPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPageView.m; sourceTree = "<group>"; };
 		3A97DD2013BF0F1B0010CDC6 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
 		3A97DE7013BF0FE70010CDC6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -448,10 +448,10 @@
 		3AB77E5D13C7550D00C98D3E /* EZTextViewScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTextViewScene.m; sourceTree = "<group>"; };
 		3AB77FE513C77C3A00C98D3E /* EZParagraphTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZParagraphTransition.h; sourceTree = "<group>"; };
 		3AB77FE613C77C3B00C98D3E /* EZParagraphTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZParagraphTransition.m; sourceTree = "<group>"; };
-		3ABEDA2213C0D1F100DC40BC /* EZBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZBook.h; sourceTree = "<group>"; };
-		3ABEDA2313C0D1F100DC40BC /* EZBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZBook.m; sourceTree = "<group>"; };
-		3ABEDA2513C0D26900DC40BC /* EZPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPage.h; sourceTree = "<group>"; };
-		3ABEDA2613C0D26900DC40BC /* EZPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPage.m; sourceTree = "<group>"; };
+		3ABEDA2213C0D1F100DC40BC /* EZBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZBook.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3ABEDA2313C0D1F100DC40BC /* EZBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EZBook.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		3ABEDA2513C0D26900DC40BC /* EZPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZPage.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3ABEDA2613C0D26900DC40BC /* EZPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EZPage.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3ABEDA2813C0D30900DC40BC /* EZWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZWord.h; sourceTree = "<group>"; };
 		3ABEDA2913C0D30A00DC40BC /* EZWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZWord.m; sourceTree = "<group>"; };
 		3AC034DD13C508940017D811 /* EcoZicoBook.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EcoZicoBook.plist; path = EcoZico/EcoZicoBook.plist; sourceTree = "<group>"; };
@@ -477,16 +477,16 @@
 		3AD4B8281360961C00000919 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3AD4B82A1360961C00000919 /* EcoZico-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EcoZico-Prefix.pch"; path = "EcoZico/EcoZico-Prefix.pch"; sourceTree = "<group>"; };
 		3AD4B82B1360961C00000919 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EcoZico/main.m; sourceTree = "<group>"; };
-		3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcoZicoAppDelegate.h; sourceTree = "<group>"; };
-		3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EcoZicoAppDelegate.m; sourceTree = "<group>"; };
+		3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EcoZicoAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EcoZicoAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3AD4B8311360961C00000919 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		3AF02FF613DAD2780042F706 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		3AF02FF813DAD2FE0042F706 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		3AF02FF913DAD2FE0042F706 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		3AF02FFC13DAD3D60042F706 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		3AF02FFE13DAD5280042F706 /* Default-LandscapeUpsideDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-LandscapeUpsideDown.png"; sourceTree = "<group>"; };
-		3AF0301013DAEACA0042F706 /* EZFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZFrontViewController.h; sourceTree = "<group>"; };
-		3AF0301113DAEACB0042F706 /* EZFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZFrontViewController.m; sourceTree = "<group>"; };
+		3AF0301013DAEACA0042F706 /* EZFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZFrontViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3AF0301113DAEACB0042F706 /* EZFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EZFrontViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3AF0301213DAEACB0042F706 /* EZFrontViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZFrontViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
