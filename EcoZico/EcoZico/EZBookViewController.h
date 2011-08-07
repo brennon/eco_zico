@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVAudioPlayer.h>
-#import "EZParagraphTransition.h"
+#import "EZParagraphTransitions.h"
 
 #define PLAY_PAUSE_BUTTON_WIDTH 85
 

@@ -15,7 +15,20 @@
 - (void)paragraphTransitionDidFinish;
 @end
 
-@interface EZParagraphTransition : CCTransitionFlipY 
+@interface EZParagraphTransitionFlipY : CCTransitionFlipY 
+{
+    id <EZParagraphTransitionDelegate> transitionFinishDelegate;
+}
+
+@property (nonatomic, assign) id <EZParagraphTransitionDelegate> transitionFinishDelegate;
+
++ (id) transitionWithDuration:(ccTime)t scene:(CCScene *)s delegate:(id)d;
+- (id) initWithDuration:(ccTime)t scene:(CCScene *)s delegate:(id)d;
+
+@end
+
+
+@interface EZParagraphTransitionMoveInB : CCTransitionMoveInB 
 {
     id <EZParagraphTransitionDelegate> transitionFinishDelegate;
 }

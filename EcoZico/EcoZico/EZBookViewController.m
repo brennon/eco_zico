@@ -17,7 +17,7 @@
 #import "EZWordLabel.h"
 #import "EZTextViewScene.h"
 #import "CCLabelBMFont.h"
-#import "EZParagraphTransition.h"
+#import "EZParagraphTransitions.h"
 
 const NSUInteger kNumberOfPages = 14;
 
@@ -218,7 +218,10 @@ const NSUInteger kNumberOfPages = 14;
         
         NSLog(@"beginIgnoringInteractionEvents");
         
-        [[CCDirector sharedDirector] replaceScene:[EZParagraphTransition transitionWithDuration:0.25 scene:nextScene delegate:self]];
+        //show a different transition every other page.
+        Class trans = [currentPage intValue] % 2 == 0 ? [EZParagraphTransitionFlipY class] : [EZParagraphTransitionMoveInB class];
+        
+        [[CCDirector sharedDirector] replaceScene:[trans transitionWithDuration:0.25 scene:nextScene delegate:self]];
     }
     else
     {
