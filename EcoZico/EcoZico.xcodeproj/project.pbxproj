@@ -110,6 +110,8 @@
 		3A4286CF13BF43F8004BF22B /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866A13BF43F8004BF22B /* CJSONDeserializer.m */; };
 		3A4286D013BF43F8004BF22B /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866C13BF43F8004BF22B /* CJSONScanner.m */; };
 		3A4286D113BF43F8004BF22B /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866E13BF43F8004BF22B /* CJSONSerializer.m */; };
+		3A47510D13EED7020096ED92 /* 00_zico.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A47510C13EED7020096ED92 /* 00_zico.wav */; };
+		3A47511113EEE39F0096ED92 /* EZTransparentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A47511013EEE39F0096ED92 /* EZTransparentButton.m */; };
 		3A74D668136191B500155817 /* EZBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A74D666136191B500155817 /* EZBookViewController.m */; };
 		3A74D669136191B500155817 /* EZBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D667136191B500155817 /* EZBookViewController.xib */; };
 		3A74D6791361E88600155817 /* eco-page_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D66B1361E88500155817 /* eco-page_0.png */; };
@@ -400,6 +402,9 @@
 		3A42866D13BF43F8004BF22B /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
 		3A42866E13BF43F8004BF22B /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
 		3A42866F13BF43F8004BF22B /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		3A47510C13EED7020096ED92 /* 00_zico.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 00_zico.wav; sourceTree = "<group>"; };
+		3A47510F13EEE39F0096ED92 /* EZTransparentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTransparentButton.h; sourceTree = "<group>"; };
+		3A47511013EEE39F0096ED92 /* EZTransparentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTransparentButton.m; sourceTree = "<group>"; };
 		3A74D665136191B500155817 /* EZBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZBookViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		3A74D666136191B500155817 /* EZBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EZBookViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3A74D667136191B500155817 /* EZBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZBookViewController.xib; sourceTree = "<group>"; };
@@ -856,6 +861,7 @@
 		3A97DD1513BF0E3E0010CDC6 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				3A47510C13EED7020096ED92 /* 00_zico.wav */,
 				3AC034E013C5DC3E0017D811 /* zico_audio-page_0.wav */,
 				3AC034FA13C5DDA70017D811 /* zico_audio-page_1.wav */,
 				3AC034E113C5DC3E0017D811 /* zico_audio-page_2.wav */,
@@ -961,6 +967,8 @@
 				3A74D666136191B500155817 /* EZBookViewController.m */,
 				3ABEDA2213C0D1F100DC40BC /* EZBook.h */,
 				3ABEDA2313C0D1F100DC40BC /* EZBook.m */,
+				3A47510F13EEE39F0096ED92 /* EZTransparentButton.h */,
+				3A47511013EEE39F0096ED92 /* EZTransparentButton.m */,
 				3A97DCFF13BCE4350010CDC6 /* EZPageView.h */,
 				3A97DD0013BCE4350010CDC6 /* EZPageView.m */,
 				3ABEDA2513C0D26900DC40BC /* EZPage.h */,
@@ -1106,6 +1114,7 @@
 				3A8B602713E06FAA00ECA47E /* instructions_02.png in Resources */,
 				3A8B602813E06FAA00ECA47E /* instructions_03.png in Resources */,
 				3A8B602913E06FAA00ECA47E /* instructions_04.png in Resources */,
+				3A47510D13EED7020096ED92 /* 00_zico.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1222,6 +1231,7 @@
 				3AB77FE713C77C3C00C98D3E /* EZParagraphTransition.m in Sources */,
 				3AF0301313DAEACC0042F706 /* EZFrontViewController.m in Sources */,
 				3A8B600913E0212A00ECA47E /* EZHelpViewController.m in Sources */,
+				3A47511113EEE39F0096ED92 /* EZTransparentButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

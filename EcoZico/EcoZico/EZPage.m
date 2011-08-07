@@ -12,14 +12,16 @@
 @implementation EZPage
 
 @synthesize words, audioFilePath, imageFilePath;
+@synthesize touchButtons = _touchButtons;
 
-- (id)initWithWords:(NSArray *)wordArray andAudioFilePath:(NSString *)audioFP andImageFilePath:(NSString *)imageFP
+- (id)initWithWords:(NSArray *)wordArray andAudioFilePath:(NSString *)audioFP andImageFilePath:(NSString *)imageFP andEZTransparentButtons:(NSArray *)buttonArray
 {
     self = [super init];
     if (self) {
         self.words = wordArray;
         self.audioFilePath = audioFP;
         self.imageFilePath = imageFP;
+        self.touchButtons = buttonArray;
     }
     return self;
 }
@@ -30,6 +32,10 @@
     words = nil;
     [audioFilePath release];
     audioFilePath = nil;
+    [self.imageFilePath release];
+    self.imageFilePath = nil;
+    [self.touchButtons release];
+    self.touchButtons = nil;
     [super dealloc];
 }
 

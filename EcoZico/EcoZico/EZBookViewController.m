@@ -18,10 +18,13 @@
 #import "EZTextViewScene.h"
 #import "CCLabelBMFont.h"
 #import "EZParagraphTransition.h"
+#import "EZTransparentButton.h"
 
 @implementation EZBookViewController
 
 @synthesize ezPageView, textView, ezBook, currentPage, ezWordLabels, ezTextViewScene, idxOfLastWordLaidOut, player, playPauseBut, skipParaBut;
+
+@synthesize touchZones = _touchZones;
 
 
 #pragma mark - EZBookViewController lifecycle
@@ -29,11 +32,10 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        
+    if (self) {        
         isFirstPageAfterLaunch = YES;
         currentPage = [NSNumber numberWithInt:0];
-        ezBook = [[[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"] retain];
+        ezBook = [[[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"] retain];                
     }
     return self;
 }
@@ -190,8 +192,18 @@
     
     // Layout text
     [self layoutTextWithTransition:withTrans];
+    
+    for (UInt16 i = 0; i < [ezPage.touchButtons count]; i++) {
+        EZTransparentButton *buttonToAdd = [ezPage.touchButtons objectAtIndex:i];
+        [buttonToAdd addTarget:self action:@selector(playImageAudio:) forControlEvents:UIControlEventTouchUpInside];
+        [self.ezPageView addSubview:buttonToAdd];        
+    }
 }
 
+- (void)playImageAudio:(id)sender
+{
+    NSLog(@"playImageAudio");
+}
 
 -(void)layoutTextWithTransition:(BOOL)withTrans
 {    

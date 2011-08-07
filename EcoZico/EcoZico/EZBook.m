@@ -8,6 +8,7 @@
 
 #import "EZBook.h"
 #import "EZPage.h"
+#import "EZTransparentButton.h"
 
 @implementation EZBook
 
@@ -40,7 +41,26 @@
         NSArray *newWordArray = [NSArray arrayWithArray:[newPageDictionary objectForKey:@"words"]];
         NSString *audioFilepath = [[NSBundle mainBundle] pathForResource:[newPageDictionary objectForKey:@"audio"] ofType:nil];
         NSString *imageFilepath = [[NSBundle mainBundle] pathForResource:[newPageDictionary objectForKey:@"image"] ofType:nil];
-        EZPage *newPage = [[EZPage alloc] initWithWords:newWordArray andAudioFilePath:audioFilepath andImageFilePath:imageFilepath];
+        NSArray *touchButtonsInfo = [newPageDictionary objectForKey:@"touchButtons"];
+        
+        NSMutableArray *touchButtons = [NSMutableArray arrayWithCapacity:[touchButtonsInfo count]];
+        
+        for (UInt16 j = 0; j < [touchButtonsInfo count]; j++) {
+            NSDictionary *buttonDict = [touchButtonsInfo objectAtIndex:j];
+            EZTransparentButton *newButton = [EZTransparentButton buttonWithType:UIButtonTypeCustom];
+            CGFloat x = [[buttonDict objectForKey:@"x"] floatValue];
+            CGFloat y = [[buttonDict objectForKey:@"y"] floatValue];
+            CGFloat width = [[buttonDict objectForKey:@"width"] floatValue];
+            CGFloat height = [[buttonDict objectForKey:@"height"] floatValue];
+            CGRect buttonFrame = CGRectMake(0.f, 0.f, width, height);            
+            newButton.frame = buttonFrame;
+            newButton.center = CGPointMake(x + (width/2) + (i * 1024), y + (height/2));
+            newButton.backgroundColor = [UIColor redColor];
+            newButton.audioFilePath = [buttonDict objectForKey:@"audio"];
+            [touchButtons insertObject:newButton atIndex:j];
+        }   
+        
+        EZPage *newPage = [[EZPage alloc] initWithWords:newWordArray andAudioFilePath:audioFilepath andImageFilePath:imageFilepath andEZTransparentButtons:touchButtons];
         [tempPages insertObject:newPage atIndex:i];
         [newPage release];
     }

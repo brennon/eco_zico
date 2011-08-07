@@ -430,6 +430,21 @@
 				<real>23.523</real>
 			</dict>
 		</array>
+		<key>touchButtons</key>
+		<array>
+			<dict>
+				<key>x</key>
+				<string>239</string>
+				<key>y</key>
+				<string>171</string>
+				<key>width</key>
+				<string>110</string>
+				<key>height</key>
+				<string>235</string>
+				<key>audio</key>
+				<string>00_zico.wav</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>audio</key>
@@ -923,6 +938,21 @@
 				<string>chanted.</string>
 				<key>time</key>
 				<real>31.376</real>
+			</dict>
+		</array>
+        <key>touchButtons</key>
+		<array>
+			<dict>
+				<key>x</key>
+				<string>808</string>
+				<key>y</key>
+				<string>217</string>
+				<key>width</key>
+				<string>100</string>
+				<key>height</key>
+				<string>93</string>
+				<key>audio</key>
+				<string>01_fireball.wav</string>
 			</dict>
 		</array>
 	</dict>

@@ -9,15 +9,17 @@
 #import <Foundation/Foundation.h>
 
 @interface EZPage : NSObject {
-    NSArray *words;
+    NSArray *words;    
     NSString *audioFilePath;
     NSString *imageFilePath;
+    NSArray *touchButtons;
 }
 
 @property (nonatomic, retain) NSArray *words;
 @property (nonatomic, retain) NSString *audioFilePath;
 @property (nonatomic, retain) NSString *imageFilePath;
+@property (nonatomic, retain) NSArray *touchButtons;
 
-- (id)initWithWords:(NSArray *)wordArray andAudioFilePath:(NSString *)audioFP andImageFilePath:(NSString *)imageFP;
+- (id)initWithWords:(NSArray *)wordArray andAudioFilePath:(NSString *)audioFP andImageFilePath:(NSString *)imageFP andEZTransparentButtons:(NSArray *)buttonArray;
 
 @end
