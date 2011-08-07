@@ -88,13 +88,6 @@
 		2EE8EA4D13CF893D0045F65C /* Lucidia30.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 2EE8EA4B13CF893D0045F65C /* Lucidia30.fnt */; };
 		2EE8EA4E13CF893D0045F65C /* Lucidia30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE8EA4C13CF893D0045F65C /* Lucidia30.png */; };
 		3A112C7913C60CC4004A8AAF /* eco-page_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A112C7813C60CC4004A8AAF /* eco-page_1.png */; };
-		3A4286BC13BF43F8004BF22B /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42864113BF43F8004BF22B /* CDAudioManager.m */; };
-		3A4286BD13BF43F8004BF22B /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42864413BF43F8004BF22B /* CDOpenALSupport.m */; };
-		3A4286BE13BF43F8004BF22B /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42864613BF43F8004BF22B /* CocosDenshion.m */; };
-		3A4286BF13BF43F8004BF22B /* SimpleAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42864813BF43F8004BF22B /* SimpleAudioEngine.m */; };
-		3A4286C013BF43F8004BF22B /* CLScoreServerPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42864B13BF43F8004BF22B /* CLScoreServerPost.m */; };
-		3A4286C113BF43F8004BF22B /* CLScoreServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42864D13BF43F8004BF22B /* CLScoreServerRequest.m */; };
-		3A4286C213BF43F8004BF22B /* cocoslive.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42864F13BF43F8004BF22B /* cocoslive.m */; };
 		3A4286C313BF43F8004BF22B /* FontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42865213BF43F8004BF22B /* FontLabel.m */; };
 		3A4286C413BF43F8004BF22B /* FontLabelStringDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42865413BF43F8004BF22B /* FontLabelStringDrawing.m */; };
 		3A4286C513BF43F8004BF22B /* FontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42865613BF43F8004BF22B /* FontManager.m */; };
@@ -104,12 +97,6 @@
 		3A4286C913BF43F8004BF22B /* LICENSE_CocosDenshion.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A42865D13BF43F8004BF22B /* LICENSE_CocosDenshion.txt */; };
 		3A4286CA13BF43F8004BF22B /* LICENSE_FontLabel.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A42865E13BF43F8004BF22B /* LICENSE_FontLabel.txt */; };
 		3A4286CB13BF43F8004BF22B /* LICENSE_TouchJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A42865F13BF43F8004BF22B /* LICENSE_TouchJSON.txt */; };
-		3A4286CC13BF43F8004BF22B /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866213BF43F8004BF22B /* CDataScanner.m */; };
-		3A4286CD13BF43F8004BF22B /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866513BF43F8004BF22B /* CDataScanner_Extensions.m */; };
-		3A4286CE13BF43F8004BF22B /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866713BF43F8004BF22B /* NSDictionary_JSONExtensions.m */; };
-		3A4286CF13BF43F8004BF22B /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866A13BF43F8004BF22B /* CJSONDeserializer.m */; };
-		3A4286D013BF43F8004BF22B /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866C13BF43F8004BF22B /* CJSONScanner.m */; };
-		3A4286D113BF43F8004BF22B /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866E13BF43F8004BF22B /* CJSONSerializer.m */; };
 		3A74D668136191B500155817 /* EZBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A74D666136191B500155817 /* EZBookViewController.m */; };
 		3A74D669136191B500155817 /* EZBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D667136191B500155817 /* EZBookViewController.xib */; };
 		3A74D6791361E88600155817 /* eco-page_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D66B1361E88500155817 /* eco-page_0.png */; };
@@ -357,21 +344,6 @@
 		2EE8EA4C13CF893D0045F65C /* Lucidia30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lucidia30.png; sourceTree = "<group>"; };
 		3A112C7813C60CC4004A8AAF /* eco-page_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_1.png"; sourceTree = "<group>"; };
 		3A427B1B13BF3A3E004BF22B /* GameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
-		3A42864013BF43F8004BF22B /* CDAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAudioManager.h; sourceTree = "<group>"; };
-		3A42864113BF43F8004BF22B /* CDAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAudioManager.m; sourceTree = "<group>"; };
-		3A42864213BF43F8004BF22B /* CDConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConfig.h; sourceTree = "<group>"; };
-		3A42864313BF43F8004BF22B /* CDOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDOpenALSupport.h; sourceTree = "<group>"; };
-		3A42864413BF43F8004BF22B /* CDOpenALSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDOpenALSupport.m; sourceTree = "<group>"; };
-		3A42864513BF43F8004BF22B /* CocosDenshion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosDenshion.h; sourceTree = "<group>"; };
-		3A42864613BF43F8004BF22B /* CocosDenshion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocosDenshion.m; sourceTree = "<group>"; };
-		3A42864713BF43F8004BF22B /* SimpleAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine.h; sourceTree = "<group>"; };
-		3A42864813BF43F8004BF22B /* SimpleAudioEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine.m; sourceTree = "<group>"; };
-		3A42864A13BF43F8004BF22B /* CLScoreServerPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLScoreServerPost.h; sourceTree = "<group>"; };
-		3A42864B13BF43F8004BF22B /* CLScoreServerPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLScoreServerPost.m; sourceTree = "<group>"; };
-		3A42864C13BF43F8004BF22B /* CLScoreServerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLScoreServerRequest.h; sourceTree = "<group>"; };
-		3A42864D13BF43F8004BF22B /* CLScoreServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLScoreServerRequest.m; sourceTree = "<group>"; };
-		3A42864E13BF43F8004BF22B /* cocoslive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoslive.h; sourceTree = "<group>"; };
-		3A42864F13BF43F8004BF22B /* cocoslive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoslive.m; sourceTree = "<group>"; };
 		3A42865113BF43F8004BF22B /* FontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontLabel.h; sourceTree = "<group>"; };
 		3A42865213BF43F8004BF22B /* FontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontLabel.m; sourceTree = "<group>"; };
 		3A42865313BF43F8004BF22B /* FontLabelStringDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontLabelStringDrawing.h; sourceTree = "<group>"; };
@@ -387,19 +359,6 @@
 		3A42865D13BF43F8004BF22B /* LICENSE_CocosDenshion.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_CocosDenshion.txt; sourceTree = "<group>"; };
 		3A42865E13BF43F8004BF22B /* LICENSE_FontLabel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_FontLabel.txt; sourceTree = "<group>"; };
 		3A42865F13BF43F8004BF22B /* LICENSE_TouchJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_TouchJSON.txt; sourceTree = "<group>"; };
-		3A42866113BF43F8004BF22B /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
-		3A42866213BF43F8004BF22B /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
-		3A42866413BF43F8004BF22B /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
-		3A42866513BF43F8004BF22B /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
-		3A42866613BF43F8004BF22B /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
-		3A42866713BF43F8004BF22B /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
-		3A42866913BF43F8004BF22B /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
-		3A42866A13BF43F8004BF22B /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
-		3A42866B13BF43F8004BF22B /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
-		3A42866C13BF43F8004BF22B /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
-		3A42866D13BF43F8004BF22B /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
-		3A42866E13BF43F8004BF22B /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
-		3A42866F13BF43F8004BF22B /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 		3A74D665136191B500155817 /* EZBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZBookViewController.h; sourceTree = "<group>"; };
 		3A74D666136191B500155817 /* EZBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZBookViewController.m; sourceTree = "<group>"; };
 		3A74D667136191B500155817 /* EZBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZBookViewController.xib; sourceTree = "<group>"; };
@@ -446,7 +405,7 @@
 		3AB77E5A13C6F18500C98D3E /* EZWordLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZWordLabel.m; sourceTree = "<group>"; };
 		3AB77E5C13C7550B00C98D3E /* EZTextViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTextViewScene.h; sourceTree = "<group>"; };
 		3AB77E5D13C7550D00C98D3E /* EZTextViewScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTextViewScene.m; sourceTree = "<group>"; };
-		3AB77FE513C77C3A00C98D3E /* EZParagraphTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; path = EZParagraphTransitions.h; sourceTree = "<group>"; };
+		3AB77FE513C77C3A00C98D3E /* EZParagraphTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZParagraphTransitions.h; sourceTree = "<group>"; };
 		3AB77FE613C77C3B00C98D3E /* EZParagraphTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZParagraphTransitions.m; sourceTree = "<group>"; };
 		3ABEDA2213C0D1F100DC40BC /* EZBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZBook.h; sourceTree = "<group>"; };
 		3ABEDA2313C0D1F100DC40BC /* EZBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZBook.m; sourceTree = "<group>"; };
@@ -736,46 +695,14 @@
 			isa = PBXGroup;
 			children = (
 				2EBED09013EF1BF8005F5D2C /* cocos2d */,
-				3A42863F13BF43F8004BF22B /* CocosDenshion */,
-				3A42864913BF43F8004BF22B /* cocoslive */,
 				3A42865013BF43F8004BF22B /* FontLabel */,
 				3A42865C13BF43F8004BF22B /* LICENSE_cocos2d.txt */,
 				3A42865D13BF43F8004BF22B /* LICENSE_CocosDenshion.txt */,
 				3A42865E13BF43F8004BF22B /* LICENSE_FontLabel.txt */,
 				3A42865F13BF43F8004BF22B /* LICENSE_TouchJSON.txt */,
-				3A42866013BF43F8004BF22B /* TouchJSON */,
 			);
 			name = Libraries;
 			path = libs;
-			sourceTree = "<group>";
-		};
-		3A42863F13BF43F8004BF22B /* CocosDenshion */ = {
-			isa = PBXGroup;
-			children = (
-				3A42864013BF43F8004BF22B /* CDAudioManager.h */,
-				3A42864113BF43F8004BF22B /* CDAudioManager.m */,
-				3A42864213BF43F8004BF22B /* CDConfig.h */,
-				3A42864313BF43F8004BF22B /* CDOpenALSupport.h */,
-				3A42864413BF43F8004BF22B /* CDOpenALSupport.m */,
-				3A42864513BF43F8004BF22B /* CocosDenshion.h */,
-				3A42864613BF43F8004BF22B /* CocosDenshion.m */,
-				3A42864713BF43F8004BF22B /* SimpleAudioEngine.h */,
-				3A42864813BF43F8004BF22B /* SimpleAudioEngine.m */,
-			);
-			path = CocosDenshion;
-			sourceTree = "<group>";
-		};
-		3A42864913BF43F8004BF22B /* cocoslive */ = {
-			isa = PBXGroup;
-			children = (
-				3A42864A13BF43F8004BF22B /* CLScoreServerPost.h */,
-				3A42864B13BF43F8004BF22B /* CLScoreServerPost.m */,
-				3A42864C13BF43F8004BF22B /* CLScoreServerRequest.h */,
-				3A42864D13BF43F8004BF22B /* CLScoreServerRequest.m */,
-				3A42864E13BF43F8004BF22B /* cocoslive.h */,
-				3A42864F13BF43F8004BF22B /* cocoslive.m */,
-			);
-			path = cocoslive;
 			sourceTree = "<group>";
 		};
 		3A42865013BF43F8004BF22B /* FontLabel */ = {
@@ -794,42 +721,6 @@
 				3A42865B13BF43F8004BF22B /* ZFont.m */,
 			);
 			path = FontLabel;
-			sourceTree = "<group>";
-		};
-		3A42866013BF43F8004BF22B /* TouchJSON */ = {
-			isa = PBXGroup;
-			children = (
-				3A42866113BF43F8004BF22B /* CDataScanner.h */,
-				3A42866213BF43F8004BF22B /* CDataScanner.m */,
-				3A42866313BF43F8004BF22B /* Extensions */,
-				3A42866813BF43F8004BF22B /* JSON */,
-			);
-			path = TouchJSON;
-			sourceTree = "<group>";
-		};
-		3A42866313BF43F8004BF22B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3A42866413BF43F8004BF22B /* CDataScanner_Extensions.h */,
-				3A42866513BF43F8004BF22B /* CDataScanner_Extensions.m */,
-				3A42866613BF43F8004BF22B /* NSDictionary_JSONExtensions.h */,
-				3A42866713BF43F8004BF22B /* NSDictionary_JSONExtensions.m */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		3A42866813BF43F8004BF22B /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				3A42866913BF43F8004BF22B /* CJSONDeserializer.h */,
-				3A42866A13BF43F8004BF22B /* CJSONDeserializer.m */,
-				3A42866B13BF43F8004BF22B /* CJSONScanner.h */,
-				3A42866C13BF43F8004BF22B /* CJSONScanner.m */,
-				3A42866D13BF43F8004BF22B /* CJSONSerializer.h */,
-				3A42866E13BF43F8004BF22B /* CJSONSerializer.m */,
-				3A42866F13BF43F8004BF22B /* JSONRepresentation.h */,
-			);
-			path = JSON;
 			sourceTree = "<group>";
 		};
 		3A74D6871361E89800155817 /* Page Images */ = {
@@ -1120,24 +1011,11 @@
 				3AD4B82F1360961C00000919 /* EcoZicoAppDelegate.m in Sources */,
 				3A74D668136191B500155817 /* EZBookViewController.m in Sources */,
 				3A97DD0113BCE4350010CDC6 /* EZPageView.m in Sources */,
-				3A4286BC13BF43F8004BF22B /* CDAudioManager.m in Sources */,
-				3A4286BD13BF43F8004BF22B /* CDOpenALSupport.m in Sources */,
-				3A4286BE13BF43F8004BF22B /* CocosDenshion.m in Sources */,
-				3A4286BF13BF43F8004BF22B /* SimpleAudioEngine.m in Sources */,
-				3A4286C013BF43F8004BF22B /* CLScoreServerPost.m in Sources */,
-				3A4286C113BF43F8004BF22B /* CLScoreServerRequest.m in Sources */,
-				3A4286C213BF43F8004BF22B /* cocoslive.m in Sources */,
 				3A4286C313BF43F8004BF22B /* FontLabel.m in Sources */,
 				3A4286C413BF43F8004BF22B /* FontLabelStringDrawing.m in Sources */,
 				3A4286C513BF43F8004BF22B /* FontManager.m in Sources */,
 				3A4286C613BF43F8004BF22B /* ZAttributedString.m in Sources */,
 				3A4286C713BF43F8004BF22B /* ZFont.m in Sources */,
-				3A4286CC13BF43F8004BF22B /* CDataScanner.m in Sources */,
-				3A4286CD13BF43F8004BF22B /* CDataScanner_Extensions.m in Sources */,
-				3A4286CE13BF43F8004BF22B /* NSDictionary_JSONExtensions.m in Sources */,
-				3A4286CF13BF43F8004BF22B /* CJSONDeserializer.m in Sources */,
-				3A4286D013BF43F8004BF22B /* CJSONScanner.m in Sources */,
-				3A4286D113BF43F8004BF22B /* CJSONSerializer.m in Sources */,
 				3ABEDA2413C0D1F200DC40BC /* EZBook.m in Sources */,
 				3ABEDA2713C0D26A00DC40BC /* EZPage.m in Sources */,
 				3ABEDA2A13C0D30A00DC40BC /* EZWord.m in Sources */,
