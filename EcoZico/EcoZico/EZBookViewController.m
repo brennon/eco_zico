@@ -26,7 +26,6 @@
 
 @synthesize touchZones = _touchZones;
 
-
 #pragma mark - EZBookViewController lifecycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -192,6 +191,12 @@
     
     // Layout text
     [self layoutTextWithTransition:withTrans];
+    
+    for (UIView *view in [ezPageView subviews]) {
+        if ([view isKindOfClass:[EZTransparentButton class]]) {
+            [view removeFromSuperview];
+        }        
+    }
     
     for (UInt16 i = 0; i < [ezPage.touchButtons count]; i++) {
         EZTransparentButton *buttonToAdd = [ezPage.touchButtons objectAtIndex:i];

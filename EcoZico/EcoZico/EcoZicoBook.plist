@@ -940,7 +940,7 @@
 				<real>31.376</real>
 			</dict>
 		</array>
-        <key>touchButtons</key>
+		<key>touchButtons</key>
 		<array>
 			<dict>
 				<key>x</key>
@@ -1432,6 +1432,21 @@
 				<real>30.511</real>
 			</dict>
 		</array>
+		<key>touchButtons</key>
+		<array>
+			<dict>
+				<key>x</key>
+				<string>863</string>
+				<key>y</key>
+				<string>229</string>
+				<key>width</key>
+				<string>142</string>
+				<key>height</key>
+				<string>264</string>
+				<key>audio</key>
+				<string>02_zico.wav</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>audio</key>
@@ -1829,6 +1844,33 @@
 				<string>long.</string>
 				<key>time</key>
 				<real>23.364</real>
+			</dict>
+		</array>
+		<key>touchButtons</key>
+		<array>
+			<dict>
+				<key>x</key>
+				<string>0</string>
+				<key>y</key>
+				<string>59</string>
+				<key>width</key>
+				<string>966</string>
+				<key>height</key>
+				<string>572</string>
+				<key>audio</key>
+				<string>03_spacecar.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>917</string>
+				<key>y</key>
+				<string>24</string>
+				<key>width</key>
+				<string>107</string>
+				<key>height</key>
+				<string>105</string>
+				<key>audio</key>
+				<string>03_planetearth.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -2306,6 +2348,21 @@
 				<string>themselves.</string>
 				<key>time</key>
 				<real>30.974</real>
+			</dict>
+		</array>
+		<key>touchButtons</key>
+		<array>
+			<dict>
+				<key>x</key>
+				<string>284</string>
+				<key>y</key>
+				<string>387</string>
+				<key>width</key>
+				<string>205</string>
+				<key>height</key>
+				<string>94</string>
+				<key>audio</key>
+				<string>04_greenville.wav</string>
 			</dict>
 		</array>
 	</dict>
