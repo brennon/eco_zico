@@ -22,7 +22,7 @@
 
 @implementation EZBookViewController
 
-@synthesize ezPageView, textView, ezBook, currentPage, ezWordLabels, ezTextViewScene, idxOfLastWordLaidOut, player, playPauseBut, skipParaBut;
+@synthesize ezPageView, textView, ezBook, currentPage, ezWordLabels, ezTextViewScene, idxOfLastWordLaidOut, player, playPauseBut, skipParaBut, audioIsPlaying;
 
 @synthesize touchZones = _touchZones;
 
@@ -33,8 +33,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {        
         isFirstPageAfterLaunch = YES;
-        currentPage = [NSNumber numberWithInt:0];
-        ezBook = [[[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"] retain];                
+		self.audioIsPlaying = NO;
+        self.currentPage = [NSNumber numberWithInt:0];
+        self.ezBook = [[[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"] retain];
     }
     return self;
 }
@@ -207,7 +208,17 @@
 
 - (void)playImageAudio:(id)sender
 {
-    NSLog(@"playImageAudio");
+	if (!self.audioIsPlaying) {
+		NSString *filename = [(EZTransparentButton *)sender audioFilePath];
+		NSString *path = [[NSBundle mainBundle] pathForResource:filename ofType:nil];  
+		NSURL *url = [[NSURL alloc] initFileURLWithPath: path];
+		AVAudioPlayer *localPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error: NULL];
+		[url release];
+		
+		self.audioIsPlaying = YES;		
+		[localPlayer play];    
+		[localPlayer setDelegate:self];
+	}
 }
 
 -(void)layoutTextWithTransition:(BOOL)withTrans
@@ -282,6 +293,7 @@
     [ezTextViewScene startPollingPlayer];
     
     [player play];
+	self.audioIsPlaying = YES;
     
     [playPauseBut setSelected:YES];
 }
@@ -292,6 +304,7 @@
     [ezTextViewScene stopPollingPlayer];
     
     [player pause];
+	self.audioIsPlaying = NO;
     
     [playPauseBut setSelected:NO];
 }
@@ -339,12 +352,16 @@ double thirdParaSkip = 30;
 
 #pragma mark - audioplayer delegate methods
 
-- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *) player successfully:(BOOL) completed
-{    
+- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)completed
+{
+	self.audioIsPlaying = NO;
+	
     if (completed == YES) 
     {            
         [[ezWordLabels lastObject] startWordOffAnimation];       
-    }    
+    }
+	
+	[player release];
 }
 
 

@@ -55,7 +55,7 @@
             CGRect buttonFrame = CGRectMake(0.f, 0.f, width, height);            
             newButton.frame = buttonFrame;
             newButton.center = CGPointMake(x + (width/2) + (i * 1024), y + (height/2));
-            newButton.backgroundColor = [UIColor redColor];
+            newButton.backgroundColor = [UIColor clearColor];
             newButton.audioFilePath = [buttonDict objectForKey:@"audio"];
             [touchButtons insertObject:newButton atIndex:j];
         }   

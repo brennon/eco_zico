@@ -59,6 +59,7 @@
 @property int                                               idxOfLastWordLaidOut;
 @property (nonatomic, retain) IBOutlet  UIButton            *skipParaBut; // debugging
 @property (nonatomic, retain)           NSMutableArray      *touchZones;
+@property (nonatomic, assign)			BOOL				audioIsPlaying;
 
 //scroll view methods
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
