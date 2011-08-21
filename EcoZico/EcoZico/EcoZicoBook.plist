@@ -2866,6 +2866,93 @@
 				<real>34.455</real>
 			</dict>
 		</array>
+		<key>touchButtons</key>
+		<array>
+			<dict>
+				<key>x</key>
+				<string>372</string>
+				<key>y</key>
+				<string>134</string>
+				<key>width</key>
+				<string>122</string>
+				<key>height</key>
+				<string>127</string>
+				<key>audio</key>
+				<string>05_junk.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>317</string>
+				<key>y</key>
+				<string>314</string>
+				<key>width</key>
+				<string>73</string>
+				<key>height</key>
+				<string>114</string>
+				<key>audio</key>
+				<string>05_junk.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>466</string>
+				<key>y</key>
+				<string>261</string>
+				<key>width</key>
+				<string>64</string>
+				<key>height</key>
+				<string>146</string>
+				<key>audio</key>
+				<string>05_junk.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>530</string>
+				<key>y</key>
+				<string>352</string>
+				<key>width</key>
+				<string>24</string>
+				<key>height</key>
+				<string>55</string>
+				<key>audio</key>
+				<string>05_junk.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>466</string>
+				<key>y</key>
+				<string>407</string>
+				<key>width</key>
+				<string>88</string>
+				<key>height</key>
+				<string>21</string>
+				<key>audio</key>
+				<string>05_junk.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>295</string>
+				<key>y</key>
+				<string>352</string>
+				<key>width</key>
+				<string>25</string>
+				<key>height</key>
+				<string>76</string>
+				<key>audio</key>
+				<string>05_junk.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>354</string>
+				<key>y</key>
+				<string>261</string>
+				<key>width</key>
+				<string>41</string>
+				<key>height</key>
+				<string>53</string>
+				<key>audio</key>
+				<string>05_junk.wav</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>audio</key>
@@ -3323,6 +3410,45 @@
 				<string>replied.</string>
 				<key>time</key>
 				<real>31.056</real>
+			</dict>
+		</array>
+		<key>touchButtons</key>
+		<array>
+			<dict>
+				<key>x</key>
+				<string>770</string>
+				<key>y</key>
+				<string>371</string>
+				<key>width</key>
+				<string>32</string>
+				<key>height</key>
+				<string>74</string>
+				<key>audio</key>
+				<string>06_repair.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>821</string>
+				<key>y</key>
+				<string>379</string>
+				<key>width</key>
+				<string>29</string>
+				<key>height</key>
+				<string>66</string>
+				<key>audio</key>
+				<string>06_repair.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>862</string>
+				<key>y</key>
+				<string>307</string>
+				<key>width</key>
+				<string>70</string>
+				<key>height</key>
+				<string>87</string>
+				<key>audio</key>
+				<string>06_reuse.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -4012,6 +4138,45 @@
 				<real>41.465</real>
 			</dict>
 		</array>
+		<key>touchButtons</key>
+		<array>
+			<dict>
+				<key>x</key>
+				<string>73</string>
+				<key>y</key>
+				<string>290</string>
+				<key>width</key>
+				<string>77</string>
+				<key>height</key>
+				<string>73</string>
+				<key>audio</key>
+				<string>07_recycle.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>99</string>
+				<key>y</key>
+				<string>363</string>
+				<key>width</key>
+				<string>96</string>
+				<key>height</key>
+				<string>108</string>
+				<key>audio</key>
+				<string>07_recycle.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>280</string>
+				<key>y</key>
+				<string>197</string>
+				<key>width</key>
+				<string>78</string>
+				<key>height</key>
+				<string>232</string>
+				<key>audio</key>
+				<string>07_recycle.wav</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>audio</key>
@@ -4427,6 +4592,33 @@
 				<string>air.</string>
 				<key>time</key>
 				<real>26.2</real>
+			</dict>
+		</array>
+		<key>touchButtons</key>
+		<array>
+			<dict>
+				<key>x</key>
+				<string>26</string>
+				<key>y</key>
+				<string>147</string>
+				<key>width</key>
+				<string>132</string>
+				<key>height</key>
+				<string>325</string>
+				<key>audio</key>
+				<string>08_mayor.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>714</string>
+				<key>y</key>
+				<string>266</string>
+				<key>width</key>
+				<string>83</string>
+				<key>height</key>
+				<string>206</string>
+				<key>audio</key>
+				<string>08_vote.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -5008,6 +5200,57 @@
 				<real>33.707</real>
 			</dict>
 		</array>
+		<key>touchButtons</key>
+		<array>
+			<dict>
+				<key>x</key>
+				<string>935</string>
+				<key>y</key>
+				<string>56</string>
+				<key>width</key>
+				<string>89</string>
+				<key>height</key>
+				<string>227</string>
+				<key>audio</key>
+				<string>09_cans.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>0</string>
+				<key>y</key>
+				<string>56</string>
+				<key>width</key>
+				<string>90</string>
+				<key>height</key>
+				<string>285</string>
+				<key>audio</key>
+				<string>09_glass.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>90</string>
+				<key>y</key>
+				<string>250</string>
+				<key>width</key>
+				<string>60</string>
+				<key>height</key>
+				<string>201</string>
+				<key>audio</key>
+				<string>09_paper.wav</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<string>310</string>
+				<key>y</key>
+				<string>425</string>
+				<key>width</key>
+				<string>180</string>
+				<key>height</key>
+				<string>77</string>
+				<key>audio</key>
+				<string>09_paper.wav</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>audio</key>
@@ -5387,6 +5630,21 @@
 				<string>Zico.&quot;</string>
 				<key>time</key>
 				<real>22.181</real>
+			</dict>
+		</array>
+		<key>touchButtons</key>
+		<array>
+			<dict>
+				<key>x</key>
+				<string>732</string>
+				<key>y</key>
+				<string>437</string>
+				<key>width</key>
+				<string>67</string>
+				<key>height</key>
+				<string>60</string>
+				<key>audio</key>
+				<string>10_green.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -5792,6 +6050,21 @@
 				<string>planet.</string>
 				<key>time</key>
 				<real>26.363</real>
+			</dict>
+		</array>
+		<key>touchButtons</key>
+		<array>
+			<dict>
+				<key>x</key>
+				<string>869</string>
+				<key>y</key>
+				<string>128</string>
+				<key>width</key>
+				<string>114</string>
+				<key>height</key>
+				<string>296</string>
+				<key>audio</key>
+				<string>11_ecozico.wav</string>
 			</dict>
 		</array>
 	</dict>
