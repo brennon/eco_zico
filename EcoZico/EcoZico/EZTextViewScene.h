@@ -43,20 +43,20 @@
 - (id)initWithEZBookView:(EZBookViewController *)anEZBookView;
 
 //find where to stop laying out words
--(int)stopIdx;
+- (int)stopIdx;
 
 //layout words to idx found with stopIdx
--(void)layoutWords;
+- (void)layoutWords;
 
 //callback when a para reaches end of narration
--(void)paraNarrationDidFinish;
+- (void)paraNarrationDidFinish;
 
 //start / stop polling audio player position
--(void)startPollingPlayer;
+- (void)startPollingPlayer;
 
--(void)stopPollingPlayer;
+- (void)stopPollingPlayer;
 
 //for debugging
--(void)setWordPositionForTime:(NSTimeInterval)time;
+- (void)setWordPositionForTime:(NSTimeInterval)time;
 
 @end

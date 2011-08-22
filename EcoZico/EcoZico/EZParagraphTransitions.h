@@ -9,33 +9,26 @@
 #import <Foundation/Foundation.h>
 #import "CCTransition.h"
 
-// Class for paragraph transitions
-
 @protocol EZParagraphTransitionDelegate <NSObject>
+
 - (void)paragraphTransitionDidFinish;
-@end
-
-@interface EZParagraphTransitionFlipY : CCTransitionFlipY 
-{
-    id <EZParagraphTransitionDelegate> transitionFinishDelegate;
-}
-
-@property (nonatomic, assign) id <EZParagraphTransitionDelegate> transitionFinishDelegate;
-
-+ (id) transitionWithDuration:(ccTime)t scene:(CCScene *)s delegate:(id)d;
-- (id) initWithDuration:(ccTime)t scene:(CCScene *)s delegate:(id)d;
 
 @end
 
-
-@interface EZParagraphTransitionMoveInB : CCTransitionMoveInB 
-{
-    id <EZParagraphTransitionDelegate> transitionFinishDelegate;
-}
+@interface EZParagraphTransitionFlipY : CCTransitionFlipY
 
 @property (nonatomic, assign) id <EZParagraphTransitionDelegate> transitionFinishDelegate;
 
-+ (id) transitionWithDuration:(ccTime)t scene:(CCScene *)s delegate:(id)d;
-- (id) initWithDuration:(ccTime)t scene:(CCScene *)s delegate:(id)d;
++ (id)transitionWithDuration:(ccTime)t scene:(CCScene *)s delegate:(id)d;
+- (id)initWithDuration:(ccTime)t scene:(CCScene *)s delegate:(id)d;
+
+@end
+
+@interface EZParagraphTransitionMoveInB : CCTransitionMoveInB
+
+@property (nonatomic, assign) id <EZParagraphTransitionDelegate> transitionFinishDelegate;
+
++ (id)transitionWithDuration:(ccTime)t scene:(CCScene *)s delegate:(id)d;
+- (id)initWithDuration:(ccTime)t scene:(CCScene *)s delegate:(id)d;
 
 @end

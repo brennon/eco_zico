@@ -30,7 +30,7 @@
 }
 
 
--(void)layoutWords
+- (void)layoutWords
 {     
     //measurment vars for laying out words
     
@@ -114,7 +114,7 @@
 }
 
 
--(int)stopIdx
+- (int)stopIdx
 {
     int returnVal;
     
@@ -181,7 +181,7 @@
 }
 
 
--(void)setWordPositionForTime:(NSTimeInterval)time
+- (void)setWordPositionForTime:(NSTimeInterval)time
 {    
     for (int i = 0; i < [ezBookView.ezWordLabels count]; i++)
     {
@@ -199,14 +199,14 @@
     }
 }
 
--(void)startPollingPlayer
+- (void)startPollingPlayer
 {
     //start a timer which polls the avaudio player obj for it's current position.
     timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(pollPlaybackTime) userInfo:nil repeats:YES];   
 }
 
 
--(void)stopPollingPlayer
+- (void)stopPollingPlayer
 {
     [timer invalidate];
     timer = nil;
@@ -214,7 +214,7 @@
 
 
 
--(void)pollPlaybackTime
+- (void)pollPlaybackTime
 {
     currentPlaybackPosition = [ezBookView.ezAudioPlayer currentTime];// current playback pos
     
@@ -257,7 +257,7 @@
 
 
 
--(void)paraNarrationDidFinish
+- (void)paraNarrationDidFinish
 {    
     [currentWord startWordOffAnimation];
     
@@ -266,13 +266,13 @@
 
 
 //not used
--(void)setPlayPosition:(NSTimeInterval)pos
+- (void)setPlayPosition:(NSTimeInterval)pos
 {
     ezBookView.ezAudioPlayer.currentTime = ezBookView.ezAudioPlayer.duration / pos;
 }
 
 
--(void)dealloc
+- (void)dealloc
 {    
 	[super dealloc];
 }

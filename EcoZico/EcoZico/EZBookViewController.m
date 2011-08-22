@@ -218,7 +218,7 @@ const NSUInteger kNumberOfPages = 14;
     }
 }
 
--(void)layoutTextWithTransition:(BOOL)withTrans
+- (void)layoutTextWithTransition:(BOOL)withTrans
 {    
     // Changing scenes allows you to use the fancy transitions
     CCScene *nextScene = [CCScene node];
