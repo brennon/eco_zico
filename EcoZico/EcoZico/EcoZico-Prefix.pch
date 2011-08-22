@@ -12,3 +12,23 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #endif
+
+#define EZ_DEBUG
+
+// DebugLog is almost a drop-in replacement for DebugLog  
+// DebugLog();  
+// DebugLog(@“here”);  
+// DebugLog(@“value: %d”, x);  
+// Unfortunately this doesn’t work: DebugLog(aStringVariable); you have to do this instead: DebugLog(@“%@“, aStringVariable); 
+// Shamelessly stolen (and edited) from http://iphoneincubator.com/blog/debugging/the-evolution-of-a-replacement-for-DebugLog
+
+#ifdef EZ_DEBUG  
+#define DebugLog(fmt, ...) NSLog((@"%s:%d " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define DebugLogFunc() NSLog( @"%s:%d", __PRETTY_FUNCTION__, __LINE__ );
+#else  
+#define NSLog(...) 
+#define NSLogFunc() 
+#endif  
+
+// AlwaysLog always displays output regardless of the DEBUG setting  
+#define AlwaysLog(fmt, ...) NSLog((@"%s:%d " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
