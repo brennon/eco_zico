@@ -10,11 +10,23 @@
 
 @implementation EZAudioPlayer
 
-- (id)init
+@synthesize playerType;
+
+- (id)initWithContentsOfURL:(NSURL *)url error:(NSError **)outError playerType:(EZAudioPlayerType)type
 {
-    self = [super init];
+	self = [super initWithContentsOfURL:url error:outError];
     if (self) {
-        // Initialization code here.
+        self.playerType = type;
+    }
+    
+    return self;
+}
+
+- (id)initWithData:(NSData *)data error:(NSError **)outError playerType:(EZAudioPlayerType)type
+{
+	self = [super initWithData:data error:outError];
+    if (self) {
+        self.playerType = type;
     }
     
     return self;
