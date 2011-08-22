@@ -16,142 +16,135 @@
 
 @implementation EZTextViewScene
 
-@synthesize ezBookView;
-
+@synthesize ezBookView				= _ezBookView;
+@synthesize heightOfWords			= _heightOfWords;
+@synthesize inset					= _inset;
+@synthesize padding					= _padding;
+@synthesize incY					= _incY;
+@synthesize x						= _x;
+@synthesize y						= _y;
+@synthesize startOFLine				= _startOFLine;
+@synthesize s						= _s;
+@synthesize prevWordWidth			= _prevWordWidth;
+@synthesize currentWordWidth		= _currentWordWidth;
+@synthesize idxEndOfline3			= _idxEndOfline3;
+@synthesize idxStopPoint			= _idxStopPoint;
+@synthesize wordPositionCounter		= _wordPositionCounter;
+@synthesize timer					= _timer;
+@synthesize currentPlaybackPosition	= _currentPlaybackPosition;
+@synthesize isParaNarrationFinished	= _isParaNarrationFinished;
 
 - (id)initWithEZBookView:(EZBookViewController *)anEZBookView;
 {
-	if((self = [super initWithColor:ccc4(255, 255, 255, 255)]))
-	{    
+	if((self = [super initWithColor:ccc4(255, 255, 255, 255)])) {    
         self.ezBookView = anEZBookView;
     }
-	
 	return self;
 }
 
-
 - (void)layoutWords
 {     
-    //measurment vars for laying out words
+    // measurment vars for laying out words
     
-    //height of a label / word
-    heightOfWords = [[ezBookView.ezWordLabels objectAtIndex:0] boundingBox].size.height;
+    // height of a label / word
+    self.heightOfWords = [[self.ezBookView.ezWordLabels objectAtIndex:0] boundingBox].size.height;
     
-    //inset from left and top edge 
-    inset = 20;
-    //space between words
-    padding = 7;
-    //line inc spacing
-    incY = heightOfWords;
-    //x and y positioning for each word
-	y = [self boundingBox].size.height - inset;
-    x = inset;    
+    // inset from left and top edge 
+    self.inset = 20;
+    // space between words
+    self.padding = 7;
+    // line inc spacing
+    self.incY = self.heightOfWords;
+    // x and y positioning for each word
+	self.y = [self boundingBox].size.height - self.inset;
+    self.x = self.inset;    
     
-    //whether we are at the start of the line
-    startOFLine = NO;
+    // whether we are at the start of the line
+    self.startOFLine = NO;
     
-    //size of the drawable area
-    s = [[CCDirector sharedDirector] winSize];       
+    // size of the drawable area
+    self.s = [[CCDirector sharedDirector] winSize];       
     
     // find the idx of the word at the end of the third line. work backwards from there to find the idx of the word with the first full-stop '.'
     // layout the words to that point.
     
     // point at which to stop laying out words
-    idxStopPoint = [self stopIdx];
+    self.idxStopPoint = [self stopIdx];
     
     
     // layout the words
-    for(int i = ezBookView.idxOfLastWordLaidOut; i < [ezBookView.ezWordLabels count]; i++)
-	{
-        word = (EZWordLabel *)[ezBookView.ezWordLabels objectAtIndex:i];
+    for (int i = self.ezBookView.idxOfLastWordLaidOut; i < [self.ezBookView.ezWordLabels count]; i++) {
+        word = (EZWordLabel *)[self.ezBookView.ezWordLabels objectAtIndex:i];
         
-        if(i > ezBookView.idxOfLastWordLaidOut)
-        {
-            //width of previous and current word
-            prevWordWidth = [[ezBookView.ezWordLabels objectAtIndex:i - 1]boundingBox].size.width;
-            currentWordWidth = [word boundingBox].size.width;
+        if (i > self.ezBookView.idxOfLastWordLaidOut) {
+            // width of previous and current word
+            self.prevWordWidth = [[self.ezBookView.ezWordLabels objectAtIndex:i - 1] boundingBox].size.width;
+            self.currentWordWidth = [word boundingBox].size.width;
             
             //if next word will take us past the drawable area, move to the next line
-            if ((x + prevWordWidth + currentWordWidth + padding) >= s.width) 
-            {                
-                y -= incY;
-                x = inset;
-                startOFLine = YES;
+            if ((self.x + self.prevWordWidth + self.currentWordWidth + self.padding) >= self.s.width) {                
+                self.y -= self.incY;
+                self.x = self.inset;
+                self.startOFLine = YES;
             }
             
             //only inc x when not at the start of a line 
-            if(startOFLine == NO)
-            {
-                x += (prevWordWidth + padding);
-            }
-            else
-            {
-                startOFLine = NO;
+            if(self.startOFLine == NO) {
+                self.x += (self.prevWordWidth + self.padding);
+            } else {
+                self.startOFLine = NO;
             }            
         }
         
-        word.position = ccp(x, y);
+        word.position = ccp(self.x, self.y);
         
         [self addChild:word];
         
         // stop laying out when get to the idx found from the first loop.
-        if(i == idxStopPoint)
-        {
-            //record the location of where we stopped so we can start from the right location next time.
-            ezBookView.idxOfLastWordLaidOut = i + 1;
-            
+        if(i == self.idxStopPoint) {
+            // record the location of where we stopped so we can start from the right location next time.
+            self.ezBookView.idxOfLastWordLaidOut = i + 1;            
             break;
         }
             
-        //used for debugging - skipping paragrpahs.
-        if(i == [ezBookView.ezWordLabels count] - 1)
-        {
-            ezBookView.idxOfLastWordLaidOut = i;
-        }
-
-        
+        // used for debugging - skipping paragrpahs.
+        if (i == [self.ezBookView.ezWordLabels count] - 1) {
+            self.ezBookView.idxOfLastWordLaidOut = i;
+        }        
 	}	    
 }
-
 
 - (int)stopIdx
 {
     int returnVal;
     
-    int lineNum = 1;
+    int lineNum = 1;    
     
-    
-    for(int i = ezBookView.idxOfLastWordLaidOut; i < [ezBookView.ezWordLabels count]; i++)
-	{
-        word = (EZWordLabel *)[ezBookView.ezWordLabels objectAtIndex:i];
+    for (int i = self.ezBookView.idxOfLastWordLaidOut; i < [self.ezBookView.ezWordLabels count]; i++) {
+        word = (EZWordLabel *)[self.ezBookView.ezWordLabels objectAtIndex:i];
         
-        if(i > ezBookView.idxOfLastWordLaidOut)
-        {
-            //width of previous and current word
-            prevWordWidth = [[ezBookView.ezWordLabels objectAtIndex:i - 1]boundingBox].size.width;
-            currentWordWidth = [word boundingBox].size.width;
+        if(i > self.ezBookView.idxOfLastWordLaidOut) {
+            // width of previous and current word
+            self.prevWordWidth = [[self.ezBookView.ezWordLabels objectAtIndex:i - 1] boundingBox].size.width;
+            self.currentWordWidth = [word boundingBox].size.width;
             
-            //if next word will take us past the drawable area, move to the next line
-            if ((x + prevWordWidth + currentWordWidth + padding) >= s.width) 
-            {
+            // if next word will take us past the drawable area, move to the next line
+            if ((self.x + self.prevWordWidth + self.currentWordWidth + self.padding) >= self.s.width) {
                 lineNum++;
-                x = inset;
-                startOFLine = YES;
+                self.x = self.inset;
+                self.startOFLine = YES;
             }            
             
             // find the idx of the word at the end of the third line.
-            if(lineNum == (EZ_MAX_LINES + 1) && startOFLine == YES)
-            {
+            if (lineNum == (EZ_MAX_LINES + 1) && self.startOFLine == YES) {
                 //we are at the start of the fourth line so, one word back is the end of the third.
-                idxEndOfline3 = i - 1;
+                self.idxEndOfline3 = i - 1;
                 
                 // work backwards from there to find the idx of the word with the first full-stop '.'
-                for(int i = idxEndOfline3; i >= 0; i--)
-                {
-                    EZWordLabel *wordToCheckForPeriod = [ezBookView.ezWordLabels objectAtIndex:i];
+                for (int i = self.idxEndOfline3; i >= 0; i--) {
+                    EZWordLabel *wordToCheckForPeriod = [self.ezBookView.ezWordLabels objectAtIndex:i];
                     
-                    if([[wordToCheckForPeriod string] hasSuffix:@"."])
-                    {
+                    if ([[wordToCheckForPeriod string] hasSuffix:@"."]) {
                         // idx of the word at which to stop laying out, i.e. next word with a '.' from the end of the third line (working backwards)
                         returnVal = i;
                         break;
@@ -162,37 +155,30 @@
             }
             
             //only inc x when not at the start of a line 
-            if(startOFLine == NO)
-            {
-                x += (prevWordWidth + padding);
-            }
-            else
-            {
-                startOFLine = NO;
+            if (self.startOFLine == NO) {
+                self.x += (self.prevWordWidth + self.padding);
+            } else {
+                self.startOFLine = NO;
             }            
         }        
-	}
+	}    
     
-    
-    x = inset;//reset
-    startOFLine = NO;//reset
+    self.x = self.inset;//reset
+    self.startOFLine = NO;//reset
     
     return returnVal;    
 }
 
-
 - (void)setWordPositionForTime:(NSTimeInterval)time
 {    
-    for (int i = 0; i < [ezBookView.ezWordLabels count]; i++)
-    {
-        EZWordLabel *labelToCheck = (EZWordLabel *)[ezBookView.ezWordLabels objectAtIndex:i];
-        if ((NSTimeInterval)[labelToCheck.seekPoint doubleValue] >= time)
-        {
-            wordPositionCounter = i;
+    for (int i = 0; i < [self.ezBookView.ezWordLabels count]; i++) {
+        EZWordLabel *labelToCheck = (EZWordLabel *)[self.ezBookView.ezWordLabels objectAtIndex:i];
+        if ((NSTimeInterval)[labelToCheck.seekPoint doubleValue] >= time) {
+            self.wordPositionCounter = i;
             
-            EZWordLabel *wordForCurrentTime = (EZWordLabel *)[ezBookView.ezWordLabels objectAtIndex:wordPositionCounter]; 
+            EZWordLabel *wordForCurrentTime = (EZWordLabel *)[self.ezBookView.ezWordLabels objectAtIndex:self.wordPositionCounter]; 
             
-            ezBookView.ezAudioPlayer.currentTime = (NSTimeInterval)[wordForCurrentTime.seekPoint doubleValue];
+            self.ezBookView.ezAudioPlayer.currentTime = (NSTimeInterval)[wordForCurrentTime.seekPoint doubleValue];
             
             break;
         }
@@ -202,52 +188,45 @@
 - (void)startPollingPlayer
 {
     //start a timer which polls the avaudio player obj for it's current position.
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(pollPlaybackTime) userInfo:nil repeats:YES];   
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(pollPlaybackTime) userInfo:nil repeats:YES];   
 }
-
 
 - (void)stopPollingPlayer
 {
-    [timer invalidate];
-    timer = nil;
+    [_timer invalidate];
+    self.timer = nil;
 }
-
-
 
 - (void)pollPlaybackTime
 {
-    currentPlaybackPosition = [ezBookView.ezAudioPlayer currentTime];// current playback pos
+    self.currentPlaybackPosition = [self.ezBookView.ezAudioPlayer currentTime];// current playback pos
     
-    if(wordPositionCounter < [ezBookView.ezWordLabels count] && !isParaNarrationFinished)
-    {
-        EZWordLabel *wordForCurrentPosition = (EZWordLabel *)[ezBookView.ezWordLabels objectAtIndex:wordPositionCounter];
+    if (self.wordPositionCounter < [self.ezBookView.ezWordLabels count] && !self.isParaNarrationFinished) {
+        EZWordLabel *wordForCurrentPosition = (EZWordLabel *)[self.ezBookView.ezWordLabels objectAtIndex:self.wordPositionCounter];
         
-        if(currentPlaybackPosition >= [wordForCurrentPosition.seekPoint doubleValue])
-        {
-            if (wordPositionCounter > 0) 
-            {
-                [[ezBookView.ezWordLabels objectAtIndex:wordPositionCounter - 1] startWordOffAnimation];
+        if (self.currentPlaybackPosition >= [wordForCurrentPosition.seekPoint doubleValue]) {
+            if (self.wordPositionCounter > 0) {
+                [[self.ezBookView.ezWordLabels objectAtIndex:self.wordPositionCounter - 1] startWordOffAnimation];
             }            
             
             //if playback pos is beyond next word in word array set it as the current word
-            currentWord = [ezBookView.ezWordLabels objectAtIndex:wordPositionCounter];
+            currentWord = [self.ezBookView.ezWordLabels objectAtIndex:self.wordPositionCounter];
             
             //do some animation
             [currentWord startWordOnAnimation];
             
             //inc the counter
-            wordPositionCounter++;
+            self.wordPositionCounter++;
         }
         
-        if(wordPositionCounter > idxStopPoint && wordPositionCounter < [ezBookView.ezWordLabels count])
-        {   
-            isParaNarrationFinished = YES;//only allow this block to be called once
+        if (self.wordPositionCounter > self.idxStopPoint && self.wordPositionCounter < [self.ezBookView.ezWordLabels count]) {   
+            self.isParaNarrationFinished = YES;//only allow this block to be called once
             
             DebugLog(@"isParaNarrationFinished = YES");
                         
             [self stopPollingPlayer];
             
-            double timeToWait = [[[ezBookView.ezWordLabels objectAtIndex:wordPositionCounter] seekPoint] doubleValue] - [currentWord.seekPoint doubleValue];
+            double timeToWait = [[[self.ezBookView.ezWordLabels objectAtIndex:self.wordPositionCounter] seekPoint] doubleValue] - [currentWord.seekPoint doubleValue];
             
             [self performSelector:@selector(paraNarrationDidFinish) withObject:nil afterDelay:timeToWait];
         }
@@ -255,27 +234,21 @@
     
 }
 
-
-
 - (void)paraNarrationDidFinish
 {    
-    [currentWord startWordOffAnimation];
-    
-    [ezBookView textViewDidFinishNarratingParagraph];    
+    [currentWord startWordOffAnimation];    
+    [self.ezBookView textViewDidFinishNarratingParagraph];    
 }
-
-
-//not used
-- (void)setPlayPosition:(NSTimeInterval)pos
-{
-    ezBookView.ezAudioPlayer.currentTime = ezBookView.ezAudioPlayer.duration / pos;
-}
-
 
 - (void)dealloc
 {    
 	[super dealloc];
 }
 
+// Not used
+- (void)setPlayPosition:(NSTimeInterval)pos
+{
+    self.ezBookView.ezAudioPlayer.currentTime = self.ezBookView.ezAudioPlayer.duration / pos;
+}
 
 @end

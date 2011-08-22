@@ -11,52 +11,49 @@
 
 @class EZWordLabel, EZBookViewController;
 
-//TODO: position works like anchorpoint is set at 0.5, 0.0 - fix it.
+// TODO: position works like anchorpoint is set at 0.5, 0.0 - fix it.
 
 @interface EZTextViewScene : CCLayerColor {
-    EZBookViewController *ezBookView;
-    
-    float heightOfWords;
-    float inset;
-    float padding;
-    float incY;
-    float x, y;
-    BOOL startOFLine;
-    CGSize s;
-    float prevWordWidth;
-    float currentWordWidth;
-    EZWordLabel *word;
-    
-    int idxEndOfline3;
-    int idxStopPoint;
-    
-    //narration
-    int wordPositionCounter;
-    NSTimer *timer;
+    EZWordLabel *word;  
     EZWordLabel *currentWord;
-    NSTimeInterval currentPlaybackPosition;
-    BOOL isParaNarrationFinished;
 }
 
-@property(nonatomic, assign) EZBookViewController *ezBookView;
+@property (nonatomic, assign) EZBookViewController	*ezBookView;
+@property (nonatomic, assign) CGFloat				heightOfWords;
+@property (nonatomic, assign) CGFloat				inset;
+@property (nonatomic, assign) CGFloat				padding;
+@property (nonatomic, assign) CGFloat				incY;
+@property (nonatomic, assign) CGFloat				x;
+@property (nonatomic, assign) CGFloat				y;
+@property (nonatomic, assign) BOOL					startOFLine;
+@property (nonatomic, assign) CGSize				s;
+@property (nonatomic, assign) CGFloat				prevWordWidth;
+@property (nonatomic, assign) CGFloat				currentWordWidth;
+@property (nonatomic, assign) NSUInteger			idxEndOfline3;
+@property (nonatomic, assign) NSUInteger			idxStopPoint;
+
+// Narration
+@property (nonatomic, assign) NSUInteger			wordPositionCounter;
+@property (nonatomic, retain) NSTimer				*timer;
+@property (nonatomic, assign) NSTimeInterval		currentPlaybackPosition;
+@property (nonatomic, assign) BOOL					isParaNarrationFinished;
 
 - (id)initWithEZBookView:(EZBookViewController *)anEZBookView;
 
-//find where to stop laying out words
+// Find where to stop laying out words
 - (int)stopIdx;
 
-//layout words to idx found with stopIdx
+// Layout words to idx found with stopIdx
 - (void)layoutWords;
 
-//callback when a para reaches end of narration
+// Callback when a paragraph reaches end of narration
 - (void)paraNarrationDidFinish;
 
-//start / stop polling audio player position
+// Start/stop polling audio player position
 - (void)startPollingPlayer;
-
 - (void)stopPollingPlayer;
 
-//for debugging
+// For debugging
 - (void)setWordPositionForTime:(NSTimeInterval)time;
 
 @end
