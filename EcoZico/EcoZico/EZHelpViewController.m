@@ -11,9 +11,13 @@
 
 
 @implementation EZHelpViewController
-@synthesize nextButton;
 
-@synthesize screenView, textView, handView, currentInstructions, textImageFilenames;
+@synthesize nextButton			= _nextButton;
+@synthesize screenView			= _screenView;
+@synthesize textView			= _textView;
+@synthesize handView			= _handView;
+@synthesize currentInstructions = _currentInstructions;
+@synthesize textImageFilenames	= _textImageFilenames;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,11 +40,16 @@
 
 - (void)dealloc
 {
-    [currentInstructions release];
-    [handView release];
-    [screenView release];
-    [textView release];
-    [nextButton release];
+    [_currentInstructions release];
+	self.currentInstructions = nil;
+    [_handView release];
+	self.handView = nil;
+    [_screenView release];
+	self.screenView = nil;
+    [_textView release];
+	self.textView = nil;
+    [_nextButton release];
+	self.nextButton = nil;
     [super dealloc];
 }
 
@@ -62,11 +71,10 @@
 
 - (void)viewDidUnload
 {
-    [self setHandView:nil];
-    [self setHandView:nil];
-    [self setScreenView:nil];
-    [self setTextView:nil];
-    [self setNextButton:nil];
+    self.handView = nil;
+    self.screenView = nil;
+    self.textView = nil;
+    self.nextButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -87,7 +95,7 @@
                          self.textView.alpha = 0.0; 
                      } 
                      completion:^(BOOL finished) {
-                         NSString *nextFilename = [self.textImageFilenames objectAtIndex:[currentInstructions intValue]];    
+                         NSString *nextFilename = [self.textImageFilenames objectAtIndex:[self.currentInstructions intValue]];    
                          UIImage *nextTextImage = [UIImage imageNamed:nextFilename];    
                          self.textView.image = nextTextImage;
                          [UIView animateWithDuration:0.75 
@@ -101,7 +109,7 @@
 {
     [UIView animateWithDuration:1.0 
                      animations:^ {
-                         self.handView.frame = handRects[[currentInstructions intValue] - 1];
+                         self.handView.frame = handRects[[self.currentInstructions intValue] - 1];
                      }];
 }
 
@@ -114,7 +122,7 @@
 
 - (IBAction)nextButtonPushed:(id)sender
 {    
-    self.currentInstructions = [NSNumber numberWithInt:[currentInstructions intValue] + 1];
+    self.currentInstructions = [NSNumber numberWithInt:[self.currentInstructions intValue] + 1];
     if ([self.currentInstructions intValue] == 3) {
         [self.nextButton removeFromSuperview];
     }

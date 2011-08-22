@@ -57,7 +57,7 @@
 	if ( ![self containsTouchLocation:touch] ) return NO;
     //	
     //	state = kPaddleStateGrabbed;
-    NSLog(@"%@", [self string]);
+    DebugLog(@"%@", [self string]);
 	return YES;
 }
 

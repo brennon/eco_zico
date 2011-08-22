@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface EZFrontViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UIButton *helpButton;

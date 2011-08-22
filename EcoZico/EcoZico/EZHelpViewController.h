@@ -10,13 +10,6 @@
 
 
 @interface EZHelpViewController : UIViewController {
-    IBOutlet UIImageView *handView;
-    IBOutlet UIView *screenView;
-    IBOutlet UIImageView *textView;
-    IBOutlet UIButton *nextButton;
-    
-    NSNumber *currentInstructions;
-    NSArray *textImageFilenames;
     CGRect handRects[4];
 }
 

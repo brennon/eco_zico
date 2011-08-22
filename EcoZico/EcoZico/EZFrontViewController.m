@@ -10,9 +10,10 @@
 #import "EcoZicoAppDelegate.h"
 
 @implementation EZFrontViewController
-@synthesize helpButton;
-@synthesize readItMyselfButton;
-@synthesize readItToMeButton;
+
+@synthesize helpButton			= _helpButton;
+@synthesize readItMyselfButton	= _readItMyselfButton;
+@synthesize readItToMeButton	= _readItToMeButton;
 
 - (IBAction)readItToMeButtonPushed 
 {
@@ -34,10 +35,12 @@
 
 - (void)dealloc
 {
-    [helpButton release];
-    [helpButton release];
-    [readItMyselfButton release];
-    [readItToMeButton release];
+    [_helpButton release];
+    self.helpButton = nil;
+    [_readItMyselfButton release];
+	self.readItMyselfButton = nil;
+    [_readItToMeButton release];
+	self.readItToMeButton = nil;
     [super dealloc];
 }
 

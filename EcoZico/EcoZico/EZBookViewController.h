@@ -12,49 +12,34 @@
 
 #define PLAY_PAUSE_BUTTON_WIDTH 85
 
-@class EZPage, EZTextViewScene, EZPageView, EZTextView, EZBook, EZAudioPlayer;
+@class EZPage, EZTextViewScene, EZPageView, EZBook, EZAudioPlayer;
 
 @interface EZBookViewController : UIViewController <UIScrollViewDelegate, AVAudioPlayerDelegate, EZParagraphTransitionDelegate> 
 
 @property (nonatomic, retain) IBOutlet  EZPageView          *ezPageView;
+@property (nonatomic, retain) IBOutlet  UIButton            *playPauseBut;
+@property (nonatomic, retain) IBOutlet  UIButton            *skipParaBut; // For debugging
 @property (nonatomic, retain)           UIView              *textView;
 @property (nonatomic, retain)           EZBook              *ezBook;
 @property (nonatomic, retain)           NSNumber            *currentPage;
-
-// TV properties
 @property (nonatomic, retain)           NSArray             *ezWordLabels;
 @property (nonatomic, retain)           EZTextViewScene     *ezTextViewScene;
-@property (nonatomic, retain) IBOutlet  UIButton            *playPauseBut;
 @property (nonatomic, retain)           EZAudioPlayer       *ezAudioPlayer;
-@property (nonatomic, assign)			int					idxOfLastWordLaidOut;
-@property (nonatomic, retain) IBOutlet  UIButton            *skipParaBut; // debugging
+@property (nonatomic, assign)			NSUInteger			idxOfLastWordLaidOut;
 @property (nonatomic, retain)           NSMutableArray      *touchZones;
 @property (nonatomic, assign)			BOOL				audioIsPlaying;
 @property (nonatomic, assign)			BOOL				isFirstPageAfterLaunch;
 
-//scroll view methods
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
-
-//TV methods
--(void)attachCocos2dToSelf;
-
--(void)loadNewPage:(EZPage *)ezPage withTransition:(BOOL)withTrans;
-
--(void)layoutTextWithTransition:(BOOL)withTrans;
-
--(void)loadAudioForPage:(int)pageNum;
-
-//play / pause audio playback (and TVC narration)
-- (IBAction)playPause:(id)sender;
-
+- (void)attachCocos2dToSelf;
+- (void)loadNewPage:(EZPage *)ezPage withTransition:(BOOL)withTrans; 
+- (void)layoutTextWithTransition:(BOOL)withTrans;
+- (void)loadAudioForPage:(int)pageNum;
+- (IBAction)playPause:(id)sender; // Play/pause audio playback (and TVC narration)
 - (void)playAudio;
-
 - (void)pauseAudio;
-
-- (void)textViewDidFinishNarratingParagraph;
-
-- (IBAction)skipPara:(id)sender; //debugging
-
+- (IBAction)skipPara:(id)sender; // For debugging
 - (void)playImageAudio:(id)sender;
+- (void)textViewDidFinishNarratingParagraph;
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
 
 @end

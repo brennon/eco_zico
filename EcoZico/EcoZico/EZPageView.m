@@ -75,13 +75,4 @@
     }
 }
 
-
-#pragma - touches 
-
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    NSLog(@"-touchesEnded:withEvent:");     
-}
-
-
 @end

@@ -199,26 +199,6 @@
     }
 }
 
-/*
--(void)playPause
-{
-    //pause
-    if([ezBookView.player isPlaying])
-    {
-        NSLog(@"tv pause");
-        [timer invalidate];
-        timer = nil;
-    }
-    //play
-    else 
-    {
-        NSLog(@"tv play");
-        //start a timer which polls the avaudio player obj for it's current position.
-        timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(pollPlaybackTime) userInfo:nil repeats:YES];
-    }
-}
-*/
-
 -(void)startPollingPlayer
 {
     //start a timer which polls the avaudio player obj for it's current position.
@@ -263,7 +243,7 @@
         {   
             isParaNarrationFinished = YES;//only allow this block to be called once
             
-            NSLog(@"isParaNarrationFinished = YES");
+            DebugLog(@"isParaNarrationFinished = YES");
                         
             [self stopPollingPlayer];
             

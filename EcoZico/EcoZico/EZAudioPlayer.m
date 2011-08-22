@@ -10,7 +10,7 @@
 
 @implementation EZAudioPlayer
 
-@synthesize playerType;
+@synthesize playerType = _playerType;
 
 - (id)initWithContentsOfURL:(NSURL *)url error:(NSError **)outError playerType:(EZAudioPlayerType)type
 {
