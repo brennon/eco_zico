@@ -12,7 +12,6 @@
 
 @implementation EZPageView
 
-
 #pragma mark - View lifecycle
 
 - (id)initWithFrame:(CGRect)frame
@@ -41,10 +40,7 @@
 #pragma mark - Book setup
 
 - (void)setupWithBook:(EZBook *)book 
-{    
-    // ezPageView is instantiated by the NIB file
-//    self.delegate = svDelegate;
-    
+{
     // For ease in referencing sizes
     CGFloat portalHeight = self.frame.size.height;
     CGFloat portalWidth = self.frame.size.width;

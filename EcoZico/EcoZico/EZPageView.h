@@ -10,10 +10,7 @@
 
 @class EZBook;
 
-@interface EZPageView : UIScrollView {
-
-}
-
+@interface EZPageView : UIScrollView
 
 - (void)setupWithBook:(EZBook *)book;
 
