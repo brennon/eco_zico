@@ -25,7 +25,7 @@ const NSUInteger kNumberOfPages = 14;
 
 @implementation EZBookViewController
 
-@synthesize ezPageView, textView, ezBook, currentPage, ezWordLabels, ezTextViewScene, idxOfLastWordLaidOut, player, playPauseBut, skipParaBut, audioIsPlaying;
+@synthesize ezPageView, textView, ezBook, currentPage, ezWordLabels, ezTextViewScene, idxOfLastWordLaidOut, ezAudioPlayer, playPauseBut, skipParaBut, audioIsPlaying, isFirstPageAfterLaunch;
 
 @synthesize touchZones = _touchZones;
 
@@ -268,11 +268,11 @@ const NSUInteger kNumberOfPages = 14;
 	EZAudioPlayer *newPlayer = [[EZAudioPlayer alloc] initWithContentsOfURL:fileURL error:NULL playerType:kEZPageTextAudio];
     [fileURL release];           
     
-    self.player = newPlayer;    
+    self.ezAudioPlayer = newPlayer;    
     [newPlayer release];        
     
-    [player prepareToPlay];    
-    [player setDelegate:self];
+    [self.ezAudioPlayer prepareToPlay];    
+    [self.ezAudioPlayer setDelegate:self];
     
 }
 
@@ -282,7 +282,7 @@ const NSUInteger kNumberOfPages = 14;
     NSLog(@"tv playPause");
     
     //pause
-    if([player isPlaying])
+    if([self.ezAudioPlayer isPlaying])
     {                
         [self pauseAudio];
     }
@@ -298,7 +298,7 @@ const NSUInteger kNumberOfPages = 14;
 {
     [ezTextViewScene startPollingPlayer];
     
-    [player play];
+    [self.ezAudioPlayer play];
 	self.audioIsPlaying = YES;
     
     [playPauseBut setSelected:YES];
@@ -309,7 +309,7 @@ const NSUInteger kNumberOfPages = 14;
 {
     [ezTextViewScene stopPollingPlayer];
     
-    [player pause];
+    [self.ezAudioPlayer pause];
 	self.audioIsPlaying = NO;
     
     [playPauseBut setSelected:NO];

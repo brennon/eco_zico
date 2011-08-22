@@ -9,11 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface EZFrontViewController : UIViewController {
-    UIButton *helpButton;
-    UIButton *readItMyselfButton;
-    UIButton *readItToMeButton;
-}
+@interface EZFrontViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UIButton *helpButton;
 @property (nonatomic, retain) IBOutlet UIButton *readItMyselfButton;

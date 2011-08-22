@@ -12,39 +12,9 @@
 
 #define PLAY_PAUSE_BUTTON_WIDTH 85
 
-@class EZPage, EZTextViewScene, EZPageView, EZTextView, EZBook;
-
+@class EZPage, EZTextViewScene, EZPageView, EZTextView, EZBook, EZAudioPlayer;
 
 @interface EZBookViewController : UIViewController <UIScrollViewDelegate, AVAudioPlayerDelegate, EZParagraphTransitionDelegate> 
-{
-    IBOutlet    EZPageView  *ezPageView;
-    IBOutlet    UIView      *textView;
-    
-                EZBook          *ezBook;    
-                NSNumber        *currentPage;
-        
-                // TV vars //
-    
-                //TEMP - debug button for skipping paragraphs
-                UIButton        *skipParaBut;
-    
-                BOOL            isFirstPageAfterLaunch;
-
-                //cocos2d labels for words
-                NSArray         *ezWordLabels;
-                
-                //cocos2d layer for drawing labels
-                EZTextViewScene *ezTextViewScene;    
-                
-                // play pause button
-                UIButton        *playPauseBut;
-                
-                // used to continuing laying out page text from the end of the last paragraph
-                int             idxOfLastWordLaidOut;
-                
-                //audio player
-                AVAudioPlayer   *player;
-}
 
 @property (nonatomic, retain) IBOutlet  EZPageView          *ezPageView;
 @property (nonatomic, retain)           UIView              *textView;
@@ -55,11 +25,12 @@
 @property (nonatomic, retain)           NSArray             *ezWordLabels;
 @property (nonatomic, retain)           EZTextViewScene     *ezTextViewScene;
 @property (nonatomic, retain) IBOutlet  UIButton            *playPauseBut;
-@property (nonatomic, retain)           AVAudioPlayer       *player;
-@property int                                               idxOfLastWordLaidOut;
+@property (nonatomic, retain)           EZAudioPlayer       *ezAudioPlayer;
+@property (nonatomic, assign)			int					idxOfLastWordLaidOut;
 @property (nonatomic, retain) IBOutlet  UIButton            *skipParaBut; // debugging
 @property (nonatomic, retain)           NSMutableArray      *touchZones;
 @property (nonatomic, assign)			BOOL				audioIsPlaying;
+@property (nonatomic, assign)			BOOL				isFirstPageAfterLaunch;
 
 //scroll view methods
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;

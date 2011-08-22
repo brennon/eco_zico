@@ -10,6 +10,7 @@
 #import "EZBookViewController.h"
 #import "EZWord.h"
 #import "EZWordLabel.h"
+#import "EZAudioPlayer.h"
 
 #define EZ_MAX_LINES 3
 
@@ -191,7 +192,7 @@
             
             EZWordLabel *wordForCurrentTime = (EZWordLabel *)[ezBookView.ezWordLabels objectAtIndex:wordPositionCounter]; 
             
-            ezBookView.player.currentTime = (NSTimeInterval)[wordForCurrentTime.seekPoint doubleValue];
+            ezBookView.ezAudioPlayer.currentTime = (NSTimeInterval)[wordForCurrentTime.seekPoint doubleValue];
             
             break;
         }
@@ -235,7 +236,7 @@
 
 -(void)pollPlaybackTime
 {
-    currentPlaybackPosition = [ezBookView.player currentTime];// current playback pos
+    currentPlaybackPosition = [ezBookView.ezAudioPlayer currentTime];// current playback pos
     
     if(wordPositionCounter < [ezBookView.ezWordLabels count] && !isParaNarrationFinished)
     {
@@ -287,7 +288,7 @@
 //not used
 -(void)setPlayPosition:(NSTimeInterval)pos
 {
-    ezBookView.player.currentTime = ezBookView.player.duration / pos;
+    ezBookView.ezAudioPlayer.currentTime = ezBookView.ezAudioPlayer.duration / pos;
 }
 
 
