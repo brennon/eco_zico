@@ -2,8 +2,8 @@
 //  EZAudioPlayer.m
 //  EcoZico
 //
-//  Created by Brennon Bortz on 22/08/2011.
-//  Copyright 2011 Queen's University Belfast. All rights reserved.
+//  Created by Brennon Bortz and Donal O'Brien on 22/08/2011.
+//  Copyright 2011 Brennon Bortz and Donal O'Brien. All rights reserved.
 //
 
 #import "EZAudioPlayer.h"
