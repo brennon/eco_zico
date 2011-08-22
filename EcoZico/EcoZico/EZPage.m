@@ -11,7 +11,9 @@
 
 @implementation EZPage
 
-@synthesize words, audioFilePath, imageFilePath;
+@synthesize words = _words;
+@synthesize audioFilePath = _audioFilePath;
+@synthesize imageFilePath = _imageFilePath;
 @synthesize touchButtons = _touchButtons;
 
 - (id)initWithWords:(NSArray *)wordArray andAudioFilePath:(NSString *)audioFP andImageFilePath:(NSString *)imageFP andEZTransparentButtons:(NSArray *)buttonArray
@@ -28,20 +30,20 @@
 
 - (void)dealloc
 {
-    [words release];
-    words = nil;
-    [audioFilePath release];
-    audioFilePath = nil;
-    [self.imageFilePath release];
+    [_words release];
+    self.words = nil;
+    [_audioFilePath release];
+    self.audioFilePath = nil;
+    [_imageFilePath release];
     self.imageFilePath = nil;
-    [self.touchButtons release];
+    [_touchButtons release];
     self.touchButtons = nil;
     [super dealloc];
 }
 
 - (void)setWords:(NSArray *)wordArray
 {
-    [words release];
+    [_words release];
     NSMutableArray *tempWords = [NSMutableArray arrayWithCapacity:[wordArray count]];
     for (int i = 0; i < [wordArray count]; i++) {
         NSDictionary *wordDictionary = [NSDictionary dictionaryWithDictionary:[wordArray objectAtIndex:i]];
@@ -52,7 +54,7 @@
         [newWord release];
     }
     
-    words = [[NSArray arrayWithArray:(NSArray *)tempWords] retain];
+    _words = [[NSArray arrayWithArray:(NSArray *)tempWords] retain];
 }
 
 @end

@@ -8,12 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EZPage : NSObject {
-    NSArray *words;    
-    NSString *audioFilePath;
-    NSString *imageFilePath;
-    NSArray *touchButtons;
-}
+@interface EZPage : NSObject
 
 @property (nonatomic, retain) NSArray *words;
 @property (nonatomic, retain) NSString *audioFilePath;
