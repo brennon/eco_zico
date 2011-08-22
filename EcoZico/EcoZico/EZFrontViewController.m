@@ -32,15 +32,6 @@
     [appDelegate switchToHelpViewController];
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)dealloc
 {
     [helpButton release];
@@ -68,10 +59,9 @@
 
 - (void)viewDidUnload
 {
-    [self setHelpButton:nil];
-    [self setHelpButton:nil];
-    [self setReadItMyselfButton:nil];
-    [self setReadItToMeButton:nil];
+    self.helpButton = nil;
+    self.readItMyselfButton = nil;
+    self.readItToMeButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
