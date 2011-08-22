@@ -7,14 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class EZBookViewController;
 
-@interface EcoZicoAppDelegate : NSObject <UIApplicationDelegate> {
-    UIViewController *rootViewController;
-}
+@interface EcoZicoAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) EZBookViewController *ezBookViewController;
 
 - (void)switchToFrontViewController;
 - (void)switchToBookViewController;

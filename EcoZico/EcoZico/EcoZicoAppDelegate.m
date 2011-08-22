@@ -11,52 +11,39 @@
 #import "EZFrontViewController.h"
 #import "EZHelpViewController.h"
 
+// #define SKIP_MENU
+
 @implementation EcoZicoAppDelegate
 
-@synthesize window=_window, ezBookViewController;
+@synthesize window = _window;
 
 - (void)switchToBookViewController
 {
-    [self.window setRootViewController:nil];
-    rootViewController = (UIViewController *)[[EZBookViewController alloc] init];
-    [self.window setRootViewController:rootViewController];
+    self.window.rootViewController = (UIViewController *)[[EZBookViewController alloc] init];
     [self.window makeKeyAndVisible];
 }
 
 - (void)switchToHelpViewController
 {
-    [self.window setRootViewController:nil];
-    rootViewController = (UIViewController *)[[EZHelpViewController alloc] init];
-    [self.window setRootViewController:rootViewController];
+    self.window.rootViewController = (UIViewController *)[[EZHelpViewController alloc] init];
     [self.window makeKeyAndVisible];
 }
 
 - (void)switchToFrontViewController
 {
-    [self.window setRootViewController:nil];
-    rootViewController = (UIViewController *)[[EZFrontViewController alloc] init];
-    [self.window setRootViewController:rootViewController];
+    self.window.rootViewController = (UIViewController *)[[EZFrontViewController alloc] init];
     [self.window makeKeyAndVisible];
 }
 
-#define SKIP_MENU 1
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    if (SKIP_MENU) 
-    {
-        // Override point for customization after application launch.
-        rootViewController = (UIViewController *)[[EZBookViewController alloc] init];
-        [self.window setRootViewController:rootViewController];
-        [self.window makeKeyAndVisible];
-    }
-    else
-    {
-        // Override point for customization after application launch.
-        rootViewController = (UIViewController *)[[EZFrontViewController alloc] init];
-        [self.window setRootViewController:rootViewController];
-        [self.window makeKeyAndVisible];
-    }
+#ifdef SKIP_MENU
+    self.window.rootViewController = (UIViewController *)[[EZBookViewController alloc] init];
+	[self.window makeKeyAndVisible];
+#else    
+	self.window.rootViewController = (UIViewController *)[[EZFrontViewController alloc] init];
+	[self.window makeKeyAndVisible];
+#endif
     return YES;
 }
 
@@ -102,8 +89,7 @@
 - (void)dealloc
 {
     [_window release];
-    [rootViewController release];
-    rootViewController = nil;
+	self.window = nil;
     [super dealloc];
 }
 
