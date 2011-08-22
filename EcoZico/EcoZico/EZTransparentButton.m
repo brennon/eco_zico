@@ -12,19 +12,9 @@
 
 @synthesize audioFilePath = _audioFilePath;
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
 - (void)dealloc
 {
-    [self.audioFilePath release];
+    [_audioFilePath release];
     self.audioFilePath = nil;
     [super dealloc];
 }
