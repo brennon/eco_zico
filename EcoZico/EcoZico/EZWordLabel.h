@@ -13,10 +13,6 @@
 @class EZWord;
 
 @interface EZWordLabel : CCLabelBMFont <CCTargetedTouchDelegate>
-{
-    NSString *text;
-    NSNumber *seekPoint;
-}
 
 @property (nonatomic, retain) NSString *text;
 @property (nonatomic, retain) NSNumber *seekPoint;
