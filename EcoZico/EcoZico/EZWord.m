@@ -11,7 +11,8 @@
 
 @implementation EZWord
 
-@synthesize text, seekPoint;
+@synthesize text = _text;
+@synthesize seekPoint = _seekPoint;
 
 - (id)initWithText:(NSString *)word andSeekPoint:(NSNumber *)milliseconds
 {
@@ -31,10 +32,10 @@
 
 - (void)dealloc
 {
-    [text release];
-    text = nil;
-    [seekPoint release];
-    seekPoint = nil;
+    [_text release];
+    self.text = nil;
+    [_seekPoint release];
+    self.seekPoint = nil;
     [super dealloc];
 }
 

@@ -9,10 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface EZWord : NSObject {
-    NSString *text;
-    NSNumber *seekPoint;
-}
+@interface EZWord : NSObject
 
 @property (nonatomic, retain) NSString *text;
 @property (nonatomic, retain) NSNumber *seekPoint;
