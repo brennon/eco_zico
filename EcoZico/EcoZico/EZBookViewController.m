@@ -352,7 +352,7 @@ double thirdParaSkip = 30;
 
 #pragma mark - audioplayer delegate methods
 
-- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)completed
+- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)thisPlayer successfully:(BOOL)completed
 {
 	self.audioIsPlaying = NO;
 	
@@ -361,7 +361,7 @@ double thirdParaSkip = 30;
         [[ezWordLabels lastObject] startWordOffAnimation];       
     }
 	
-	[player release];
+	[thisPlayer release];
 }
 
 
