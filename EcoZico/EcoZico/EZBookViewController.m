@@ -102,6 +102,8 @@ const NSUInteger kNumberOfPages = 14;
     // e.g. self.myOutlet = nil;
     self.ezPageView = nil;
     self.textView = nil;
+	self.playPauseBut = nil;
+	self.skipParaBut = nil; // For debugging
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -111,6 +113,7 @@ const NSUInteger kNumberOfPages = 14;
 }
 
 #pragma mark - Text view setup/manipulation
+
 - (void)attachCocos2dToSelf
 {
     // Try to use CADisplayLink director
@@ -225,8 +228,7 @@ const NSUInteger kNumberOfPages = 14;
     [nextScene addChild:self.ezTextViewScene];
     
     //do the transition if not the first page shown
-    if (withTrans)
-    {
+    if (withTrans) {
         //turn off interactions for the transition
         [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
         
@@ -236,9 +238,7 @@ const NSUInteger kNumberOfPages = 14;
         Class trans = [self.currentPage intValue] % 2 == 0 ? [EZParagraphTransitionFlipY class] : [EZParagraphTransitionMoveInB class];
         
         [[CCDirector sharedDirector] replaceScene:[trans transitionWithDuration:0.25 scene:nextScene delegate:self]];
-    }
-    else
-    {
+    } else {
         [[CCDirector sharedDirector] replaceScene:nextScene];   
     }
     
@@ -249,7 +249,7 @@ const NSUInteger kNumberOfPages = 14;
 
 #pragma mark - Text view-related callbacks
 
--(void)textViewDidFinishNarratingParagraph
+- (void)textViewDidFinishNarratingParagraph
 {    
     [self pauseAudio];    
     [self layoutTextWithTransition:YES];    
@@ -267,7 +267,7 @@ const NSUInteger kNumberOfPages = 14;
 
 #pragma mark - Text and image playback
 
--(void)loadAudioForPage:(int)pageNum
+- (void)loadAudioForPage:(int)pageNum
 {
     // Load sound file
     NSString *audioFileName = [NSString stringWithFormat:@"zico_audio-page_%0i", pageNum];
@@ -301,42 +301,35 @@ const NSUInteger kNumberOfPages = 14;
 }
 
 
--(IBAction)playPause:(id)sender
+- (IBAction)playPause:(id)sender
 {
     DebugLogFunc();
     
-    //pause
-    if([self.ezAudioPlayer isPlaying])
-    {                
+    if([self.ezAudioPlayer isPlaying]) {
         [self pauseAudio];
-    }
-    //play
-    else 
-    {            
+		self.audioIsPlaying = NO;
+    } else {            
         [self playAudio];
+		self.audioIsPlaying = YES;
     }
 }
 
 
--(void)playAudio
+- (void)playAudio
 {
-    [self.ezTextViewScene startPollingPlayer];
-    
+    [self.ezTextViewScene startPollingPlayer];    
     [self.ezAudioPlayer play];
-	self.audioIsPlaying = YES;
-    
-    [self.playPauseBut setSelected:YES];
+	self.audioIsPlaying = YES;    
+    self.playPauseBut.selected = YES;
 }
 
 
--(void)pauseAudio
+- (void)pauseAudio
 {
-    [self.ezTextViewScene stopPollingPlayer];
-    
+    [self.ezTextViewScene stopPollingPlayer];    
     [self.ezAudioPlayer pause];
 	self.audioIsPlaying = NO;
-    
-    [self.playPauseBut setSelected:NO];
+    self.playPauseBut.selected = NO;
 }
 
 
@@ -345,7 +338,7 @@ double firstParaSkip = 6.5;
 double secondParaSkip = 20;
 double thirdParaSkip = 30;
 
--(IBAction)skipPara:(id)sender
+- (IBAction)skipPara:(id)sender
 {    
     EZPage *currentPageObj = [self.ezBook.pages objectAtIndex:[self.currentPage intValue]];
     NSTimeInterval timeOfLastWordInParagraph = [[[currentPageObj.words objectAtIndex:self.idxOfLastWordLaidOut]seekPoint] doubleValue];
@@ -360,8 +353,7 @@ double thirdParaSkip = 30;
 {
 	self.audioIsPlaying = NO;
 	
-    if (completed == YES) 
-    {            
+    if (completed == YES) {            
         [[self.ezWordLabels lastObject] startWordOffAnimation];       
     }
 	
@@ -379,16 +371,16 @@ double thirdParaSkip = 30;
     
     self.currentPage = [NSNumber numberWithInt:(int) scrollView.contentOffset.x / scrollView.frame.size.width];
     
-    // don't 'change the page' if the page being changed to is the same as the previous page
-    // this happens for minor scrolls and for the first and last pages.
+    // Don't 'change the page' if the page being changed to is the same as the previous page.
+    // (This delegate method fires even for minor scrolls and for the first and last pages.
     
     if ([self.currentPage intValue] != previousPage) 
     {
-        //must be set before loadNewPage!!
-        self.idxOfLastWordLaidOut = 0;
+        // Must be set before -loadNewPage:withTransition: is called.
+		self.idxOfLastWordLaidOut = 0;
         
-        // pause audio which cancells polling timer before calling loadNewPage.
-        // if timer is not cancelled, you get a crash.
+        // Pause audio which cancells polling timer before calling -loadNewPage:withTransition:.
+        // Will crash if timer is not cancelled.
         [self pauseAudio];
 
         [self loadNewPage:(EZPage *)[self.ezBook.pages objectAtIndex:[self.currentPage intValue]] withTransition:YES];
