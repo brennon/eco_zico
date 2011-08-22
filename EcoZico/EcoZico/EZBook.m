@@ -12,7 +12,7 @@
 
 @implementation EZBook
 
-@synthesize pages;
+@synthesize pages = _pages;
 
 - (id)initWithPlist:(NSString *)aPath
 {
@@ -27,14 +27,14 @@
 
 - (void)dealloc
 {
-    [pages release];
-    pages = nil;
+    [_pages release];
+    self.pages = nil;
     [super dealloc];
 }
 
 - (void)setPages:(NSArray *)somePages
 {
-    [pages release];
+    [self.pages release];
     NSMutableArray *tempPages = [NSMutableArray arrayWithCapacity:[somePages count]];
     for (int i = 0; i < [somePages count]; i++) {
         NSDictionary *newPageDictionary = [NSDictionary dictionaryWithDictionary:[somePages objectAtIndex:i]];
@@ -65,7 +65,7 @@
         [newPage release];
     }
     
-    pages = [[NSArray arrayWithArray:(NSArray *)tempPages] retain];
+    self.pages = [[NSArray arrayWithArray:(NSArray *)tempPages] retain];
 }
 
 @end

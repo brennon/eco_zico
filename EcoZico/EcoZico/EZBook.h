@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EZBook : NSObject {
-    NSArray *pages;    
-}
+@interface EZBook : NSObject
 
 @property (nonatomic, retain) NSArray *pages;
 
