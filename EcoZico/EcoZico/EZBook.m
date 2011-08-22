@@ -34,7 +34,7 @@
 
 - (void)setPages:(NSArray *)somePages
 {
-    [self.pages release];
+    [_pages release];
     NSMutableArray *tempPages = [NSMutableArray arrayWithCapacity:[somePages count]];
     for (int i = 0; i < [somePages count]; i++) {
         NSDictionary *newPageDictionary = [NSDictionary dictionaryWithDictionary:[somePages objectAtIndex:i]];
@@ -65,7 +65,7 @@
         [newPage release];
     }
     
-    self.pages = [[NSArray arrayWithArray:(NSArray *)tempPages] retain];
+    _pages = [[NSArray arrayWithArray:(NSArray *)tempPages] retain];
 }
 
 @end
