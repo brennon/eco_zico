@@ -97,12 +97,6 @@
 		3A4286C913BF43F8004BF22B /* LICENSE_CocosDenshion.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A42865D13BF43F8004BF22B /* LICENSE_CocosDenshion.txt */; };
 		3A4286CA13BF43F8004BF22B /* LICENSE_FontLabel.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A42865E13BF43F8004BF22B /* LICENSE_FontLabel.txt */; };
 		3A4286CB13BF43F8004BF22B /* LICENSE_TouchJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A42865F13BF43F8004BF22B /* LICENSE_TouchJSON.txt */; };
-		3A4286CC13BF43F8004BF22B /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866213BF43F8004BF22B /* CDataScanner.m */; };
-		3A4286CD13BF43F8004BF22B /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866513BF43F8004BF22B /* CDataScanner_Extensions.m */; };
-		3A4286CE13BF43F8004BF22B /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866713BF43F8004BF22B /* NSDictionary_JSONExtensions.m */; };
-		3A4286CF13BF43F8004BF22B /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866A13BF43F8004BF22B /* CJSONDeserializer.m */; };
-		3A4286D013BF43F8004BF22B /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866C13BF43F8004BF22B /* CJSONScanner.m */; };
-		3A4286D113BF43F8004BF22B /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866E13BF43F8004BF22B /* CJSONSerializer.m */; };
 		3A47510D13EED7020096ED92 /* 00_zico.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A47510C13EED7020096ED92 /* 00_zico.wav */; };
 		3A47511113EEE39F0096ED92 /* EZTransparentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A47511013EEE39F0096ED92 /* EZTransparentButton.m */; };
 		3A74D668136191B500155817 /* EZBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A74D666136191B500155817 /* EZBookViewController.m */; };
@@ -196,6 +190,7 @@
 		3AF02FFF13DAD5280042F706 /* Default-LandscapeUpsideDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF02FFE13DAD5280042F706 /* Default-LandscapeUpsideDown.png */; };
 		3AF0301313DAEACC0042F706 /* EZFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0301113DAEACB0042F706 /* EZFrontViewController.m */; };
 		3AF0301413DAEACC0042F706 /* EZFrontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF0301213DAEACB0042F706 /* EZFrontViewController.xib */; };
+		3AFE8DFB140253E200D60576 /* EZAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE8DFA140253E200D60576 /* EZAudioPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -384,19 +379,6 @@
 		3A42865D13BF43F8004BF22B /* LICENSE_CocosDenshion.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_CocosDenshion.txt; sourceTree = "<group>"; };
 		3A42865E13BF43F8004BF22B /* LICENSE_FontLabel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_FontLabel.txt; sourceTree = "<group>"; };
 		3A42865F13BF43F8004BF22B /* LICENSE_TouchJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_TouchJSON.txt; sourceTree = "<group>"; };
-		3A42866113BF43F8004BF22B /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
-		3A42866213BF43F8004BF22B /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
-		3A42866413BF43F8004BF22B /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
-		3A42866513BF43F8004BF22B /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
-		3A42866613BF43F8004BF22B /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
-		3A42866713BF43F8004BF22B /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
-		3A42866913BF43F8004BF22B /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
-		3A42866A13BF43F8004BF22B /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
-		3A42866B13BF43F8004BF22B /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
-		3A42866C13BF43F8004BF22B /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
-		3A42866D13BF43F8004BF22B /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
-		3A42866E13BF43F8004BF22B /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
-		3A42866F13BF43F8004BF22B /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 		3A47510C13EED7020096ED92 /* 00_zico.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 00_zico.wav; sourceTree = "<group>"; };
 		3A47510F13EEE39F0096ED92 /* EZTransparentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTransparentButton.h; sourceTree = "<group>"; };
 		3A47511013EEE39F0096ED92 /* EZTransparentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTransparentButton.m; sourceTree = "<group>"; };
@@ -505,6 +487,8 @@
 		3AF0301013DAEACA0042F706 /* EZFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZFrontViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		3AF0301113DAEACB0042F706 /* EZFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EZFrontViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3AF0301213DAEACB0042F706 /* EZFrontViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZFrontViewController.xib; sourceTree = "<group>"; };
+		3AFE8DF9140253E200D60576 /* EZAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZAudioPlayer.h; sourceTree = "<group>"; };
+		3AFE8DFA140253E200D60576 /* EZAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZAudioPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -920,6 +904,8 @@
 			children = (
 				3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */,
 				3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */,
+				3AFE8DF9140253E200D60576 /* EZAudioPlayer.h */,
+				3AFE8DFA140253E200D60576 /* EZAudioPlayer.m */,
 				3AF0301013DAEACA0042F706 /* EZFrontViewController.h */,
 				3AF0301113DAEACB0042F706 /* EZFrontViewController.m */,
 				3A8B600613E0212800ECA47E /* EZHelpViewController.h */,
@@ -1197,6 +1183,7 @@
 				2EBED18313EF1BF8005F5D2C /* TransformUtils.m in Sources */,
 				2EBED18413EF1BF8005F5D2C /* ZipUtils.m in Sources */,
 				3A47511113EEE39F0096ED92 /* EZTransparentButton.m in Sources */,
+				3AFE8DFB140253E200D60576 /* EZAudioPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

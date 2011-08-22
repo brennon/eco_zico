@@ -19,6 +19,7 @@
 #import "CCLabelBMFont.h"
 #import "EZParagraphTransitions.h"
 #import "EZTransparentButton.h"
+#import "EZAudioPlayer.h"
 
 const NSUInteger kNumberOfPages = 14;
 
@@ -214,7 +215,7 @@ const NSUInteger kNumberOfPages = 14;
 		NSString *filename = [(EZTransparentButton *)sender audioFilePath];
 		NSString *path = [[NSBundle mainBundle] pathForResource:filename ofType:nil];  
 		NSURL *url = [[NSURL alloc] initFileURLWithPath: path];
-		AVAudioPlayer *localPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error: NULL];
+		EZAudioPlayer *localPlayer = [[EZAudioPlayer alloc] initWithContentsOfURL:url error:NULL playerType:kEZImageAudio];
 		[url release];
 		
 		self.audioIsPlaying = YES;		
@@ -263,8 +264,8 @@ const NSUInteger kNumberOfPages = 14;
     NSString *audioFileName = [NSString stringWithFormat:@"zico_audio-page_%0i", pageNum];
     
     NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: audioFileName ofType: @"wav"];  
-    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];    
-    AVAudioPlayer *newPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: fileURL error: NULL];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];
+	EZAudioPlayer *newPlayer = [[EZAudioPlayer alloc] initWithContentsOfURL:fileURL error:NULL playerType:kEZPageTextAudio];
     [fileURL release];           
     
     self.player = newPlayer;    
@@ -357,7 +358,7 @@ double thirdParaSkip = 30;
 
 #pragma mark - audioplayer delegate methods
 
-- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)completed
+- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)thisPlayer successfully:(BOOL)completed
 {
 	self.audioIsPlaying = NO;
 	
@@ -366,7 +367,9 @@ double thirdParaSkip = 30;
         [[ezWordLabels lastObject] startWordOffAnimation];       
     }
 	
-	[self.player release];
+	if ([(EZAudioPlayer *)thisPlayer playerType] == kEZImageAudio) {
+		[thisPlayer release];
+	}
 }
 
 
