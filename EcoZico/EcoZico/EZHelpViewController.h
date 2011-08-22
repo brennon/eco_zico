@@ -2,8 +2,8 @@
 //  EZHelpViewController.h
 //  EcoZico
 //
-//  Created by Brennon Bortz on 27/07/2011.
-//  Copyright 2011 Queen's University Belfast. All rights reserved.
+//  Created by Brennon Bortz and Donal O'Brien on 27/07/2011.
+//  Copyright 2011 Brennon Bortz and Donal O'Brien. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

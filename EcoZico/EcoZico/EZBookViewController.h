@@ -58,6 +58,8 @@
 @property (nonatomic, retain)           AVAudioPlayer       *player;
 @property int                                               idxOfLastWordLaidOut;
 @property (nonatomic, retain) IBOutlet  UIButton            *skipParaBut; // debugging
+@property (nonatomic, retain)           NSMutableArray      *touchZones;
+@property (nonatomic, assign)			BOOL				audioIsPlaying;
 
 //scroll view methods
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
@@ -72,15 +74,16 @@
 -(void)loadAudioForPage:(int)pageNum;
 
 //play / pause audio playback (and TVC narration)
--(IBAction)playPause:(id)sender;
+- (IBAction)playPause:(id)sender;
 
--(void)playAudio;
+- (void)playAudio;
 
--(void)pauseAudio;
+- (void)pauseAudio;
 
--(void)textViewDidFinishNarratingParagraph;
+- (void)textViewDidFinishNarratingParagraph;
 
--(IBAction)skipPara:(id)sender; //debugging
+- (IBAction)skipPara:(id)sender; //debugging
 
+- (void)playImageAudio:(id)sender;
 
 @end

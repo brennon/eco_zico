@@ -18,30 +18,26 @@
 #import "EZTextViewScene.h"
 #import "CCLabelBMFont.h"
 #import "EZParagraphTransitions.h"
+#import "EZTransparentButton.h"
 
 const NSUInteger kNumberOfPages = 14;
 
-@interface EZBookViewController ()
-
--(void)setupTextView;
-
-@end
-
 @implementation EZBookViewController
 
-@synthesize ezPageView, textView, ezBook, currentPage, ezWordLabels, ezTextViewScene, idxOfLastWordLaidOut, player, playPauseBut, skipParaBut;
+@synthesize ezPageView, textView, ezBook, currentPage, ezWordLabels, ezTextViewScene, idxOfLastWordLaidOut, player, playPauseBut, skipParaBut, audioIsPlaying;
 
+@synthesize touchZones = _touchZones;
 
 #pragma mark - EZBookViewController lifecycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        
+    if (self) {        
         isFirstPageAfterLaunch = YES;
-        currentPage = [NSNumber numberWithInt:0];
-        ezBook = [[[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"] retain];
+		self.audioIsPlaying = NO;
+        self.currentPage = [NSNumber numberWithInt:0];
+        self.ezBook = [[[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"] retain];
     }
     return self;
 }
@@ -195,11 +191,37 @@ const NSUInteger kNumberOfPages = 14;
     [self loadEZPageWordsAsCCLabelBMFonts:ezPage];
     
     [self loadAudioForPage:[currentPage intValue]];
-        
+    
     // Layout text
     [self layoutTextWithTransition:withTrans];
+    
+    for (UIView *view in [ezPageView subviews]) {
+        if ([view isKindOfClass:[EZTransparentButton class]]) {
+            [view removeFromSuperview];
+        }        
+    }
+    
+    for (UInt16 i = 0; i < [ezPage.touchButtons count]; i++) {
+        EZTransparentButton *buttonToAdd = [ezPage.touchButtons objectAtIndex:i];
+        [buttonToAdd addTarget:self action:@selector(playImageAudio:) forControlEvents:UIControlEventTouchUpInside];
+        [self.ezPageView addSubview:buttonToAdd];        
+    }
 }
 
+- (void)playImageAudio:(id)sender
+{
+	if (!self.audioIsPlaying) {
+		NSString *filename = [(EZTransparentButton *)sender audioFilePath];
+		NSString *path = [[NSBundle mainBundle] pathForResource:filename ofType:nil];  
+		NSURL *url = [[NSURL alloc] initFileURLWithPath: path];
+		AVAudioPlayer *localPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error: NULL];
+		[url release];
+		
+		self.audioIsPlaying = YES;		
+		[localPlayer play];    
+		[localPlayer setDelegate:self];
+	}
+}
 
 -(void)layoutTextWithTransition:(BOOL)withTrans
 {    
@@ -276,6 +298,7 @@ const NSUInteger kNumberOfPages = 14;
     [ezTextViewScene startPollingPlayer];
     
     [player play];
+	self.audioIsPlaying = YES;
     
     [playPauseBut setSelected:YES];
 }
@@ -286,6 +309,7 @@ const NSUInteger kNumberOfPages = 14;
     [ezTextViewScene stopPollingPlayer];
     
     [player pause];
+	self.audioIsPlaying = NO;
     
     [playPauseBut setSelected:NO];
 }
@@ -333,12 +357,16 @@ double thirdParaSkip = 30;
 
 #pragma mark - audioplayer delegate methods
 
-- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *) player successfully:(BOOL) completed
-{    
+- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)completed
+{
+	self.audioIsPlaying = NO;
+	
     if (completed == YES) 
     {            
         [[ezWordLabels lastObject] startWordOffAnimation];       
-    }    
+    }
+	
+	[self.player release];
 }
 
 
@@ -363,11 +391,7 @@ double thirdParaSkip = 30;
         [self pauseAudio];
 
         [self loadNewPage:(EZPage *)[ezBook.pages objectAtIndex:[currentPage intValue]] withTransition:YES];
-    }
-
-    
+    }    
 }
-
-
 
 @end

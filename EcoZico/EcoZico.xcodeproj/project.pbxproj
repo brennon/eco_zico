@@ -97,6 +97,14 @@
 		3A4286C913BF43F8004BF22B /* LICENSE_CocosDenshion.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A42865D13BF43F8004BF22B /* LICENSE_CocosDenshion.txt */; };
 		3A4286CA13BF43F8004BF22B /* LICENSE_FontLabel.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A42865E13BF43F8004BF22B /* LICENSE_FontLabel.txt */; };
 		3A4286CB13BF43F8004BF22B /* LICENSE_TouchJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A42865F13BF43F8004BF22B /* LICENSE_TouchJSON.txt */; };
+		3A4286CC13BF43F8004BF22B /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866213BF43F8004BF22B /* CDataScanner.m */; };
+		3A4286CD13BF43F8004BF22B /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866513BF43F8004BF22B /* CDataScanner_Extensions.m */; };
+		3A4286CE13BF43F8004BF22B /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866713BF43F8004BF22B /* NSDictionary_JSONExtensions.m */; };
+		3A4286CF13BF43F8004BF22B /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866A13BF43F8004BF22B /* CJSONDeserializer.m */; };
+		3A4286D013BF43F8004BF22B /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866C13BF43F8004BF22B /* CJSONScanner.m */; };
+		3A4286D113BF43F8004BF22B /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A42866E13BF43F8004BF22B /* CJSONSerializer.m */; };
+		3A47510D13EED7020096ED92 /* 00_zico.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A47510C13EED7020096ED92 /* 00_zico.wav */; };
+		3A47511113EEE39F0096ED92 /* EZTransparentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A47511013EEE39F0096ED92 /* EZTransparentButton.m */; };
 		3A74D668136191B500155817 /* EZBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A74D666136191B500155817 /* EZBookViewController.m */; };
 		3A74D669136191B500155817 /* EZBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D667136191B500155817 /* EZBookViewController.xib */; };
 		3A74D6791361E88600155817 /* eco-page_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A74D66B1361E88500155817 /* eco-page_0.png */; };
@@ -164,6 +172,23 @@
 		3AD4B82C1360961C00000919 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4B82B1360961C00000919 /* main.m */; };
 		3AD4B82F1360961C00000919 /* EcoZicoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */; };
 		3AD4B8321360961C00000919 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AD4B8301360961C00000919 /* MainWindow.xib */; };
+		3AD5B70C13F6B1440051CF2C /* 01_fireball.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B6FB13F6B1440051CF2C /* 01_fireball.wav */; };
+		3AD5B70D13F6B1440051CF2C /* 02_zico.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B6FC13F6B1440051CF2C /* 02_zico.wav */; };
+		3AD5B70E13F6B1440051CF2C /* 03_planetearth.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B6FD13F6B1440051CF2C /* 03_planetearth.wav */; };
+		3AD5B70F13F6B1440051CF2C /* 03_spacecar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B6FE13F6B1440051CF2C /* 03_spacecar.wav */; };
+		3AD5B71013F6B1440051CF2C /* 04_greenville.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B6FF13F6B1440051CF2C /* 04_greenville.wav */; };
+		3AD5B71113F6B1440051CF2C /* 04_litter.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B70013F6B1440051CF2C /* 04_litter.wav */; };
+		3AD5B71213F6B1440051CF2C /* 05_junk.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B70113F6B1440051CF2C /* 05_junk.wav */; };
+		3AD5B71313F6B1440051CF2C /* 06_repair.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B70213F6B1440051CF2C /* 06_repair.wav */; };
+		3AD5B71413F6B1440051CF2C /* 06_reuse.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B70313F6B1440051CF2C /* 06_reuse.wav */; };
+		3AD5B71513F6B1440051CF2C /* 07_recycle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B70413F6B1440051CF2C /* 07_recycle.wav */; };
+		3AD5B71613F6B1440051CF2C /* 08_mayor.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B70513F6B1440051CF2C /* 08_mayor.wav */; };
+		3AD5B71713F6B1440051CF2C /* 08_vote.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B70613F6B1440051CF2C /* 08_vote.wav */; };
+		3AD5B71813F6B1440051CF2C /* 09_cans.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B70713F6B1440051CF2C /* 09_cans.wav */; };
+		3AD5B71913F6B1440051CF2C /* 09_glass.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B70813F6B1440051CF2C /* 09_glass.wav */; };
+		3AD5B71A13F6B1440051CF2C /* 09_paper.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B70913F6B1440051CF2C /* 09_paper.wav */; };
+		3AD5B71B13F6B1440051CF2C /* 10_green.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B70A13F6B1440051CF2C /* 10_green.wav */; };
+		3AD5B71C13F6B1440051CF2C /* 11_ecozico.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5B70B13F6B1440051CF2C /* 11_ecozico.wav */; };
 		3AF02FF713DAD2780042F706 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3AF02FF613DAD2780042F706 /* iTunesArtwork */; };
 		3AF02FFA13DAD2FE0042F706 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF02FF813DAD2FE0042F706 /* Icon-Small-50.png */; };
 		3AF02FFB13DAD2FE0042F706 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF02FF913DAD2FE0042F706 /* Icon-Small.png */; };
@@ -359,8 +384,24 @@
 		3A42865D13BF43F8004BF22B /* LICENSE_CocosDenshion.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_CocosDenshion.txt; sourceTree = "<group>"; };
 		3A42865E13BF43F8004BF22B /* LICENSE_FontLabel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_FontLabel.txt; sourceTree = "<group>"; };
 		3A42865F13BF43F8004BF22B /* LICENSE_TouchJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_TouchJSON.txt; sourceTree = "<group>"; };
-		3A74D665136191B500155817 /* EZBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZBookViewController.h; sourceTree = "<group>"; };
-		3A74D666136191B500155817 /* EZBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZBookViewController.m; sourceTree = "<group>"; };
+		3A42866113BF43F8004BF22B /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
+		3A42866213BF43F8004BF22B /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
+		3A42866413BF43F8004BF22B /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
+		3A42866513BF43F8004BF22B /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
+		3A42866613BF43F8004BF22B /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		3A42866713BF43F8004BF22B /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
+		3A42866913BF43F8004BF22B /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		3A42866A13BF43F8004BF22B /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		3A42866B13BF43F8004BF22B /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
+		3A42866C13BF43F8004BF22B /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
+		3A42866D13BF43F8004BF22B /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		3A42866E13BF43F8004BF22B /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		3A42866F13BF43F8004BF22B /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		3A47510C13EED7020096ED92 /* 00_zico.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 00_zico.wav; sourceTree = "<group>"; };
+		3A47510F13EEE39F0096ED92 /* EZTransparentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTransparentButton.h; sourceTree = "<group>"; };
+		3A47511013EEE39F0096ED92 /* EZTransparentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTransparentButton.m; sourceTree = "<group>"; };
+		3A74D665136191B500155817 /* EZBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZBookViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3A74D666136191B500155817 /* EZBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EZBookViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3A74D667136191B500155817 /* EZBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZBookViewController.xib; sourceTree = "<group>"; };
 		3A74D66B1361E88500155817 /* eco-page_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_0.png"; sourceTree = "<group>"; };
 		3A74D66D1361E88500155817 /* eco-page_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eco-page_2.png"; sourceTree = "<group>"; };
@@ -379,8 +420,8 @@
 		3A8B5FD113DDEAE600ECA47E /* read_it_myself-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "read_it_myself-button.png"; sourceTree = "<group>"; };
 		3A8B5FD213DDEAE700ECA47E /* read_it_to_me-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "read_it_to_me-button.png"; sourceTree = "<group>"; };
 		3A8B600313E0206600ECA47E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		3A8B600613E0212800ECA47E /* EZHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZHelpViewController.h; sourceTree = "<group>"; };
-		3A8B600713E0212800ECA47E /* EZHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZHelpViewController.m; sourceTree = "<group>"; };
+		3A8B600613E0212800ECA47E /* EZHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZHelpViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3A8B600713E0212800ECA47E /* EZHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EZHelpViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3A8B600813E0212900ECA47E /* EZHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZHelpViewController.xib; sourceTree = "<group>"; };
 		3A8B600B13E02A9300ECA47E /* book_frame-bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book_frame-bottom.png"; sourceTree = "<group>"; };
 		3A8B600C13E02A9300ECA47E /* book_frame-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book_frame-top.png"; sourceTree = "<group>"; };
@@ -393,7 +434,7 @@
 		3A8B602313E06FAA00ECA47E /* instructions_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instructions_02.png; sourceTree = "<group>"; };
 		3A8B602413E06FAA00ECA47E /* instructions_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instructions_03.png; sourceTree = "<group>"; };
 		3A8B602513E06FAA00ECA47E /* instructions_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instructions_04.png; sourceTree = "<group>"; };
-		3A97DCFF13BCE4350010CDC6 /* EZPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZPageView.h; sourceTree = "<group>"; };
+		3A97DCFF13BCE4350010CDC6 /* EZPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZPageView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		3A97DD0013BCE4350010CDC6 /* EZPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPageView.m; sourceTree = "<group>"; };
 		3A97DD2013BF0F1B0010CDC6 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
 		3A97DE7013BF0FE70010CDC6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -436,16 +477,33 @@
 		3AD4B8281360961C00000919 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3AD4B82A1360961C00000919 /* EcoZico-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EcoZico-Prefix.pch"; path = "EcoZico/EcoZico-Prefix.pch"; sourceTree = "<group>"; };
 		3AD4B82B1360961C00000919 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EcoZico/main.m; sourceTree = "<group>"; };
-		3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcoZicoAppDelegate.h; sourceTree = "<group>"; };
-		3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EcoZicoAppDelegate.m; sourceTree = "<group>"; };
+		3AD4B82D1360961C00000919 /* EcoZicoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EcoZicoAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3AD4B82E1360961C00000919 /* EcoZicoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EcoZicoAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3AD4B8311360961C00000919 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		3AD5B6FB13F6B1440051CF2C /* 01_fireball.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 01_fireball.wav; sourceTree = "<group>"; };
+		3AD5B6FC13F6B1440051CF2C /* 02_zico.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 02_zico.wav; sourceTree = "<group>"; };
+		3AD5B6FD13F6B1440051CF2C /* 03_planetearth.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 03_planetearth.wav; sourceTree = "<group>"; };
+		3AD5B6FE13F6B1440051CF2C /* 03_spacecar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 03_spacecar.wav; sourceTree = "<group>"; };
+		3AD5B6FF13F6B1440051CF2C /* 04_greenville.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04_greenville.wav; sourceTree = "<group>"; };
+		3AD5B70013F6B1440051CF2C /* 04_litter.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04_litter.wav; sourceTree = "<group>"; };
+		3AD5B70113F6B1440051CF2C /* 05_junk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 05_junk.wav; sourceTree = "<group>"; };
+		3AD5B70213F6B1440051CF2C /* 06_repair.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 06_repair.wav; sourceTree = "<group>"; };
+		3AD5B70313F6B1440051CF2C /* 06_reuse.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 06_reuse.wav; sourceTree = "<group>"; };
+		3AD5B70413F6B1440051CF2C /* 07_recycle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 07_recycle.wav; sourceTree = "<group>"; };
+		3AD5B70513F6B1440051CF2C /* 08_mayor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 08_mayor.wav; sourceTree = "<group>"; };
+		3AD5B70613F6B1440051CF2C /* 08_vote.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 08_vote.wav; sourceTree = "<group>"; };
+		3AD5B70713F6B1440051CF2C /* 09_cans.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 09_cans.wav; sourceTree = "<group>"; };
+		3AD5B70813F6B1440051CF2C /* 09_glass.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 09_glass.wav; sourceTree = "<group>"; };
+		3AD5B70913F6B1440051CF2C /* 09_paper.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 09_paper.wav; sourceTree = "<group>"; };
+		3AD5B70A13F6B1440051CF2C /* 10_green.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 10_green.wav; sourceTree = "<group>"; };
+		3AD5B70B13F6B1440051CF2C /* 11_ecozico.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 11_ecozico.wav; sourceTree = "<group>"; };
 		3AF02FF613DAD2780042F706 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		3AF02FF813DAD2FE0042F706 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		3AF02FF913DAD2FE0042F706 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		3AF02FFC13DAD3D60042F706 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		3AF02FFE13DAD5280042F706 /* Default-LandscapeUpsideDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-LandscapeUpsideDown.png"; sourceTree = "<group>"; };
-		3AF0301013DAEACA0042F706 /* EZFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZFrontViewController.h; sourceTree = "<group>"; };
-		3AF0301113DAEACB0042F706 /* EZFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZFrontViewController.m; sourceTree = "<group>"; };
+		3AF0301013DAEACA0042F706 /* EZFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZFrontViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		3AF0301113DAEACB0042F706 /* EZFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EZFrontViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3AF0301213DAEACB0042F706 /* EZFrontViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EZFrontViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -747,6 +805,24 @@
 		3A97DD1513BF0E3E0010CDC6 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				3A47510C13EED7020096ED92 /* 00_zico.wav */,
+				3AD5B6FB13F6B1440051CF2C /* 01_fireball.wav */,
+				3AD5B6FC13F6B1440051CF2C /* 02_zico.wav */,
+				3AD5B6FD13F6B1440051CF2C /* 03_planetearth.wav */,
+				3AD5B6FE13F6B1440051CF2C /* 03_spacecar.wav */,
+				3AD5B6FF13F6B1440051CF2C /* 04_greenville.wav */,
+				3AD5B70013F6B1440051CF2C /* 04_litter.wav */,
+				3AD5B70113F6B1440051CF2C /* 05_junk.wav */,
+				3AD5B70213F6B1440051CF2C /* 06_repair.wav */,
+				3AD5B70313F6B1440051CF2C /* 06_reuse.wav */,
+				3AD5B70413F6B1440051CF2C /* 07_recycle.wav */,
+				3AD5B70513F6B1440051CF2C /* 08_mayor.wav */,
+				3AD5B70613F6B1440051CF2C /* 08_vote.wav */,
+				3AD5B70713F6B1440051CF2C /* 09_cans.wav */,
+				3AD5B70813F6B1440051CF2C /* 09_glass.wav */,
+				3AD5B70913F6B1440051CF2C /* 09_paper.wav */,
+				3AD5B70A13F6B1440051CF2C /* 10_green.wav */,
+				3AD5B70B13F6B1440051CF2C /* 11_ecozico.wav */,
 				3AC034E013C5DC3E0017D811 /* zico_audio-page_0.wav */,
 				3AC034FA13C5DDA70017D811 /* zico_audio-page_1.wav */,
 				3AC034E113C5DC3E0017D811 /* zico_audio-page_2.wav */,
@@ -852,6 +928,8 @@
 				3A74D666136191B500155817 /* EZBookViewController.m */,
 				3ABEDA2213C0D1F100DC40BC /* EZBook.h */,
 				3ABEDA2313C0D1F100DC40BC /* EZBook.m */,
+				3A47510F13EEE39F0096ED92 /* EZTransparentButton.h */,
+				3A47511013EEE39F0096ED92 /* EZTransparentButton.m */,
 				3A97DCFF13BCE4350010CDC6 /* EZPageView.h */,
 				3A97DD0013BCE4350010CDC6 /* EZPageView.m */,
 				3ABEDA2513C0D26900DC40BC /* EZPage.h */,
@@ -997,6 +1075,24 @@
 				3A8B602713E06FAA00ECA47E /* instructions_02.png in Resources */,
 				3A8B602813E06FAA00ECA47E /* instructions_03.png in Resources */,
 				3A8B602913E06FAA00ECA47E /* instructions_04.png in Resources */,
+				3A47510D13EED7020096ED92 /* 00_zico.wav in Resources */,
+				3AD5B70C13F6B1440051CF2C /* 01_fireball.wav in Resources */,
+				3AD5B70D13F6B1440051CF2C /* 02_zico.wav in Resources */,
+				3AD5B70E13F6B1440051CF2C /* 03_planetearth.wav in Resources */,
+				3AD5B70F13F6B1440051CF2C /* 03_spacecar.wav in Resources */,
+				3AD5B71013F6B1440051CF2C /* 04_greenville.wav in Resources */,
+				3AD5B71113F6B1440051CF2C /* 04_litter.wav in Resources */,
+				3AD5B71213F6B1440051CF2C /* 05_junk.wav in Resources */,
+				3AD5B71313F6B1440051CF2C /* 06_repair.wav in Resources */,
+				3AD5B71413F6B1440051CF2C /* 06_reuse.wav in Resources */,
+				3AD5B71513F6B1440051CF2C /* 07_recycle.wav in Resources */,
+				3AD5B71613F6B1440051CF2C /* 08_mayor.wav in Resources */,
+				3AD5B71713F6B1440051CF2C /* 08_vote.wav in Resources */,
+				3AD5B71813F6B1440051CF2C /* 09_cans.wav in Resources */,
+				3AD5B71913F6B1440051CF2C /* 09_glass.wav in Resources */,
+				3AD5B71A13F6B1440051CF2C /* 09_paper.wav in Resources */,
+				3AD5B71B13F6B1440051CF2C /* 10_green.wav in Resources */,
+				3AD5B71C13F6B1440051CF2C /* 11_ecozico.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1100,6 +1196,7 @@
 				2EBED18213EF1BF8005F5D2C /* TGAlib.m in Sources */,
 				2EBED18313EF1BF8005F5D2C /* TransformUtils.m in Sources */,
 				2EBED18413EF1BF8005F5D2C /* ZipUtils.m in Sources */,
+				3A47511113EEE39F0096ED92 /* EZTransparentButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
