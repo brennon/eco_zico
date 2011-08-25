@@ -48,7 +48,7 @@ const NSUInteger kNumberOfPages = 14;
         self.isFirstPageAfterLaunch = YES;
 		self.audioIsPlaying = NO;
         self.currentPage = [NSNumber numberWithInt:0];
-        self.ezBook = [[[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"] retain];
+        self.ezBook = [[[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"] autorelease];
     }
     return self;
 }
@@ -216,6 +216,7 @@ const NSUInteger kNumberOfPages = 14;
         [buttonToAdd addTarget:self action:@selector(playImageAudio:) forControlEvents:UIControlEventTouchUpInside];
         [self.ezPageView addSubview:buttonToAdd];        
     }
+			DebugLog(@"self.ezBook retain count: %d", [self.ezBook retainCount]);
 }
 
 - (void)layoutTextWithTransition:(BOOL)withTrans
@@ -250,7 +251,8 @@ const NSUInteger kNumberOfPages = 14;
 #pragma mark - Text view-related callbacks
 
 - (void)textViewDidFinishNarratingParagraph
-{    
+{
+	DebugLogFunc();
     [self pauseAudio];    
     [self layoutTextWithTransition:YES];    
 }
