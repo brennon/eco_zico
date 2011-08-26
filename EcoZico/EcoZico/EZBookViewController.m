@@ -84,14 +84,17 @@ const NSUInteger kNumberOfPages = 14;
 {
     [super viewDidLoad];    
     
-    self.view.backgroundColor = [UIColor blackColor];    
+    self.view.backgroundColor = [UIColor blackColor];
+    
+	// Setup ezPageView with images, etc.
     self.ezPageView.delegate = self;
     [self.ezPageView setupWithBook:self.ezBook];
-    
+	
+	// Startup cocos2d and attach it to the text view
     [self attachCocos2dToSelf];
-
-    [self loadNewPage:[self.ezBook.pages objectAtIndex:[self.currentPage intValue]] withTransition:!self.isFirstPageAfterLaunch];
-    
+	
+	// Load the first page
+    [self loadNewPage:[self.ezBook.pages objectAtIndex:[self.currentPage intValue]] withTransition:!self.isFirstPageAfterLaunch];    
     self.isFirstPageAfterLaunch = NO;
 }
 
@@ -124,12 +127,9 @@ const NSUInteger kNumberOfPages = 14;
     
     CCDirector *director = [CCDirector sharedDirector];
     
-    //
     // Create the EAGLView manually
     //  1. Create a RGB565 format. Alternative: RGBA8
     //	2. depth format of 0 bit. Use 16 or 24 bit for 3d effects, like CCPageTurnTransition
-    //
-    //
     EAGLView *glView = [EAGLView viewWithFrame:self.textView.bounds
                                    pixelFormat:kEAGLColorFormatRGB565	// kEAGLColorFormatRGBA8
                                    depthFormat:0						// GL_DEPTH_COMPONENT16_OES
@@ -137,10 +137,6 @@ const NSUInteger kNumberOfPages = 14;
     
     // attach the openglView to the director
     [director setOpenGLView:glView];
-    
-    //	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-    //	if( ! [director enableRetinaDisplay:YES] )
-    //		CCLOG(@"Retina Display Not supported");
     
     //
     // VERY IMPORTANT:
@@ -158,11 +154,12 @@ const NSUInteger kNumberOfPages = 14;
 #endif
     
     [director setAnimationInterval:1.0/60];
-    [director setDisplayFPS:YES];
+	
+	// Show debugging FPS output
+    // [director setDisplayFPS:YES];
     
     
     // make the OpenGLView a child of sentenceView
-    //[viewController setView:glView];
     [self.textView addSubview:glView];
     
     // Default texture format for PNG/BMP/TIFF/JPEG/GIF images
@@ -216,7 +213,6 @@ const NSUInteger kNumberOfPages = 14;
         [buttonToAdd addTarget:self action:@selector(playImageAudio:) forControlEvents:UIControlEventTouchUpInside];
         [self.ezPageView addSubview:buttonToAdd];        
     }
-			DebugLog(@"self.ezBook retain count: %d", [self.ezBook retainCount]);
 }
 
 - (void)layoutTextWithTransition:(BOOL)withTrans
@@ -224,11 +220,12 @@ const NSUInteger kNumberOfPages = 14;
     // Changing scenes allows you to use the fancy transitions
     CCScene *nextScene = [CCScene node];
     
-    // pass a refernce to self, i.e. the EZTextView, so that EZTextViewScene knows where to get the words        
-    self.ezTextViewScene = [[EZTextViewScene alloc] initWithEZBookView:self];
+    // Pass a reference to self, i.e. the EZBookViewController, so that EZTextViewScene knows where to get the words        
+    self.ezTextViewScene = [[[EZTextViewScene alloc] initWithEZBookView:self] autorelease];
     [nextScene addChild:self.ezTextViewScene];
+	
     
-    //do the transition if not the first page shown
+    // Do the transition if not the first page shown
     if (withTrans) {
         //turn off interactions for the transition
         [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
@@ -244,8 +241,7 @@ const NSUInteger kNumberOfPages = 14;
     }
     
     //draw the paragraph
-    [self.ezTextViewScene layoutWords];
-    
+    [self.ezTextViewScene layoutWords];    
 }
 
 #pragma mark - Text view-related callbacks

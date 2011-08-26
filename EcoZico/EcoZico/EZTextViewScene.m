@@ -17,6 +17,8 @@
 @implementation EZTextViewScene
 
 @synthesize ezBookView				= _ezBookView;
+@synthesize word					= _word;
+@synthesize currentWord				= _currentWord;
 @synthesize heightOfWords			= _heightOfWords;
 @synthesize inset					= _inset;
 @synthesize padding					= _padding;
@@ -74,12 +76,12 @@
     
     // layout the words
     for (int i = self.ezBookView.idxOfLastWordLaidOut; i < [self.ezBookView.ezWordLabels count]; i++) {
-        word = (EZWordLabel *)[self.ezBookView.ezWordLabels objectAtIndex:i];
+        self.word = (EZWordLabel *)[self.ezBookView.ezWordLabels objectAtIndex:i];
         
         if (i > self.ezBookView.idxOfLastWordLaidOut) {
             // width of previous and current word
             self.prevWordWidth = [[self.ezBookView.ezWordLabels objectAtIndex:i - 1] boundingBox].size.width;
-            self.currentWordWidth = [word boundingBox].size.width;
+            self.currentWordWidth = [self.word boundingBox].size.width;
             
             //if next word will take us past the drawable area, move to the next line
             if ((self.x + self.prevWordWidth + self.currentWordWidth + self.padding) >= self.s.width) {                
@@ -96,9 +98,9 @@
             }            
         }
         
-        word.position = ccp(self.x, self.y);
+        self.word.position = ccp(self.x, self.y);
         
-        [self addChild:word];
+        [self addChild:self.word];
         
         // stop laying out when get to the idx found from the first loop.
         if(i == self.idxStopPoint) {
@@ -121,12 +123,12 @@
     int lineNum = 1;    
     
     for (int i = self.ezBookView.idxOfLastWordLaidOut; i < [self.ezBookView.ezWordLabels count]; i++) {
-        word = (EZWordLabel *)[self.ezBookView.ezWordLabels objectAtIndex:i];
+        self.word = (EZWordLabel *)[self.ezBookView.ezWordLabels objectAtIndex:i];
         
         if(i > self.ezBookView.idxOfLastWordLaidOut) {
             // width of previous and current word
             self.prevWordWidth = [[self.ezBookView.ezWordLabels objectAtIndex:i - 1] boundingBox].size.width;
-            self.currentWordWidth = [word boundingBox].size.width;
+            self.currentWordWidth = [self.word boundingBox].size.width;
             
             // if next word will take us past the drawable area, move to the next line
             if ((self.x + self.prevWordWidth + self.currentWordWidth + self.padding) >= self.s.width) {
@@ -210,10 +212,10 @@
             }            
             
             //if playback pos is beyond next word in word array set it as the current word
-            currentWord = [self.ezBookView.ezWordLabels objectAtIndex:self.wordPositionCounter];
+            self.currentWord = [self.ezBookView.ezWordLabels objectAtIndex:self.wordPositionCounter];
             
             //do some animation
-            [currentWord startWordOnAnimation];
+            [self.currentWord startWordOnAnimation];
             
             //inc the counter
             self.wordPositionCounter++;
@@ -226,7 +228,7 @@
                         
             [self stopPollingPlayer];
             
-            double timeToWait = [[[self.ezBookView.ezWordLabels objectAtIndex:self.wordPositionCounter] seekPoint] doubleValue] - [currentWord.seekPoint doubleValue];
+            double timeToWait = [[[self.ezBookView.ezWordLabels objectAtIndex:self.wordPositionCounter] seekPoint] doubleValue] - [self.currentWord.seekPoint doubleValue];
             
             [self performSelector:@selector(paraNarrationDidFinish) withObject:nil afterDelay:timeToWait];
         }
@@ -236,7 +238,7 @@
 
 - (void)paraNarrationDidFinish
 {    
-    [currentWord startWordOffAnimation];    
+    [self.currentWord startWordOffAnimation];    
     [self.ezBookView textViewDidFinishNarratingParagraph];    
 }
 
