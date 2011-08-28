@@ -15,6 +15,7 @@
 
 @interface EZTextViewScene : CCLayerColor
 
+
 @property (nonatomic, assign) EZBookViewController	*ezBookView;
 @property (nonatomic, assign) CGFloat				heightOfWords;
 @property (nonatomic, assign) CGFloat				inset;

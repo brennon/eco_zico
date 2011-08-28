@@ -15,6 +15,9 @@
 @class EZPage, EZTextViewScene, EZPageView, EZBook, EZAudioPlayer;
 
 @interface EZBookViewController : UIViewController <UIScrollViewDelegate, AVAudioPlayerDelegate, EZParagraphTransitionDelegate> 
+{
+    IBOutlet    UILabel         *pageParaNumberLab;
+}
 
 @property (nonatomic, retain) IBOutlet  EZPageView          *ezPageView;
 @property (nonatomic, retain) IBOutlet  UIButton            *playPauseBut;
@@ -29,6 +32,8 @@
 @property (nonatomic, retain)           NSMutableArray      *touchZones;
 @property (nonatomic, assign)			BOOL				audioIsPlaying;
 @property (nonatomic, assign)			BOOL				isFirstPageAfterLaunch;
+
+-(void)updateDebugLabel;
 
 - (void)attachCocos2dToSelf;
 - (void)loadNewPage:(EZPage *)ezPage withTransition:(BOOL)withTrans; 

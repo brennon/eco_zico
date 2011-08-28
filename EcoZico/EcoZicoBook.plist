@@ -175,13 +175,13 @@
 				<key>text</key>
 				<string>Zico&apos;s</string>
 				<key>time</key>
-				<real>9.906000000000001</real>
+				<real>9.800000000000001</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>father</string>
 				<key>time</key>
-				<real>9.881</real>
+				<real>10.3</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -313,7 +313,7 @@
 				<key>text</key>
 				<string>She</string>
 				<key>time</key>
-				<real>17.717</real>
+				<real>17.443</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -428,21 +428,6 @@
 				<string>computer.</string>
 				<key>time</key>
 				<real>23.523</real>
-			</dict>
-		</array>
-		<key>touchButtons</key>
-		<array>
-			<dict>
-				<key>x</key>
-				<string>239</string>
-				<key>y</key>
-				<string>171</string>
-				<key>width</key>
-				<string>110</string>
-				<key>height</key>
-				<string>235</string>
-				<key>audio</key>
-				<string>00_zico.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -661,7 +646,7 @@
 				<key>text</key>
 				<string>One</string>
 				<key>time</key>
-				<real>13.187</real>
+				<real>13</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -829,7 +814,7 @@
 				<key>text</key>
 				<string>The</string>
 				<key>time</key>
-				<real>25.022</real>
+				<real>24.822</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -938,21 +923,6 @@
 				<string>chanted.</string>
 				<key>time</key>
 				<real>31.376</real>
-			</dict>
-		</array>
-		<key>touchButtons</key>
-		<array>
-			<dict>
-				<key>x</key>
-				<string>808</string>
-				<key>y</key>
-				<string>217</string>
-				<key>width</key>
-				<string>100</string>
-				<key>height</key>
-				<string>93</string>
-				<key>audio</key>
-				<string>01_fireball.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -1165,7 +1135,7 @@
 				<key>text</key>
 				<string>&quot;Your</string>
 				<key>time</key>
-				<real>13.164</real>
+				<real>13.064</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -1345,7 +1315,7 @@
 				<key>text</key>
 				<string>No-one</string>
 				<key>time</key>
-				<real>25.612</real>
+				<real>25.512</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -1430,21 +1400,6 @@
 				<string>himself.</string>
 				<key>time</key>
 				<real>30.511</real>
-			</dict>
-		</array>
-		<key>touchButtons</key>
-		<array>
-			<dict>
-				<key>x</key>
-				<string>863</string>
-				<key>y</key>
-				<string>229</string>
-				<key>width</key>
-				<string>142</string>
-				<key>height</key>
-				<string>264</string>
-				<key>audio</key>
-				<string>02_zico.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -1603,7 +1558,7 @@
 				<key>text</key>
 				<string>Zico</string>
 				<key>time</key>
-				<real>9.185</real>
+				<real>9.135</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -1807,7 +1762,7 @@
 				<key>text</key>
 				<string>But,</string>
 				<key>time</key>
-				<real>21.755</real>
+				<real>21.5</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -1831,7 +1786,7 @@
 				<key>text</key>
 				<string>last</string>
 				<key>time</key>
-				<real>28.828</real>
+				<real>22.828</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -1844,33 +1799,6 @@
 				<string>long.</string>
 				<key>time</key>
 				<real>23.364</real>
-			</dict>
-		</array>
-		<key>touchButtons</key>
-		<array>
-			<dict>
-				<key>x</key>
-				<string>0</string>
-				<key>y</key>
-				<string>59</string>
-				<key>width</key>
-				<string>966</string>
-				<key>height</key>
-				<string>572</string>
-				<key>audio</key>
-				<string>03_spacecar.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>917</string>
-				<key>y</key>
-				<string>24</string>
-				<key>width</key>
-				<string>107</string>
-				<key>height</key>
-				<string>105</string>
-				<key>audio</key>
-				<string>03_planetearth.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -2065,7 +1993,7 @@
 				<key>text</key>
 				<string>Zico</string>
 				<key>time</key>
-				<real>12.984</real>
+				<real>12.934</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -2269,7 +2197,7 @@
 				<key>text</key>
 				<string>They</string>
 				<key>time</key>
-				<real>26.697</real>
+				<real>26.297</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -2348,21 +2276,6 @@
 				<string>themselves.</string>
 				<key>time</key>
 				<real>30.974</real>
-			</dict>
-		</array>
-		<key>touchButtons</key>
-		<array>
-			<dict>
-				<key>x</key>
-				<string>284</string>
-				<key>y</key>
-				<string>387</string>
-				<key>width</key>
-				<string>205</string>
-				<key>height</key>
-				<string>94</string>
-				<key>audio</key>
-				<string>04_greenville.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -2459,7 +2372,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>bananas</string>
+				<string>bannanas</string>
 				<key>time</key>
 				<real>5.351</real>
 			</dict>
@@ -2671,7 +2584,7 @@
 				<key>text</key>
 				<string>Everyone</string>
 				<key>time</key>
-				<real>23.362</real>
+				<real>23.2</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -2851,106 +2764,19 @@
 				<key>text</key>
 				<string>almost</string>
 				<key>time</key>
-				<real>34.549</real>
+				<real>34.449</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>toppled</string>
 				<key>time</key>
-				<real>35.019</real>
+				<real>34.819</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>over.</string>
 				<key>time</key>
-				<real>34.455</real>
-			</dict>
-		</array>
-		<key>touchButtons</key>
-		<array>
-			<dict>
-				<key>x</key>
-				<string>372</string>
-				<key>y</key>
-				<string>134</string>
-				<key>width</key>
-				<string>122</string>
-				<key>height</key>
-				<string>127</string>
-				<key>audio</key>
-				<string>05_junk.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>317</string>
-				<key>y</key>
-				<string>314</string>
-				<key>width</key>
-				<string>73</string>
-				<key>height</key>
-				<string>114</string>
-				<key>audio</key>
-				<string>05_junk.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>466</string>
-				<key>y</key>
-				<string>261</string>
-				<key>width</key>
-				<string>64</string>
-				<key>height</key>
-				<string>146</string>
-				<key>audio</key>
-				<string>05_junk.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>530</string>
-				<key>y</key>
-				<string>352</string>
-				<key>width</key>
-				<string>24</string>
-				<key>height</key>
-				<string>55</string>
-				<key>audio</key>
-				<string>05_junk.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>466</string>
-				<key>y</key>
-				<string>407</string>
-				<key>width</key>
-				<string>88</string>
-				<key>height</key>
-				<string>21</string>
-				<key>audio</key>
-				<string>05_junk.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>295</string>
-				<key>y</key>
-				<string>352</string>
-				<key>width</key>
-				<string>25</string>
-				<key>height</key>
-				<string>76</string>
-				<key>audio</key>
-				<string>05_junk.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>354</string>
-				<key>y</key>
-				<string>261</string>
-				<key>width</key>
-				<string>41</string>
-				<key>height</key>
-				<string>53</string>
-				<key>audio</key>
-				<string>05_junk.wav</string>
+				<real>35.255</real>
 			</dict>
 		</array>
 	</dict>
@@ -3151,7 +2977,7 @@
 				<key>text</key>
 				<string>&quot;Well,</string>
 				<key>time</key>
-				<real>12.836</real>
+				<real>12.786</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -3253,7 +3079,7 @@
 				<key>text</key>
 				<string>&quot;On</string>
 				<key>time</key>
-				<real>22.406</real>
+				<real>22.356</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -3410,45 +3236,6 @@
 				<string>replied.</string>
 				<key>time</key>
 				<real>31.056</real>
-			</dict>
-		</array>
-		<key>touchButtons</key>
-		<array>
-			<dict>
-				<key>x</key>
-				<string>770</string>
-				<key>y</key>
-				<string>371</string>
-				<key>width</key>
-				<string>32</string>
-				<key>height</key>
-				<string>74</string>
-				<key>audio</key>
-				<string>06_repair.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>821</string>
-				<key>y</key>
-				<string>379</string>
-				<key>width</key>
-				<string>29</string>
-				<key>height</key>
-				<string>66</string>
-				<key>audio</key>
-				<string>06_repair.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>862</string>
-				<key>y</key>
-				<string>307</string>
-				<key>width</key>
-				<string>70</string>
-				<key>height</key>
-				<string>87</string>
-				<key>audio</key>
-				<string>06_reuse.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -3679,7 +3466,7 @@
 				<key>text</key>
 				<string>Even</string>
 				<key>time</key>
-				<real>11.01</real>
+				<real>10.95</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -3941,7 +3728,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>recycle.</string>
+				<string>recylce.</string>
 				<key>time</key>
 				<real>29.465</real>
 			</dict>
@@ -3953,7 +3740,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>recycle</string>
+				<string>recylce</string>
 				<key>time</key>
 				<real>30.715</real>
 			</dict>
@@ -4045,7 +3832,7 @@
 				<key>text</key>
 				<string>&quot;If</string>
 				<key>time</key>
-				<real>37.13</real>
+				<real>37</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -4136,45 +3923,6 @@
 				<string>added.</string>
 				<key>time</key>
 				<real>41.465</real>
-			</dict>
-		</array>
-		<key>touchButtons</key>
-		<array>
-			<dict>
-				<key>x</key>
-				<string>73</string>
-				<key>y</key>
-				<string>290</string>
-				<key>width</key>
-				<string>77</string>
-				<key>height</key>
-				<string>73</string>
-				<key>audio</key>
-				<string>07_recycle.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>99</string>
-				<key>y</key>
-				<string>363</string>
-				<key>width</key>
-				<string>96</string>
-				<key>height</key>
-				<string>108</string>
-				<key>audio</key>
-				<string>07_recycle.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>280</string>
-				<key>y</key>
-				<string>197</string>
-				<key>width</key>
-				<string>78</string>
-				<key>height</key>
-				<string>232</string>
-				<key>audio</key>
-				<string>07_recycle.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -4339,7 +4087,7 @@
 				<key>text</key>
 				<string>&quot;The</string>
 				<key>time</key>
-				<real>9.811999999999999</real>
+				<real>9.761999999999999</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -4507,7 +4255,7 @@
 				<key>text</key>
 				<string>&quot;All</string>
 				<key>time</key>
-				<real>20.868</real>
+				<real>20.768</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -4592,33 +4340,6 @@
 				<string>air.</string>
 				<key>time</key>
 				<real>26.2</real>
-			</dict>
-		</array>
-		<key>touchButtons</key>
-		<array>
-			<dict>
-				<key>x</key>
-				<string>26</string>
-				<key>y</key>
-				<string>147</string>
-				<key>width</key>
-				<string>132</string>
-				<key>height</key>
-				<string>325</string>
-				<key>audio</key>
-				<string>08_mayor.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>714</string>
-				<key>y</key>
-				<string>266</string>
-				<key>width</key>
-				<string>83</string>
-				<key>height</key>
-				<string>206</string>
-				<key>audio</key>
-				<string>08_vote.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -4735,7 +4456,7 @@
 				<key>text</key>
 				<string>They</string>
 				<key>time</key>
-				<real>7.103</real>
+				<real>7.05</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -4837,7 +4558,7 @@
 				<key>text</key>
 				<string>there</string>
 				<key>time</key>
-				<real>16.684</real>
+				<real>13.684</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -4891,7 +4612,7 @@
 				<key>text</key>
 				<string>The</string>
 				<key>time</key>
-				<real>16.594</real>
+				<real>16.25</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -5023,13 +4744,13 @@
 				<key>text</key>
 				<string>The</string>
 				<key>time</key>
-				<real>24.854</real>
+				<real>24.404</real>
 			</dict>
 			<dict>
 				<key>text</key>
 				<string>flies</string>
 				<key>time</key>
-				<real>24.987</real>
+				<real>24.957</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -5198,57 +4919,6 @@
 				<string>act.</string>
 				<key>time</key>
 				<real>33.707</real>
-			</dict>
-		</array>
-		<key>touchButtons</key>
-		<array>
-			<dict>
-				<key>x</key>
-				<string>935</string>
-				<key>y</key>
-				<string>56</string>
-				<key>width</key>
-				<string>89</string>
-				<key>height</key>
-				<string>227</string>
-				<key>audio</key>
-				<string>09_cans.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>0</string>
-				<key>y</key>
-				<string>56</string>
-				<key>width</key>
-				<string>90</string>
-				<key>height</key>
-				<string>285</string>
-				<key>audio</key>
-				<string>09_glass.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>90</string>
-				<key>y</key>
-				<string>250</string>
-				<key>width</key>
-				<string>60</string>
-				<key>height</key>
-				<string>201</string>
-				<key>audio</key>
-				<string>09_paper.wav</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<string>310</string>
-				<key>y</key>
-				<string>425</string>
-				<key>width</key>
-				<string>180</string>
-				<key>height</key>
-				<string>77</string>
-				<key>audio</key>
-				<string>09_paper.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -5587,7 +5257,7 @@
 				<key>text</key>
 				<string>&quot;Now,</string>
 				<key>time</key>
-				<real>21.121</real>
+				<real>20.121</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -5630,21 +5300,6 @@
 				<string>Zico.&quot;</string>
 				<key>time</key>
 				<real>22.181</real>
-			</dict>
-		</array>
-		<key>touchButtons</key>
-		<array>
-			<dict>
-				<key>x</key>
-				<string>732</string>
-				<key>y</key>
-				<string>437</string>
-				<key>width</key>
-				<string>67</string>
-				<key>height</key>
-				<string>60</string>
-				<key>audio</key>
-				<string>10_green.wav</string>
 			</dict>
 		</array>
 	</dict>
@@ -5851,7 +5506,7 @@
 				<key>text</key>
 				<string>He</string>
 				<key>time</key>
-				<real>13.775</real>
+				<real>13.575</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -6052,21 +5707,6 @@
 				<real>26.363</real>
 			</dict>
 		</array>
-		<key>touchButtons</key>
-		<array>
-			<dict>
-				<key>x</key>
-				<string>869</string>
-				<key>y</key>
-				<string>128</string>
-				<key>width</key>
-				<string>114</string>
-				<key>height</key>
-				<string>296</string>
-				<key>audio</key>
-				<string>11_ecozico.wav</string>
-			</dict>
-		</array>
 	</dict>
 	<dict>
 		<key>audio</key>
@@ -6223,7 +5863,7 @@
 				<key>text</key>
 				<string>Bring</string>
 				<key>time</key>
-				<real>11.458</real>
+				<real>11.3</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -6682,7 +6322,7 @@
 				<key>text</key>
 				<string>REPAIR!</string>
 				<key>time</key>
-				<real>12.106</real>
+				<real>12.006</real>
 			</dict>
 			<dict>
 				<key>text</key>
@@ -6770,7 +6410,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>RECYCLE!</string>
+				<string>RECYLCE!</string>
 				<key>time</key>
 				<real>19.535</real>
 			</dict>
@@ -6832,7 +6472,7 @@
 				<key>text</key>
 				<string>Turn</string>
 				<key>time</key>
-				<real>25.367</real>
+				<real>25.167</real>
 			</dict>
 			<dict>
 				<key>text</key>

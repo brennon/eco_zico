@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E68E62A1409575D0064CB2F /* EcoZicoBook.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E68E6291409575D0064CB2F /* EcoZicoBook.plist */; };
 		2EBB858113D597D5006CEF3C /* pause_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBB857F13D597D5006CEF3C /* pause_button.png */; };
 		2EBB858213D597D5006CEF3C /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EBB858013D597D5006CEF3C /* play_button.png */; };
 		2EBED13913EF1BF8005F5D2C /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBED09213EF1BF8005F5D2C /* CCAction.m */; };
@@ -144,7 +145,6 @@
 		3ABEDA2413C0D1F200DC40BC /* EZBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEDA2313C0D1F100DC40BC /* EZBook.m */; };
 		3ABEDA2713C0D26A00DC40BC /* EZPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEDA2613C0D26900DC40BC /* EZPage.m */; };
 		3ABEDA2A13C0D30A00DC40BC /* EZWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEDA2913C0D30A00DC40BC /* EZWord.m */; };
-		3AC034DE13C508940017D811 /* EcoZicoBook.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034DD13C508940017D811 /* EcoZicoBook.plist */; };
 		3AC034ED13C5DC3E0017D811 /* zico_audio-page_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E013C5DC3E0017D811 /* zico_audio-page_0.wav */; };
 		3AC034EE13C5DC3E0017D811 /* zico_audio-page_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E113C5DC3E0017D811 /* zico_audio-page_2.wav */; };
 		3AC034EF13C5DC3E0017D811 /* zico_audio-page_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AC034E213C5DC3E0017D811 /* zico_audio-page_3.wav */; };
@@ -194,6 +194,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E68E6291409575D0064CB2F /* EcoZicoBook.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EcoZicoBook.plist; sourceTree = "<group>"; };
 		2EBB857F13D597D5006CEF3C /* pause_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_button.png; sourceTree = "<group>"; };
 		2EBB858013D597D5006CEF3C /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button.png; sourceTree = "<group>"; };
 		2EBED09113EF1BF8005F5D2C /* CCAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAction.h; sourceTree = "<group>"; };
@@ -436,7 +437,6 @@
 		3ABEDA2613C0D26900DC40BC /* EZPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPage.m; sourceTree = "<group>"; };
 		3ABEDA2813C0D30900DC40BC /* EZWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZWord.h; sourceTree = "<group>"; };
 		3ABEDA2913C0D30A00DC40BC /* EZWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZWord.m; sourceTree = "<group>"; };
-		3AC034DD13C508940017D811 /* EcoZicoBook.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EcoZicoBook.plist; path = EcoZico/EcoZicoBook.plist; sourceTree = "<group>"; };
 		3AC034E013C5DC3E0017D811 /* zico_audio-page_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_0.wav"; sourceTree = "<group>"; };
 		3AC034E113C5DC3E0017D811 /* zico_audio-page_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_2.wav"; sourceTree = "<group>"; };
 		3AC034E213C5DC3E0017D811 /* zico_audio-page_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zico_audio-page_3.wav"; sourceTree = "<group>"; };
@@ -866,8 +866,8 @@
 			isa = PBXGroup;
 			children = (
 				3AD4B8241360961C00000919 /* EcoZico */,
-				3AC034DD13C508940017D811 /* EcoZicoBook.plist */,
 				3AD4B8261360961C00000919 /* EcoZico-Info.plist */,
+				2E68E6291409575D0064CB2F /* EcoZicoBook.plist */,
 				3AD4B8271360961C00000919 /* InfoPlist.strings */,
 				3AD4B82A1360961C00000919 /* EcoZico-Prefix.pch */,
 				3AD4B82B1360961C00000919 /* main.m */,
@@ -1019,7 +1019,6 @@
 				3A4286C913BF43F8004BF22B /* LICENSE_CocosDenshion.txt in Resources */,
 				3A4286CA13BF43F8004BF22B /* LICENSE_FontLabel.txt in Resources */,
 				3A4286CB13BF43F8004BF22B /* LICENSE_TouchJSON.txt in Resources */,
-				3AC034DE13C508940017D811 /* EcoZicoBook.plist in Resources */,
 				3AC034ED13C5DC3E0017D811 /* zico_audio-page_0.wav in Resources */,
 				3AC034EE13C5DC3E0017D811 /* zico_audio-page_2.wav in Resources */,
 				3AC034EF13C5DC3E0017D811 /* zico_audio-page_3.wav in Resources */,
@@ -1079,6 +1078,7 @@
 				3AD5B71A13F6B1440051CF2C /* 09_paper.wav in Resources */,
 				3AD5B71B13F6B1440051CF2C /* 10_green.wav in Resources */,
 				3AD5B71C13F6B1440051CF2C /* 11_ecozico.wav in Resources */,
+				2E68E62A1409575D0064CB2F /* EcoZicoBook.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
