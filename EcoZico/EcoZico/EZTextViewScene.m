@@ -40,6 +40,8 @@
 {
 	if((self = [super initWithColor:ccc4(255, 255, 255, 255)])) {    
         self.ezBookView = anEZBookView;
+		self.wordPositionCounter = 0;
+		self.isParaNarrationFinished = NO;
     }
 	return self;
 }

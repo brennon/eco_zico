@@ -235,7 +235,7 @@ const NSUInteger kNumberOfPages = 14;
         //show a different transition every other page.
         Class trans = [self.currentPage intValue] % 2 == 0 ? [EZParagraphTransitionFlipY class] : [EZParagraphTransitionMoveInB class];
         
-        [[CCDirector sharedDirector] replaceScene:[trans transitionWithDuration:0.25 scene:nextScene delegate:self]];
+        [[CCDirector sharedDirector] replaceScene:[trans transitionWithDuration:0.15 scene:nextScene delegate:self]];
     } else {
         [[CCDirector sharedDirector] replaceScene:nextScene];   
     }
@@ -249,8 +249,9 @@ const NSUInteger kNumberOfPages = 14;
 - (void)textViewDidFinishNarratingParagraph
 {
 	DebugLogFunc();
-    [self pauseAudio];    
-    [self layoutTextWithTransition:YES];    
+    // [self pauseAudio];
+    [self layoutTextWithTransition:YES];
+	DebugLog(@"ezAudioPlayer.currentTime: %f", [[self ezAudioPlayer] currentTime]);
 }
 
 - (void)paragraphTransitionDidFinish
@@ -259,7 +260,7 @@ const NSUInteger kNumberOfPages = 14;
     [[UIApplication sharedApplication] endIgnoringInteractionEvents];
     
 	DebugLog(@"(-endIgnoringInteractionEvents)");
-    
+	// [self pauseAudio];
     [self playAudio];
 }
 
