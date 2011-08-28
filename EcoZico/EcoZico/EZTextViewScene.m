@@ -226,8 +226,9 @@
         if (self.wordPositionCounter > self.idxStopPoint && self.wordPositionCounter < [self.ezBookView.ezWordLabels count]) {   
             self.isParaNarrationFinished = YES;//only allow this block to be called once
             
+
             DebugLog(@"isParaNarrationFinished = YES");
-                        
+            
             [self stopPollingPlayer];
             
             double timeToWait = [[[self.ezBookView.ezWordLabels objectAtIndex:self.wordPositionCounter] seekPoint] doubleValue] - [self.currentWord.seekPoint doubleValue];

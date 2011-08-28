@@ -96,6 +96,7 @@ const NSUInteger kNumberOfPages = 14;
 	// Load the first page
     [self loadNewPage:[self.ezBook.pages objectAtIndex:[self.currentPage intValue]] withTransition:!self.isFirstPageAfterLaunch];    
     self.isFirstPageAfterLaunch = NO;
+    
 }
 
 - (void)viewDidUnload
@@ -241,8 +242,10 @@ const NSUInteger kNumberOfPages = 14;
     }
     
     //draw the paragraph
-    [self.ezTextViewScene layoutWords];    
+    [self.ezTextViewScene layoutWords];
+    
 }
+
 
 #pragma mark - Text view-related callbacks
 
