@@ -217,9 +217,6 @@
             //do some animation
             [self.currentWord startWordOnAnimation];
             
-            //debugging
-            [_ezBookView updateDebugLabel];
-            
             //inc the counter
             self.wordPositionCounter++;
         }

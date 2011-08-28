@@ -97,9 +97,6 @@ const NSUInteger kNumberOfPages = 14;
     [self loadNewPage:[self.ezBook.pages objectAtIndex:[self.currentPage intValue]] withTransition:!self.isFirstPageAfterLaunch];    
     self.isFirstPageAfterLaunch = NO;
     
-    //for debugging
-    _ezPageView.contentOffset = CGPointMake([_currentPage intValue] * _ezPageView.frame.size.width, _ezPageView.frame.size.height);
-
 }
 
 - (void)viewDidUnload
@@ -247,14 +244,8 @@ const NSUInteger kNumberOfPages = 14;
     //draw the paragraph
     [self.ezTextViewScene layoutWords];
     
-    [self updateDebugLabel];
 }
 
-
--(void)updateDebugLabel
-{
-    pageParaNumberLab.text = [NSString stringWithFormat:@"page: %i para: %i word: %i", [_currentPage intValue], _ezTextViewScene.paraNum, _ezTextViewScene.wordPositionCounter];   
-}
 
 #pragma mark - Text view-related callbacks
 
