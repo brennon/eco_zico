@@ -336,10 +336,6 @@ const NSUInteger kNumberOfPages = 14;
 
 
 //for debugging - allows to skip through paragraphs in order to observer transitions more quickly.
-double firstParaSkip = 6.5;
-double secondParaSkip = 20;
-double thirdParaSkip = 30;
-
 - (IBAction)skipPara:(id)sender
 {    
     EZPage *currentPageObj = [self.ezBook.pages objectAtIndex:[self.currentPage intValue]];
@@ -356,7 +352,11 @@ double thirdParaSkip = 30;
 	self.audioIsPlaying = NO;
 	
     if (completed == YES) {            
-        [[self.ezWordLabels lastObject] startWordOffAnimation];       
+        [[self.ezWordLabels lastObject] startWordOffAnimation]; 
+        
+        // disable interactions on play/pause once page narration has finished
+        // re-enable after turn of next page
+        [self.playPauseBut setUserInteractionEnabled:NO];
     }
 	
 	if ([(EZAudioPlayer *)thisPlayer playerType] == kEZImageAudio) {
@@ -386,6 +386,9 @@ double thirdParaSkip = 30;
         [self pauseAudio];
 
         [self loadNewPage:(EZPage *)[self.ezBook.pages objectAtIndex:[self.currentPage intValue]] withTransition:YES];
+        
+        // re-enable interactions after turn of next page 
+        [self.playPauseBut setUserInteractionEnabled:YES];
     }    
 }
 
