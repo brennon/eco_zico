@@ -233,10 +233,7 @@ const NSUInteger kNumberOfPages = 14;
         
         DebugLog(@"(-beginIgnoringInteractionEvents)");
         
-        //show a different transition every other page.
-        Class trans = [self.currentPage intValue] % 2 == 0 ? [EZParagraphTransitionFlipY class] : [EZParagraphTransitionMoveInB class];
-        
-        [[CCDirector sharedDirector] replaceScene:[trans transitionWithDuration:0.15 scene:nextScene delegate:self]];
+        [[CCDirector sharedDirector] replaceScene:[[EZParagraphTransitionFlipY class] transitionWithDuration:0.15 scene:nextScene delegate:self]];
     } else {
         [[CCDirector sharedDirector] replaceScene:nextScene];   
     }
