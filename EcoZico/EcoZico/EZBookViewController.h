@@ -25,9 +25,6 @@
         
                 // TV vars //
     
-                //TEMP - debug button for skipping paragraphs
-                UIButton        *skipParaBut;
-    
                 BOOL            isFirstPageAfterLaunch;
 
                 //cocos2d labels for words
@@ -57,7 +54,6 @@
 @property (nonatomic, retain) IBOutlet  UIButton            *playPauseBut;
 @property (nonatomic, retain)           AVAudioPlayer       *player;
 @property int                                               idxOfLastWordLaidOut;
-@property (nonatomic, retain) IBOutlet  UIButton            *skipParaBut; // debugging
 @property (nonatomic, retain)           NSMutableArray      *touchZones;
 @property (nonatomic, assign)			BOOL				audioIsPlaying;
 

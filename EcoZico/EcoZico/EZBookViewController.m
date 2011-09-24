@@ -22,7 +22,7 @@
 
 @implementation EZBookViewController
 
-@synthesize ezPageView, textView, ezBook, currentPage, ezWordLabels, ezTextViewScene, idxOfLastWordLaidOut, player, playPauseBut, skipParaBut, audioIsPlaying;
+@synthesize ezPageView, textView, ezBook, currentPage, ezWordLabels, ezTextViewScene, idxOfLastWordLaidOut, player, playPauseBut, audioIsPlaying;
 
 @synthesize touchZones = _touchZones;
 
@@ -308,22 +308,6 @@
     
     [playPauseBut setSelected:NO];
 }
-
-
-//for debugging - allows to skip through paragraphs in order to observer transitions more quickly.
-double firstParaSkip = 6.5;
-double secondParaSkip = 20;
-double thirdParaSkip = 30;
-
--(IBAction)skipPara:(id)sender
-{    
-    EZPage *currentPageObj = [self.ezBook.pages objectAtIndex:[currentPage intValue]];
-    NSTimeInterval timeOfLastWordInParagraph = [[[currentPageObj.words objectAtIndex:idxOfLastWordLaidOut]seekPoint] doubleValue];
-    
-    [ezTextViewScene setWordPositionForTime:timeOfLastWordInParagraph - 2];
-    
-}
-
 
 #pragma mark - callback from EZTextViewScene
 
