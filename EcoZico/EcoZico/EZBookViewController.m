@@ -1,6 +1,6 @@
 //
 //  BookViewController.m
-//  EcoZico
+`//  EcoZico
 //
 //  Created by Brennon Bortz and Donal O'Brien on 21/04/2011.
 //  Copyright 2011 Brennon Bortz and Donal O'Brien. All rights reserved.
@@ -38,6 +38,7 @@ const NSUInteger kNumberOfPages = 14;
 @synthesize audioIsPlaying			= _audioIsPlaying;
 @synthesize isFirstPageAfterLaunch	= _isFirstPageAfterLaunch;
 @synthesize touchZones				= _touchZones;
+@synthesize player                  = _player;
 
 #pragma mark - EZBookViewController lifecycle
 
@@ -331,19 +332,30 @@ const NSUInteger kNumberOfPages = 14;
     self.playPauseBut.selected = NO;
 }
 
-
-//for debugging - allows to skip through paragraphs in order to observer transitions more quickly.
-- (IBAction)skipPara:(id)sender
+#pragma mark - callback from EZTextViewScene
+-(void)textViewDidFinishNarratingParagraph
 {    
-    EZPage *currentPageObj = [self.ezBook.pages objectAtIndex:[self.currentPage intValue]];
-    NSTimeInterval timeOfLastWordInParagraph = [[[currentPageObj.words objectAtIndex:self.idxOfLastWordLaidOut]seekPoint] doubleValue];
+    [self pauseAudio];
     
-    [self.ezTextViewScene setWordPositionForTime:timeOfLastWordInParagraph - 2];
-    
+    [self layoutTextWithTransition:YES];    
 }
 
-#pragma mark - AVAudioPlayerDelegate methods
 
+#pragma mark - callback from EZParagraphTransition
+- (void)paragraphTransitionDidFinish
+{    
+    //re-enable interactions after the transition
+    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+    
+    NSLog(@"endIgnoringInteractionEvents");
+    
+    [self playAudio];
+    
+    //  [self performSelector:@selector(playPause:) withObject:self afterDelay:2];    
+}
+
+
+#pragma mark - AVAudioPlayerDelegate methods
 - (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)thisPlayer successfully:(BOOL)completed
 {
 	self.audioIsPlaying = NO;

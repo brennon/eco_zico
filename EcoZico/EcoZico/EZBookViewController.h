@@ -14,7 +14,7 @@
 
 @class EZPage, EZTextViewScene, EZPageView, EZBook, EZAudioPlayer;
 
-@interface EZBookViewController : UIViewController <UIScrollViewDelegate, AVAudioPlayerDelegate, EZParagraphTransitionDelegate> 
+@interface EZBookViewController : UIViewController <UIScrollViewDelegate, AVAudioPlayerDelegate, EZParagraphTransitionDelegate>
 
 @property (nonatomic, retain) IBOutlet  EZPageView          *ezPageView;
 @property (nonatomic, retain) IBOutlet  UIButton            *playPauseBut;
@@ -26,6 +26,7 @@
 @property (nonatomic, retain)           EZTextViewScene     *ezTextViewScene;
 @property (nonatomic, retain)           EZAudioPlayer       *ezAudioPlayer;
 @property (nonatomic, assign)			NSUInteger			idxOfLastWordLaidOut;
+@property (nonatomic, retain)           AVAudioPlayer       *player;
 @property (nonatomic, retain)           NSMutableArray      *touchZones;
 @property (nonatomic, assign)			BOOL				audioIsPlaying;
 @property (nonatomic, assign)			BOOL				isFirstPageAfterLaunch;
@@ -37,7 +38,6 @@
 - (IBAction)playPause:(id)sender; // Play/pause audio playback (and TVC narration)
 - (void)playAudio;
 - (void)pauseAudio;
-- (IBAction)skipPara:(id)sender; // For debugging
 - (void)playImageAudio:(id)sender;
 - (void)textViewDidFinishNarratingParagraph;
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;

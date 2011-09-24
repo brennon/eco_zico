@@ -11,7 +11,7 @@
 #import "EZFrontViewController.h"
 #import "EZHelpViewController.h"
 
-#define SKIP_MENU
+#define SKIP_MENU 0
 
 @implementation EcoZicoAppDelegate
 
