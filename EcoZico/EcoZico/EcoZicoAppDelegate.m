@@ -39,7 +39,7 @@
     [self.window makeKeyAndVisible];
 }
 
-#define SKIP_MENU 1
+#define SKIP_MENU 0
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
