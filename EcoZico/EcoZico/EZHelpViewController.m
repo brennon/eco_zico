@@ -31,9 +31,9 @@
                                    @"instructions_04.png", 
                                    nil];
         
-        handRects[0] = CGRectMake(236, 570, 293, 475);
-        handRects[1] = CGRectMake(-136, 320, 293, 475);
-        handRects[2] = CGRectMake(236, 570, 293, 475);
+        handRects[0] = CGRectMake(236, 540, 293, 475);
+        handRects[1] = CGRectMake(-26, 370, 293, 475);
+        handRects[2] = CGRectMake(236, 540, 293, 475);
     }
     return self;
 }

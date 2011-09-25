@@ -261,10 +261,7 @@ const NSUInteger kNumberOfPages = 14;
 	DebugLog(@"(-endIgnoringInteractionEvents)");
 	// [self pauseAudio];
     
-    EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
-    if (appDelegate.readItMyself = NO) {
-        [self playAudio];
-    }
+    [self playAudio];
 }
 
 #pragma mark - Text and image playback
@@ -273,7 +270,7 @@ const NSUInteger kNumberOfPages = 14;
     // Load sound file
     NSString *audioFileName = [NSString stringWithFormat:@"zico_audio-page_%0i", pageNum];
     
-    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: audioFileName ofType: @"wav"];  
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: audioFileName ofType: @"mp3"];  
     NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];
 	EZAudioPlayer *newPlayer = [[EZAudioPlayer alloc] initWithContentsOfURL:fileURL error:NULL playerType:kEZPageTextAudio];
     [fileURL release];           
