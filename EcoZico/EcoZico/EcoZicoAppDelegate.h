@@ -11,6 +11,7 @@
 @interface EcoZicoAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, assign) BOOL readItMyself;
 
 - (void)switchToFrontViewController;
 - (void)switchToBookViewController;

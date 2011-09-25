@@ -1,6 +1,6 @@
 //
 //  BookViewController.m
-`//  EcoZico
+//  EcoZico
 //
 //  Created by Brennon Bortz and Donal O'Brien on 21/04/2011.
 //  Copyright 2011 Brennon Bortz and Donal O'Brien. All rights reserved.
@@ -18,6 +18,7 @@
 #import "EZParagraphTransitions.h"
 #import "EZTransparentButton.h"
 #import "EZAudioPlayer.h"
+#import "EcoZicoAppDelegate.h"
 
 const NSUInteger kNumberOfPages = 14;
 
@@ -34,7 +35,6 @@ const NSUInteger kNumberOfPages = 14;
 @synthesize idxOfLastWordLaidOut	= _idxOfLastWordLaidOut;
 @synthesize ezAudioPlayer			= _ezAudioPlayer;
 @synthesize playPauseBut			= _playPauseBut;
-@synthesize skipParaBut				= _skipParaBut;
 @synthesize audioIsPlaying			= _audioIsPlaying;
 @synthesize isFirstPageAfterLaunch	= _isFirstPageAfterLaunch;
 @synthesize touchZones				= _touchZones;
@@ -108,7 +108,6 @@ const NSUInteger kNumberOfPages = 14;
     self.ezPageView = nil;
     self.textView = nil;
 	self.playPauseBut = nil;
-	self.skipParaBut = nil; // For debugging
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -246,7 +245,6 @@ const NSUInteger kNumberOfPages = 14;
 
 
 #pragma mark - Text view-related callbacks
-
 - (void)textViewDidFinishNarratingParagraph
 {
 	DebugLogFunc();
@@ -262,11 +260,14 @@ const NSUInteger kNumberOfPages = 14;
     
 	DebugLog(@"(-endIgnoringInteractionEvents)");
 	// [self pauseAudio];
-    [self playAudio];
+    
+    EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (appDelegate.readItMyself = NO) {
+        [self playAudio];
+    }
 }
 
 #pragma mark - Text and image playback
-
 - (void)loadAudioForPage:(int)pageNum
 {
     // Load sound file
@@ -332,29 +333,6 @@ const NSUInteger kNumberOfPages = 14;
     self.playPauseBut.selected = NO;
 }
 
-#pragma mark - callback from EZTextViewScene
--(void)textViewDidFinishNarratingParagraph
-{    
-    [self pauseAudio];
-    
-    [self layoutTextWithTransition:YES];    
-}
-
-
-#pragma mark - callback from EZParagraphTransition
-- (void)paragraphTransitionDidFinish
-{    
-    //re-enable interactions after the transition
-    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-    
-    NSLog(@"endIgnoringInteractionEvents");
-    
-    [self playAudio];
-    
-    //  [self performSelector:@selector(playPause:) withObject:self afterDelay:2];    
-}
-
-
 #pragma mark - AVAudioPlayerDelegate methods
 - (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)thisPlayer successfully:(BOOL)completed
 {
@@ -373,9 +351,7 @@ const NSUInteger kNumberOfPages = 14;
 	}
 }
 
-
 #pragma mark - UIScrollViewDelegate methods
-
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     int previousPage = [self.currentPage intValue];
@@ -396,7 +372,8 @@ const NSUInteger kNumberOfPages = 14;
 
         [self loadNewPage:(EZPage *)[self.ezBook.pages objectAtIndex:[self.currentPage intValue]] withTransition:YES];
         
-        // re-enable interactions after turn of next page 
+        // re-enable interactions after turn of next page
+        
         [self.playPauseBut setUserInteractionEnabled:YES];
     }    
 }

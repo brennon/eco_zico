@@ -18,7 +18,6 @@
 
 @property (nonatomic, retain) IBOutlet  EZPageView          *ezPageView;
 @property (nonatomic, retain) IBOutlet  UIButton            *playPauseBut;
-@property (nonatomic, retain) IBOutlet  UIButton            *skipParaBut; // For debugging
 @property (nonatomic, retain)           UIView              *textView;
 @property (nonatomic, retain)           EZBook              *ezBook;
 @property (nonatomic, retain)           NSNumber            *currentPage;

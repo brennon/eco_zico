@@ -11,11 +11,12 @@
 #import "EZFrontViewController.h"
 #import "EZHelpViewController.h"
 
-#define SKIP_MENU 0
+// #define SKIP_MENU
 
 @implementation EcoZicoAppDelegate
 
-@synthesize window = _window;
+@synthesize window          = _window;
+@synthesize readItMyself    = _readItMyself;
 
 - (void)switchToBookViewController
 {
