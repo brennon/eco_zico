@@ -102,7 +102,7 @@ const NSUInteger kNumberOfPages = 14;
     [super viewDidLoad];    
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
-        
+    
     self.view.backgroundColor = [UIColor blackColor];
     
 	// Setup ezPageView with images, etc.
@@ -247,28 +247,28 @@ const NSUInteger kNumberOfPages = 14;
     //don't change para if go home has already been called
     if (self.goHomeCalled == NO){
         
-    // Changing scenes allows you to use the fancy transitions
-    CCScene *nextScene = [CCScene node];
-    
-    // Pass a reference to self, i.e. the EZBookViewController, so that EZTextViewScene knows where to get the words        
-    self.ezTextViewScene = [[[EZTextViewScene alloc] initWithEZBookView:self] autorelease];
-    [nextScene addChild:self.ezTextViewScene];
-	
-    
-    // Do the transition if not the first page shown
-    if (withTrans) {
-        //turn off interactions for the transition
-        [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+        // Changing scenes allows you to use the fancy transitions
+        CCScene *nextScene = [CCScene node];
         
-        DebugLog(@"(-beginIgnoringInteractionEvents)");
+        // Pass a reference to self, i.e. the EZBookViewController, so that EZTextViewScene knows where to get the words        
+        self.ezTextViewScene = [[[EZTextViewScene alloc] initWithEZBookView:self] autorelease];
+        [nextScene addChild:self.ezTextViewScene];
         
-        [[CCDirector sharedDirector] replaceScene:[[EZParagraphTransitionFlipY class] transitionWithDuration:0.15 scene:nextScene delegate:self]];
-    } else {
-        [[CCDirector sharedDirector] replaceScene:nextScene];   
-    }
-    
-    //draw the paragraph
-    [self.ezTextViewScene layoutWords];
+        
+        // Do the transition if not the first page shown
+        if (withTrans) {
+            //turn off interactions for the transition
+            [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+            
+            DebugLog(@"(-beginIgnoringInteractionEvents)");
+            
+            [[CCDirector sharedDirector] replaceScene:[[EZParagraphTransitionFlipY class] transitionWithDuration:0.15 scene:nextScene delegate:self]];
+        } else {
+            [[CCDirector sharedDirector] replaceScene:nextScene];   
+        }
+        
+        //draw the paragraph
+        [self.ezTextViewScene layoutWords];
     }
     
 }
@@ -363,7 +363,7 @@ const NSUInteger kNumberOfPages = 14;
 - (IBAction) goHome:(id)sender
 {
     DebugLogFunc();
-
+    
     EcoZicoAppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     
     appDelegate.window.rootViewController = (UIViewController *)[[EZFrontViewController alloc] init];
@@ -411,7 +411,7 @@ const NSUInteger kNumberOfPages = 14;
         // Pause audio which cancells polling timer before calling -loadNewPage:withTransition:.
         // Will crash if timer is not cancelled.
         [self pauseAudio];
-
+        
         [self loadNewPage:(EZPage *)[self.ezBook.pages objectAtIndex:[self.currentPage intValue]] withTransition:YES];
         
         // re-enable interactions after turn of next page
