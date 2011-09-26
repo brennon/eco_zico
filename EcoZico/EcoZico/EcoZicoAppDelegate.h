@@ -10,6 +10,7 @@
 
 @interface EcoZicoAppDelegate : NSObject <UIApplicationDelegate>
 
+@property BOOL shouldContinueFromLastPageReached;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, assign) BOOL readItMyself;
 

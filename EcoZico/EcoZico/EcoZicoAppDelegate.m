@@ -15,6 +15,7 @@
 
 @implementation EcoZicoAppDelegate
 
+@synthesize shouldContinueFromLastPageReached = _shouldContinueFromLastPageReached;
 @synthesize window          = _window;
 @synthesize readItMyself    = _readItMyself;
 

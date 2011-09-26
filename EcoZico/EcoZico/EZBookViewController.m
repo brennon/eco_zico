@@ -19,6 +19,8 @@
 #import "EZTransparentButton.h"
 #import "EZAudioPlayer.h"
 #import "EcoZicoAppDelegate.h"
+#import "EZFrontViewController.h"
+
 
 const NSUInteger kNumberOfPages = 14;
 
@@ -26,6 +28,7 @@ const NSUInteger kNumberOfPages = 14;
 
 #pragma mark - Properties
 
+@synthesize homeBut                 = _homeBut;
 @synthesize ezPageView				= _ezPageView;
 @synthesize textView				= _textView;
 @synthesize ezBook					= _ezBook;
@@ -39,6 +42,7 @@ const NSUInteger kNumberOfPages = 14;
 @synthesize isFirstPageAfterLaunch	= _isFirstPageAfterLaunch;
 @synthesize touchZones				= _touchZones;
 @synthesize player                  = _player;
+@synthesize goHomeCalled            = _goHomeCalled;
 
 #pragma mark - EZBookViewController lifecycle
 
@@ -48,7 +52,17 @@ const NSUInteger kNumberOfPages = 14;
     if (self) {        
         self.isFirstPageAfterLaunch = YES;
 		self.audioIsPlaying = NO;
-        self.currentPage = [NSNumber numberWithInt:0];
+        
+        EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];        
+        
+        if (appDelegate.shouldContinueFromLastPageReached) {
+            self.currentPage = [defaults objectForKey:NUMBER_OF_LAST_PAGE_REACHED];
+        }
+        else{
+            self.currentPage = [NSNumber numberWithInt:0];
+        }
+        
         self.ezBook = [[[EZBook alloc] initWithPlist:@"EcoZicoBook.plist"] autorelease];
     }
     return self;
@@ -56,6 +70,8 @@ const NSUInteger kNumberOfPages = 14;
 
 - (void)dealloc
 {
+    [_homeBut release];
+    _homeBut = nil;
     [_ezPageView release];
     self.ezPageView = nil;
     [_textView release];
@@ -85,6 +101,8 @@ const NSUInteger kNumberOfPages = 14;
 {
     [super viewDidLoad];    
     
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+        
     self.view.backgroundColor = [UIColor blackColor];
     
 	// Setup ezPageView with images, etc.
@@ -97,6 +115,14 @@ const NSUInteger kNumberOfPages = 14;
 	// Load the first page
     [self loadNewPage:[self.ezBook.pages objectAtIndex:[self.currentPage intValue]] withTransition:!self.isFirstPageAfterLaunch];    
     self.isFirstPageAfterLaunch = NO;
+    
+    //scroll to current page (necessary is user picket to continue from where they last left off).
+    self.ezPageView.contentOffset = CGPointMake([self.currentPage intValue] * self.ezPageView.frame.size.width, self.ezPageView.frame.size.height);
+    
+    //save page to defaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];    
+    [defaults setObject:self.currentPage forKey:NUMBER_OF_LAST_PAGE_REACHED];    
+    [defaults synchronize];
     
 }
 
@@ -218,6 +244,9 @@ const NSUInteger kNumberOfPages = 14;
 
 - (void)layoutTextWithTransition:(BOOL)withTrans
 {    
+    //don't change para if go home has already been called
+    if (self.goHomeCalled == NO){
+        
     // Changing scenes allows you to use the fancy transitions
     CCScene *nextScene = [CCScene node];
     
@@ -240,6 +269,7 @@ const NSUInteger kNumberOfPages = 14;
     
     //draw the paragraph
     [self.ezTextViewScene layoutWords];
+    }
     
 }
 
@@ -330,6 +360,21 @@ const NSUInteger kNumberOfPages = 14;
     self.playPauseBut.selected = NO;
 }
 
+- (IBAction) goHome:(id)sender
+{
+    DebugLogFunc();
+
+    EcoZicoAppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    
+    appDelegate.window.rootViewController = (UIViewController *)[[EZFrontViewController alloc] init];
+    
+    [[CCDirector sharedDirector] end];
+    
+    self.goHomeCalled = YES;
+    
+    [self pauseAudio];
+}
+
 #pragma mark - AVAudioPlayerDelegate methods
 - (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)thisPlayer successfully:(BOOL)completed
 {
@@ -356,7 +401,7 @@ const NSUInteger kNumberOfPages = 14;
     self.currentPage = [NSNumber numberWithInt:(int) scrollView.contentOffset.x / scrollView.frame.size.width];
     
     // Don't 'change the page' if the page being changed to is the same as the previous page.
-    // (This delegate method fires even for minor scrolls and for the first and last pages.
+    // (This delegate method fires even for minor scrolls and for the first and last pages).
     
     if ([self.currentPage intValue] != previousPage) 
     {
@@ -372,7 +417,11 @@ const NSUInteger kNumberOfPages = 14;
         // re-enable interactions after turn of next page
         
         [self.playPauseBut setUserInteractionEnabled:YES];
-    }    
+    }
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];    
+    [defaults setObject:self.currentPage forKey:NUMBER_OF_LAST_PAGE_REACHED];    
+    [defaults synchronize];
 }
 
 @end

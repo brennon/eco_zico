@@ -17,9 +17,12 @@
 
 - (IBAction)readItToMeButtonPushed 
 {
-    EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
-    appDelegate.readItMyself = NO;
-    [appDelegate switchToBookViewController];
+        
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Option" message:@"Do you want to continue from where you left off last time?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    
+    [alert show];
+    [alert release];
+    
 }
 
 - (IBAction)readItMyselfButtonPushed 
@@ -33,6 +36,14 @@
 {
     EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate switchToHelpViewController];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{   
+    EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.readItMyself = NO;
+    appDelegate.shouldContinueFromLastPageReached = buttonIndex > 0 ? YES : NO;    
+    [appDelegate switchToBookViewController];
 }
 
 - (void)dealloc
@@ -59,6 +70,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+
     // Do any additional setup after loading the view from its nib.
 }
 

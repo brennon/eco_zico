@@ -11,6 +11,7 @@
 #import "EZParagraphTransitions.h"
 
 #define PLAY_PAUSE_BUTTON_WIDTH 85
+#define NUMBER_OF_LAST_PAGE_REACHED @"lastPageReached"
 
 @class EZPage, EZTextViewScene, EZPageView, EZBook, EZAudioPlayer;
 
@@ -18,6 +19,7 @@
 
 @property (nonatomic, retain) IBOutlet  EZPageView          *ezPageView;
 @property (nonatomic, retain) IBOutlet  UIButton            *playPauseBut;
+@property (nonatomic, retain) IBOutlet  UIButton            *homeBut;
 @property (nonatomic, retain)           UIView              *textView;
 @property (nonatomic, retain)           EZBook              *ezBook;
 @property (nonatomic, retain)           NSNumber            *currentPage;
@@ -29,12 +31,14 @@
 @property (nonatomic, retain)           NSMutableArray      *touchZones;
 @property (nonatomic, assign)			BOOL				audioIsPlaying;
 @property (nonatomic, assign)			BOOL				isFirstPageAfterLaunch;
+@property                               BOOL                goHomeCalled;
 
 - (void)attachCocos2dToSelf;
 - (void)loadNewPage:(EZPage *)ezPage withTransition:(BOOL)withTrans; 
 - (void)layoutTextWithTransition:(BOOL)withTrans;
 - (void)loadAudioForPage:(int)pageNum;
 - (IBAction)playPause:(id)sender; // Play/pause audio playback (and TVC narration)
+- (IBAction) goHome:(id)sender;
 - (void)playAudio;
 - (void)pauseAudio;
 - (void)playImageAudio:(id)sender;
