@@ -18,6 +18,7 @@
 #import "EZParagraphTransitions.h"
 #import "EZTransparentButton.h"
 #import "EZAudioPlayer.h"
+#import "EcoZicoAppDelegate.h"
 
 const NSUInteger kNumberOfPages = 14;
 
@@ -34,10 +35,10 @@ const NSUInteger kNumberOfPages = 14;
 @synthesize idxOfLastWordLaidOut	= _idxOfLastWordLaidOut;
 @synthesize ezAudioPlayer			= _ezAudioPlayer;
 @synthesize playPauseBut			= _playPauseBut;
-@synthesize skipParaBut				= _skipParaBut;
 @synthesize audioIsPlaying			= _audioIsPlaying;
 @synthesize isFirstPageAfterLaunch	= _isFirstPageAfterLaunch;
 @synthesize touchZones				= _touchZones;
+@synthesize player                  = _player;
 
 #pragma mark - EZBookViewController lifecycle
 
@@ -107,7 +108,6 @@ const NSUInteger kNumberOfPages = 14;
     self.ezPageView = nil;
     self.textView = nil;
 	self.playPauseBut = nil;
-	self.skipParaBut = nil; // For debugging
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -245,7 +245,6 @@ const NSUInteger kNumberOfPages = 14;
 
 
 #pragma mark - Text view-related callbacks
-
 - (void)textViewDidFinishNarratingParagraph
 {
 	DebugLogFunc();
@@ -261,17 +260,17 @@ const NSUInteger kNumberOfPages = 14;
     
 	DebugLog(@"(-endIgnoringInteractionEvents)");
 	// [self pauseAudio];
+    
     [self playAudio];
 }
 
 #pragma mark - Text and image playback
-
 - (void)loadAudioForPage:(int)pageNum
 {
     // Load sound file
     NSString *audioFileName = [NSString stringWithFormat:@"zico_audio-page_%0i", pageNum];
     
-    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: audioFileName ofType: @"wav"];  
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: audioFileName ofType: @"mp3"];  
     NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];
 	EZAudioPlayer *newPlayer = [[EZAudioPlayer alloc] initWithContentsOfURL:fileURL error:NULL playerType:kEZPageTextAudio];
     [fileURL release];           
@@ -331,19 +330,7 @@ const NSUInteger kNumberOfPages = 14;
     self.playPauseBut.selected = NO;
 }
 
-
-//for debugging - allows to skip through paragraphs in order to observer transitions more quickly.
-- (IBAction)skipPara:(id)sender
-{    
-    EZPage *currentPageObj = [self.ezBook.pages objectAtIndex:[self.currentPage intValue]];
-    NSTimeInterval timeOfLastWordInParagraph = [[[currentPageObj.words objectAtIndex:self.idxOfLastWordLaidOut]seekPoint] doubleValue];
-    
-    [self.ezTextViewScene setWordPositionForTime:timeOfLastWordInParagraph - 2];
-    
-}
-
 #pragma mark - AVAudioPlayerDelegate methods
-
 - (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)thisPlayer successfully:(BOOL)completed
 {
 	self.audioIsPlaying = NO;
@@ -361,9 +348,7 @@ const NSUInteger kNumberOfPages = 14;
 	}
 }
 
-
 #pragma mark - UIScrollViewDelegate methods
-
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     int previousPage = [self.currentPage intValue];
@@ -384,7 +369,8 @@ const NSUInteger kNumberOfPages = 14;
 
         [self loadNewPage:(EZPage *)[self.ezBook.pages objectAtIndex:[self.currentPage intValue]] withTransition:YES];
         
-        // re-enable interactions after turn of next page 
+        // re-enable interactions after turn of next page
+        
         [self.playPauseBut setUserInteractionEnabled:YES];
     }    
 }

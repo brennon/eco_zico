@@ -18,12 +18,14 @@
 - (IBAction)readItToMeButtonPushed 
 {
     EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.readItMyself = NO;
     [appDelegate switchToBookViewController];
 }
 
 - (IBAction)readItMyselfButtonPushed 
 {
     EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.readItMyself = YES;
     [appDelegate switchToBookViewController];
 }
 
