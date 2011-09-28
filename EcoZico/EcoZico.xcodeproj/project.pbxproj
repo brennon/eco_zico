@@ -131,6 +131,24 @@
 		3A8B602713E06FAA00ECA47E /* instructions_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B602313E06FAA00ECA47E /* instructions_02.png */; };
 		3A8B602813E06FAA00ECA47E /* instructions_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B602413E06FAA00ECA47E /* instructions_03.png */; };
 		3A8B602913E06FAA00ECA47E /* instructions_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B602513E06FAA00ECA47E /* instructions_04.png */; };
+		3A8D4E451433DBC600C038CB /* 00_zico.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E331433DBC600C038CB /* 00_zico.wav */; };
+		3A8D4E461433DBC600C038CB /* 01_fireball.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E341433DBC600C038CB /* 01_fireball.wav */; };
+		3A8D4E471433DBC600C038CB /* 02_zico.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E351433DBC600C038CB /* 02_zico.wav */; };
+		3A8D4E481433DBC600C038CB /* 03_planetearth.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E361433DBC600C038CB /* 03_planetearth.wav */; };
+		3A8D4E491433DBC600C038CB /* 03_spacecar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E371433DBC600C038CB /* 03_spacecar.wav */; };
+		3A8D4E4A1433DBC600C038CB /* 04_greenville.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E381433DBC600C038CB /* 04_greenville.wav */; };
+		3A8D4E4B1433DBC600C038CB /* 04_litter.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E391433DBC600C038CB /* 04_litter.wav */; };
+		3A8D4E4C1433DBC600C038CB /* 05_junk.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E3A1433DBC600C038CB /* 05_junk.wav */; };
+		3A8D4E4D1433DBC600C038CB /* 06_repair.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E3B1433DBC600C038CB /* 06_repair.wav */; };
+		3A8D4E4E1433DBC600C038CB /* 06_reuse.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E3C1433DBC600C038CB /* 06_reuse.wav */; };
+		3A8D4E4F1433DBC600C038CB /* 07_recycle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E3D1433DBC600C038CB /* 07_recycle.wav */; };
+		3A8D4E501433DBC600C038CB /* 08_mayor.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E3E1433DBC600C038CB /* 08_mayor.wav */; };
+		3A8D4E511433DBC600C038CB /* 08_vote.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E3F1433DBC600C038CB /* 08_vote.wav */; };
+		3A8D4E521433DBC600C038CB /* 09_cans.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E401433DBC600C038CB /* 09_cans.wav */; };
+		3A8D4E531433DBC600C038CB /* 09_glass.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E411433DBC600C038CB /* 09_glass.wav */; };
+		3A8D4E541433DBC600C038CB /* 09_paper.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E421433DBC600C038CB /* 09_paper.wav */; };
+		3A8D4E551433DBC600C038CB /* 10_green.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E431433DBC600C038CB /* 10_green.wav */; };
+		3A8D4E561433DBC600C038CB /* 11_ecozico.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D4E441433DBC600C038CB /* 11_ecozico.wav */; };
 		3A97DD0113BCE4350010CDC6 /* EZPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A97DD0013BCE4350010CDC6 /* EZPageView.m */; };
 		3A97DD2913BF0F1B0010CDC6 /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A97DD2013BF0F1B0010CDC6 /* fps_images.png */; };
 		3A97DE7513BF0FE80010CDC6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97DE7013BF0FE70010CDC6 /* AudioToolbox.framework */; };
@@ -399,6 +417,24 @@
 		3A8B602313E06FAA00ECA47E /* instructions_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instructions_02.png; sourceTree = "<group>"; };
 		3A8B602413E06FAA00ECA47E /* instructions_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instructions_03.png; sourceTree = "<group>"; };
 		3A8B602513E06FAA00ECA47E /* instructions_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instructions_04.png; sourceTree = "<group>"; };
+		3A8D4E331433DBC600C038CB /* 00_zico.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 00_zico.wav; sourceTree = "<group>"; };
+		3A8D4E341433DBC600C038CB /* 01_fireball.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 01_fireball.wav; sourceTree = "<group>"; };
+		3A8D4E351433DBC600C038CB /* 02_zico.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 02_zico.wav; sourceTree = "<group>"; };
+		3A8D4E361433DBC600C038CB /* 03_planetearth.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 03_planetearth.wav; sourceTree = "<group>"; };
+		3A8D4E371433DBC600C038CB /* 03_spacecar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 03_spacecar.wav; sourceTree = "<group>"; };
+		3A8D4E381433DBC600C038CB /* 04_greenville.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04_greenville.wav; sourceTree = "<group>"; };
+		3A8D4E391433DBC600C038CB /* 04_litter.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04_litter.wav; sourceTree = "<group>"; };
+		3A8D4E3A1433DBC600C038CB /* 05_junk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 05_junk.wav; sourceTree = "<group>"; };
+		3A8D4E3B1433DBC600C038CB /* 06_repair.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 06_repair.wav; sourceTree = "<group>"; };
+		3A8D4E3C1433DBC600C038CB /* 06_reuse.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 06_reuse.wav; sourceTree = "<group>"; };
+		3A8D4E3D1433DBC600C038CB /* 07_recycle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 07_recycle.wav; sourceTree = "<group>"; };
+		3A8D4E3E1433DBC600C038CB /* 08_mayor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 08_mayor.wav; sourceTree = "<group>"; };
+		3A8D4E3F1433DBC600C038CB /* 08_vote.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 08_vote.wav; sourceTree = "<group>"; };
+		3A8D4E401433DBC600C038CB /* 09_cans.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 09_cans.wav; sourceTree = "<group>"; };
+		3A8D4E411433DBC600C038CB /* 09_glass.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 09_glass.wav; sourceTree = "<group>"; };
+		3A8D4E421433DBC600C038CB /* 09_paper.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 09_paper.wav; sourceTree = "<group>"; };
+		3A8D4E431433DBC600C038CB /* 10_green.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 10_green.wav; sourceTree = "<group>"; };
+		3A8D4E441433DBC600C038CB /* 11_ecozico.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 11_ecozico.wav; sourceTree = "<group>"; };
 		3A97DCFF13BCE4350010CDC6 /* EZPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EZPageView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		3A97DD0013BCE4350010CDC6 /* EZPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZPageView.m; sourceTree = "<group>"; };
 		3A97DD2013BF0F1B0010CDC6 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
@@ -755,6 +791,24 @@
 		3A97DD1513BF0E3E0010CDC6 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				3A8D4E331433DBC600C038CB /* 00_zico.wav */,
+				3A8D4E341433DBC600C038CB /* 01_fireball.wav */,
+				3A8D4E351433DBC600C038CB /* 02_zico.wav */,
+				3A8D4E361433DBC600C038CB /* 03_planetearth.wav */,
+				3A8D4E371433DBC600C038CB /* 03_spacecar.wav */,
+				3A8D4E381433DBC600C038CB /* 04_greenville.wav */,
+				3A8D4E391433DBC600C038CB /* 04_litter.wav */,
+				3A8D4E3A1433DBC600C038CB /* 05_junk.wav */,
+				3A8D4E3B1433DBC600C038CB /* 06_repair.wav */,
+				3A8D4E3C1433DBC600C038CB /* 06_reuse.wav */,
+				3A8D4E3D1433DBC600C038CB /* 07_recycle.wav */,
+				3A8D4E3E1433DBC600C038CB /* 08_mayor.wav */,
+				3A8D4E3F1433DBC600C038CB /* 08_vote.wav */,
+				3A8D4E401433DBC600C038CB /* 09_cans.wav */,
+				3A8D4E411433DBC600C038CB /* 09_glass.wav */,
+				3A8D4E421433DBC600C038CB /* 09_paper.wav */,
+				3A8D4E431433DBC600C038CB /* 10_green.wav */,
+				3A8D4E441433DBC600C038CB /* 11_ecozico.wav */,
 				3AB76103142FC5E600186893 /* zico_audio-page_0.mp3 */,
 				3AB76104142FC5E600186893 /* zico_audio-page_1.mp3 */,
 				3AB76105142FC5E600186893 /* zico_audio-page_2.mp3 */,
@@ -1011,6 +1065,24 @@
 				3AB7611D142FC5E600186893 /* zico_audio-page_12.mp3 in Resources */,
 				3AB7611E142FC5E600186893 /* zico_audio-page_13.mp3 in Resources */,
 				3AB76131142FEAC600186893 /* help-screen.png in Resources */,
+				3A8D4E451433DBC600C038CB /* 00_zico.wav in Resources */,
+				3A8D4E461433DBC600C038CB /* 01_fireball.wav in Resources */,
+				3A8D4E471433DBC600C038CB /* 02_zico.wav in Resources */,
+				3A8D4E481433DBC600C038CB /* 03_planetearth.wav in Resources */,
+				3A8D4E491433DBC600C038CB /* 03_spacecar.wav in Resources */,
+				3A8D4E4A1433DBC600C038CB /* 04_greenville.wav in Resources */,
+				3A8D4E4B1433DBC600C038CB /* 04_litter.wav in Resources */,
+				3A8D4E4C1433DBC600C038CB /* 05_junk.wav in Resources */,
+				3A8D4E4D1433DBC600C038CB /* 06_repair.wav in Resources */,
+				3A8D4E4E1433DBC600C038CB /* 06_reuse.wav in Resources */,
+				3A8D4E4F1433DBC600C038CB /* 07_recycle.wav in Resources */,
+				3A8D4E501433DBC600C038CB /* 08_mayor.wav in Resources */,
+				3A8D4E511433DBC600C038CB /* 08_vote.wav in Resources */,
+				3A8D4E521433DBC600C038CB /* 09_cans.wav in Resources */,
+				3A8D4E531433DBC600C038CB /* 09_glass.wav in Resources */,
+				3A8D4E541433DBC600C038CB /* 09_paper.wav in Resources */,
+				3A8D4E551433DBC600C038CB /* 10_green.wav in Resources */,
+				3A8D4E561433DBC600C038CB /* 11_ecozico.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
