@@ -38,7 +38,7 @@
 - (void)layoutTextWithTransition:(BOOL)withTrans;
 - (void)loadAudioForPage:(int)pageNum;
 - (IBAction)playPause:(id)sender; // Play/pause audio playback (and TVC narration)
-- (IBAction) goHome:(id)sender;
+- (IBAction)goHome:(id)sender;
 - (void)playAudio;
 - (void)pauseAudio;
 - (void)playImageAudio:(id)sender;

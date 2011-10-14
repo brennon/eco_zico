@@ -315,16 +315,18 @@ const NSUInteger kNumberOfPages = 14;
 
 - (void)playImageAudio:(id)sender
 {
+    DebugLogFunc();
 	if (!self.audioIsPlaying) {
 		NSString *filename = [(EZTransparentButton *)sender audioFilePath];
 		NSString *path = [[NSBundle mainBundle] pathForResource:filename ofType:nil];  
-		NSURL *url = [[NSURL alloc] initFileURLWithPath: path];
+		NSURL *url = [[NSURL alloc] initFileURLWithPath: path];        
 		EZAudioPlayer *localPlayer = [[EZAudioPlayer alloc] initWithContentsOfURL:url error:NULL playerType:kEZImageAudio];
-		[url release];
-		
-		self.audioIsPlaying = YES;		
-		[localPlayer play];    
+		[url release];		
+		self.audioIsPlaying = YES;
+		[localPlayer play];
+        /*
 		[localPlayer setDelegate:self];
+         */
 	}
 }
 
