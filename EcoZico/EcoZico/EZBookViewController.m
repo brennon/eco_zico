@@ -360,7 +360,7 @@ const NSUInteger kNumberOfPages = 14;
     self.playPauseBut.selected = NO;
 }
 
-- (IBAction) goHome:(id)sender
+- (IBAction)goHome:(id)sender
 {
     DebugLogFunc();
     
@@ -376,7 +376,7 @@ const NSUInteger kNumberOfPages = 14;
 }
 
 #pragma mark - AVAudioPlayerDelegate methods
-- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)thisPlayer successfully:(BOOL)completed
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)thisPlayer successfully:(BOOL)completed
 {
 	self.audioIsPlaying = NO;
 	
