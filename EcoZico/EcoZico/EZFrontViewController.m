@@ -8,6 +8,7 @@
 
 #import "EZFrontViewController.h"
 #import "EcoZicoAppDelegate.h"
+#import "EZBookViewController.h"
 
 @implementation EZFrontViewController
 
@@ -17,11 +18,19 @@
 
 - (IBAction)readItToMeButtonPushed 
 {
+    if([[[NSUserDefaults standardUserDefaults] objectForKey:NUMBER_OF_LAST_PAGE_REACHED]intValue] > 0)
+    {        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Option" message:@"Do you want to continue from where you left off last time?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
         
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Option" message:@"Do you want to continue from where you left off last time?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
-    
-    [alert show];
-    [alert release];
+        [alert show];
+        [alert release];
+    }
+    else
+    {
+        EcoZicoAppDelegate *appDelegate = (EcoZicoAppDelegate *)[[UIApplication sharedApplication] delegate];
+        appDelegate.readItMyself = NO;
+        [appDelegate switchToBookViewController];
+    }
     
 }
 
