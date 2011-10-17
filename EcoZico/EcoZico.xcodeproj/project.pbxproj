@@ -977,6 +977,7 @@
 		3AD4B8111360961C00000919 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Queen's University Belfast";
 			};
 			buildConfigurationList = 3AD4B8141360961C00000919 /* Build configuration list for PBXProject "EcoZico" */;
@@ -1219,8 +1220,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				COCOS2D_DEBUG = 1;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -1228,8 +1229,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "607EC445-2E58-4F60-8521-308C77E6E894";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "607EC445-2E58-4F60-8521-308C77E6E894";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -1239,17 +1238,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EcoZico/EcoZico-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "EcoZico/EcoZico-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0886D4FE-443F-467A-AC85-B01B507A9F2F";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0886D4FE-443F-467A-AC85-B01B507A9F2F";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1260,8 +1258,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				COCOS2D_DEBUG = 1;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Brennon Bortz (23S826VVLA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brennon Bortz (23S826VVLA)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1273,8 +1271,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PROVISIONING_PROFILE = "607EC445-2E58-4F60-8521-308C77E6E894";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "607EC445-2E58-4F60-8521-308C77E6E894";
+				PROVISIONING_PROFILE = "47BDEE13-8CAF-4E5C-91EE-BBE469EEA539";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47BDEE13-8CAF-4E5C-91EE-BBE469EEA539";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -1285,8 +1283,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				COCOS2D_DEBUG = 1;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -1294,8 +1292,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "607EC445-2E58-4F60-8521-308C77E6E894";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "607EC445-2E58-4F60-8521-308C77E6E894";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -1305,18 +1301,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Brennon Bortz (23S826VVLA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brennon Bortz (23S826VVLA)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EcoZico/EcoZico-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "EcoZico/EcoZico-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0886D4FE-443F-467A-AC85-B01B507A9F2F";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0886D4FE-443F-467A-AC85-B01B507A9F2F";
+				PROVISIONING_PROFILE = "47BDEE13-8CAF-4E5C-91EE-BBE469EEA539";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47BDEE13-8CAF-4E5C-91EE-BBE469EEA539";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1325,17 +1322,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EcoZico/EcoZico-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "EcoZico/EcoZico-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0886D4FE-443F-467A-AC85-B01B507A9F2F";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0886D4FE-443F-467A-AC85-B01B507A9F2F";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
