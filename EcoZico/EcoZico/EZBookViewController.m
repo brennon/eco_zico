@@ -323,10 +323,8 @@ const NSUInteger kNumberOfPages = 14;
 		EZAudioPlayer *localPlayer = [[EZAudioPlayer alloc] initWithContentsOfURL:url error:NULL playerType:kEZImageAudio];
 		[url release];		
 		self.audioIsPlaying = YES;
-		[localPlayer play];
-        /*
-		[localPlayer setDelegate:self];
-         */
+		[localPlayer play];        
+		[localPlayer setDelegate:self];        
 	}
 }
 
@@ -382,17 +380,15 @@ const NSUInteger kNumberOfPages = 14;
 {
 	self.audioIsPlaying = NO;
 	
-    if (completed == YES) {            
+	if ([(EZAudioPlayer *)thisPlayer playerType] == kEZImageAudio) {
+		[thisPlayer release];
+	} else if (completed == YES) {            
         [[self.ezWordLabels lastObject] startWordOffAnimation]; 
         
         // disable interactions on play/pause once page narration has finished
         // re-enable after turn of next page
         [self.playPauseBut setUserInteractionEnabled:NO];
     }
-	
-	if ([(EZAudioPlayer *)thisPlayer playerType] == kEZImageAudio) {
-		[thisPlayer release];
-	}
 }
 
 #pragma mark - UIScrollViewDelegate methods
