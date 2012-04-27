@@ -2546,7 +2546,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>bannanas</string>
+				<string>bananas</string>
 				<key>time</key>
 				<real>5.351</real>
 			</dict>
@@ -3980,7 +3980,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>recylce.</string>
+				<string>recycle.</string>
 				<key>time</key>
 				<real>29.465</real>
 			</dict>
@@ -3992,7 +3992,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>recylce</string>
+				<string>recycle</string>
 				<key>time</key>
 				<real>30.715</real>
 			</dict>
@@ -4868,7 +4868,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>recyled.</string>
+				<string>recycled.</string>
 				<key>time</key>
 				<real>11.161</real>
 			</dict>
@@ -6770,7 +6770,7 @@
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>RECYLCE!</string>
+				<string>RECYCLE!</string>
 				<key>time</key>
 				<real>19.535</real>
 			</dict>
